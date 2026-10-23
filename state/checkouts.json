@@ -15,6 +15,21 @@
     "commit": "82e7472e6cad5c08a55c3aef92ef5be218621b2c"
   },
   {
+    "path": "build/thorch-work/packages/azahar",
+    "origin": "https://github.com/AzaharPlus/AzaharPlus.git",
+    "commit": "7407e4f7b6c4004bdf296c3b0ddb91319aee7523"
+  },
+  {
+    "path": "build/thorch-work/packages/azahar/externals/Anylinux-AppImages",
+    "origin": "https://github.com/pkgforge-dev/Anylinux-AppImages.git",
+    "commit": "5f7717a6b520d7597e76973b61f58deaa20df972"
+  },
+  {
+    "path": "build/thorch-work/packages/azahar/externals/dllwalker",
+    "origin": "https://github.com/azahar-emu/dllwalker",
+    "commit": "2f8b349c26832cae612aa7082154c0697a9cbc8e"
+  },
+  {
     "path": "work/compatibility-reference-20261018",
     "origin": "https://github.com/azahar-emu/compatibility-list.git",
     "commit": "d282515cd6a66b694ac0657eef250c24b7410495"

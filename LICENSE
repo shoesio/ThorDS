@@ -1,0 +1,20 @@
+ThorDS source licensing
+======================
+
+Unless a file carries a different notice, ThorDS-authored scripts,
+configuration, packaging changes, and documentation are licensed under the GNU
+General Public License version 2 or (at your option) any later version:
+
+SPDX-License-Identifier: GPL-2.0-or-later
+
+The full GPL version 2 text is in licenses/GPL-2.0.txt.
+
+This repository is also a collection of patches and third-party sources.
+Those works retain their original copyright, license, and attribution notices.
+In particular, Thorch and Armada code, Azahar/AzaharPlus, MAKO, libssc,
+hexagonrpc, and embedded stb headers are not relicensed by this notice.
+See THIRD_PARTY_NOTICES.md and the component-local license files.
+
+Firmware, operating-system packages, console data, game content, and trademarks
+are not licensed by this notice. No rights to third-party names or marks are
+implied. The software is supplied without warranty under its applicable license.

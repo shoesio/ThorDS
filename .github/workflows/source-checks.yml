@@ -1,0 +1,38 @@
+name: Source checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  restore-and-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build-check dependencies
+        run: sudo apt-get update && sudo apt-get install -y libdrm-dev pkg-config build-essential jq
+      - name: Test source restoration safeguards
+        run: python3 -m unittest discover -s tests -v
+      - name: Restore exact upstream sources and local changes
+        run: python3 scripts/restore-sources.py
+      - name: Validate package manifest and runtime policies
+        working-directory: build/thorch-work
+        run: |
+          python3 scripts/package-manifest.py validate
+          bash tests/thords-framegen-integration.bash
+          python3 tests/thords-power-policy.py
+      - name: Compile splash renderer and assemble kiosk payload
+        working-directory: build/thorch-work/packages/thords-kiosk
+        run: |
+          set -euo pipefail
+          make -C early-splash
+          export startdir="$PWD"
+          export pkgdir="$RUNNER_TEMP/thords-kiosk"
+          mkdir -p "$pkgdir"
+          source PKGBUILD
+          package
+          test -x "$pkgdir/usr/libexec/thords/early-splash-renderer"
+          test -L "$pkgdir/etc/systemd/system/systemd-homed.service"
+          test -s "$pkgdir/usr/share/thords/boot-splash.asp"

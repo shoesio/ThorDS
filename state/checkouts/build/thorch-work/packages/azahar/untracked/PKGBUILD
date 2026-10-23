@@ -1,0 +1,90 @@
+pkgname=azahar
+pkgver=2126.1.B
+pkgrel=12
+pkgdesc='AzaharPlus 3DS emulator for ThorDS'
+arch=('aarch64')
+license=('GPL-2.0-or-later')
+
+depends=(
+  ffmpeg
+  fmt
+  hicolor-icon-theme
+  libusb
+  libxkbcommon
+  qt6-base
+  qt6-multimedia
+  qt6-tools
+  qt6-wayland
+  sdl2
+  zstd
+  vulkan-icd-loader
+)
+
+makedepends=(
+  cmake
+  git
+  ninja
+  python
+)
+
+source=(
+  "AzaharPlus::git+https://github.com/AzaharPlus/AzaharPlus.git#tag=AZAHAR_PLUS_2126_1_B"
+  "thords-kiosk-fixes.patch"
+  "thords-vulkan-edge-aa.patch"
+)
+
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+prepare() {
+  cd "$srcdir/AzaharPlus"
+
+  git submodule update --init --recursive
+  patch -Np1 -i "$srcdir/thords-kiosk-fixes.patch"
+  patch -Np1 -i "$srcdir/thords-vulkan-edge-aa.patch"
+
+  python3 - <<'PATCH'
+from pathlib import Path
+
+p = Path("externals/libzip/CMakeLists.txt")
+s = p.read_text()
+
+old = """    if(TARGET zstd::libzstd_shared AND BUILD_SHARED_LIBS)
+      set(zstd_TARGET zstd::libzstd_shared)
+    else()
+      set(zstd_TARGET zstd::libzstd_static)
+    endif()"""
+
+new = """    if(TARGET zstd::libzstd_static)
+      set(zstd_TARGET zstd::libzstd_static)
+    elseif(TARGET zstd::libzstd_shared)
+      set(zstd_TARGET zstd::libzstd_shared)
+    endif()"""
+
+if old not in s:
+    raise SystemExit("Expected AzaharPlus libzip zstd block not found")
+
+p.write_text(s.replace(old, new, 1))
+print("Applied confirmed AzaharPlus ARM64 zstd fix")
+PATCH
+}
+
+build() {
+  cmake \
+    -S "$srcdir/AzaharPlus" \
+    -B "$srcdir/build" \
+    -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DENABLE_QT=ON \
+    -DENABLE_SDL2=ON \
+    -DENABLE_VULKAN=ON \
+    -DENABLE_OPENGL=OFF \
+    -DENABLE_TESTS=OFF
+
+  cmake --build "$srcdir/build"
+}
+
+package() {
+  DESTDIR="$pkgdir" \
+    cmake --install "$srcdir/build"
+}

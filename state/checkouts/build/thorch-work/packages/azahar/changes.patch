@@ -1,0 +1,238 @@
+diff --git a/src/citra_qt/citra_qt.cpp b/src/citra_qt/citra_qt.cpp
+index e7d7d5557..6a60f17dc 100644
+--- a/src/citra_qt/citra_qt.cpp
++++ b/src/citra_qt/citra_qt.cpp
+@@ -15,6 +15,7 @@
+ #include <QLabel>
+ #include <QMessageBox>
+ #include <QPalette>
++#include <QProcess>
+ #include <QSysInfo>
+ #include <QtConcurrent/QtConcurrentMap>
+ #include <QtConcurrent/QtConcurrentRun>
+@@ -214,6 +215,7 @@ GMainWindow::GMainWindow(Core::System& system_)
+     QStringList args = QApplication::arguments();
+     QString game_path;
+     std::optional<bool> fullscreen_override;
++    bool boot_home_menu_europe = false;
+     for (int i = 1; i < args.size(); ++i) {
+         // Preserves drag/drop functionality
+         if (args.size() == 2 && !args[1].startsWith(QChar::fromLatin1('-'))) {
+@@ -241,6 +243,14 @@ GMainWindow::GMainWindow(Core::System& system_)
+             continue;
+         }
+ 
++        // ThorDS kiosk startup: use the same delayed frontend path as the
++        // File -> Boot Home Menu action. Passing the NCCH path as a positional
++        // argument boots too early and can crash during service initialization.
++        if (args[i] == QStringLiteral("--boot-home-menu-europe")) {
++            boot_home_menu_europe = true;
++            continue;
++        }
++
+         // Enable GDB stub
+         if (args[i] == QStringLiteral("--gdbport") || args[i] == QStringLiteral("-g")) {
+             if (i >= args.size() - 1 || args[i + 1].startsWith(QChar::fromLatin1('-'))) {
+@@ -480,6 +490,11 @@ GMainWindow::GMainWindow(Core::System& system_)
+ 
+     if (!game_path.isEmpty()) {
+         BootGame(game_path);
++    } else if (boot_home_menu_europe) {
++        // ThorDS boots straight into HOME Menu. Deferring this until the Qt
++        // window and asynchronous game/system-title population have settled
++        // follows the same reliable path as selecting HOME from the UI.
++        QTimer::singleShot(5000, this, [this] { OnMenuBootHomeMenu(2); });
+     }
+ }
+ 
+@@ -3997,6 +4012,16 @@ void GMainWindow::OnCoreError(Core::System::ResultStatus result, std::string det
+             message_box.clickedButton() == abort_button) {
+             if (emu_thread) {
+                 ShutdownGame();
++                // In the ThorDS kiosk, the guest HOME Menu is the device shell.
++                // Honour its completed Power Off action at the host level instead
++                // of exposing Azahar's desktop game list.
++                if (result == Core::System::ResultStatus::ShutdownRequested &&
++                    qEnvironmentVariableIntValue("THORDS_POWEROFF_ON_GUEST_SHUTDOWN") == 1) {
++                    QProcess::startDetached(QStringLiteral("/usr/bin/sudo"),
++                                            {QStringLiteral("-n"),
++                                             QStringLiteral("/usr/bin/systemctl"),
++                                             QStringLiteral("poweroff")});
++                }
+                 return;
+             }
+         }
+diff --git a/src/core/hle/kernel/shared_page.cpp b/src/core/hle/kernel/shared_page.cpp
+index ef7f1690c..0980cc4f1 100644
+--- a/src/core/hle/kernel/shared_page.cpp
++++ b/src/core/hle/kernel/shared_page.cpp
+@@ -72,11 +72,10 @@ Handler::Handler(Core::Timing& timing, u64 override_init_time) : timing(timing)
+     // Some games wait until this value becomes 0x1, before asking running_hw
+     shared_page.unknown_value = 0x1;
+ 
+-    // Set to a completely full battery
+-    shared_page.battery_state.charge_level.Assign(
+-        static_cast<u8>(Service::PTM::ChargeLevels::CompletelyFull));
+-    shared_page.battery_state.is_adapter_connected.Assign(1);
+-    shared_page.battery_state.is_charging.Assign(1);
++    const auto battery = Service::PTM::GetHostBatteryState();
++    shared_page.battery_state.charge_level.Assign(static_cast<u8>(battery.charge_level));
++    shared_page.battery_state.is_adapter_connected.Assign(battery.adapter_connected);
++    shared_page.battery_state.is_charging.Assign(battery.is_charging);
+ 
+     init_time = GetInitTime(override_init_time);
+ 
+@@ -136,8 +135,13 @@ void Handler::UpdateTimeCallback(std::uintptr_t user_data, int cycles_late) {
+ 
+     ++shared_page.date_time_counter;
+ 
+-    // system time is updated hourly
+-    timing.ScheduleEvent(msToCycles(60 * 60 * 1000) - cycles_late, update_time_event);
++    const auto battery = Service::PTM::GetHostBatteryState();
++    shared_page.battery_state.charge_level.Assign(static_cast<u8>(battery.charge_level));
++    shared_page.battery_state.is_adapter_connected.Assign(battery.adapter_connected);
++    shared_page.battery_state.is_charging.Assign(battery.is_charging);
++
++    // Keep the emulated HOME Menu battery indicator reasonably current.
++    timing.ScheduleEvent(msToCycles(30 * 1000) - cycles_late, update_time_event);
+ }
+ 
+ void Handler::SetMacAddress(const MacAddress& addr) {
+diff --git a/src/core/hle/service/ptm/ptm.cpp b/src/core/hle/service/ptm/ptm.cpp
+index f0e5769e1..5294d3055 100644
+--- a/src/core/hle/service/ptm/ptm.cpp
++++ b/src/core/hle/service/ptm/ptm.cpp
+@@ -19,12 +19,52 @@
+ #include "core/hle/service/ptm/ptm_sets.h"
+ #include "core/hle/service/ptm/ptm_sysm.h"
+ #include "core/hle/service/ptm/ptm_u.h"
++#include <algorithm>
++#include <fstream>
++#include <string>
+ 
+ SERIALIZE_EXPORT_IMPL(Service::PTM::Module)
+ SERVICE_CONSTRUCT_IMPL(Service::PTM::Module)
+ 
+ namespace Service::PTM {
+ 
++namespace {
++
++constexpr const char* BatteryCapacityPath = "/sys/class/power_supply/battery/capacity";
++constexpr const char* BatteryStatusPath = "/sys/class/power_supply/battery/status";
++
++} // Anonymous namespace
++
++HostBatteryState GetHostBatteryState() {
++    HostBatteryState state{};
++
++    std::ifstream capacity_file(BatteryCapacityPath);
++    int capacity = 100;
++    if (capacity_file >> capacity) {
++        capacity = std::clamp(capacity, 0, 100);
++        if (capacity <= 5) {
++            state.charge_level = ChargeLevels::CriticalBattery;
++        } else if (capacity <= 20) {
++            state.charge_level = ChargeLevels::LowBattery;
++        } else if (capacity <= 50) {
++            state.charge_level = ChargeLevels::HalfFull;
++        } else if (capacity <= 80) {
++            state.charge_level = ChargeLevels::MostlyFull;
++        } else {
++            state.charge_level = ChargeLevels::CompletelyFull;
++        }
++    }
++
++    std::ifstream status_file(BatteryStatusPath);
++    std::string status;
++    if (status_file >> status) {
++        state.is_charging = status == "Charging";
++        state.adapter_connected = state.is_charging || status == "Full" || status == "Not charging";
++    }
++
++    return state;
++}
++
+ /// Values for the default gamecoin.dat file
+ static const GameCoin default_game_coin = {0x4F00, 42, 0, 0, 0, 2014, 12, 29};
+ 
+@@ -33,7 +73,7 @@ void Module::Interface::GetAdapterState(Kernel::HLERequestContext& ctx) {
+ 
+     IPC::RequestBuilder rb = rp.MakeBuilder(2, 0);
+     rb.Push(ResultSuccess);
+-    rb.Push(ptm->battery_is_charging);
++    rb.Push(GetHostBatteryState().adapter_connected);
+ 
+     LOG_DEBUG(Service_PTM, "(STUBBED) called");
+ }
+@@ -51,7 +91,7 @@ void Module::Interface::GetBatteryLevel(Kernel::HLERequestContext& ctx) {
+ 
+     IPC::RequestBuilder rb = rp.MakeBuilder(2, 0);
+     rb.Push(ResultSuccess);
+-    rb.Push(static_cast<u32>(ChargeLevels::CompletelyFull)); // Set to a completely full battery
++    rb.Push(static_cast<u32>(GetHostBatteryState().charge_level));
+ 
+     LOG_DEBUG(Service_PTM, "(STUBBED) called");
+ }
+@@ -61,7 +101,7 @@ void Module::Interface::GetBatteryChargeState(Kernel::HLERequestContext& ctx) {
+ 
+     IPC::RequestBuilder rb = rp.MakeBuilder(2, 0);
+     rb.Push(ResultSuccess);
+-    rb.Push(ptm->battery_is_charging);
++    rb.Push(GetHostBatteryState().is_charging);
+ 
+     LOG_DEBUG(Service_PTM, "(STUBBED) called");
+ }
+diff --git a/src/core/hle/service/ptm/ptm.h b/src/core/hle/service/ptm/ptm.h
+index 95863350a..5b0e08f36 100644
+--- a/src/core/hle/service/ptm/ptm.h
++++ b/src/core/hle/service/ptm/ptm.h
+@@ -27,6 +27,16 @@ enum class ChargeLevels : u32 {
+     CompletelyFull = 5,
+ };
+ 
++struct HostBatteryState {
++    ChargeLevels charge_level = ChargeLevels::CompletelyFull;
++    bool adapter_connected = true;
++    bool is_charging = true;
++};
++
++/// Returns the host battery state when Linux exposes one through power_supply.
++/// Defaults preserve Azahar's existing full/charging behaviour on other hosts.
++HostBatteryState GetHostBatteryState();
++
+ /**
+  * Represents the gamecoin file structure in the SharedExtData archive
+  * More information in 3dbrew
+diff --git a/src/core/hw/unique_data.cpp b/src/core/hw/unique_data.cpp
+index 37601f2fd..d116f97c5 100644
+--- a/src/core/hw/unique_data.cpp
++++ b/src/core/hw/unique_data.cpp
+@@ -574,11 +574,17 @@ std::unique_ptr<FileUtil::IOFile> OpenUniqueCryptoFile(const std::string& filena
+ }
+ 
+ bool IsFullConsoleLinked() {
+-    return GetOTP().Valid() && GetSecureInfoA().IsValid() && GetLocalFriendCodeSeedB().IsValid();
++    // AzaharPlus supplies dummy SecureInfo/LocalFriendCodeSeed data when the
++    // real files are absent. Do not mistake those fallbacks for a linked
++    // console, otherwise Artic initial setup rejects every real 3DS as a
++    // different previously-linked device.
++    return FileUtil::Exists(GetOTPPath()) && FileUtil::Exists(GetSecureInfoAPath()) &&
++           FileUtil::Exists(GetLocalFriendCodeSeedBPath()) && GetOTP().Valid() &&
++           GetSecureInfoA().IsValid() && GetLocalFriendCodeSeedB().IsValid();
+ }
+ 
+ void UnlinkConsole() {
+-/*    // Remove all console unique data, as well as the act, nim and frd savefiles
++    // Remove all console unique data, as well as the act, nim and frd savefiles
+     const std::string system_save_data_path =
+         FileSys::GetSystemSaveDataContainerPath(FileUtil::GetUserPath(FileUtil::UserPath::NANDDir));
+     constexpr std::array<std::array<u8, 8>, 3> save_data_ids{{
+@@ -596,7 +602,7 @@ void UnlinkConsole() {
+     FileUtil::Delete(GetSecureInfoAPath());
+     FileUtil::Delete(GetLocalFriendCodeSeedBPath());
+ 
+-    InvalidateSecureData();*/
++    InvalidateSecureData();
+ }
+ 
+ 

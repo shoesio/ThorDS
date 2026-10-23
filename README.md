@@ -1,43 +1,77 @@
-# ThorDS
+# ThorDS — experimental developer sources
 
-A dedicated Linux distribution for the AYN Thor whose normal user experience is:
+ThorDS is a Linux/Azahar console-session experiment for the AYN Thor:
 
     power -> Linux -> Wayland -> Azahar -> emulated 3DS HOME Menu
 
-The Linux desktop is not the product. Linux exists to expose the Thor hardware to Azahar.
+This repository publishes the development sources, patches, configuration,
+and historical hardware notes. **It is not a supported operating-system release.**
+There is no ready-to-flash image, and a complete clean build and fresh-device
+installation have not been verified. Some updates tested on the original
+Thor remain separate experiments rather than integrated image components.
 
-## Getting started
+## Start here
 
-Start with [the developer setup guide](docs/GETTING_STARTED.md) for source
-restoration, build entry points, known gaps, and a map of the hardware notes.
-There is no ready-to-flash release or verified clean-install workflow yet.
+- [Getting started](docs/GETTING_STARTED.md) — restore and inspect the sources.
+- [Build guide](docs/BUILD.md) — environment, commands, private-data handling, and remaining build gaps.
+- [SD testing and recovery](docs/INSTALLATION.md) — spare-card testing and acceptance criteria.
+- [Validation status](docs/VALIDATION.md) — exactly what has and has not passed.
+- [Contributing](CONTRIBUTING.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-## Safety
+```sh
+git clone https://github.com/shoesio/ThorDS.git
+cd ThorDS
+python3 scripts/restore-sources.py
+```
 
-The image-builder is intentionally SD-only during bring-up.
-No ThorDS script writes Android internal storage or flashes ABL automatically.
+This restores source into `build/thorch-work`; it does not build an image,
+connect to a Thor, or modify a device. Python 3.9+ and Git are required. Choose
+`--destination /path/to/a/new/directory` to restore elsewhere. Existing
+checkouts are never overwritten.
 
-## Layout
+## Repository layout
 
-- `upstream/thorch` — pristine hardware-enablement reference
-- `upstream/azahar` — pristine Azahar source/provenance reference
-- `build/thorch-work` — disposable patched build tree
-- `state` — exact upstream commits used
-- `output` — finished image copies/checksums
+| Path | Contents |
+| --- | --- |
+| `scripts/` | Snapshot and restore tooling |
+| `state/checkouts.json` | Upstream URLs and exact commits |
+| `state/checkouts/` | Local patches and extra source/assets for those checkouts |
+| `state/source-hashes.json` | Snapshot file hashes, executable flags, and symlink targets |
+| `work/` | Historical scripts, experiments, and validation records |
+| `docs/` | Current developer setup and testing guides |
+| `build/thorch-work/` | Restored working source; generated locally and ignored by this repository |
+| `upstream/`, `output/`, `backups/`, `testdata/` | Local-only reference sources, outputs, and data; excluded |
 
-## Source backup
+## Protect an existing setup
 
-This repository preserves local scripts, patches, configuration, investigation notes,
-and validation records. It is a development snapshot, not a tested distribution release.
+Source checks run on a development computer. Hardware testing requires a
+separate expendable SD card and an already working Linux boot/recovery path.
+This project does not provide a bootloader flashing procedure. The inherited
+Thorch source contains internal-storage installers; those are outside the
+ThorDS SD-only testing guide and can erase data if explicitly invoked.
 
-`state/checkouts.json` records each nested source checkout's origin and exact commit.
-`state/checkouts/<checkout-path>/changes.patch` preserves its changes against that commit
-(including staged and unstaged changes). The adjacent `untracked/` directory preserves
-additional UTF-8 source files up to 5 MB, retaining executable permissions. To recover a
-checkout, clone its recorded origin at its recorded commit, apply `changes.patch` with
-`git apply` when nonempty, then copy the contents of `untracked/` into that checkout.
-Run `python3 scripts/snapshot-sources.py` before committing further nested-checkout work.
+No console keys, HOME Menu, games, saves, device backups, downloaded firmware,
+or complete images are included. Two explicitly listed splash assets are
+included because the kiosk package needs them. Do not publish images built
+with private console data or personal credentials.
 
-Build trees, downloaded binaries, firmware, disk images, device backups, game files,
-saves, and screenshots are excluded. These remain local and need separate backup.
-Upstream source history is referenced by commit rather than copied here.
+## Save development changes
+
+Before committing changes inside nested source checkouts, run:
+
+```sh
+python3 scripts/snapshot-sources.py
+git status
+git diff
+```
+
+Then commit and push this outer repository. Review the generated snapshots:
+build and reference directories themselves are ignored. The snapshot records
+tracked changes plus eligible additional source files, safe symlinks, and the
+two splash assets. It does not back up your device or binary build products.
+
+## License and acknowledgements
+
+See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+ThorDS builds on Thorch, ROCKNIX, Azahar/AzaharPlus, Armada, MAKO, libssc,
+hexagonrpc, and their contributors. Each component retains its own notices.

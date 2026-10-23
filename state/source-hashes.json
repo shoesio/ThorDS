@@ -1,0 +1,451 @@
+{
+  "state/checkouts/build/thorch-work/changes.patch": {
+    "sha256": "0208df4b12b227667e429c452d0d84d1135eeab3a592fc68b32fd964eece74d9",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/changes.patch": {
+    "sha256": "2bdbea73b96c2f1bf471e07e3018e4a04e470aa7798ebf7b336beb62adbaacd3",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/externals/Anylinux-AppImages/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/externals/dllwalker/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/untracked/PKGBUILD": {
+    "sha256": "c15ac6dbff3e4db551ec04ad1794737939d02a0feec43a3e828913e083b06377",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/untracked/thords-kiosk-fixes.patch": {
+    "sha256": "e09521feebdd84bb8f68a2dbc2b0ccd636fbaacfb005b003e00753dd566fa0f6",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/packages/azahar/untracked/thords-vulkan-edge-aa.patch": {
+    "sha256": "a772be2a9d7a2e481f3974f4bca2454e5de66d9dd81eeefcd1912e3fcc4fcdf7",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/THORDS_BUILD": {
+    "sha256": "b45c547c5e30516bb8a23906efce7a8bef5921d9f2c52619cfaf0d54786beabd",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/lsfg-vk-thords-azahar": {
+    "sha256": "67ebb4972a9fd53b8ca4051b995ca4517cf897a77e4459898af97a06801c50bf",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/dts-patches/0007-arm64-dts-thor-debounce-lid-open-wake.patch": {
+    "sha256": "7e300a23ab1442b09064f3dff6fb7a68d21162566e5dd465907f5102fd213cf2",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/dts-patches/0008-arm64-dts-ayn-disable-volume-up-wake.patch": {
+    "sha256": "91876bbe4ab7bfdd68750f6d14b42fa7d8aaab2dcf6c2b9d9f2e07c9ae732a4c",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0009-mailbox-qcom-ipcc-mask-summary-irq-for-suspend-to-ram.patch": {
+    "sha256": "0d415b6ba98460508f639d90d5e31ad0de6330586f8332a619a64152651de0f2",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0023-input-rsinput-quiesce-and-restore-mcu-on-sleep.patch": {
+    "sha256": "52f2afe63ed2e15d8c07484fbf81f732b753fcfef7d5d8b896fede6a153369e2",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0024-tty-serial-qcom-geni-mask-non-console-irq-on-suspend.patch": {
+    "sha256": "f65f5524cce5f3cde8ae598aa2272f5a6f5c96975b5e8d11b9396aecba76db4a",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0025-scsi-ufs-qcom-balance-lane-clock-references.patch": {
+    "sha256": "4f4d02f3cbe564558fc6f35e5426e9748494818e9bd1dc29a59e842cfce18b70",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0026-serial-qcom-geni-force-system-sleep-runtime-pm.patch": {
+    "sha256": "0f2e47476b64ab22658319f7e8f120675cd9fa161f1c9c11b73fa1ca24289941",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0027-input-rsinput-release-mcu-supply-on-sleep.patch": {
+    "sha256": "ec3e9f08f1dd21669884329de9122c534bbc0a23d2dd329f3c18e8d51bfd6702",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0223-ASoC-qcom-sc8280xp-suspend-the-card-and-its-streams.patch": {
+    "sha256": "9e400f089a68fcfa56b8fa7f7a47031018f9d191c4c15f18f426d1ca690cd6c7",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0224-ASoC-qdsp6-q6apm-fail-the-graph-open-when-the-DSP-rejects-it.patch": {
+    "sha256": "f981b50ca24eb92dc1caa6807d8e9ddceadd2aed5c156757759a55b6d059a854",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/linux-thorch/patches/0225-ASoC-qdsp6-release-AudioReach-graphs-across-system-suspend.patch": {
+    "sha256": "4dd1ed06595c1877dc4bc8f903c98adfaa9ab9925cfc56d8b6d7106ac3003ab6",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thorch-bsp/payload/usr/lib/systemd/system/thorch-debug-report.timer": {
+    "sha256": "87254efb9f6ecf7929d1d4233e75c4affd90e13ad77551f17fbec69b2be7e301",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thorch-mako/PKGBUILD": {
+    "sha256": "e43fecb2363d8cf5c853025c7d856118c3cdee26c12c3f6f22cc44f01d5c9d1e",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thorch-mako/top-only.patch": {
+    "sha256": "788073dc17449369b676dd08d1773be4e5dfc082a22a6ed4ccdbda51f99cc5ea",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/PKGBUILD": {
+    "sha256": "ff4af4e8ad86e9c7db46bc8a628856484fd128ef725353c0bd0bcbff6e978b10",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/LICENSE.md": {
+    "sha256": "334de5b799cb2aefec9d9da13bb8ceeb17fde1729d6d747db77f4b481b0e34b3",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/Makefile": {
+    "sha256": "a475ba21d75124acf50d1217449db88d008720b605fcaebf525c6317996f8c22",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/UPSTREAM": {
+    "sha256": "9487593ec8d65c4a0a23bbc626937a4cafe04408b5c6ca4f76f77b8816ffade5",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/src/armada-splash.c": {
+    "sha256": "f0c0c5f29205144d4aa14a82fd02018a8995a245c7b292791c47acaaedea4d8c",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/src/font8x8_basic.h": {
+    "sha256": "49d8df366296b203ca3211bc0672cf2a762135bf12710735b6292756b19dffd5",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/src/stb_impl.c": {
+    "sha256": "bc98ef7911af234560131d9882113bc92419ed587ddec04b03a821f32b018b04",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/early-splash/src/stb_truetype.h": {
+    "sha256": "ecd30b05e0dd4fea3a13c26810dd9e1992dc379049482c393d5a19e6b5090aab",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/mkinitcpio.conf.d/95-thords-splash.conf": {
+    "sha256": "66d2a4ae50940153a5d85508391e7e602975f91adfeb8af81f6785358844e6c2",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/sudoers.d/thords-poweroff": {
+    "sha256": "0f12ced68b67d70f1b6e2f6eb32ae045edf4d645734fa22dbc857ce65423b61c",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/serial-getty@ttyMSM0.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-confext.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-coredump-register.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-coredump.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-coredumpd.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-homed-activate.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-homed.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-importd.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-importd.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-machined.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-machined.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-nsresourced.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-nsresourced.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-basic.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-cgroup.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-files.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-sign-plain.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-sign-tpm2.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report-sign-tsm.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-report.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysext.service": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysext.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysupdate-notify-bootctl.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysupdate-notify-pcrlock.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysupdate-notify-sysext.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/systemd-sysupdate.socket": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/thorch-debug-report.timer": {
+    "symlink": "/dev/null"
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/thords-hardware-buttons.service": {
+    "sha256": "7a6bdbc21c87a5f736657b9b1d0583cade740a14133000129f89d539b3281c0a",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/systemd/system/thords-session.service.d/40-early-splash.conf": {
+    "sha256": "58815fdd68d956014a36cd21b82d89c8574eb43e67ff75f208082eeda8657065",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/thords/power.conf": {
+    "sha256": "50fef5f617c422f02f93131ceea34ea41899aeec1c068cd0539a83d60d0b88da",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/etc/thords/sway.conf": {
+    "sha256": "c824f254692302f4d66e78217f1e4a08faed13f25260c9564bc58fed470136ba",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-azahar": {
+    "sha256": "09a1c475d76d40263e6cb2875f8bcae97421f4c122621e14bd37e5e9d181de29",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-brightness": {
+    "sha256": "fa55b85b2a92e74b62b9e3b819449e849376cef3f9e74360f954601085b20e5a",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-brightness-hotkeys": {
+    "sha256": "6191332552064bb7b85acab2bdb1ae17f7508b73e95f707d1ce9a48aff479c7a",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-configure-controls": {
+    "sha256": "29e2900fee2e4d565688d5eed6676317a985493f6e87d2a58b4ba84108b21bd0",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-configure-performance": {
+    "sha256": "fa49412e9e47742ddef69d9e28a2318d31e43e23bb318f6e412f49d97a388bb0",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-diagnostics": {
+    "sha256": "41a836712a9af7f7fd8eb8f91ba47f8458020e74f056c8eb1709c3c15ff4c105",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-framegen": {
+    "sha256": "6a42a042f5fc96a7ee6779613fd9f454a79c539283b01e4727cb4787c8f9765e",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-framegen-input": {
+    "sha256": "6167495194289903d63441b1e7f818c3a0daf4a699def463adc50ce98bf832ad",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-hardware-buttons": {
+    "sha256": "910339860a2e587f27f618b4964d95410813b7a66d1accf80cd6554cd048cc22",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-irq-policy": {
+    "sha256": "de89f440ab1dd9af7f519b62d8b738e608a28c9d5739613d3444aa4ec56d8bd0",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-low-battery-shutdown": {
+    "sha256": "490c461ed5bc1bd11206692a291a89e266918b84302edcb5126c599a63ebe570",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-performance": {
+    "sha256": "76a5288b9ef8d562b8f5e9dd2b401df9229974435edc648b852f93d5283319af",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-power-sample": {
+    "sha256": "98f2b7f7679944f7cb3202d78625fa8b26591921a2488e4127753532fa7193fa",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-prepare-testdata": {
+    "sha256": "97f2d535543c2930bf505435e0e49059f516d349563e958a662c7f322d589260",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-rgb-sleep": {
+    "sha256": "255665f3458f9c757345a6f6e63799fc7ded011eea2c4042b8460e14d873ee07",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-session": {
+    "sha256": "740d938a5ee880b6889beffc8fbe9af4d054053df5e32bdfd0d4ef013e96dc36",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-sleep-guard": {
+    "sha256": "403064e0de8a3c5209ab766a4214e2852e0c5c4cdef22ecceec46edbe544dac1",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-wake-policy": {
+    "sha256": "07c5eba3dc76bcb14564233476f118662c0db6ebfccdc3b7c01e6249bd176575",
+    "executable": true
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/bin/thords-window-manager": {
+    "sha256": "3cc4e8d811636138ca766e5dd8ef178bc88024e4657eaeb78f892c00a96e8592",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/initcpio/hooks/thords-splash": {
+    "sha256": "527a423596275debfe53a1be5ed77baea6236ad44da563f31b4285ca6f1fa408",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/initcpio/install/thords-splash": {
+    "sha256": "d054d749ad6ae66cdbc9c670dc1ac67f1e122176e1335fa05e3183bf3d6ebb5b",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-early-splash.service": {
+    "sha256": "8aef76d8f9c2e338b776dd23fc910aab44e9705b4da34e21172110f5e560ace8",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-irq-policy.service": {
+    "sha256": "f0bdaed224e2ab7fe1ca23bb72ea8632eb5277b8671cb76e88d2d4e44bdf0e44",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-low-battery-shutdown.service": {
+    "sha256": "8f7802422b45fc460ba3067fe3b6c58635eb440026bc1d835bc65733bd6f4677",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-performance.service": {
+    "sha256": "1fd2e9fd61bc0dd5edbbf708c431c70a7e3120c167266d09bee4bdc6d08bbad2",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-session.service": {
+    "sha256": "e5b08e980b6bb1f4e868c9c3dfa59672ce92c4cc39df06db2c7e276cc25bb2c0",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system/thords-sleep-guard.service": {
+    "sha256": "482e30babce5e722d23c7ae1bd2520e5995857915d6404b05c0297c28c31b4ac",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/systemd/system-preset/90-thords.preset": {
+    "sha256": "1c59799ec3cfa04bea945b5f7a476ceffa7e1c566e3ce6002fa878e8e1ce1466",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/sysusers.d/thords.conf": {
+    "sha256": "233d7ced9a50389f6dcb971e362e962903fe9a5316e910a749d890b62b6d4ef7",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/lib/tmpfiles.d/thords.conf": {
+    "sha256": "b2864e1481e664a576b4f4a1bc5b7e7083809a03e295b6d9dd7ac63fb38bf025",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/libexec/thords/early-splash": {
+    "sha256": "300c96d44c529bb0f51b82db029c716f01bf65a6142085e69a22337c511cd81a",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/share/inputplumber/profiles/thords-azahar.yaml": {
+    "sha256": "ec8919ef94c13fa353d0580459528fe9a50f8232d6b8e89ad78022fedeac4285",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/share/thords/boot-splash.asp": {
+    "sha256": "224f5664237d98b4ae226262344e5f71976852f7ff5e96d2e08732884ccca3d7",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/share/thords/boot-splash.png": {
+    "sha256": "4b5940d8ed646d0f5adb3f5fcf2add07415d462f746fb9c6cf6d05950adc7fa6",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/packages/thords-kiosk/rootfs/usr/share/thords/touch-test.qml": {
+    "sha256": "0659283b51e9761dd802077e56e56cd6a670cc41ca90c3ec7e2bbcaef0912641",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/tests/thords-framegen-integration.bash": {
+    "sha256": "45e081d874a08bca41b8011ded4610536ac60aa63c1823b904f5421fa2153180",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/tests/thords-power-policy.py": {
+    "sha256": "e8f23dfae57dd56f4ac2eb5110047930a232c46bb78c950fb9e3e12110f2b925",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/work/create.cpp.remote": {
+    "sha256": "d775d5c8b383ce47e9eceef2a64660c967bb263a27871e34bad28134ebdade21",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/work/instance.cpp.remote": {
+    "sha256": "e9b21074711910209277f40b0cfd9942669d0314365da8591f99267f3484c54a",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/work/profile.cpp.remote": {
+    "sha256": "451029a1597eaa8ce2c50dc8e0c663435357696646cfe1c8adc9b0492e827c70",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/work/sdl-guid.c": {
+    "sha256": "9e8d9504fa41728f19ebd1f63097ad200941c4cd04bc47f7599fc4f52daf2ff1",
+    "executable": false
+  },
+  "state/checkouts/build/thorch-work/untracked/work/thords-session.remote": {
+    "sha256": "452ed1630e897feb5816a3ffd788055f7457c2ff49548e945de7b55be31f0358",
+    "executable": true
+  },
+  "state/checkouts/upstream/azahar/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/upstream/thorch/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/3dsconv/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/armada/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/compatibility-reference-20261018/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/gyro-kettle-reference/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/gyro-lab/firmware-ayn-odin/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/gyro-lab/hexagonrpc/changes.patch": {
+    "sha256": "06e0b8ec7328bf3d5ad9c39acbc9dec521cfeb3439815e7e51b6827205d366bc",
+    "executable": false
+  },
+  "state/checkouts/work/gyro-lab/pd-mapper/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/gyro-lab/qrtr/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/hexagonrpc/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  },
+  "state/checkouts/work/mako-source/changes.patch": {
+    "sha256": "c785f29e69d9db53deb1520b50646cc2b59f6fb63681c6839294627d3901b305",
+    "executable": false
+  },
+  "state/checkouts/work/rocknix-distribution/changes.patch": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "executable": false
+  }
+}
