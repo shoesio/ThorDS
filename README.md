@@ -6,6 +6,12 @@ A dedicated Linux distribution for the AYN Thor whose normal user experience is:
 
 The Linux desktop is not the product. Linux exists to expose the Thor hardware to Azahar.
 
+## Getting started
+
+Start with [the developer setup guide](docs/GETTING_STARTED.md) for source
+restoration, build entry points, known gaps, and a map of the hardware notes.
+There is no ready-to-flash release or verified clean-install workflow yet.
+
 ## Safety
 
 The image-builder is intentionally SD-only during bring-up.
