@@ -1,0 +1,568 @@
+## CTGP-7 Dutch translation file.
+##
+## This file has been generated from the Mario Kart Translation Project spreadsheet.
+## If you want to contribute, please join the following discord server:
+## https://discord.gg/ubgfE96
+
+#Bell Cup
+$700010 :: Superbelbeker
+$710042 :: Harmoniestad
+$710059 :: Mario's Circuit \uE022\uE023
+$710044 :: Galvarny-Watervallen
+$710045 :: Wolkenhof \uE024\uE025
+
+#Acorn Cup
+$700011 :: Eikelbeker
+$710046 :: Herfstbos
+$710068 :: Rivieroever \uE024\uE025
+$710043 :: Mario's Circuit 1 RMX
+$710049 :: Bowsers Kasteel 3 \uE024\uE025
+
+#Cloud Cup
+$700012 :: Wolkenbeker
+$710053 :: Sorbetland \uE022\uE023
+$710054 :: Boe-Boe-Boerderij \uE022\uE023
+$710052 :: Pianta-Plein \uE033
+$710096 :: Mario's Circuit \uE026\uE027
+
+#Boo Cup
+$700013 :: Boo-Beker
+$710055 :: Spookpier 2
+$710062 :: Elementale Grot
+$710057 :: Spookvallei 2 \uE031\uE032
+$710065 :: Cheep Cheep-Strand \uE033
+
+#Spring Cup
+$700014 :: Springveerbeker
+$710067 :: Tik-Tak-Klok \uE033
+$710075 :: Paddenstoelenbrug \uE026\uE027
+$710066 :: Zonneruïne \uE033
+$710069 :: Kasteel der Tijd
+
+#Egg Cup
+$700015 :: Eierbeker
+$710063 :: Yoshi's Watervallen \uE033
+$710047 :: Chocokloof \uE022\uE023
+$710048 :: Paddenstoelenpas \uE033
+$710051 :: Crash-Grot CTR
+
+#Bullet Cup
+$700016 :: Bullet Bill-Beker
+$710056 :: Cortex-Kasteel CTR
+$710089 :: Revo-Circuit
+$710061 :: Choco-Eiland 2 \uE031\uE032
+$710064 :: Sterrenhelling
+
+#Blooper Cup
+$700018 :: Blooper-Beker
+$710074 :: Zandkasteelpark
+$710058 :: Jungleruïnes
+$710076 :: Luigi's Circuit \uE026\uE027
+$710077 :: Vulkaanstrandruïnes
+
+#Feather Cup
+$700019 :: Veerbeker
+$710078 :: Yoshi's Circuit \uE026\uE027
+$710079 :: Peach' Circuit \uE024\uE025
+$710080 :: Metro-Gekheid
+$710081 :: Luigi's Circuit \uE024\uE025
+
+#Fire Cup
+$700020 :: Vuurbalbeker
+$710082 :: RC Uitdaging SMO
+$710083 :: Bowsers Kasteel 4 \uE024\uE025
+$710084 :: Donutvlakte 1 RMX
+$710085 :: Geheime Glijbaan
+
+#Bob-omb Cup
+$700021 :: Bob-omb-Beker
+$710086 :: Wario's Stadion \uE033
+$710087 :: Ermii's Circuit
+$710088 :: Babypark \uE026\uE027
+$710072 :: Bowsers Kasteel \uE026\uE027
+
+#Cherry Cup
+$700022 :: Kersenbeker
+$710090 :: Mario's Circuit 3 \uE031\uE032
+$710091 :: Big Blue
+$710092 :: Shy Guy-Strand \uE024\uE025
+$710093 :: Bingo Party
+
+#Coin Cup
+$700023 :: Muntenbeker
+$710094 :: Doge-Woestijn
+$710095 :: Spookpier \uE022\uE023
+$710050 :: DK's Junglepark \uE022\uE023
+$710073 :: Miku's Verjaardag Spec. 2
+
+#Rainbow Cup
+$700017 :: Regenboogbeker
+$710070 :: Regenboogbaan \uE022\uE023
+$710071 :: Regenboogbaan \uE024\uE025
+$710114 :: Regenboogbaan 1 RMX
+$710097 :: Regenboogbaan DX
+
+#Pickaxe Cup
+$700024 :: Pikhouweelbeker
+$710098 :: Sneeuwig Sterrenzicht
+$710099 :: Zonsondergangsracebaan
+$710100 :: Afbrokkelende Pier \uE024\uE025
+$710101 :: Gletsjermijn
+
+#Mega Cup
+$700025 :: Megabeker
+$710102 :: Bloemenbedvesting
+$710103 :: Zeepaleis
+$710104 :: Sterrenstad DKR
+$710105 :: Paddenstoelenberg
+
+#Propeller Cup
+$700026 :: Propellerbeker
+$710106 :: IJzige IJsbaan \uE022\uE023
+$710107 :: Blokkeneiland
+$710108 :: Bowsers Kasteel \uE033
+$710109 :: Junglewatervallen DKR
+
+#POW Cup
+$700027 :: POW-Beker
+$710110 :: Retro Racebaan
+$710111 :: Bevroren Grot
+$710112 :: Vulkaanoever \uE024\uE025
+$710113 :: Drakenkerkhof
+
+#Rock Cup
+$700028 :: Rotsbeker
+$710060 :: Buizeneiland
+$710115 :: Neo-Metropool
+$710116 :: Koude Hoogtes
+$710117 :: Gnasty Gnorcs Hol
+
+#Moon Cup
+$700029 :: Maanbeker
+$710118 :: Vanillemeer 1 RMX
+$710119 :: Klifcircuit
+$710120 :: Interstellair Laboratorium
+$710121 :: Donkerematerievesting
+
+#Hammer Cup
+$700030 :: Hamerbeker
+$710122 :: Donutvlakte 2 \uE031\uE032
+$710123 :: Hoogtevreesbaan
+$710124 :: Bowsers Kasteel \uE022\uE023
+$710125 :: DK's Skipark \uE067
+
+#Wonder Cup
+$700031 :: Wonderbeker
+$710126 :: Schilderachtige Moerasracebaan
+$710127 :: Roulettebaan
+$710128 :: Ruimtelijke Uitkijkpost
+$710129 :: Regenboogbaan \uE033
+
+#Shine Cup
+$700032 :: Zonnebeker
+$710130 :: Kaap Koraal
+$710131 :: Wario's Goudmijn \uE067
+$710132 :: Peach' Paleistuin \uE033
+$710133 :: IJskoud Citadel
+
+#Dark Star Cup
+$700033 :: Donkere Ster-Beker
+$710134 :: Donker Heiligdom
+$710135 :: Helse Piramide
+$710136 :: Paddenstoelenstad \uE026\uE027
+$710137 :: Donkere Ster-Kasteel
+
+#Save Data
+$7005 :: Extra opslagdata voor CTGP-7\nwordt op de SD kaart gemaakt.
+$7003 :: Extra opslagdata maken...
+$7004 :: Extra opslagdata\nis aangemaakt.
+$7007 :: Mario Kart 7-opslagdata\nbestaat niet, open alsjeblieft\nhet spel om nieuwe opslag-\ndata te maken.\n\nDruk op de POWER-knop.
+
+#First opening welcome message
+welc_t :: Welkom bij CTGP-7!
+welc_1 :: Hallo daar!\nVanaf het ingebouwde menu\nkun je wat interessante functies\ngebruiken. Gebruik de (SELECT)\n-knop om het ingebouwde menu\nte openen.
+welc_2 :: Om een functie te gebruiken, plaats\nje de cursor over een item\nen druk je op A om het aan te\nzetten/te configureren.
+welc_3 :: Sommige functies zoals\n"cc-selectie" zullen uitgeschakeld\nzijn tijdens een online race.
+welc_4 :: Je statistieken worden geüpload\nnaar de CTGP-7-server zodat\nze openbaar beschikbaar\nzijn (data is geanonimiseerd).\nServercommunicatie kan\nuitgeschakeld worden vanuit\nhet menu.
+welc_5 :: Bij gebruik van het CTGP-7-\nnetwerk ga je akkoord\nmet de regels.\n\nJe kan ze hier lezen:\nctgp-7.github.io/ctww.html
+welc_6 :: Vergeet niet de CTGP-7-\nDiscord-server te bekijken!\n\nUitnodigingslink:\ninvite.gg/ctgp7
+welc_7 :: We hopen dat je\nde mod leuk vind!\n^w^
+
+#Achievements
+achiev_all_gold :: Je hebt een gouden trofee\nbehaald in alle nieuwe bekers.\n\nGefeliciteerd!
+achiev_all_1star :: Je hebt 1 ster\nin alle nieuwe bekers.\n\nGefeliciteerd!
+achiev_all_3star :: Je hebt 3 sterren\nin alle nieuwe bekers.\n\nGefeliciteerd!
+achiev_all_mission :: Je hebt 10 punten\nin alle missies.\n\nGefeliciteerd!
+achiev_5000_vr :: Je hebt 5000 rp.\nin CTWW.\n\nGefeliciteerd!
+achiev_all_score_completed :: Je hebt alle circuits\nin Scoreraces gespeeld.\n\nGefeliciteerd!
+achiev_blue_coin :: Je hebt alle blauwe\nmunten verzameld!\n\nGefeliciteerd!
+achiev_dodged_blue :: Je hebt 3 spiny-schilden\nontweken!\n\nGefeliciteerd!
+unlocked_item :: Je hebt vrijgespeeld:\n\n
+types_achievs :: Normale prestaties :: Speciale prestaties
+types_achievs_optional :: Optionele prestaties
+gold_tro_achiev :: Goud bij alle nieuwe bekers
+1star_achiev :: 1 ster bij alle nieuwe bekers
+3star_achiev :: 3 sterren bij alle nieuwe bekers
+10pts_msn_achiev :: 10 punten bij alle missies
+5000vr_achiev :: 5000 rp. in CTWW
+score_all_achiev :: Alle circuits voltooid in Scoreraces
+blue_coin_achiev :: Alle blauwe munten verzameld
+dodged_blue_achiev :: 3 Spiny-schilden ontweken
+dodged_blue_amount :: Spiny-schilden ontweken
+custom_track_cups :: Nieuwe bekers
+tro_gold :: Goud
+tro_1star :: 1 ster
+tro_3star :: 3 sterren
+tro_10pts :: 10 punten
+tro_blue_collected :: Verzameld
+
+#General text
+warning :: WAARSCHUWING
+error :: FOUT
+state :: Status
+next :: Volgende
+select :: Selecteer
+chng :: Veranderen
+custom :: Aangepast
+page :: Pagina
+race_noun :: Race
+state_mode :: Ingeschakeld :: Uitgeschakeld
+state_inf :: Schakel in :: Schakel uit
+allow_inf :: Toestaan :: Weigeren
+valid_inf :: Geldig :: Ongeldig
+num_betw :: Nummer moet tussen %d en %d in zitten.
+settings :: Instellingen
+exit :: Terug
+default :: Standaard
+button :: Knop
+summary :: Samenvatting
+continue :: Verdergaan
+mode_type :: Modus :: Type
+
+#Folders
+gameplay_folder :: Spelfuncties :: Configuratie voor aanvullende spelfuncties.
+settings_folder :: Spelopties :: CTGP-7 specifieke instellingen.
+other_folder :: Andere opties :: Andere opties en functies.
+
+#Entries
+spdmeter :: Snelheidsmeter :: Laat een snelheidsmeter zien rechtsonder op het bovenste scherm.
+ccsel :: cc-selectie :: Zet de huidige cc op een andere waarde (moet ingeschakeld zijn vóór het starten van een race).
+itemled :: Waarschuw voorwerpen met led :: De led-verlichting knippert blauw wanneer een Spiny-schild is gebruikt en geel wanneer Bliksem wordt gebruikt.
+backcam :: Achteruitkijken :: Druk op \uE002 om te zien wat er achter je zit, net zoals in andere Mario Kart-spellen! (Merk op: de \uE002-knop zal geen voorwerpen meer gebruiken.)
+charman :: Coureurmanager :: Wissel tussen de originele en nieuwe coureurs.
+cuskart :: Nieuwe karts :: Laad nieuwe karts van de MyStuff-map.
+trackorder :: Online circuitvolgorde :: Kies in welke volgorde de circuits in bekers online zitten.
+itmprb :: Verbeterde voorwerproulette :: Laat de echte voorwerpkansen zien op de voorwerproulette in plaats van willekeurige voorwerpen.
+imtrick :: Verbeterde springboosts ::  Karts gaan draaien tijdens een trucje op een schans. Gebruik de \uE077 draaiknop om de draairichting te veranderen.
+autoaccel :: Auto-acceleratie :: Wanneer op \uE000 of \uE003 wordt gedrukt, wordt auto-acceleratie aangezet totdat op \uE001 wordt gedrukt.
+imbrakedrift :: Verbeterd rem-driften :: Druk op \uE001 tijdens het driften om te remmen zonder een miniturbo te verliezen.
+autodelaydrift :: Automatische "Delay Drift" :: Helpt voorkomen dat de kart snelheid verliest wanneer deze begint te driften.
+improvedhorn :: Verbeterde claxon :: Druk op de claxon met de voorwerpknop en hoor de claxon van andere spelers.
+achieventry :: Prestaties :: Bekijk je voortgang van CTGP-7-prestaties.
+badgesentry :: Badges :: Bekijk verkregen CTGP-7-badges (internetverbinding vereist).
+optionsentry :: Opties :: Configureer CTGP-7-opties.
+servsett :: Serverinstellingen :: CTGP-7 server-gerelateerde instellingen
+cloudsaveentry :: Cloud Save-Backup :: Beheer online save-backups gemaakt door deze console.
+
+#Speedometer text
+spd_set :: Opties snelheidsmeter.
+spd_unit :: Eenheid
+spd_type :: Type
+spd_sunit :: Selecteer eenheid snelheidsmeter.
+spd_stype :: Selecteer type snelheidsmeter.
+spd_types1 :: Digitaal :: Analoog
+spd_types2 :: Double Dash
+
+#CC Selector text
+cc_set :: Opties cc-selectie.
+cc_val :: Waarde
+cc_entv :: Voer een nieuwe cc-waarde in.
+cc_chgv :: Verander waarde
+
+#Course Manager
+track_ct :: Custom Tracks
+track_ori :: Originele Circuits
+ct_endis :: Custom tracks ingeschakeld :: Custom tracks uitgeschakeld
+ori_endis :: Originele circuits ingeschakeld :: Originele circuits uitgeschakeld
+
+#Community Code Generator
+def_spd :: Standaard snelheid
+rand_tr :: Forceer willekeurige circuits
+code :: Code
+cusitem :: Custom voorwerpen
+
+#Change Round Number
+chgrnd :: Verander aantal rondes :: Verandert het aantal rondes in races en gevechten.
+chgrnd_desc :: Selecteer het aantal rondes\ndat je in VS races of gevechten wilt spelen.\nMerk op: werkt niet met Download Play.\nIn lokale Multiplayer moet iedereen\ndezelfde instellingen hebben.
+rounds :: Rondes
+rnd_sel :: Selecteer het aantal rondes.
+
+#Enhanced Local Map
+enhmap :: Aangepaste lokale kaart :: Voegt inzoomen toe aan het onderste scherm door middel van het \uE058 touchscreen.
+
+#Custom character manager text
+char_select :: Selecteer een coureur om te configureren.
+reboot_req :: Opnieuw opstarten vereist om veranderingen toe te passen.
+face_raider_sel :: Selecteer een gezicht
+authors :: Auteurs
+change_face :: Ander gezicht
+
+#Online track order
+order_mode :: Standaard :: Alphabetisch
+
+#Auto Acceleration
+autoaccel_button :: Selecteer de knop die auto-\nacceleratie activeert.
+
+#Online update check
+update_check :: Zoeken naar updates... :: De nieuwste versie van CTGP-7\nis nodig om online te spelen.
+fail_conn :: Kon niet verbinden\nmet de CTGP-7-server.\n\nProbeer het later opnieuw.
+
+#CTWW
+cntdwn :: Countdown
+ctww :: CTWW
+vr :: rp.
+CTWWtog :: Wil je CTWW inschakelen? :: Wil je CTWW uitschakelen?
+
+#VS Mode
+VSSet :: VS Instellingen
+CourOrd :: Circuitvolgorde
+RacAm :: Aantal races
+CpuAm :: CPU-spelers
+RanCT :: Willekeurig (CTs)
+RanOri :: Willekeurig (Origineel)
+RanAll :: Willekeurig (Alle)
+OrderH :: Horizontale volgorde
+OrderV :: Verticale volgorde
+NextRac :: Selecteer volgende circuit.\nRaces te gaan:
+extra_diff :: Erg Moeilijk :: EXTREEM
+cusitem_notice :: Merk op: Het standaard voorwerp (%s) zal in sommige gevallen toch voor kunnen komen.
+item_mega :: Megapaddenstoel
+item_fib :: Nep-blok
+item_boxes :: Voorwerpdozen
+item_periodic :: Periodiek :: Kies hoe vaak voorwerpen worden\ngegeven in seconden.
+item_color_rain :: Kleurendoosregen
+item_box_rain :: Voorwerpdoosregen
+item_triple :: Driedubbele voorwerpen
+item_bs_show :: Spiny-schild Showdown
+item_sel_mode :: Selecteer voorwerpmodus. :: Selecteer voorwerptype.
+
+#Reset Ghosts
+resghost :: Reset ghost :: Staat het resetten van een ghost toe op elk circuit.
+ghostseltrack :: Selecteer het circuit waarvan de ghost moet worden gereset:
+ghostcantrecov :: Deze handeling kan niet\nongedaan worden gemaakt.\nDoorgaan? :: De ghost is gereset.
+
+#Server Settings
+serv_consID :: CTGP-7 ConsoleID
+serv_communic :: Servercommunicatie :: Deze functionaliteit vereist dat\nservercommunicatie is ingeschakeld.
+serv_displname :: Naam weergeven :: Selecteer de modus voor het tonen van\njouw naam.
+serv_disphid :: Verborgen
+serv_dispmii :: Mii-naam
+serv_dispcust :: Voer aangepaste naam in. :: Naam kan maar 15\nkarakters lang zijn.
+serv_qrshow :: Druk op \uE002 om weer te geven.
+
+#Statistics
+statsentry :: Lokale statistieken :: Kijk hier je CTGP-7-statistieken na.
+stats_tpl :: Keren gespeeld
+stats_tot :: Totale offline races :: Totale online races
+stats_sc :: Totale Scoreraces :: Totale pogingen wekelijkse uitdagingen
+stats_vnll :: Origineel
+stats_most :: Meest gespeelde circuits :: Meest gespeelde arenas
+stats_rpoints :: Racepunten
+
+#Discord
+disc_info :: Discord-informatie
+disc_notlink :: Deze console is niet gekoppeld\naan een Discord-account.\n\nWil je een account koppelen?
+disc_linksteps1 :: Volg deze stappen om\neen Discord-account te koppelen:
+disc_linksteps2 :: 1. Ga naar de CTGP-7 Discord-server.\n(Link: invite.gg/ctgp7)
+disc_linksteps3 :: 2. Ga naar het \#bots-kanaal.
+disc_linksteps4 :: 3. Stuur het volgende bericht:
+disc_data :: Account :: Gebruikersnaam
+disc_beta :: Komt in aanmerking voor privé bètatesten. :: Komt niet in aanmerking voor privé bètatesten.
+disc_unlink :: Ontkoppelen :: Wil je je Discord-account\nontkoppelen?
+
+#Render Optimizations
+render_optim :: Renderoptimaliseringen :: Schakelt 3D-modus op het bovenste scherm uit en schakelt de New 3DS CPU-verbeteringen in.
+
+#Missions
+ms_miss :: Missies
+ms_desc :: Voltooi missies en ga voor de beste score!
+ms_selmiss :: Selecteer een missie
+ms_rcrd :: Record
+ms_gradelim :: Max. Rang :: Min. Rang
+ms_timescor :: Tijd :: Score
+ms_failed :: Missie gefaald!
+ms_nodata :: Geen data
+ms_delsave :: (Verwijder data: \uE002) :: Verwijder data van deze missie?
+msstat_msnplay :: Missies gespeeld
+msstat_state :: Voltooid :: Gefaald
+msstat_perfgrad :: (met perfecte rang)
+msstat_usermsn :: Eigen missies
+
+#Course Checksum
+course_check :: Circuit-Checksum
+
+#Custom Server
+server_name :: Nintendo-netwerk :: CTGP-7-netwerk
+server_choice :: Selecteer een onlineserver:\n\n%s:\n    - Alleen voor CTGP-7-spelers\n    - CTWW en originele circuits\n    - Sterke anti-cheat\n%s:\n    - Voor alle MK7-spelers\n    - Originele circuits en community's\n    - Zwakke anti-cheat
+server_ctgp7_conn :: Bezig verbinding te maken\nmet het CTGP-7-netwerk...
+server_ctgp7_dconn :: Wil je de verbinding met\nhet CTGP-7-netwerk verbreken?
+server_ctgp7_nocomm :: Community's zijn niet beschikbaar\nin het CTGP-7-netwerk.
+
+#Blue Coins
+blue_coins :: Blauwe munten
+blue_coins_desc :: Een blauwe munt zal verschijnen op elk circuit. Verzamel ze allemaal om iets te ontgrendelen!
+blue_coin_obtain :: $Blauwe munt$\nverzameld! :: %d circuits \n te gaan.
+blue_coin_all :: Alle munten \nzijn verzameld!
+blue_coin_nocc :: Blauwe munten kunnen niet\nworden verzameld met \ncc-selectie ingeschakeld.
+
+#Lobby
+lobby_type :: Openbare groep :: Privégroep
+choose_lobby :: Kies online groep:\n\n- Openbaar: Speel met andere CTGP-7-spelers.\n- Privé: Speel met andere spelers in het privé.\n\nMerk op: originele RP wordt gebruikt in privégroepen.
+enter_lobby_code :: Vul code van privégroep in.\nDeel deze code met anderen om samen te spelen! :: Groepscode is te kort.
+
+#Proximity Chat
+proximity_chat :: Proximity Chat :: (druk op \uE002 om te wisselen)
+proximity_chat_desc :: Maak verbinding met de proximity chatclient.\nMeer informatie: pastebin.com/ZPQs0FWR\n\nServeradres: %s\nDruk op \uE001 om te annuleren. :: Er is een fout opgetreden.\nDruk op \uE001 om af te sluiten.
+
+#Badges
+badges_obtained :: Verkregen badges:
+badges_use_online :: Gebruik online :: Gebruik niet online
+badge_name_desc :: Badgenaam :: Badgebeschrijving
+badge_date :: Datum verkregen
+badge_msg :: Je hebt nieuwe CTGP-7-\nbadges verkregen.\n\nGefeliciteerd!
+badge_date_fmt :: %d-%m-%Y
+
+#Score Attack Actions
+pts_action_0 :: Paddenstoel!
+pts_action_1 :: Sprintpaneel
+pts_action_2 :: Miniturbo
+pts_action_3 :: Superminiturbo
+pts_action_4 :: Kleine superstart
+pts_action_5 :: Superstart
+pts_action_6 :: Perfecte superstart
+pts_action_7 :: Springboost
+pts_action_8 :: Superspringboost
+pts_action_9 :: Slipstream
+pts_action_10 :: Gouden Paddenstoel!
+pts_action_11 :: Munt
+pts_action_12 :: Sterrenring
+pts_action_13 :: Buis
+pts_action_14 :: Goomba
+pts_action_15 :: Swoop
+pts_action_16 :: Pylon
+pts_action_17 :: Rotsblok
+pts_action_18 :: Cheep Cheep
+pts_action_19 :: Clampy
+pts_action_20 :: Sidestepper
+pts_action_21 :: Geit
+pts_action_22 :: Pot
+pts_action_23 :: Vliegend Tapijt-Shy Guy
+pts_action_24 :: Ton
+pts_action_25 :: Tiki Goon
+pts_action_26 :: Frogoon
+pts_action_27 :: Auto
+pts_action_28 :: Kist
+pts_action_29 :: Pinguïn
+pts_action_30 :: IJspegel
+pts_action_31 :: Thwomp
+pts_action_32 :: Nepstruik
+pts_action_33 :: Nep-Goomba
+pts_action_34 :: Piranha Plant
+pts_action_35 :: Chain Chomp
+pts_action_36 :: Fish Bone
+pts_action_37 :: Anker
+pts_action_38 :: Music Bash
+pts_action_39 :: Bladhoop
+pts_action_40 :: Wiggler
+pts_action_41 :: Bullet Bill
+pts_action_42 :: Rocky Wrench
+pts_action_43 :: Sneeuwpop
+pts_action_44 :: Sneeuwbal
+pts_action_45 :: Metalen bal
+pts_action_46 :: Tafel
+pts_action_47 :: Cactus
+pts_action_48 :: Trein
+pts_action_49 :: Stingby
+pts_action_50 :: Vliegtijd
+pts_action_51 :: Groen Schild-treffer!
+pts_action_52 :: Rood Schild-treffer!
+pts_action_53 :: Banaantreffer!
+pts_action_54 :: Spiny-schildtreffer!
+pts_action_55 :: Bliksemtreffer!
+pts_action_56 :: Nep-bloktreffer!
+pts_action_57 :: Bob-ombtreffer!
+pts_action_58 :: Vuurbloemtreffer!
+pts_action_59 :: Superblaadjestreffer!
+pts_action_60 :: Blooperactivering!
+pts_action_61 :: Stertreffer!
+pts_action_62 :: Megapaddenstoeltreffer!
+pts_action_63 :: Bullet Bill-treffer!
+pts_action_64 :: Bullet Bill-inhaling
+pts_action_65 :: Payback!
+pts_action_66 :: Smash!
+pts_action_67 :: Voorwerp vernietigd
+pts_action_68 :: Voorwerp geweerd
+pts_action_69 :: Spiny-schild vermeden!
+pts_action_70 :: Volgende ronde!
+pts_action_71 :: Volgende traject!
+pts_action_72 :: Frenzy-finish!
+pts_action_73 :: Finish!
+
+#Score Attack
+score_attack :: Scoreraces :: Keten acties om de meeste punten te krijgen!
+sc_at_spc_cup :: Willekeurig circuit :: Wekelijkse uitdaging
+sc_at_race_start :: Scorerace
+sc_at_clear :: Circuit voltooid :: Circuit niet voltooid
+sc_at_save :: (Verwijder data: \uE002) :: (Geen)
+sc_at_score :: Beste score :: Voltooiingsscore
+sc_at_delete :: Verwijder deze circuitdata?
+sc_at_record :: Nieuw record!
+sc_at_clear_small :: Voltooid! :: Niet voltooid
+sc_at_cleared_tr :: Voltooide circuits
+sc_at_nice :: GOED!
+sc_at_great :: GEWELDIG!
+sc_at_excel :: UITSTEKEND!
+sc_at_fanta :: FANTASTISCH!
+sc_at_combo :: Combo ×
+
+#Score Attack Weekly
+sc_wc_ended :: Huidige wekelijkse uitdaging is beëindigd :: Geen data beschikbaar
+sc_wc_curr :: Huidige uitdaging:
+sc_wc_time :: Resterende tijd:
+sc_wc_bonus :: Bonuscombo: :: Jouw bonus:
+sc_wc_board :: Klassement: Top 10 :: Klassement: Mijn score
+sc_wc_getting :: Verkrijgen van informatie van wekelijkse uitdaging... :: Mislukt om informatie van wekelijkse uitgaging te verkijgen.\nError: 0x%08X
+sc_wc_results :: Resultaten wekelijkse uitdaging
+sc_wc_score :: Vorige score: :: Nieuwe score:
+sc_wc_upload :: Wil je jouw score publiceren? :: Publiceren
+sc_wc_uploading :: Uploaden van resultaten... :: Een fout is opgetreden.
+sc_wc_retry :: Opnieuw proberen?
+
+#Local Multiplayer Error
+mult_error :: Alle deelnemers moeten\nde nieuwste versie van CTGP-7\nhebben geïnstalleerd. :: Je moet CTGP-7 updaten\nom in deze kamer\n te spelen.
+
+#Save Backup
+sbak_avail :: Deze optie is alleen beschikbaar\nin het singleplayer-menu.
+sbak_fetch :: Ophalen van informatie save-backup... :: Mislukt om informatie save-backup te verkrijgen:\n0x%08X
+sbak_info :: Informatie save-backup
+sbak_found :: Save-backup gevonden. :: Save-backup niet gevonden.
+sbak_created :: Gemaakt:
+sbak_cretime :: Vandaag :: %d dagen geleden
+sbak_create :: Maak backup
+sbak_restore :: Herstel backup
+sbak_delete :: Verwijder backup
+sbak_new :: Een nieuwe online save-backup wordt\ngemaakt (exclusief ghost-data). :: De vorige online save-backup wordt overschreven.
+sbak_newprog :: Maken van backup: %s
+sbak_newres :: Backup succesvol gemaakt. :: Mislukt om backup te maken:\n0x%08X
+sbak_rest :: De online save-backup wordt\nhersteld. :: De huidige save-data wordt\nverplaatst naar de mappen:
+sbak_restex :: De backupmappen bestaan al en\n ze worden verwijderd.
+sbak_restprog :: Herstellen van backup: %s
+sbak_restres :: Backup succesvol hersteld. :: Mislukt om backup te herstellen:\n0x%08X
+sbak_restres2 :: Herstel de volgende mappen\nhandmatig om de oude\nsave-data terug te krijgen. :: Het spel wordt afgesloten.
+sbak_dele :: De online save-backup wordt\nverwijderd. :: Dit kan niet ongedaan gemaakt worden.
+sbak_deleprog :: Verwijderen van backup...
+sbak_deleres :: Backup succesvol verwijderd. :: Mislukt om backup te verwijderen:\n0x%08X
+
+#Photo Mode
+photo_inst :: Besturing foto maken\n\nA: Maak foto\nB: Terug\nDraaiknop: Beweeg\nTouchscreen: Rondkijken\nL/R: Zoom\nX/Y: Verander snelheid
+photo_saved :: Foto opgeslagen!

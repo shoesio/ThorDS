@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Run outside the frozen user slice, ordered around sleep.target.
+set -euo pipefail
+state=/run/thords-sleep
+logs=/var/log/thords/sleep
+mkdir -p "$state" "$logs"
+case "${1:-}" in
+  pre)
+    if systemctl is-active --quiet thorch-lavd.service; then
+      touch "$state/restart-lavd"
+      systemctl stop thorch-lavd.service
+    fi
+    /usr/bin/thords-wake-policy pre
+    /usr/bin/thords-rgb-sleep pre || true
+    /usr/bin/thords-power-sample --snapshot --sleep-phase pre > "$logs/latest-pre.json"
+    logger -t thords-sleep 'Prepared sleep; LAVD stopped if previously active'
+    ;;
+  post)
+    /usr/bin/thords-wake-policy post || true
+    /usr/bin/thords-rgb-sleep post || true
+    /usr/bin/thords-power-sample --snapshot --sleep-phase post > "$logs/latest-post.json" || true
+    # Restore only a scheduler that was active before this sleep.
+    if [[ -f "$state/restart-lavd" ]]; then
+      systemctl start thorch-lavd.service
+      rm -f "$state/restart-lavd"
+    fi
+    logger -t thords-sleep 'Sleep lifecycle finished; battery snapshots saved'
+    ;;
+  *) echo 'Usage: thords-sleep-guard pre|post' >&2; exit 2 ;;
+esac

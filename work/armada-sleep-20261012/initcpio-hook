@@ -1,0 +1,4 @@
+#!/usr/bin/ash
+run_earlyhook() {
+    /usr/libexec/thords/early-splash start || true
+}

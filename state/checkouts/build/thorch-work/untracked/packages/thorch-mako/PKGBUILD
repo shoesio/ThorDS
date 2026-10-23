@@ -1,0 +1,54 @@
+pkgname=thorch-mako
+pkgver=3.3.0
+pkgrel=3
+pkgdesc='MAKO Vulkan frame-generation layer for ThorDS'
+arch=('aarch64')
+license=('GPL-3.0-or-later')
+
+depends=(
+  vulkan-icd-loader
+)
+
+makedepends=(
+  clang
+  cmake
+  git
+  ninja
+  vulkan-headers
+  libx11
+  libxcb
+  xorgproto
+)
+
+source=(
+  "MAKO::git+https://github.com/eugeniosegala/MAKO.git#commit=0534110a381672dc33a285d45a61662ff06f44ae"
+  "top-only.patch"
+)
+
+sha256sums=('SKIP' 'SKIP')
+
+prepare() {
+  cd "$srcdir/MAKO"
+  patch -p1 < "$srcdir/top-only.patch"
+}
+
+build() {
+  cmake \
+    -S "$srcdir/MAKO/engine" \
+    -B "$srcdir/build" \
+    -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_CXX_COMPILER=clang++ \
+    -DMAKO_BUILD_VK_LAYER=ON \
+    -DMAKO_BUILD_UI=OFF \
+    -DMAKO_BUILD_CLI=ON \
+    -DMAKO_INSTALL_XDG_FILES=OFF \
+    -DMAKO_REQUIRE_NATIVE_PACKAGE_HEADERS=OFF \
+    -DBUILD_TESTING=OFF
+  cmake --build "$srcdir/build"
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install "$srcdir/build"
+}

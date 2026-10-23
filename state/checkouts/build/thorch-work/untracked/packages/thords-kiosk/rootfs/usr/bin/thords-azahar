@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -u
+
+log_file="/var/log/thords/framegen.log"
+mkdir -p "$(dirname "$log_file")"
+
+state=on
+if [[ -x /usr/bin/thords-framegen ]]; then
+  state=$(/usr/bin/thords-framegen status 2>>"$log_file" | sed -n 's/^frame-generation=//p')
+fi
+if [[ "${THORDS_FRAMEGEN_SESSION_NATIVE:-0}" == 1 ]]; then
+  state=off
+fi
+export THORDS_FRAMEGEN_TARGET_FPS=120
+export THORDS_FRAMEGEN_ENABLED="$state"
+# Select the 1920x1080 (120 Hz) surface; the 1240x1080 touch surface stays native.
+export MAKO_FRAME_GENERATION_TOP_ONLY=1
+
+# The console requires the verified XWayland presentation path. XWayland may
+# start lazily, so socket existence is not a safe test during a cold boot.
+export DISPLAY="${DISPLAY:-:0}"
+export QT_QPA_PLATFORM=xcb
+
+# Keep the ThorDS profile separate from any desktop MAKO configuration. This
+# makes the feature automatic while preserving a user's unrelated profiles.
+mako_config_dir="${HOME}/.config/thords"
+mako_config="$mako_config_dir/mako-120.toml"
+mkdir -p "$mako_config_dir"
+cat >"$mako_config" <<'EOF'
+version = 2
+
+[global]
+allow_fp16 = true
+
+[[profile]]
+name = "ThorDS 120 Hz"
+active_in = ["azahar"]
+frame_generation_enabled = true
+multiplier = 2
+performance_mode = true
+flow_scale = 0.7
+adaptive = false
+target_fps = 120
+adaptive_max_multiplier = 2
+adaptive_stable_cadence = false
+adaptive_auto_base_fps_cap = false
+EOF
+if [[ -s "${HOME}/.local/mako/Lossless.dll" ]]; then
+  sed -i "/^\[global\]/a dll = \"${HOME}/.local/mako/Lossless.dll\"" "$mako_config"
+fi
+if [[ "$state" == off ]]; then
+  sed -i 's/^frame_generation_enabled = true$/frame_generation_enabled = false/' "$mako_config"
+fi
+export MAKO_CONFIG="$mako_config"
+export MAKO_PROFILE="ThorDS 120 Hz"
+
+launcher=""
+for candidate in "${HOME}/.local/mako/bin/mako-launch" \
+                "${HOME}/.local/bin/mako-launch" \
+                /usr/bin/mako-launch /usr/local/bin/mako-launch; do
+  if [[ -x "$candidate" ]]; then
+    launcher=$candidate
+    break
+  fi
+done
+
+if [[ "$state" == on && -n "$launcher" ]]; then
+  case "$launcher" in
+    "${HOME}"/*)
+      mako_prefix=${launcher%/bin/mako-launch}
+      export LD_LIBRARY_PATH="$mako_prefix/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+      ;;
+  esac
+  printf 'starting Azahar through %s with fixed 2x top-only profile\n' "$launcher" >>"$log_file"
+  "$launcher" azahar "$@"
+  launcher_rc=$?
+  if [[ "$launcher_rc" -ne 0 ]]; then
+    printf 'MAKO launch failed with %s; retrying native Azahar\n' "$launcher_rc" >>"$log_file"
+    exec azahar "$@"
+  fi
+  exit 0
+fi
+
+if [[ "$state" == on ]]; then
+  printf 'MAKO unavailable; using normal Vulkan presentation\n' >>"$log_file"
+else
+  printf 'frame generation disabled by hidden toggle\n' >>"$log_file"
+fi
+exec azahar "$@"

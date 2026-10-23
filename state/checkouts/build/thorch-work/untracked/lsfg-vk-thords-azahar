@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -u
+
+log_file="/var/log/thords/framegen.log"
+mkdir -p "$(dirname "$log_file")"
+
+# Azahar's duplicate-frame suppression is specifically intended for external
+# frame-generation layers. It does not change emulation speed or game cadence.
+config="${HOME}/.config/azaharplus-emu/qt-config.ini"
+if [[ -f "$config" ]]; then
+  if grep -q '^skip_presenting_duplicate_frames=' "$config"; then
+    sed -i 's/^skip_presenting_duplicate_frames=.*/skip_presenting_duplicate_frames=true/' "$config"
+  else
+    printf '\nskip_presenting_duplicate_frames=true\n' >>"$config"
+  fi
+fi
+
+state=on
+if [[ -x /usr/bin/thords-framegen ]]; then
+  state=$(/usr/bin/thords-framegen status 2>>"$log_file" | sed -n 's/^frame-generation=//p')
+fi
+export THORDS_FRAMEGEN_TARGET_FPS=120
+export THORDS_FRAMEGEN_ENABLED="$state"
+export MANGOHUD=1
+export MANGOHUD_CONFIG=fps_only
+export MAKO_PRESENT_DIAGNOSTICS=1
+export MAKO_PRESENT_DIAGNOSTICS_THRESHOLD_MS=25
+export VK_LAYER_PATH="/usr/share/vulkan/implicit_layer.d"
+
+mako_config_dir="${HOME}/.config/thords"
+mako_config="$mako_config_dir/mako-120.toml"
+mkdir -p "$mako_config_dir"
+cat >"$mako_config" <<'EOF'
+version = 2
+
+[global]
+dll = "/home/thords/.local/mako/Lossless.dll"
+allow_fp16 = true
+
+[[profile]]
+name = "ThorDS 120 Hz"
+active_in = ["azahar"]
+frame_generation_enabled = true
+adaptive = true
+target_fps = 120
+adaptive_max_multiplier = 5
+adaptive_stable_cadence = true
+adaptive_auto_base_fps_cap = false
+EOF
+if [[ "$state" == on ]]; then
+  printf 'starting Azahar through MAKO with Fixed 2x presentation\n' >>"$log_file"
+  exec /usr/bin/mako-launch azahar "$@"
+fi
+printf 'MAKO disabled by hidden toggle; using normal Vulkan presentation\n' >>"$log_file"
+export DISABLE_MAKO=1
+exec azahar "$@"

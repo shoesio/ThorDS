@@ -1,0 +1,7 @@
+{
+  "armada_commit": "d2bcf6fd33435f670f59a164c926842af91730f1",
+  "path": "packages/kernel/patches/0504-mailbox-qcom-ipcc-mask-summary-irq-for-suspend-to-ram.patch",
+  "sha256": "0d415b6ba98460508f639d90d5e31ad0de6330586f8332a619a64152651de0f2",
+  "old_kernel": "7.1.2-thorch19",
+  "new_kernel": "7.1.2-thorch20"
+}

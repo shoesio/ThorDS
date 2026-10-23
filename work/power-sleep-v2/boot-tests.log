@@ -1,0 +1,18 @@
+thorch atomic boot rebuild checks passed
+:: thorch-boot-transaction removed legacy hook mask /tmp/tmp.1FM7omRlYf/root/etc/pacman.d/hooks/60-mkinitcpio-remove.hook
+:: thorch-boot-transaction removed legacy hook mask /tmp/tmp.1FM7omRlYf/root/etc/pacman.d/hooks/90-mkinitcpio-install.hook
+:: thorch-boot-transaction retained boot payload and modules for old-release
+:: thorch-boot-transaction recovered the prior rollback generation after an interrupted publication
+:: thorch-boot-transaction restored boot payload and modules for old-release
+:: thorch-boot-transaction finished cleanup of an interrupted rollback publication
+:: thorch-boot-transaction restored boot payload and modules for old-release
+:: thorch-boot-transaction retained boot payload and modules for old-release
+:: thorch-boot-transaction boot payload for new-release validated; reboot required
+:: thorch-boot-transaction restored boot payload and modules for old-release
+:: thorch-boot-transaction retained boot payload and modules for old-release
+:: thorch-boot-transaction boot payload for new-release validated; reboot required
+:: thorch-boot-transaction confirmed successful boot of new-release
+:: thorch-boot-transaction restored boot payload and modules for old-release
+:: thorch-boot-transaction retained boot payload and modules for old-release
+:: thorch-boot-transaction retained boot payload and modules for old-release
+thorch transactional boot-update checks passed

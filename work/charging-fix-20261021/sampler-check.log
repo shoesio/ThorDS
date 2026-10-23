@@ -1,0 +1,1 @@
+PASS: battery/USB snapshot valid; unwritable history does not block sampling

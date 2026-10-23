@@ -1,0 +1,14 @@
+[Unit]
+Description=ThorDS SM8550 interrupt and idle policy
+After=thorch-hw-defaults.service systemd-udev-trigger.service
+Wants=thorch-hw-defaults.service
+Before=thords-performance.service thords-session.service
+ConditionPathExists=/sys/class/devfreq/3d00000.gpu
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/thords-irq-policy
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

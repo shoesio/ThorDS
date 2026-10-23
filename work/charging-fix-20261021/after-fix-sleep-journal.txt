@@ -1,0 +1,7 @@
+Oct 21 22:30:59 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 22:37:12 alarm kernel: PM: suspend exit
+Oct 21 22:30:59 alarm thords-sleep[7136]: Prepared sleep; LAVD stopped if previously active
+Oct 21 22:37:12 alarm thords-sleep[7241]: Sleep lifecycle finished; battery snapshots saved
+total 8
+-rw-r--r-- 1 root root 1276 Oct 21 22:30 1792618259329787984-pre.json
+-rw-r--r-- 1 root root 1296 Oct 21 22:37 1792618632675503145-post.json

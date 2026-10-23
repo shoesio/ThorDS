@@ -1,0 +1,568 @@
+## CTGP-7 Russian translation file.
+##
+## This file has been generated from the Mario Kart Translation Project spreadsheet.
+## If you want to contribute, please join the following discord server:
+## https://discord.gg/ubgfE96
+
+#Bell Cup
+$700010 :: Кубок колокольчика
+$710042 :: Город Согласия
+$710059 :: Трасса Марио \uE022\uE023
+$710044 :: Галварные водопады
+$710045 :: Облачный сад \uE024\uE025
+
+#Acorn Cup
+$700011 :: Кубок желудя
+$710046 :: Осенний лес
+$710068 :: Прибрежный парк \uE024\uE025
+$710043 :: Трасса Марио 1 RMX
+$710049 :: Замок Боузера 3 \uE024\uE025
+
+#Cloud Cup
+$700012 :: Кубок облака
+$710053 :: Снежные просторы \uE022\uE023
+$710054 :: Ферма му-му \uE022\uE023
+$710052 :: Сквер Дельфино \uE033
+$710096 :: Трасса Марио \uE026\uE027
+
+#Boo Cup
+$700013 :: Кубок бу
+$710055 :: Жуткий настил 2
+$710062 :: Стихийная пещера
+$710057 :: Долина призраков 2 \uE031\uE032
+$710065 :: Пляж чип-чипов \uE033
+
+#Spring Cup
+$700014 :: Кубок пружины
+$710067 :: Часы тик-так \uE033
+$710075 :: Грибной мост \uE026\uE027
+$710066 :: Пылающая пустыня \uE033
+$710069 :: Замок Времени
+
+#Egg Cup
+$700015 :: Кубок яйца
+$710063 :: Водопады йоши \uE033
+$710047 :: Шоколадная гора \uE022\uE023
+$710048 :: Грибной кряж \uE033
+$710051 :: Бухта Крэша CTR
+
+#Bullet Cup
+$700016 :: Кубок пули
+$710056 :: Замок Кортекса CTR
+$710089 :: Трасса Рево
+$710061 :: Шоколадн. остров 2 \uE031\uE032
+$710064 :: Звездный склон
+
+#Blooper Cup
+$700018 :: Кубок блупера
+$710074 :: Парк песчаных замков
+$710058 :: Руины джунглей
+$710076 :: Трасса Луиджи \uE026\uE027
+$710077 :: Руины вулканич. пляжа
+
+#Feather Cup
+$700019 :: Кубок пера
+$710078 :: Трасса Йоши \uE026\uE027
+$710079 :: Трасса Пич \uE024\uE025
+$710080 :: Город-безумие
+$710081 :: Трасса Луиджи \uE024\uE025
+
+#Fire Cup
+$700020 :: Кубок огня
+$710082 :: Радиогонки SMO
+$710083 :: Замок Боузера 4 \uE024\uE025
+$710084 :: Бубликовые поля 1 RMX
+$710085 :: Потайная горка
+
+#Bob-omb Cup
+$700021 :: Кубок боб-омба
+$710086 :: Стадион Варио \uE033
+$710087 :: Трасса Ermii
+$710088 :: Луна-парк Малыш \uE026\uE027
+$710072 :: Замок Боузера \uE026\uE027
+
+#Cherry Cup
+$700022 :: Кубок вишни
+$710090 :: Трасса Марио 3 \uE031\uE032
+$710091 :: Синеморь
+$710092 :: Пляж скромняг \uE024\uE025
+$710093 :: Бинго-пати
+
+#Coin Cup
+$700023 :: Кубок монетки
+$710094 :: Пустыня Доги
+$710095 :: Проклятое болото \uE022\uE023
+$710050 :: Шоссе в джунглях ДК \uE022\uE023
+$710073 :: Ко дню рождения Мику 2
+
+#Rainbow Cup
+$700017 :: Радужный кубок
+$710070 :: Трасса Радуга \uE022\uE023
+$710071 :: Трасса Радуга \uE024\uE025
+$710114 :: Трасса Радуга 1 RMX
+$710097 :: Трасса Радуга DX
+
+#Pickaxe Cup
+$700024 :: Кубок кирки
+$710098 :: Звездный пик
+$710099 :: Закат на автодроме
+$710100 :: Переломанный пирс \uE024\uE025
+$710101 :: Ледниковая шахта
+
+#Mega Cup
+$700025 :: Кубок мегагриба
+$710102 :: Цветочная крепость
+$710103 :: Приозерный дворец
+$710104 :: Звездный город DKR
+$710105 :: Грибная гора
+
+#Propeller Cup
+$700026 :: Кубок пропеллера
+$710106 :: Ледяная страна \uE022\uE023
+$710107 :: Остров блоков
+$710108 :: Замок Боузера \uE033
+$710109 :: Водопады джунглей DKR
+
+#POW Cup
+$700027 :: Кубок «POW»
+$710110 :: Ретро-трасса
+$710111 :: Замороженный грот
+$710112 :: Озерный парк \uE024\uE025
+$710113 :: Драконье кладбище
+
+#Rock Cup
+$700028 :: Кубок скалы
+$710060 :: Остров труб
+$710115 :: Нео-метрополис
+$710116 :: Ледяные высоты
+$710117 :: Логово Гнасти Гнорка
+
+#Moon Cup
+$700029 :: Кубок луны
+$710118 :: Ванильное озеро 1 RMX
+$710119 :: Трасса на скале
+$710120 :: Межзвездная лаборатория
+$710121 :: Крепость темной материи
+
+#Hammer Cup
+$700030 :: Кубок молотка
+$710122 :: Бубликовые поля 2 \uE031\uE032
+$710123 :: Парящая эстакада
+$710124 :: Замок Боузера \uE022\uE023
+$710125 :: Сноуборд-кросс ДК \uE067
+
+#Wonder Cup
+$700031 :: Кубок чуда
+$710126 :: Окрашенное болото
+$710127 :: Дорога рулетки
+$710128 :: Орбитальный аванпост
+$710129 :: Трасса Радуга \uE033
+
+#Shine Cup
+$700032 :: Кубок солнца
+$710130 :: Коралловый мыс
+$710131 :: Золотой прииск Варио \uE067
+$710132 :: Сады Пич \uE033
+$710133 :: Цитадель Бризчилля
+
+#Dark Star Cup
+$700033 :: Кубок тёмной звезды
+$710134 :: Темное святилище
+$710135 :: Адская пирамида
+$710136 :: Грибной город \uE026\uE027
+$710137 :: Замок Темной Звезды
+
+#Save Data
+$7005 :: На карте SD будут созданы\nдополнительные данные\nсохранения для CTGP-7.
+$7003 :: Идет создание доп.\nданных сохранения...
+$7004 :: Дополнительные данные\nсохранения созданы.
+$7007 :: Данные сохранения для игры\nMario Kart 7 не найдены.\nЗапусти игру и создай\nновый файл сохранения.\n\nНажми кнопку POWER.
+
+#First opening welcome message
+welc_t :: Добро пожаловать в CTGP-7
+welc_1 :: Рады тебя видеть!\nВо внутриигровом меню теперь\nможно включить интересные\nфункции. Открывается оно\nкнопкой (SELECT).
+welc_2 :: Чтобы включить или\nнастроить функцию,\nвыдели ее и нажми A.
+welc_3 :: Учти, что некоторые функции,\nвроде «Выбора класса\nдвигателя», не будут\nработать при игре онлайн.
+welc_4 :: Твоя статистика будет\nзагружена на сервер CTGP-7\nв открытый доступ.\n(Данные обезличены.)\nСбор данных можно отключить\nво внутриигровом меню.
+welc_5 :: Играя CTGP-7 Network, ты согла-\nшаешься с правилами этого\nсервиса.\n\nСоветуем ознакомиться:\nctgp-7.github.io/ctww.html
+welc_6 :: Не забудь заглянуть на\nDiscord-сервер CTGP-7!\n\nСсылка-приглашение:\ninvite.gg/ctgp7
+welc_7 :: Надеемся, тебе понравится\nнаш мод! ^ω^
+
+#Achievements
+achiev_all_gold :: Во всех кубках сообщества\nзаработано золото!\n\nПоздравляем!
+achiev_all_1star :: Во всех кубках сообщества\nзаработано по одной звезде!\n\nПоздравляем!
+achiev_all_3star :: Во всех кубках сообщества\nзаработано по три звезды!\n\nПоздравляем!
+achiev_all_mission :: Во всех миссиях\nзаработано по 10 очков!\n\nПоздравляем!
+achiev_5000_vr :: В режиме «Весь мир\n(трассы сообщества)»\nзаработано 5000 ИР!\n\nПоздравляем!
+achiev_all_score_completed :: You have cleared all\ntracks in Score Attack.\n\nCongratulations!
+achiev_blue_coin :: Собраны все\nсиние монетки!\n\nПоздравляем!
+achiev_dodged_blue :: Тебе удалось ускользнуть\nот трех панцирей колючкина!\n\nПоздравляем!
+unlocked_item :: Разблокировано:\n\n
+types_achievs :: Обычные достижения :: Особые достижения
+types_achievs_optional :: Опциональные достимжения
+gold_tro_achiev :: Золото во всех кубках сообщества
+1star_achiev :: 1 звезда во всех кубках сообщества
+3star_achiev :: 3 звезды во всех кубках сообщества
+10pts_msn_achiev :: 10 очков во всех миссиях
+5000vr_achiev :: 5000 ИР в «Весь мир (трассы сообщества)»
+score_all_achiev :: All tracks cleared in Score Attack
+blue_coin_achiev :: Собрать все синие монетки
+dodged_blue_achiev :: Ускользнуть от 3 панцирей колючкина
+dodged_blue_amount :: Ускользания
+custom_track_cups :: Кубки сообщества
+tro_gold :: Золото
+tro_1star :: 1 звезда
+tro_3star :: 3 звезды
+tro_10pts :: 10 очков
+tro_blue_collected :: Собрано
+
+#General text
+warning :: ВНИМАНИЕ
+error :: ОШИБКА
+state :: Состояние
+next :: Далее
+select :: Выбрать
+chng :: Изменить
+custom :: Свое
+page :: Страница
+race_noun :: Гонка
+state_mode :: Включено :: Отключено
+state_inf :: Включить :: Отключить
+allow_inf :: Разрешить :: Запретить
+valid_inf :: OK :: Ошибка
+num_betw :: Число должно быть от %d до %d.
+settings :: Настройки
+exit :: Выход
+default :: По умолчанию
+button :: Кнопка
+summary :: Сводка
+continue :: Continue
+mode_type :: Mode :: Type
+
+#Folders
+gameplay_folder :: Дополнения к геймплею :: Управление дополнительными геймплейными функциями.
+settings_folder :: Настройки игры :: Настройки CTGP-7.
+other_folder :: Прочие настройки :: Прочая информация и различные опции.
+
+#Entries
+spdmeter :: Спидометр :: Отображение твоей скорости в правом нижнем углу верхнего экрана.
+ccsel :: Выбор класса двигателя :: Задает классу двигателя определенное значение (нужно включить до гонки).
+itemled :: LED-оповещения о предметах :: Если светодиод мигает синим — кто-то применил панцирь колючкина, а если желтым — молнию.
+backcam :: Задний обзор :: Нажми \uE002, чтобы посмотреть назад, как в других играх Mario Kart! (Кнопкой \uE002 нельзя будет использовать предметы.)
+charman :: Менеджер персонажей :: Переключайся между оригинальными персонажами и персонажами от сообщества.
+cuskart :: Свои машины :: Загружать свои машины из папки MyStuff.
+trackorder :: Порядок трасс в онлайне :: Изменить расстановку трасс при игре онлайн.
+itmprb :: Улучшенная рулетка предметов :: Вместо случайных отображает предметы, соответствующие твоему месту.
+imtrick :: Улучшенные трюки :: Во время выполнения трюка машины будут вращаться вокруг своей оси. Направление вращения зависит от наклона \uE077 кнопки движения.
+autoaccel :: Автоускорение :: Нажми \uE000 или \uE003, чтобы включить автоматическое ускорение. Чтобы отключить, нажми \uE001.
+imbrakedrift :: Улучшенный занос с тормозом :: Удерживай \uE001 во время заноса, чтобы замедлиться без потери мини-ускорения.
+autodelaydrift :: Автоматический Delay Drift :: Помогает не потерять скорость при вхождении в занос.
+improvedhorn :: Улучшенный гудок :: Включай гудок на кнопку предмета и слушай гудки других игроков в совместной игре.
+achieventry :: Достижения :: Статистика по достижениям CTGP-7.
+badgesentry :: Значки :: Список заработанных значков. (Требуется подключение к Интернету.)
+optionsentry :: Настройки :: Настройки CTGP-7.
+servsett :: Настройки сервера :: Настройки, относящиеся к серверу CTGP-7.
+cloudsaveentry :: Cloud Save Backup :: Manage online save backups created from this console.
+
+#Speedometer text
+spd_set :: Настройки спидометра.
+spd_unit :: Единицы измерения
+spd_type :: Тип
+spd_sunit :: Выбери единицы измерения скорости.
+spd_stype :: Выбери тип спидометра.
+spd_types1 :: Цифровой :: Аналоговый
+spd_types2 :: Double Dash
+
+#CC Selector text
+cc_set :: Настройки класса двигателя.
+cc_val :: Значение
+cc_entv :: Введи новое значение (в куб. см).
+cc_chgv :: Изменить значение
+
+#Course Manager
+track_ct :: Трассы сообщества
+track_ori :: Оригинальные трассы
+ct_endis :: Трассы сообщества включены :: Трассы сообщества отключены
+ori_endis :: Оригинальные трассы включены :: Оригинальные трассы отключены
+
+#Community Code Generator
+def_spd :: Обычная скорость
+rand_tr :: Трассы всегда случайные
+code :: Код
+cusitem :: Новые предметы
+
+#Change Round Number
+chgrnd :: Выбор кол-ва раундов :: Изменить количество раундов в гонках и боях.
+chgrnd_desc :: Введи количество раундов\nдля гонок и боев. Не работает\nс функцией «Загружаемая игра».\nВ локальной игре у всех должны\nбыть одинаковые настройки.
+rounds :: Раундов
+rnd_sel :: Выбери количество раундов.
+
+#Enhanced Local Map
+enhmap :: Расширенная карта :: Позволяет масштабировать карту на нижнем экране с помощью касаний \uE058.
+
+#Custom character manager text
+char_select :: Выбери, какого персонажа изменить.
+reboot_req :: Для применения изменений потребуется\nперезагрузка.
+face_raider_sel :: Выбери лицо.
+authors :: Авторы
+change_face :: Изменить лицо
+
+#Online track order
+order_mode :: По умолчанию :: По алфавиту
+
+#Auto Acceleration
+autoaccel_button :: Выбери кнопку включения\nавтоускорения.
+
+#Online update check
+update_check :: Проверка обновлений... :: Для игры онлайн необходима\nпоследняя версия CTGP-7.
+fail_conn :: Не удалось подключиться\nк серверу CTGP-7.\n\nПовтори позже.
+
+#CTWW
+cntdwn :: «Обратный отсчет»
+ctww :: Весь мир (трассы сообщества)
+vr :: ИР
+CTWWtog :: Включить режим\n«Весь мир (трассы сообщества)»? :: Отключить режим\n«Весь мир (трассы сообщества)»?
+
+#VS Mode
+VSSet :: Настройки гонок
+CourOrd :: Порядок трасс
+RacAm :: Кол-во заездов
+CpuAm :: Игроки КОМП.
+RanCT :: Случайно (от сообщества)
+RanOri :: Случайно (оригинальные)
+RanAll :: Случайно (все)
+OrderH :: По горизонтали
+OrderV :: По вертикали
+NextRac :: Выбери следующую трассу.\nОсталось заездов:
+extra_diff :: Очень сложный :: ЭКСТРИМ
+cusitem_notice :: %s иногда может не замениться на твой предмет.
+item_mega :: Мегагриб
+item_fib :: Фальшивый предмет
+item_boxes :: Item Boxes
+item_periodic :: Periodic :: Choose how often objects should\nbe given in seconds.
+item_color_rain :: Color Box Rain
+item_box_rain :: Item Box Rain
+item_triple :: Triple Items
+item_bs_show :: Blue Shell Showdown
+item_sel_mode :: Select item mode. :: Select type of items.
+
+#Reset Ghosts
+resghost :: Сброс призрака :: Позволяет сбросить призрака любой трассы.
+ghostseltrack :: Выбери, для какой трассы сбросить\nпризрака:
+ghostcantrecov :: Это действие необратимо.\nПродолжить? :: Призрак сброшен.
+
+#Server Settings
+serv_consID :: CTGP-7 ConsoleID
+serv_communic :: Server Communication :: This functionality requires server\ncommunication to be enabled.
+serv_displname :: Отображение имени :: Выбрать режим отображения имени.
+serv_disphid :: Скрыто
+serv_dispmii :: Ник Mii
+serv_dispcust :: Ввести другое имя :: Введенное имя должно быть\nне длиннее 15 символов.
+serv_qrshow :: \uE002 Показать
+
+#Statistics
+statsentry :: Локальная статистика :: Отобразить твою личную статистику CTGP-7.
+stats_tpl :: Сыграно раз
+stats_tot :: Кол-во офлайн-гонок :: Кол-во онлайн-гонок
+stats_sc :: Total Score Attack Races :: Total Weekly Challenge Attempts
+stats_vnll :: Оригинальные
+stats_most :: Трассы с наибольшим кол-вом гонок :: Арены с наибольшим кол-вом игр
+stats_rpoints :: Гоночные очки
+
+#Discord
+disc_info :: О Discord-аккаунте
+disc_notlink :: Эта консоль не привязана\nк Discord-аккаунту.\n\nХочешь привязать?
+disc_linksteps1 :: Чтобы привязать свой Discord-\nаккаунт, выполни следующее:
+disc_linksteps2 :: 1. Войди на Discord-сервер CTGP-7.\n(Ссылка: invite.gg/ctgp7)
+disc_linksteps3 :: 2. Открой канал \#bots.
+disc_linksteps4 :: 3. Отправь такое сообщение:
+disc_data :: Аккаунт :: Ник
+disc_beta :: Доступ к приватным бета-тестам есть. :: Доступа к приватным бета-тестам нет.
+disc_unlink :: Отвязать :: Хочешь отвязать свой Discord-аккаунт?
+
+#Render Optimizations
+render_optim :: Оптимизация рендеринга :: Отключает 3D-режим на верхнем экране и активирует улучшения процессора New Nintendo 3DS.
+
+#Missions
+ms_miss :: Миссии
+ms_desc :: Выполняй задания и получай за них оценки.
+ms_selmiss :: Выбор миссии
+ms_rcrd :: Рекорд
+ms_gradelim :: Макс. оценка :: Мин. оценка
+ms_timescor :: Время :: Счет
+ms_failed :: Миссия провалена!
+ms_nodata :: Нет данных
+ms_delsave :: (Удалить данные: \uE002) :: Удалить данные по этой миссии?
+msstat_msnplay :: Миссий сыграно
+msstat_state :: Пройденные :: Проваленные
+msstat_perfgrad :: (на отлично)
+msstat_usermsn :: Свои миссии
+
+#Course Checksum
+course_check :: Контрольная сумма трассы
+
+#Custom Server
+server_name :: Nintendo Network :: CTGP-7 Network
+server_choice :: Выбери сервер:\n\n%s:\n       -Только для пользователей CTGP7\n       -Оригинальные трассы и от сообщества\n        -Сильный античит\n%s:\n        -Для всех игроков МК7\n        -Оригинальные трассы и доступ к сообществам\n         -Слабый античит
+server_ctgp7_conn :: Идет подключение к сети\nCTGP-7 Network...
+server_ctgp7_dconn :: Отключиться от сети\nCTGP-7 Network?
+server_ctgp7_nocomm :: Сообщества недоступны\nв сети CTGP-7 Network.
+
+#Blue Coins
+blue_coins :: Синие монетки
+blue_coins_desc :: На каждой трассе появится синяя монета. Собери все, чтобы что-нибудь разблокировать!
+blue_coin_obtain :: $Синяя монетка$\nсобрана! :: Осталось\nтрасс: %d.
+blue_coin_all :: Все синие монетки\nсобраны!
+blue_coin_nocc :: Синие монетки не будут\nпоявляться, если у тебя\nнестандартный класс\nдвигателя.
+
+#Lobby
+lobby_type :: Публичное лобби :: Приватное лобби
+choose_lobby :: Выбери лобби:\n\n- Публичное: игра с другими игроками CTGP-7.\n- Приватное: приватная игра с другими.\n\nПримечание. В приватных лобби будет использоваться ИР из оригинальной игры.
+enter_lobby_code :: Введи код лобби.\nПоделись кодом с друзьями, чтобы играть вместе! :: Код слишком короткий.
+
+#Proximity Chat
+proximity_chat :: Голосовой чат :: (Включается на \uE002.)
+proximity_chat_desc :: Необходимо подключиться\nк клиенту голосового чата.\nУзнать больше: pastebin.com/ZPQs0FWR\n\nАдрес сервера: %s\nДля отмены нажми \uE001. :: Произошла ошибка.\nДля выхода нажми \uE001.
+
+#Badges
+badges_obtained :: Заработанные значки:
+badges_use_online :: Использовать онлайн :: Не использовать онлайн
+badge_name_desc :: Название значка :: Описание значка
+badge_date :: Дата получения
+badge_msg :: Заработаны новые\nзначки CTGP-7!\n\nПоздравляем!
+badge_date_fmt :: %d.%m.%Y
+
+#Score Attack Actions
+pts_action_0 :: Гриб ускорения
+pts_action_1 :: Площадка ускорения
+pts_action_2 :: Мини-ускорение
+pts_action_3 :: Супермини-ускорение
+pts_action_4 :: Быстрый старт
+pts_action_5 :: Очень быстрый старт
+pts_action_6 :: Невероятно быстрый старт
+pts_action_7 :: Трюк
+pts_action_8 :: Продвинутый трюк
+pts_action_9 :: Slipstream
+pts_action_10 :: Золотой гриб ускорения
+pts_action_11 :: Монетка
+pts_action_12 :: Звездное кольцо
+pts_action_13 :: Труба
+pts_action_14 :: Гумба
+pts_action_15 :: Пикировщик
+pts_action_16 :: Дорожный конус
+pts_action_17 :: Валун
+pts_action_18 :: Чип-чип
+pts_action_19 :: Жемчужница
+pts_action_20 :: Бокоход
+pts_action_21 :: Коза
+pts_action_22 :: Горшок
+pts_action_23 :: Скромняга на ковре
+pts_action_24 :: Бочка
+pts_action_25 :: Tiki Goon
+pts_action_26 :: Frogoon
+pts_action_27 :: Машина
+pts_action_28 :: Ящик
+pts_action_29 :: Пингвин
+pts_action_30 :: Сосулька
+pts_action_31 :: Бамс
+pts_action_32 :: Муляж куста
+pts_action_33 :: Муляж гумбы
+pts_action_34 :: Растение-пиранья
+pts_action_35 :: Кусалкин на цепи
+pts_action_36 :: Рыба-скелет
+pts_action_37 :: Якорь
+pts_action_38 :: Music Bash
+pts_action_39 :: Кучка листьев
+pts_action_40 :: Егоза
+pts_action_41 :: Билл-пуля
+pts_action_42 :: Роки-ключ
+pts_action_43 :: Снеговик
+pts_action_44 :: Снежок
+pts_action_45 :: Metal Ball
+pts_action_46 :: Стол
+pts_action_47 :: Кактус
+pts_action_48 :: Поезд
+pts_action_49 :: Жужжало
+pts_action_50 :: Время полета
+pts_action_51 :: Зеленый панцирь!
+pts_action_52 :: Красный панцирь!
+pts_action_53 :: Банан!
+pts_action_54 :: Панцирь колючкина!
+pts_action_55 :: Молния!
+pts_action_56 :: Fake Box Hit!
+pts_action_57 :: Боб-омб!
+pts_action_58 :: Огненный цветок!
+pts_action_59 :: Суперлист!
+pts_action_60 :: Блупер!
+pts_action_61 :: Суперзвезда!
+pts_action_62 :: Мегагриб!
+pts_action_63 :: Билл-пуля!
+pts_action_64 :: Bullet Overtake
+pts_action_65 :: Расплата!
+pts_action_66 :: Удар!
+pts_action_67 :: Предмет уничтожен
+pts_action_68 :: Предмет отражен
+pts_action_69 :: Уклон от панциря колючкина!
+pts_action_70 :: Следующий круг!
+pts_action_71 :: Следующий сектор!
+pts_action_72 :: Конец лихорадки!
+pts_action_73 :: Конец заезда!
+
+#Score Attack
+score_attack :: Score Attack :: Chain actions to get the most points.
+sc_at_spc_cup :: Random Course :: Weekly Challenge
+sc_at_race_start :: Начало заезда
+sc_at_clear :: Course Cleared :: Course Not Cleared
+sc_at_save :: (Delete Save: \uE002) :: (None)
+sc_at_score :: Best score :: Clear score
+sc_at_delete :: Delete this course save data?
+sc_at_record :: Новый рекорд!
+sc_at_clear_small :: Cleared! :: Not Cleared
+sc_at_cleared_tr :: Cleared tracks
+sc_at_nice :: NICE!
+sc_at_great :: GREAT!
+sc_at_excel :: EXCELLENT!
+sc_at_fanta :: FANTASTIC!
+sc_at_combo :: Комбо x
+
+#Score Attack Weekly
+sc_wc_ended :: Current Weekly Challenge has ended :: No data available
+sc_wc_curr :: Current challenge:
+sc_wc_time :: Time remaining:
+sc_wc_bonus :: Bonus combo: :: Your bonus:
+sc_wc_board :: Leaderboard: Top 10 :: Leaderboard: My Score
+sc_wc_getting :: Getting Weekly Challenge info... :: Failed to get Weekly Challenge info.\nError: 0x%08X
+sc_wc_results :: Weekly Challenge Results
+sc_wc_score :: Previous score: :: New score:
+sc_wc_upload :: Would you like to publish your score? :: Publish
+sc_wc_uploading :: Uploading results... :: An error has occurred.
+sc_wc_retry :: Retry?
+
+#Local Multiplayer Error
+mult_error :: All participants must\nhave the latest CTGP-7\nversion installed. :: You have to update\nCTGP-7 to play in\nthis room.
+
+#Save Backup
+sbak_avail :: This option is only available\nwithin the "Singleplayer" menu.
+sbak_fetch :: Fetching save backup info... :: Failed to get save backup info:\n0x%08X
+sbak_info :: Save Backup Information
+sbak_found :: Save backup found. :: Save backup not found.
+sbak_created :: Created:
+sbak_cretime :: Today :: %d days ago
+sbak_create :: Create backup
+sbak_restore :: Restore backup
+sbak_delete :: Delete backup
+sbak_new :: A new online save backup will be\ncreated (excluding ghost data). :: The previous online backup will be overwritten.
+sbak_newprog :: Creating backup: %s
+sbak_newres :: Backup created successfully. :: Failed to create backup:\n0x%08X
+sbak_rest :: The online backup save data\nwill be restored. :: The current save data will\nbe backed up to the folders:
+sbak_restex :: The backup folders already exist\nand they will be deleted.
+sbak_restprog :: Restoring backup: %s
+sbak_restres :: Backup restored successfully. :: Failed to restore online backup:\n0x%08X
+sbak_restres2 :: Restore the following folders\nmanually to recover your old\nsave data: :: The game will now close.
+sbak_dele :: The online backup save data\nwill be deleted. :: This operation cannot be undone.
+sbak_deleprog :: Deleting backup...
+sbak_deleres :: Backup deleted successfully. :: Failed to delete backup:\n0x%08X
+
+#Photo Mode
+photo_inst :: Photo Mode Controls\n\nA: Take photo\nB: Back\nCPad: Move\nTouch: Look around\nL/R: Zoom\nX/Y: Change speed
+photo_saved :: Photo saved!

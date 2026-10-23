@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Keep the two different backlight controllers visually balanced. The top
+# panel is dimmer at an equal electrical percentage, so give it a small boost.
+top=/sys/class/backlight/ae96000.dsi.0
+bottom=/sys/class/backlight/ae94000.dsi.0
+step=5
+top_boost=10
+
+current=$(<"$bottom/brightness")
+maximum=$(<"$bottom/max_brightness")
+percent=$((current * 100 / maximum))
+
+case "${1:-}" in
+  up) percent=$((percent + step)) ;;
+  down) percent=$((percent - step)) ;;
+  *) exit 2 ;;
+esac
+
+((percent > 100)) && percent=100
+# Avoid making both panels completely black with no graphical recovery path.
+((percent < 5)) && percent=5
+
+top_percent=$((percent + top_boost))
+((top_percent > 100)) && top_percent=100
+
+top_max=$(<"$top/max_brightness")
+bottom_max=$(<"$bottom/max_brightness")
+printf '%s\n' "$((top_max * top_percent / 100))" >"$top/brightness"
+printf '%s\n' "$((bottom_max * percent / 100))" >"$bottom/brightness"

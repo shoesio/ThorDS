@@ -1,0 +1,116 @@
+diff --git a/engine/mako-render/src/instance.cpp b/engine/mako-render/src/instance.cpp
+index 6f330e3..bd436b4 100644
+--- a/engine/mako-render/src/instance.cpp
++++ b/engine/mako-render/src/instance.cpp
+@@ -49,6 +49,16 @@ namespace {
+     constexpr uint64_t spatialScalingProcessSupportedBit = uint64_t{2};
+     constexpr uint64_t spatialScalingSupersamplingBit = uint64_t{4};
+ 
++    bool frameGenerationEligibleForExtent(const VkExtent2D extent) {
++        const char* topOnly = std::getenv("MAKO_FRAME_GENERATION_TOP_ONLY");
++        if (!topOnly || (std::string_view(topOnly) != "1" &&
++                std::string_view(topOnly) != "small"))
++            return true;
++        if (std::string_view(topOnly) == "small")
++            return extent.width >= 1200 && extent.width < 1600 && extent.height >= 900;
++        return extent.width >= 1600 && extent.height >= 900;
++    }
++
+     vk::DeviceMemoryTotals memoryDelta(
+             const vk::DeviceMemoryTotals& after,
+             const vk::DeviceMemoryTotals& before) {
+@@ -1411,7 +1421,14 @@ void Root::createSwapchainContext(const vk::Vulkan& vk,
+         const bool swapchainMaintenance1Enabled) {
+     if (!this->active_profile.has_value())
+         throw ls::error("attempted to create swapchain context while layer is inactive");
+-    const auto profile = profileForLayerContext(*this->active_profile);
++    auto profile = profileForLayerContext(*this->active_profile);
++    if (profile.frame_generation_enabled &&
++            !frameGenerationEligibleForExtent(info.extent)) {
++        profile.frame_generation_enabled = false;
++        std::cerr << "MAKO Renderer: frame generation disabled for swapchain "
++                     "extent=" << info.extent.width << 'x' << info.extent.height
++                  << " by MAKO_FRAME_GENERATION_TOP_ONLY\n";
++    }
+     const auto& global = this->config.get().global();
+ 
+     std::optional<std::filesystem::path> scalingShaderDll;
+diff --git a/engine/mako-render/src/swapchain/create.cpp b/engine/mako-render/src/swapchain/create.cpp
+index b31592f..10567e3 100644
+--- a/engine/mako-render/src/swapchain/create.cpp
++++ b/engine/mako-render/src/swapchain/create.cpp
+@@ -18,6 +18,7 @@
+ #include <iostream>
+ #include <limits>
+ #include <optional>
++#include <string_view>
+ #include <utility>
+ #include <vector>
+ 
+@@ -58,6 +59,19 @@ namespace {
+         }();
+         return timeout;
+     }
++
++    bool frameGenerationEligibleForExtent(const VkExtent2D extent) {
++        const char* topOnly = std::getenv("MAKO_FRAME_GENERATION_TOP_ONLY");
++        if (!topOnly || (std::string_view(topOnly) != "1" &&
++                std::string_view(topOnly) != "small"))
++            return true;
++        // ThorDS uses a 1920x1080/1916x1008 top surface and a 1240x1080
++        // lower surface. Keep the lower display native and frame-generate
++        // only the large top-screen swapchain.
++        if (std::string_view(topOnly) == "small")
++            return extent.width >= 1200 && extent.width < 1600 && extent.height >= 900;
++        return extent.width >= 1600 && extent.height >= 900;
++    }
+ }
+ 
+ std::optional<uint64_t> Swapchain::generatedImageAcquireTimeoutNs() {
+@@ -79,7 +93,8 @@ bool layer::context_ModifySwapchainCreateInfo(const ls::GameConf& profile,
+         colorPipeline.generationSupported &&
+         !(presentationEnvironment.hdrExposureDisabled && colorPipeline.hdr);
+     const bool frameGenerationProvisioned =
+-        frameGenerationInteropEnabled && frameGenerationSupported;
++        frameGenerationInteropEnabled && frameGenerationSupported &&
++        frameGenerationEligibleForExtent(createInfo.imageExtent);
+     const bool hdrCapableSwapchain =
+         !presentationEnvironment.hdrExposureDisabled &&
+         (colorPipeline.hdr ||
+diff --git a/engine/mako-render/src/swapchain/profile.cpp b/engine/mako-render/src/swapchain/profile.cpp
+index a55ac51..9e315c9 100644
+--- a/engine/mako-render/src/swapchain/profile.cpp
++++ b/engine/mako-render/src/swapchain/profile.cpp
+@@ -10,6 +10,7 @@
+ #include <chrono>
+ #include <cstddef>
+ #include <cstdint>
++#include <cstdlib>
+ #include <iostream>
+ #include <optional>
+ #include <string_view>
+@@ -73,10 +74,23 @@ bool Swapchain::resetGenerationScheduler(
+ }
+ 
+ ProfileUpdateDecision Swapchain::updateProfile(
+-        const ls::GameConf& nextProfile,
++        const ls::GameConf& incomingProfile,
+         const uint64_t runtimeStateRevision,
+         const ls::GameConf* requestedProfile,
+         const bool processRestartPending) {
++    // Apply the same per-surface restriction on every live update as at creation.
++    // Otherwise changing the global multiplier can re-enable the lower display.
++    auto nextProfile = incomingProfile;
++    const char* topOnly = std::getenv("MAKO_FRAME_GENERATION_TOP_ONLY");
++    const bool smallTopOnly = topOnly && std::string_view(topOnly) == "small";
++    const bool largeTopOnly = topOnly && std::string_view(topOnly) == "1";
++    const bool eligible = smallTopOnly
++        ? this->info.extent.width >= 1200 && this->info.extent.width < 1600 &&
++            this->info.extent.height >= 900
++        : this->info.extent.width >= 1600 && this->info.extent.height >= 900;
++    if ((smallTopOnly || largeTopOnly) && !eligible) {
++        nextProfile.frame_generation_enabled = false;
++    }
+     this->runtimeStatusState.requestedProfile = requestedProfile
+         ? *requestedProfile : nextProfile;
+     this->runtimeStatusState.stateRevision = runtimeStateRevision;

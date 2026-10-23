@@ -1,0 +1,253 @@
+Startup finished in 4.389s (kernel) + 5.052s (userspace) = 9.442s 
+graphical.target reached after 5.052s in userspace.
+1.052s dev-sda19.device
+ 627ms user@966.service
+ 347ms thorch-debug-report.service
+ 325ms NetworkManager.service
+ 257ms systemd-udev-trigger.service
+ 249ms dev-zram0.swap
+ 204ms thords-session.service
+ 170ms systemd-tmpfiles-setup-dev-early.service
+ 149ms inputplumber.service
+ 139ms systemd-udevd.service
+ 139ms thorch-hw-defaults.service
+ 109ms systemd-tmpfiles-setup.service
+  99ms systemd-timesyncd.service
+  98ms systemd-logind.service
+  98ms systemd-coredumpd.service
+  93ms systemd-resolved.service
+  87ms systemd-homed.service
+  78ms thords-irq-policy.service
+  77ms systemd-journal-flush.service
+  68ms dbus-broker.service
+  66ms systemd-tmpfiles-clean.service
+  62ms wpa_supplicant.service
+  60ms systemd-fsck@dev-disk-by\x2duuid-DAF4\x2d38C6.service
+  57ms thorch-rgb.service
+  56ms systemd-backlight@backlight:ae94000.dsi.0.service
+  54ms systemd-userdbd.service
+  52ms systemd-coredump-register.service
+  51ms systemd-tmpfiles-setup-dev.service
+  48ms systemd-journald.service
+  48ms systemd-update-utmp.service
+  46ms sshd.service
+  43ms systemd-vconsole-setup.service
+  42ms thords-performance.service
+  39ms tmp.mount
+  38ms thorch-rgb-battery.service
+  35ms modprobe@tun.service
+  35ms systemd-remount-fs.service
+  30ms home-thorch-.cache.mount
+  28ms systemd-backlight@backlight:ae96000.dsi.0.service
+  28ms systemd-hostnamed.service
+  27ms systemd-nsresourced.service
+  27ms systemd-rfkill.service
+  25ms sys-kernel-debug.mount
+  25ms boot.mount
+  24ms sys-kernel-config.mount
+  24ms sys-fs-fuse-connections.mount
+  24ms systemd-zram-setup@zram0.service
+  23ms systemd-journalctl-metrics.socket
+  23ms systemd-sysctl.service
+  23ms systemd-user-sessions.service
+  21ms dev-hugepages.mount
+  21ms dev-mqueue.mount
+  20ms systemd-random-seed.service
+  20ms systemd-journalctl.socket
+  20ms sys-kernel-tracing.mount
+  20ms kmod-static-nodes.service
+  20ms systemd-modules-load.service
+  20ms user-runtime-dir@966.service
+  20ms systemd-network-generator.service
+  19ms systemd-udev-load-credentials.service
+  10ms thorch-rgb-poweroff.service
+   9ms systemd-userdb-load-credentials.service
+   9ms systemd-bootctl.socket
+   3ms systemd-sysupdate-notify-sysext.socket
+   3ms systemd-sysext.socket
+   3ms polkit-agent-helper.socket
+   2ms sshd-unix-local.socket
+   2ms systemd-factory-reset.socket
+   1ms systemd-report-cgroup.socket
+   1ms systemd-cryptenroll.socket
+   1ms systemd-coredump.socket
+   1ms systemd-ask-password.socket
+   1ms dirmngr@etc-pacman.d-gnupg.socket
+   1ms systemd-mute-console.socket
+   1ms systemd-report-files.socket
+   1ms systemd-report-sign-plain.socket
+ 883us systemd-creds.socket
+ 771us systemd-sysupdate.socket
+ 749us systemd-report.socket
+ 744us systemd-report-basic.socket
+ 692us systemd-storage-block.socket
+ 557us systemd-repart.socket
+ 542us systemd-storage-fs.socket
+ 480us systemd-sysinstall.socket
+ 190us systemd-logind-varlink.socket
+ 177us systemd-machined.socket
+ 167us dbus.socket
+ 147us gpg-agent-browser@etc-pacman.d-gnupg.socket
+ 131us gpg-agent-ssh@etc-pacman.d-gnupg.socket
+ 123us keyboxd@etc-pacman.d-gnupg.socket
+ 121us gpg-agent-extra@etc-pacman.d-gnupg.socket
+ 111us gpg-agent@etc-pacman.d-gnupg.socket
+  95us systemd-journald-dev-log.socket
+  65us systemd-journald.socket
+  63us systemd-importd.socket
+  57us systemd-mountfsd.socket
+  52us systemd-resolved-monitor.socket
+  52us systemd-hostnamed.socket
+  49us systemd-homed-activate.service
+  43us systemd-udevd-varlink.socket
+  39us systemd-nsresourced.socket
+  37us dm-event.socket
+  33us systemd-resolved-varlink.socket
+  30us systemd-userdbd.socket
+  17us systemd-rfkill.socket
+  15us systemd-udevd-kernel.socket
+The time when unit became active or started is printed after the "@" character.
+The time the unit took to start is printed after the "+" character.
+
+graphical.target @5.052s
+└─thords-session.service @4.842s +204ms
+  └─user@966.service @4.207s +627ms
+    └─systemd-user-sessions.service @4.181s +23ms
+      └─network.target @4.179s
+        └─wpa_supplicant.service @4.183s +62ms
+          └─basic.target @3.852s
+            └─dbus-broker.service @3.784s +68ms
+              └─dbus.socket @3.769s +167us
+                └─sysinit.target @3.767s
+                  └─systemd-coredump-register.service @3.714s +52ms
+                    └─systemd-coredumpd.service @3.614s +98ms
+                      └─local-fs.target @3.569s
+                        └─run-user-966.mount @4.541s
+                          └─swap.target @2.636s
+                            └─dev-zram0.swap @2.125s +249ms
+                              └─systemd-zram-setup@zram0.service @2.099s +24ms
+                                └─dev-zram0.device @2.076s
+UNIT FILE                               STATE   PRESET
+getty@.service                          enabled enabled
+inputplumber.service                    enabled enabled
+NetworkManager-dispatcher.service       enabled disabled
+NetworkManager-wait-online.service      enabled disabled
+NetworkManager.service                  enabled enabled
+seatd.service                           enabled enabled
+sshd.service                            enabled enabled
+systemd-boot-clear-sysfail.service      enabled enabled
+systemd-boot-update.service             enabled enabled
+systemd-confext.service                 enabled enabled
+systemd-coredumpd.service               enabled enabled
+systemd-homed-activate.service          enabled enabled
+systemd-homed.service                   enabled enabled
+systemd-network-generator.service       enabled enabled
+systemd-pstore.service                  enabled enabled
+systemd-resolved.service                enabled enabled
+systemd-sysext.service                  enabled enabled
+systemd-timesyncd.service               enabled enabled
+systemd-tpm2-clear.service              enabled enabled
+thorch-boot-confirm.service             enabled enabled
+thorch-fancontrol.service               enabled enabled
+thorch-hw-defaults.service              enabled enabled
+thorch-inputd.service                   enabled enabled
+thorch-lavd.service                     enabled enabled
+thorch-rgb-battery.service              enabled enabled
+thorch-rgb-poweroff.service             enabled enabled
+thorch-rgb.service                      enabled enabled
+thords-hardware-buttons.service         enabled enabled
+thords-irq-policy.service               enabled enabled
+thords-low-battery-shutdown.service     enabled enabled
+thords-performance.service              enabled enabled
+thords-session.service                  enabled enabled
+thords-sleep-guard.service              enabled enabled
+systemd-journalctl-metrics.socket       enabled enabled
+systemd-journald-audit.socket           enabled enabled
+systemd-mountfsd.socket                 enabled enabled
+systemd-nsresourced.socket              enabled enabled
+systemd-report-basic.socket             enabled enabled
+systemd-report-cgroup.socket            enabled enabled
+systemd-report-files.socket             enabled enabled
+systemd-report-sign-plain.socket        enabled enabled
+systemd-report-sign-tpm2.socket         enabled enabled
+systemd-report-sign-tsm.socket          enabled enabled
+systemd-report.socket                   enabled enabled
+systemd-resolved-monitor.socket         enabled disabled
+systemd-resolved-varlink.socket         enabled disabled
+systemd-sysupdate-notify-bootctl.socket enabled enabled
+systemd-sysupdate-notify-pcrlock.socket enabled enabled
+systemd-sysupdate-notify-sysext.socket  enabled enabled
+systemd-userdbd.socket                  enabled enabled
+machines.target                         enabled enabled
+reboot.target                           enabled enabled
+remote-cryptsetup.target                enabled enabled
+remote-fs.target                        enabled enabled
+remote-integritysetup.target            enabled enabled
+remote-veritysetup.target               enabled enabled
+thorch-debug-report.timer               enabled enabled
+
+57 unit files listed.
+  UNIT                                LOAD   ACTIVE SUB     DESCRIPTION
+  dbus-broker.service                 loaded active running D-Bus System Message Bus
+  inputplumber.service                loaded active running InputPlumber Service
+  NetworkManager.service              loaded active running Network Manager
+  seatd.service                       loaded active running Seat management daemon
+  serial-getty@ttyMSM0.service        loaded active running Serial Getty on ttyMSM0
+  sshd.service                        loaded active running OpenSSH Daemon
+  systemd-coredumpd.service           loaded active running Listen Kernel Core Dump Socket
+  systemd-homed.service               loaded active running Home Area Manager
+  systemd-journald.service            loaded active running Journal Service
+  systemd-logind.service              loaded active running User Login Management
+  systemd-nsresourced.service         loaded active running Namespace Resource Manager
+  systemd-resolved.service            loaded active running Network Name Resolution
+  systemd-timesyncd.service           loaded active running Network Time Synchronization
+  systemd-udevd.service               loaded active running Rule-based Manager for Device Events and Files
+  systemd-userdbd.service             loaded active running User Database Manager
+  thorch-fancontrol.service           loaded active running Apply Thorch PWM fan control profile
+  thorch-inputd.service               loaded active running Thorch hardware hotkey input daemon
+  thorch-lavd.service                 loaded active running Thorch LAVD sched_ext scheduler
+  thorch-rgb-battery.service          loaded active running Update Thorch Thor RGB LEDs from battery status
+  thords-hardware-buttons.service     loaded active running ThorDS power and RGB button mappings
+  thords-low-battery-shutdown.service loaded active running ThorDS clean shutdown on critically low battery
+  thords-session.service              loaded active running ThorDS console session
+  user@966.service                    loaded active running User Manager for UID 966
+  wpa_supplicant.service              loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+24 loaded units listed.
+               total        used        free      shared  buff/cache   available
+Mem:           11448        3103        7450        1100        2185        8345
+Swap:           7771           0        7771
+    PID COMMAND           RSS COMMAND
+   1188 azahar          1268380 /usr/bin/azahar --boot-home-menu-europe
+    946 sway            90708 /usr/bin/sway --unsupported-gpu -c /etc/thords/sway.conf
+   1206 Xwayland        85476 Xwayland :0 -rootless -core -terminate 10 -listenfd 33 -listenfd 34 -displayfd 78 -wm 75
+    612 inputplumber    44372 /usr/bin/inputplumber
+    611 NetworkManager  38616 /usr/bin/NetworkManager --no-daemon
+    905 wireplumber     37420 /usr/bin/wireplumber
+    909 opensave        31876 /home/thords/.local/bin/opensave daemon start
+    907 pipewire-pulse  26260 /usr/bin/pipewire-pulse
+  28917 scx_lavd        24020 /usr/bin/scx_lavd --autopilot
+    902 pipewire        23380 /usr/bin/pipewire
+    986 swaybg          23220 swaybg -o * -c #000000 -o DSI-2 -i /usr/share/thords/boot-splash.png -m fit
+      1 systemd         20728 /sbin/init nosoftlockup
+    859 systemd         17540 /usr/lib/systemd/systemd --user
+    424 systemd-journal 17044 /usr/lib/systemd/systemd-journald
+  54348 sshd-session    16236 sshd-session: thords [postauth]
+    628 python3         16036 python3 /usr/bin/thords-hardware-buttons
+    474 systemd-udevd   15652 /usr/lib/systemd/systemd-udevd
+   1010 python3         14256 python3 /usr/bin/thords-brightness-hotkeys
+    855 wpa_supplicant  14220 /usr/bin/wpa_supplicant -u -s -O /run/wpa_supplicant
+    903 python3         14168 python3 /home/thords/.local/bin/thords-home-brightness
+    615 systemd-homed   10900 /usr/lib/systemd/systemd-homed
+    469 systemd-resolve  9972 /usr/lib/systemd/systemd-resolved
+  54354 sshd-session     9712 sshd-session: thords@notty
+    853 sshd             7940 sshd: /usr/bin/sshd -D [listener] 0 of 10-100 startups
+    616 systemd-logind   7248 /usr/lib/systemd/systemd-logind
+    906 pipewire         6644 /usr/bin/pipewire -c filter-chain.conf
+    475 systemd-timesyn  6292 /usr/lib/systemd/systemd-timesyncd
+    594 systemd-coredum  5948 /usr/lib/systemd/systemd-coredump --manager
+  50340 systemd-userwor  5936 systemd-userwork: waiting...

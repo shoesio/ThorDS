@@ -1,0 +1,118 @@
+{
+  "19": {
+    "image_sha256": "50dcba238a14aa2646a93c0a2807b0915bc054518f51e3344fbd7293b2ee4c2e",
+    "dtbs": [
+      {
+        "model": "AYANEO Pocket ACE",
+        "sha256": "37dd889ca21fea44d0d7b907f4395f653824797b8ea16d1faef03256e632a728"
+      },
+      {
+        "model": "AYANEO Pocket DMG",
+        "sha256": "cb3744f11d410333f62ca1ed9f2e6e8a5f2d76b04f8d5dec1369844d6753ac4e"
+      },
+      {
+        "model": "AYANEO Pocket DS",
+        "sha256": "bacdd9e227c7a149e6f82942dfcd959a675096b1cb4a5697ec97d9e2451db2f5"
+      },
+      {
+        "model": "AYANEO Pocket EVO",
+        "sha256": "073bd73bba94207ef80e32db552b348a0b7c3b90c54021b177e3cc3d037ca8c6"
+      },
+      {
+        "model": "AYANEO Pocket S 1K",
+        "sha256": "43023c1124856876421b8c570c1f7ca30fbffab46e7ba621d4d4b725abbabc97"
+      },
+      {
+        "model": "AYANEO Pocket S 2K",
+        "sha256": "69a8143e2eede86e77f43432df9eb8531bd874d0e170736c89d3519e58f6e722"
+      },
+      {
+        "model": "AYN Odin 2",
+        "sha256": "124b5691a5c7e835a17a6e47988238865ec1d287e2158d3c8980765834a78935"
+      },
+      {
+        "model": "AYN Odin 2 Mini",
+        "sha256": "20ef44221d780d80cead5aebe31e49ad7dce34152db5f3431bb9061b27b731f3"
+      },
+      {
+        "model": "AYN Odin 2 Portal",
+        "sha256": "67d292b6c9b981b29afa8026c6b43b991b7ae2184aba48242e2ea7ff71b2eb7b"
+      },
+      {
+        "model": "AYN Thor",
+        "sha256": "d50e80dc20c2168c5e096b8144351c822ce6012611e8c02454dcfc4d376286a3"
+      },
+      {
+        "model": "Retroid Pocket 6 TOP-DPAD",
+        "sha256": "9be2b32e574260a80c1f1bbd1dd1b88217b66181a5ad9cb0f4eb8aa767dae013"
+      },
+      {
+        "model": "Retroid Pocket 6",
+        "sha256": "ac30d4af0aa553572bf83207c58080b5003f006aaac49b89b6a02d34d7290808"
+      },
+      {
+        "model": "Retroid Pocket Nova",
+        "sha256": "bb26298cb872299e8a9071c7c9885ff77830e70592699f51df9e84365b72970f"
+      }
+    ],
+    "package_sha256": "a74fdabf0b0f009982f69e175a8f6a3c40e8ad7e203125d4fb7cd7fd54a16c41"
+  },
+  "20": {
+    "image_sha256": "42b8c34f0205e1e5b5901055d298cfc57b8e83eb63b2f8f4ff2f5dfe062098c0",
+    "dtbs": [
+      {
+        "model": "AYANEO Pocket ACE",
+        "sha256": "37dd889ca21fea44d0d7b907f4395f653824797b8ea16d1faef03256e632a728"
+      },
+      {
+        "model": "AYANEO Pocket DMG",
+        "sha256": "cb3744f11d410333f62ca1ed9f2e6e8a5f2d76b04f8d5dec1369844d6753ac4e"
+      },
+      {
+        "model": "AYANEO Pocket DS",
+        "sha256": "bacdd9e227c7a149e6f82942dfcd959a675096b1cb4a5697ec97d9e2451db2f5"
+      },
+      {
+        "model": "AYANEO Pocket EVO",
+        "sha256": "073bd73bba94207ef80e32db552b348a0b7c3b90c54021b177e3cc3d037ca8c6"
+      },
+      {
+        "model": "AYANEO Pocket S 1K",
+        "sha256": "43023c1124856876421b8c570c1f7ca30fbffab46e7ba621d4d4b725abbabc97"
+      },
+      {
+        "model": "AYANEO Pocket S 2K",
+        "sha256": "69a8143e2eede86e77f43432df9eb8531bd874d0e170736c89d3519e58f6e722"
+      },
+      {
+        "model": "AYN Odin 2",
+        "sha256": "124b5691a5c7e835a17a6e47988238865ec1d287e2158d3c8980765834a78935"
+      },
+      {
+        "model": "AYN Odin 2 Mini",
+        "sha256": "20ef44221d780d80cead5aebe31e49ad7dce34152db5f3431bb9061b27b731f3"
+      },
+      {
+        "model": "AYN Odin 2 Portal",
+        "sha256": "67d292b6c9b981b29afa8026c6b43b991b7ae2184aba48242e2ea7ff71b2eb7b"
+      },
+      {
+        "model": "AYN Thor",
+        "sha256": "d50e80dc20c2168c5e096b8144351c822ce6012611e8c02454dcfc4d376286a3"
+      },
+      {
+        "model": "Retroid Pocket 6 TOP-DPAD",
+        "sha256": "9be2b32e574260a80c1f1bbd1dd1b88217b66181a5ad9cb0f4eb8aa767dae013"
+      },
+      {
+        "model": "Retroid Pocket 6",
+        "sha256": "ac30d4af0aa553572bf83207c58080b5003f006aaac49b89b6a02d34d7290808"
+      },
+      {
+        "model": "Retroid Pocket Nova",
+        "sha256": "bb26298cb872299e8a9071c7c9885ff77830e70592699f51df9e84365b72970f"
+      }
+    ],
+    "package_sha256": "7432d52e5006754a9cc661cf844bec26e821e4c423946849ea3a6d7a27bd0073"
+  }
+}

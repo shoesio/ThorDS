@@ -1,0 +1,316 @@
+Kernel: 7.1.2-thorch17
+
+Update status
+state=uninitialized
+bootstrap=required
+rollback=unavailable
+
+Power services
+● thords-irq-policy.service - ThorDS SM8550 interrupt and idle policy
+     Loaded: loaded (/usr/lib/systemd/system/thords-irq-policy.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-09-26 09:00:24 BST; 12min ago
+ Invocation: 70e644d59f414df193601b83c74d00c0
+    Process: 823 ExecStart=/usr/bin/thords-irq-policy (code=exited, status=0/SUCCESS)
+   Main PID: 823 (code=exited, status=0/SUCCESS)
+   Mem peak: 4.4M
+        CPU: 52ms
+
+Sep 26 09:00:23 alarm systemd[1]: Starting ThorDS SM8550 interrupt and idle policy...
+Sep 26 09:00:24 alarm thords-irq-policy[823]: ThorDS IRQs routed to CPU3-7; CPU0 deep idle enabled
+Sep 26 09:00:24 alarm systemd[1]: Finished ThorDS SM8550 interrupt and idle policy.
+
+● thords-performance.service - ThorDS performance profile
+     Loaded: loaded (/usr/lib/systemd/system/thords-performance.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-09-26 09:00:26 BST; 12min ago
+ Invocation: a7c321ad1e7d43458744c655884014a7
+    Process: 924 ExecStart=/usr/bin/thords-performance (code=exited, status=0/SUCCESS)
+   Main PID: 924 (code=exited, status=0/SUCCESS)
+   Mem peak: 3.2M
+        CPU: 23ms
+
+Sep 26 09:00:25 alarm systemd[1]: Starting ThorDS performance profile...
+Sep 26 09:00:26 alarm thords-performance[924]: ThorDS balanced profile: CPU=schedutil GPU=simple_ondemand (frequency limits unchanged)
+Sep 26 09:00:26 alarm systemd[1]: Finished ThorDS performance profile.
+
+● thorch-lavd.service - Thorch LAVD sched_ext scheduler
+     Loaded: loaded (/usr/lib/systemd/system/thorch-lavd.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-09-26 09:00:23 BST; 12min ago
+ Invocation: dc62407a2b854b3d9b46e80de832218d
+       Docs: https://github.com/sched-ext/scx
+   Main PID: 648 (scx_lavd)
+      Tasks: 4 (limit: 14026)
+     Memory: 56.5M (peak: 58.2M)
+        CPU: 1.100s
+     CGroup: /system.slice/thorch-lavd.service
+             └─648 /usr/bin/scx_lavd --autopilot
+
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.372315Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:613: capacity bound:  3055 (70.75035%)
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   primary CPUs:  [3, 4, 5, 6, 0, 1, 2]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   overflow CPUs: [7]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.372320Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:613: capacity bound:  4318 (100%)
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   primary CPUs:  [7, 3, 4, 5, 6, 0, 1, 2]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   overflow CPUs: []
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.373341Z  WARN ThreadId(01) scx_utils::compat: rust/scx_utils/src/compat.rs:417: tracepoint syscalls:sys_enter_execve is missing, tracepoint not loaded
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.281511Z  WARN ThreadId(01) scx_utils::libbpf_logger: rust/scx_utils/src/libbpf_logger.rs:12: libbpf: map 'lavd_ops': BPF map skeleton link is uninitialized
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.345101Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:1099: scx_lavd scheduler is initialized (build ID: 1.1.2 aarch64-unknown-linux-gnu)
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.345133Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:1103: scx_lavd scheduler starts running.
+
+Governor and battery snapshot
+{"sample": {"boottime": 785.005480879, "timestamp": 1790410395.1486893, "status": "Charging", "capacity": 89, "charge_counter": 7269392, "current_now": -1320223, "voltage_now": 4124988, "power_now": 49784364, "temp": 310, "iv_watts": 5.445904032324, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1344000, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2956800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 119, "ae96000.dsi.0": 2334}}}
+
+GPU interrupt placement
+197:          0          0          0     837688          0          0          0          0    GICv3 332 Level     gpu-irq
+200:          0          0          0          0          0          0          0          0    GICv3 337 Level     gmu
+197: 3
+200: 3
+
+CPU0 idle state
+0
+
+Relevant log entries
+2026-09-26T09:01:00+01:00 alarm sway[944]: 00:00:28.084 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:10+01:00 alarm sway[944]: 00:00:38.088 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:01:36+01:00 alarm sway[944]: 00:01:03.830 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:01:37+01:00 alarm sway[944]: 00:01:04.884 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:46+01:00 alarm sway[944]: 00:01:13.551 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:50+01:00 alarm sway[944]: 00:01:17.880 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:02:04+01:00 alarm sway[944]: 00:01:32.218 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:02:11+01:00 alarm sway[944]: 00:01:39.118 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:02:22+01:00 alarm sway[944]: 00:01:49.385 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:02:32+01:00 alarm sway[944]: 00:01:59.444 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:03+01:00 alarm sway[944]: 00:02:30.302 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:08+01:00 alarm sway[944]: 00:02:35.756 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:10+01:00 alarm sway[944]: 00:02:38.147 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:16+01:00 alarm sway[944]: 00:02:43.505 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:20+01:00 alarm sway[944]: 00:02:47.302 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:28+01:00 alarm sway[944]: 00:02:55.461 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:29+01:00 alarm sway[944]: 00:02:56.702 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:29+01:00 alarm sway[944]: 00:02:57.183 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:37+01:00 alarm sway[944]: 00:03:04.289 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:52+01:00 alarm sway[944]: 00:03:20.202 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:58+01:00 alarm sway[944]: 00:03:25.588 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:58+01:00 alarm sway[944]: 00:03:25.698 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:59+01:00 alarm sway[944]: 00:03:26.665 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:07+01:00 alarm sway[944]: 00:03:35.067 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:11+01:00 alarm sway[944]: 00:03:37.034 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:11+01:00 alarm sway[944]: 00:03:37.169 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:12+01:00 alarm sway[944]: 00:03:38.553 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:16+01:00 alarm sway[944]: 00:03:42.358 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:29+01:00 alarm sway[944]: 00:03:55.036 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:37+01:00 alarm sway[944]: 00:04:03.030 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:44+01:00 alarm sway[944]: 00:04:09.983 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:46+01:00 alarm sway[944]: 00:04:12.569 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:58+01:00 alarm sway[944]: 00:04:23.777 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:05+01:00 alarm sway[944]: 00:04:30.941 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:05+01:00 alarm sway[944]: 00:04:31.679 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:08+01:00 alarm sway[944]: 00:04:33.936 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:05:44+01:00 alarm sway[944]: 00:05:09.891 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:50+01:00 alarm sway[944]: 00:05:16.720 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:14+01:00 alarm sway[944]: 00:05:40.601 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:06:18+01:00 alarm sway[944]: 00:05:44.586 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:06:37+01:00 alarm sway[944]: 00:06:02.954 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:44+01:00 alarm sway[944]: 00:06:11.971 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:59+01:00 alarm sway[944]: 00:06:27.254 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:14+01:00 alarm sway[944]: 00:07:41.938 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:15+01:00 alarm sway[944]: 00:07:42.988 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:18+01:00 alarm sway[944]: 00:07:46.228 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:09:00+01:00 alarm sway[944]: 00:08:27.336 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:09:46+01:00 alarm sway[944]: 00:09:13.426 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+
+Latest sleep snapshots
+phy#0
+	Unnamed/non-netdev interface
+		wdev 0x2
+		addr 00:03:7f:75:89:97
+		type P2P-device
+	Interface wlp1s0
+		ifindex 2
+		wdev 0x1
+		addr 00:03:7f:75:89:97
+		ssid ColchFibre_7C3F
+		type managed
+		channel 48 (5240 MHz), width: 80 MHz, center1: 5210 MHz
+		txpower 8.00 dBm
+		multicast TXQ:
+			qsz-byt	qsz-pkt	flows	drops	marks	overlmt	hashcol	tx-bytes	tx-packets
+			0	0	0	0	0	0	0	0		0
+[  337.509642] alarm thorch-fancontrol[9663]: temperature 65300 mC, setting fan PWM 102
+[  339.301260] alarm sway[944]: 00:05:16.720 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  339.301260] alarm sway[944]: 00:05:16.720 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  340.545797] alarm thorch-fancontrol[9738]: temperature 63600 mC, setting fan PWM 77
+[  341.430859] alarm systemd[925]: Created slice User Background Tasks Slice.
+[  341.431915] alarm systemd[925]: Starting Cleanup of User's Temporary Files and Directories...
+[  341.453978] alarm systemd[925]: Finished Cleanup of User's Temporary Files and Directories.
+[  358.688521] alarm NetworkManager[630]: <info>  [1790409970.3401] manager: NetworkManager state is now CONNECTED_SITE
+[  358.692230] alarm systemd[1]: Starting Network Manager Script Dispatcher Service...
+[  358.716132] alarm systemd[1]: Started Network Manager Script Dispatcher Service.
+[  358.745009] alarm thorch-fancontrol[10235]: temperature 71200 mC, setting fan PWM 119
+[  361.779357] alarm thorch-fancontrol[10312]: temperature 64000 mC, setting fan PWM 77
+[  363.181933] alarm sway[944]: 00:05:40.601 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-2: Atomic commit failed: Device or resource busy
+[  363.181933] alarm sway[944]: 00:05:40.601 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+[  364.809435] alarm thorch-fancontrol[10387]: temperature 68000 mC, setting fan PWM 102
+[  367.167286] alarm sway[944]: 00:05:44.586 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-2: Atomic commit failed: Device or resource busy
+[  367.167286] alarm sway[944]: 00:05:44.586 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+[  368.726296] alarm systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+[  378.794651] alarm NetworkManager[630]: <info>  [1790409990.4462] manager: NetworkManager state is now CONNECTED_GLOBAL
+[  378.802553] alarm systemd[1]: Starting Network Manager Script Dispatcher Service...
+[  378.828757] alarm systemd[1]: Started Network Manager Script Dispatcher Service.
+[  379.954250] alarm thorch-fancontrol[10778]: temperature 64000 mC, setting fan PWM 77
+[  382.716535] alarm sshd-session[10814]: Connection closed by 192.168.0.134 port 55953 [preauth]
+[  385.534871] alarm sway[944]: 00:06:02.954 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  385.534871] alarm sway[944]: 00:06:02.954 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  388.840616] alarm systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+[  388.929842] alarm systemd-timesyncd[489]: Timed out waiting for reply from 195.171.43.10:123 (1.arch.pool.ntp.org).
+[  388.935441] alarm systemd-resolved[488]: Clock change detected. Flushing caches.
+[  388.935564] alarm systemd-timesyncd[489]: Contacted time server 109.74.206.120:123 (1.arch.pool.ntp.org).
+[  388.980640] alarm systemd-journald[436]: Time jumped backwards, rotating.
+[  389.037138] alarm thorch-fancontrol[11027]: temperature 67700 mC, setting fan PWM 102
+[  392.070085] alarm thorch-fancontrol[11103]: temperature 64900 mC, setting fan PWM 77
+[  394.551654] alarm sway[944]: 00:06:11.971 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  394.551654] alarm sway[944]: 00:06:11.971 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  395.107429] alarm thorch-fancontrol[11178]: temperature 66100 mC, setting fan PWM 102
+[  409.835284] alarm sway[944]: 00:06:27.254 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  409.835727] alarm sway[944]: 00:06:27.254 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  452.692521] alarm thorch-fancontrol[12666]: temperature 72000 mC, setting fan PWM 119
+[  455.722909] alarm thorch-fancontrol[12741]: temperature 68400 mC, setting fan PWM 102
+[  484.518602] alarm sway[944]: 00:07:41.938 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  484.518602] alarm sway[944]: 00:07:41.938 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  485.568758] alarm sway[944]: 00:07:42.988 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  485.568758] alarm sway[944]: 00:07:42.988 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  488.808404] alarm sway[944]: 00:07:46.228 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-2: Atomic commit failed: Device or resource busy
+[  488.808404] alarm sway[944]: 00:07:46.228 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+[  516.312633] alarm thorch-fancontrol[14292]: temperature 72000 mC, setting fan PWM 119
+[  519.346420] alarm thorch-fancontrol[14367]: temperature 68000 mC, setting fan PWM 102
+[  528.447188] alarm thorch-fancontrol[14612]: temperature 70800 mC, setting fan PWM 119
+[  529.916770] alarm sway[944]: 00:08:27.336 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-1: Atomic commit failed: Device or resource busy
+[  529.916770] alarm sway[944]: 00:08:27.336 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+[  531.481328] alarm thorch-fancontrol[14687]: temperature 68400 mC, setting fan PWM 102
+[  532.820067] alarm kernel: [drm:dpu_crtc_get_vblank_counter] *ERROR* no encoder found for crtc 1
+[  558.762314] alarm thorch-fancontrol[15395]: temperature 70800 mC, setting fan PWM 119
+[  561.791795] alarm thorch-fancontrol[15470]: temperature 69600 mC, setting fan PWM 102
+[  573.911111] alarm thorch-fancontrol[15783]: temperature 71200 mC, setting fan PWM 119
+[  576.006620] alarm sway[944]: 00:09:13.426 [ERROR] [wlr] [backend/drm/atomic.c:82] connector DSI-2: Atomic commit failed: Device or resource busy
+[  576.006620] alarm sway[944]: 00:09:13.426 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+[  576.946301] alarm thorch-fancontrol[15858]: temperature 68000 mC, setting fan PWM 102
+[  578.713334] alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+[  580.060799] alarm sshd-session[15894]: Accepted publickey for thords from 192.168.0.134 port 56094 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  580.064292] alarm sshd-session[15894]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  580.159608] alarm systemd-logind[635]: New session '3' of user 'thords' with class 'user' and type 'tty'.
+[  580.180242] alarm systemd[1]: Started Session 3 of User thords.
+[  604.232676] alarm thorch-fancontrol[16684]: temperature 70800 mC, setting fan PWM 119
+[  607.269174] alarm thorch-fancontrol[16759]: temperature 67700 mC, setting fan PWM 102
+[  624.579371] alarm sshd-session[17174]: Accepted publickey for thords from 192.168.0.134 port 56096 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  624.584435] alarm sshd-session[17174]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  624.634738] alarm systemd-logind[635]: New session '4' of user 'thords' with class 'user' and type 'tty'.
+[  624.656184] alarm systemd[1]: Started Session 4 of User thords.
+[  624.864152] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  624.864276] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 42, gen 0
+[  627.395443] alarm sshd-session[17180]: Received disconnect from 192.168.0.134 port 56096:11: disconnected by user
+[  627.395864] alarm sshd-session[17180]: Disconnected from user thords 192.168.0.134 port 56096
+[  627.397240] alarm sshd-session[17174]: pam_unix(sshd:session): session closed for user thords
+[  627.404403] alarm systemd[1]: session-4.scope: Deactivated successfully.
+[  627.405147] alarm systemd-logind[635]: Session 4 logged out. Waiting for processes to exit.
+[  627.406151] alarm systemd-logind[635]: Removed session 4.
+[  643.115666] alarm sshd-session[17663]: Accepted publickey for thords from 192.168.0.134 port 56099 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  643.118749] alarm sshd-session[17663]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  643.193610] alarm systemd-logind[635]: New session '5' of user 'thords' with class 'user' and type 'tty'.
+[  643.204248] alarm systemd[1]: Started Session 5 of User thords.
+[  643.616271] alarm sshd-session[17673]: Received disconnect from 192.168.0.134 port 56099:11: disconnected by user
+[  643.616384] alarm sshd-session[17673]: Disconnected from user thords 192.168.0.134 port 56099
+[  643.617152] alarm sshd-session[17663]: pam_unix(sshd:session): session closed for user thords
+[  643.624362] alarm systemd[1]: session-5.scope: Deactivated successfully.
+[  643.625249] alarm systemd-logind[635]: Session 5 logged out. Waiting for processes to exit.
+[  643.625897] alarm systemd-logind[635]: Removed session 5.
+[  651.186413] alarm sshd-session[17932]: Accepted publickey for thords from 192.168.0.134 port 56101 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  651.189782] alarm sshd-session[17932]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  651.244971] alarm systemd-logind[635]: New session '6' of user 'thords' with class 'user' and type 'tty'.
+[  651.272201] alarm systemd[1]: Started Session 6 of User thords.
+[  651.364157] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.364437] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 43, gen 0
+[  651.368035] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.368140] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 44, gen 0
+[  651.368215] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.368274] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 45, gen 0
+[  651.384033] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384163] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 46, gen 0
+[  651.384226] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384278] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 47, gen 0
+[  651.384356] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384406] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 48, gen 0
+[  651.390241] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390336] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 49, gen 0
+[  651.390404] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390470] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 50, gen 0
+[  651.390529] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390571] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 51, gen 0
+[  652.726118] alarm thorch-fancontrol[18010]: temperature 87200 mC, setting fan PWM 255
+[  652.933344] alarm sshd-session[17938]: Received disconnect from 192.168.0.134 port 56101:11: disconnected by user
+[  652.933434] alarm sshd-session[17938]: Disconnected from user thords 192.168.0.134 port 56101
+[  652.934318] alarm sshd-session[17932]: pam_unix(sshd:session): session closed for user thords
+[  652.942720] alarm systemd[1]: session-6.scope: Deactivated successfully.
+[  652.943026] alarm systemd[1]: session-6.scope: Consumed 1.523s CPU time over 1.670s wall clock time, 15.8M memory peak.
+[  652.943943] alarm systemd-logind[635]: Session 6 logged out. Waiting for processes to exit.
+[  652.944434] alarm systemd-logind[635]: Removed session 6.
+[  655.756546] alarm thorch-fancontrol[18089]: temperature 69600 mC, setting fan PWM 102
+[  661.272331] alarm sshd-session[18212]: Accepted publickey for thords from 192.168.0.134 port 56104 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  661.277889] alarm sshd-session[18212]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  661.359046] alarm systemd-logind[635]: New session '7' of user 'thords' with class 'user' and type 'tty'.
+[  661.372180] alarm systemd[1]: Started Session 7 of User thords.
+[  661.470742] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.470887] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 52, gen 0
+[  661.471019] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.471043] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 53, gen 0
+[  661.472023] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.472061] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 54, gen 0
+[  661.490413] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490493] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 55, gen 0
+[  661.490523] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490539] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 56, gen 0
+[  661.490559] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490573] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 57, gen 0
+[  661.500039] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500133] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 58, gen 0
+[  661.500153] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500167] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 59, gen 0
+[  661.500185] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500199] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 60, gen 0
+[  661.815497] alarm thorch-fancontrol[18274]: temperature 86400 mC, setting fan PWM 255
+[  662.681922] alarm sshd-session[18219]: Received disconnect from 192.168.0.134 port 56104:11: disconnected by user
+[  662.682023] alarm sshd-session[18219]: Disconnected from user thords 192.168.0.134 port 56104
+[  662.682692] alarm sshd-session[18212]: pam_unix(sshd:session): session closed for user thords
+[  662.688618] alarm systemd[1]: session-7.scope: Deactivated successfully.
+[  662.688910] alarm systemd[1]: session-7.scope: Consumed 1.311s CPU time over 1.316s wall clock time, 15.8M memory peak.
+[  662.689831] alarm systemd-logind[635]: Session 7 logged out. Waiting for processes to exit.
+[  662.690368] alarm systemd-logind[635]: Removed session 7.
+[  664.848265] alarm thorch-fancontrol[18345]: temperature 68400 mC, setting fan PWM 102
+[  668.970349] alarm sshd-session[18434]: Accepted publickey for thords from 192.168.0.134 port 56107 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  668.972943] alarm sshd-session[18434]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  669.056456] alarm systemd-logind[635]: New session '8' of user 'thords' with class 'user' and type 'tty'.
+[  669.080410] alarm systemd[1]: Started Session 8 of User thords.
+[  676.381701] alarm sshd-session[18450]: Received disconnect from 192.168.0.134 port 56107:11: disconnected by user
+[  676.381864] alarm sshd-session[18450]: Disconnected from user thords 192.168.0.134 port 56107
+[  676.382803] alarm sshd-session[18434]: pam_unix(sshd:session): session closed for user thords
+[  676.389899] alarm systemd[1]: session-8.scope: Deactivated successfully.
+[  676.391457] alarm systemd-logind[635]: Session 8 logged out. Waiting for processes to exit.
+[  676.392388] alarm systemd-logind[635]: Removed session 8.
+[  683.041472] alarm thorch-fancontrol[18833]: temperature 71200 mC, setting fan PWM 119
+[  686.078506] alarm thorch-fancontrol[18908]: temperature 66900 mC, setting fan PWM 102
+[  728.502531] alarm thorch-fancontrol[20009]: temperature 80800 mC, setting fan PWM 204
+[  731.531882] alarm thorch-fancontrol[20084]: temperature 71600 mC, setting fan PWM 119
+[  734.569422] alarm thorch-fancontrol[20183]: temperature 67300 mC, setting fan PWM 102
+[  752.758423] alarm thorch-fancontrol[20649]: temperature 77200 mC, setting fan PWM 153
+[  755.790085] alarm thorch-fancontrol[20724]: temperature 68400 mC, setting fan PWM 102
+[  775.474007] alarm sshd-session[21200]: Accepted publickey for thords from 192.168.0.134 port 56115 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  775.476749] alarm sshd-session[21200]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  775.579093] alarm systemd-logind[635]: New session '9' of user 'thords' with class 'user' and type 'tty'.
+[  775.596234] alarm systemd[1]: Started Session 9 of User thords.
+[  775.755953] alarm sshd-session[21206]: Received disconnect from 192.168.0.134 port 56115:11: disconnected by user
+[  775.756104] alarm sshd-session[21206]: Disconnected from user thords 192.168.0.134 port 56115
+[  775.756983] alarm sshd-session[21200]: pam_unix(sshd:session): session closed for user thords
+[  775.772978] alarm systemd[1]: session-9.scope: Deactivated successfully.
+[  775.774722] alarm systemd-logind[635]: Session 9 logged out. Waiting for processes to exit.
+[  775.775519] alarm systemd-logind[635]: Removed session 9.
+[  784.781098] alarm sshd-session[21462]: Accepted publickey for thords from 192.168.0.134 port 56117 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  784.788306] alarm sshd-session[21462]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  784.870672] alarm systemd-logind[635]: New session '10' of user 'thords' with class 'user' and type 'tty'.
+[  784.892205] alarm systemd[1]: Started Session 10 of User thords.

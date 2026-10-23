@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""Port Armada's RGB sleep/wake policy to ThorDS's existing LED service.
+
+Source: armada-os/armada fd0ed0f1a285fbbccc5fa63969d4e176cb0ae4e6,
+system_files/usr/lib/systemd/system-sleep/45-armada-rgb.
+Preserve the exact current colours and whether the battery updater was running.
+"""
+import json
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+LED_ROOT = Path(os.environ.get('THORDS_RGB_LED_ROOT', '/sys/class/leds'))
+STATE = Path(os.environ.get('THORDS_RGB_SLEEP_STATE', '/run/thords-sleep/rgb.json'))
+SYSTEMCTL = os.environ.get('THORDS_RGB_SYSTEMCTL', '/usr/bin/systemctl')
+SERVICE = 'thorch-rgb-battery.service'
+NAMES = re.compile(r'(?:[lr]:[rgb]\d+|rgb:[lr]\d+)\Z')
+
+
+def service(*args):
+    return subprocess.run([SYSTEMCTL, *args, SERVICE], timeout=8,
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+
+
+def restore():
+    if not STATE.exists():
+        return
+    data = json.loads(STATE.read_text())
+    errors = []
+    for name, value in data['brightness'].items():
+        if not NAMES.fullmatch(name) or not isinstance(value, int) or value < 0:
+            raise ValueError('Invalid saved LED state')
+        try:
+            (LED_ROOT / name / 'brightness').write_text(str(value) + '\n')
+        except OSError as exc:
+            errors.append(str(exc))
+    if data['battery_service_active'] and not service('start'):
+        errors.append('Could not restart battery RGB service')
+    if errors:
+        raise OSError('; '.join(errors))
+    STATE.unlink()
+
+
+def prepare():
+    restore()  # Recover a previous incomplete resume before taking new state.
+    active = service('is-active', '--quiet')
+    if active and not service('stop'):
+        raise OSError('Could not stop battery RGB updater')
+    values = {}
+    try:
+        for led in LED_ROOT.iterdir():
+            if NAMES.fullmatch(led.name):
+                values[led.name] = int((led / 'brightness').read_text())
+        STATE.parent.mkdir(parents=True, exist_ok=True)
+        temporary = STATE.with_suffix('.tmp')
+        temporary.write_text(json.dumps({'brightness': values,
+                                        'battery_service_active': active}))
+        temporary.replace(STATE)  # Record all values before changing the LEDs.
+        for name in values:
+            (LED_ROOT / name / 'brightness').write_text('0\n')
+    except Exception:
+        if STATE.exists():
+            restore()
+        elif active:
+            service('start')
+        raise
+
+
+if __name__ == '__main__':
+    try:
+        if sys.argv[1:] == ['pre']:
+            prepare()
+        elif sys.argv[1:] == ['post']:
+            restore()
+        else:
+            raise ValueError('Usage: thords-rgb-sleep pre|post')
+    except Exception as exc:
+        print(f'thords-rgb-sleep: {exc}', file=sys.stderr)
+        sys.exit(1)

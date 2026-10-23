@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+config="${HOME}/.config/azaharplus-emu/qt-config.ini"
+[[ -f "$config" ]] || exit 0
+
+config_edits=()
+set_value() {
+  local key=$1 value=$2 escaped
+  escaped=${value//&/\\&}
+  config_edits+=(-e "s|^${key}=.*|${key}=\"${escaped}\"|")
+  config_edits+=(-e "s|^${key}\\\\default=.*|${key}\\\\default=false|")
+}
+
+guid=0300f5a35e040000120b000001000000
+base="engine:sdl,guid:${guid},port:0"
+set_value 'profiles\\1\\button_a' "button:1,${base}"
+set_value 'profiles\\1\\button_b' "button:0,${base}"
+set_value 'profiles\\1\\button_x' "button:3,${base}"
+set_value 'profiles\\1\\button_y' "button:2,${base}"
+set_value 'profiles\\1\\button_l' "button:4,${base}"
+set_value 'profiles\\1\\button_r' "button:5,${base}"
+set_value 'profiles\\1\\button_start' "button:7,${base}"
+set_value 'profiles\\1\\button_select' "button:6,${base}"
+set_value 'profiles\\1\\button_home' "button:8,${base}"
+set_value 'profiles\\1\\button_power' "code:16777286,engine:keyboard"
+set_value 'profiles\\1\\button_up' "axis:7,direction:-,threshold:-0.5,${base}"
+set_value 'profiles\\1\\button_down' "axis:7,direction:+,threshold:0.5,${base}"
+set_value 'profiles\\1\\button_left' "axis:6,direction:-,threshold:-0.5,${base}"
+set_value 'profiles\\1\\button_right' "axis:6,direction:+,threshold:0.5,${base}"
+set_value 'profiles\\1\\button_zl' "axis:2,direction:+,threshold:0.5,${base}"
+set_value 'profiles\\1\\button_zr' "axis:5,direction:+,threshold:0.5,${base}"
+set_value 'profiles\\1\\circle_pad' "axis_x:0,axis_y:1,deadzone:0.15,${base}"
+set_value 'profiles\\1\\c_stick' "axis_x:3,axis_y:4,deadzone:0.15,${base}"
+
+config_edits+=(-e 's/^profiles\\1\\name=.*/profiles\\1\\name=ThorDS Native Controller/')
+# The deliberate three-second recovery chord should close cleanly without
+# waiting on a hidden desktop confirmation dialog.
+config_edits+=(-e 's/^confirmClose=.*/confirmClose=false/')
+config_edits+=(-e 's/^confirmClose\\default=.*/confirmClose\\default=false/')
+sed -i "${config_edits[@]}" "$config"
+busctl call org.shadowblip.InputPlumber \
+  /org/shadowblip/InputPlumber/CompositeDevice0 \
+  org.shadowblip.Input.CompositeDevice LoadProfilePath s \
+  /usr/share/inputplumber/profiles/default.yaml
+busctl call org.shadowblip.InputPlumber \
+  /org/shadowblip/InputPlumber/CompositeDevice0 \
+  org.shadowblip.Input.CompositeDevice SetTargetDevices as 3 \
+  xbox-series mouse keyboard

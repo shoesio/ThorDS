@@ -1,0 +1,144 @@
+Kernel: 7.1.2-thorch17
+
+Update status
+state=uninitialized
+bootstrap=required
+rollback=unavailable
+
+Power services
+● thords-irq-policy.service - ThorDS SM8550 interrupt and idle policy
+     Loaded: loaded (/usr/lib/systemd/system/thords-irq-policy.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-09-26 09:00:24 BST; 18min ago
+ Invocation: 70e644d59f414df193601b83c74d00c0
+    Process: 823 ExecStart=/usr/bin/thords-irq-policy (code=exited, status=0/SUCCESS)
+   Main PID: 823 (code=exited, status=0/SUCCESS)
+   Mem peak: 4.4M
+        CPU: 52ms
+
+Sep 26 09:00:23 alarm systemd[1]: Starting ThorDS SM8550 interrupt and idle policy...
+Sep 26 09:00:24 alarm thords-irq-policy[823]: ThorDS IRQs routed to CPU3-7; CPU0 deep idle enabled
+Sep 26 09:00:24 alarm systemd[1]: Finished ThorDS SM8550 interrupt and idle policy.
+
+● thords-performance.service - ThorDS performance profile
+     Loaded: loaded (/usr/lib/systemd/system/thords-performance.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-09-26 09:00:26 BST; 18min ago
+ Invocation: a7c321ad1e7d43458744c655884014a7
+    Process: 924 ExecStart=/usr/bin/thords-performance (code=exited, status=0/SUCCESS)
+   Main PID: 924 (code=exited, status=0/SUCCESS)
+   Mem peak: 3.2M
+        CPU: 23ms
+
+Sep 26 09:00:25 alarm systemd[1]: Starting ThorDS performance profile...
+Sep 26 09:00:26 alarm thords-performance[924]: ThorDS balanced profile: CPU=schedutil GPU=simple_ondemand (frequency limits unchanged)
+Sep 26 09:00:26 alarm systemd[1]: Finished ThorDS performance profile.
+
+● thorch-lavd.service - Thorch LAVD sched_ext scheduler
+     Loaded: loaded (/usr/lib/systemd/system/thorch-lavd.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-09-26 09:00:23 BST; 18min ago
+ Invocation: dc62407a2b854b3d9b46e80de832218d
+       Docs: https://github.com/sched-ext/scx
+   Main PID: 648 (scx_lavd)
+      Tasks: 4 (limit: 14026)
+     Memory: 56.5M (peak: 58.2M)
+        CPU: 1.116s
+     CGroup: /system.slice/thorch-lavd.service
+             └─648 /usr/bin/scx_lavd --autopilot
+
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.372315Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:613: capacity bound:  3055 (70.75035%)
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   primary CPUs:  [3, 4, 5, 6, 0, 1, 2]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   overflow CPUs: [7]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.372320Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:613: capacity bound:  4318 (100%)
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   primary CPUs:  [7, 3, 4, 5, 6, 0, 1, 2]
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]:   overflow CPUs: []
+Sep 26 09:00:24 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:24.373341Z  WARN ThreadId(01) scx_utils::compat: rust/scx_utils/src/compat.rs:417: tracepoint syscalls:sys_enter_execve is missing, tracepoint not loaded
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.281511Z  WARN ThreadId(01) scx_utils::libbpf_logger: rust/scx_utils/src/libbpf_logger.rs:12: libbpf: map 'lavd_ops': BPF map skeleton link is uninitialized
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.345101Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:1099: scx_lavd scheduler is initialized (build ID: 1.1.2 aarch64-unknown-linux-gnu)
+Sep 26 09:00:25 alarm thorch-lavd-mode[648]: 2026-09-26T08:00:25.345133Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:1103: scx_lavd scheduler starts running.
+
+Governor and battery snapshot
+{"sample": {"boottime": 1131.282381116, "timestamp": 1790410741.4255893, "status": "Discharging", "capacity": 88, "charge_counter": 7128835, "current_now": -1737713, "voltage_now": 4071075, "power_now": 50060105, "temp": 310, "iv_watts": 7.074359951475, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1785600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2956800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2188800, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 119, "ae96000.dsi.0": 2334}}}
+
+GPU interrupt placement
+197:          0          0          0    1229483          0          0          0          0    GICv3 332 Level     gpu-irq
+200:          0          0          0          0          0          0          0          0    GICv3 337 Level     gmu
+197: 3
+200: 3
+
+CPU0 idle state
+0
+
+Relevant log entries
+2026-09-26T09:01:00+01:00 alarm sway[944]: 00:00:28.084 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:10+01:00 alarm sway[944]: 00:00:38.088 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:01:36+01:00 alarm sway[944]: 00:01:03.830 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:01:37+01:00 alarm sway[944]: 00:01:04.884 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:46+01:00 alarm sway[944]: 00:01:13.551 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:01:50+01:00 alarm sway[944]: 00:01:17.880 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:02:04+01:00 alarm sway[944]: 00:01:32.218 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:02:11+01:00 alarm sway[944]: 00:01:39.118 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:02:22+01:00 alarm sway[944]: 00:01:49.385 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:02:32+01:00 alarm sway[944]: 00:01:59.444 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:03+01:00 alarm sway[944]: 00:02:30.302 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:08+01:00 alarm sway[944]: 00:02:35.756 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:10+01:00 alarm sway[944]: 00:02:38.147 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:16+01:00 alarm sway[944]: 00:02:43.505 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:20+01:00 alarm sway[944]: 00:02:47.302 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:28+01:00 alarm sway[944]: 00:02:55.461 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:29+01:00 alarm sway[944]: 00:02:56.702 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:29+01:00 alarm sway[944]: 00:02:57.183 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:37+01:00 alarm sway[944]: 00:03:04.289 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:52+01:00 alarm sway[944]: 00:03:20.202 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:03:58+01:00 alarm sway[944]: 00:03:25.588 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:58+01:00 alarm sway[944]: 00:03:25.698 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:03:59+01:00 alarm sway[944]: 00:03:26.665 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:07+01:00 alarm sway[944]: 00:03:35.067 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:11+01:00 alarm sway[944]: 00:03:37.034 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:11+01:00 alarm sway[944]: 00:03:37.169 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:12+01:00 alarm sway[944]: 00:03:38.553 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:16+01:00 alarm sway[944]: 00:03:42.358 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:29+01:00 alarm sway[944]: 00:03:55.036 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:04:37+01:00 alarm sway[944]: 00:04:03.030 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:44+01:00 alarm sway[944]: 00:04:09.983 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:46+01:00 alarm sway[944]: 00:04:12.569 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:04:58+01:00 alarm sway[944]: 00:04:23.777 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:05+01:00 alarm sway[944]: 00:04:30.941 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:05+01:00 alarm sway[944]: 00:04:31.679 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:08+01:00 alarm sway[944]: 00:04:33.936 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:05:44+01:00 alarm sway[944]: 00:05:09.891 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:05:50+01:00 alarm sway[944]: 00:05:16.720 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:14+01:00 alarm sway[944]: 00:05:40.601 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:06:18+01:00 alarm sway[944]: 00:05:44.586 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:06:37+01:00 alarm sway[944]: 00:06:02.954 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:44+01:00 alarm sway[944]: 00:06:11.971 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:06:59+01:00 alarm sway[944]: 00:06:27.254 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:14+01:00 alarm sway[944]: 00:07:41.938 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:15+01:00 alarm sway[944]: 00:07:42.988 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:08:18+01:00 alarm sway[944]: 00:07:46.228 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:09:00+01:00 alarm sway[944]: 00:08:27.336 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:09:46+01:00 alarm sway[944]: 00:09:13.426 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:13:50+01:00 alarm sway[944]: 00:13:17.500 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:14:22+01:00 alarm sway[944]: 00:13:50.080 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:15:17+01:00 alarm sway[944]: 00:14:44.611 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:17:42+01:00 alarm sway[944]: 00:17:09.363 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+
+Latest sleep snapshots
+enabled
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+Sep 26 09:00:23 alarm systemd[1]: Starting Confirm a successful Thorch boot transaction...
+Sep 26 09:00:24 alarm boot-transaction[871]: ok: Thorch initramfs
+Sep 26 09:00:24 alarm boot-transaction[871]: ok: Android boot image KERNEL
+Sep 26 09:00:24 alarm boot-transaction[871]: ok: canonical boot-image validator
+Sep 26 09:00:33 alarm boot-transaction[871]: ok: Android boot image invariants
+Sep 26 09:00:33 alarm boot-transaction[871]: Thorch boot validation passed
+Sep 26 09:00:36 alarm boot-transaction[636]: :: thorch-boot-transaction confirmed successful boot of 7.1.2-thorch17
+Sep 26 09:00:36 alarm systemd[1]: thorch-boot-confirm.service: Deactivated successfully.
+Sep 26 09:00:36 alarm systemd[1]: Finished Confirm a successful Thorch boot transaction.
+Sep 26 09:00:36 alarm systemd[1]: thorch-boot-confirm.service: Consumed 793ms CPU time over 13.120s wall clock time, 283.1M memory peak.
+Power save: off
+[s2idle] deep
+filter_mode=false
+resolution_factor=4
+texture_filter=4
+screenshot_resolution_factor=0

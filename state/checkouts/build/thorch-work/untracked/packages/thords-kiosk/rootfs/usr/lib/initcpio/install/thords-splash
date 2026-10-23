@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+build() {
+    add_binary /usr/bin/bash
+    add_binary /usr/bin/mkdir
+    add_binary /usr/bin/chmod
+    add_binary /usr/bin/sleep
+    add_binary /usr/bin/readlink
+    add_binary /usr/libexec/thords/early-splash-renderer
+    add_file /usr/libexec/thords/early-splash
+    add_file /usr/share/thords/boot-splash.asp
+    add_runscript
+}
+help() {
+    echo 'Start the Armada splash drawer with ThorDS artwork as the display becomes available.'
+}

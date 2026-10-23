@@ -1,0 +1,633 @@
+2026-09-26T21:44:54+01:00
+1054 bash /usr/bin/thords-session
+1057 bash /usr/bin/thords-session
+1164 bash /usr/bin/thords-azahar --boot-home-menu-europe
+1187 azahar --boot-home-menu-europe
+5965 bash -c date -Is; pgrep -af "azahar|thords-azahar|thords-session|mako"; ps -eo pid,ppid,stat,pcpu,args --sort=pid | grep -E "azahar|thords-session|thords-window|mako" | grep -v grep; echo SWAY; SWAYSOCK=$(ls /run/user/967/sway-ipc.*.sock | head -1) swaymsg -t get_tree -r
+   1054     915 Ss    0.0 bash /usr/bin/thords-session
+   1057    1054 S     0.0 bash /usr/bin/thords-session
+   1096    1054 S     0.3 bash /usr/bin/thords-window-manager
+   1164    1054 S     0.0 bash /usr/bin/thords-azahar --boot-home-menu-europe
+   1187    1164 Sl    347 azahar --boot-home-menu-europe
+SWAY
+{
+  "id": 1,
+  "type": "root",
+  "orientation": "horizontal",
+  "percent": null,
+  "urgent": false,
+  "marks": [],
+  "focused": false,
+  "layout": "splith",
+  "border": "none",
+  "current_border_width": 0,
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 3160,
+    "height": 1080
+  },
+  "deco_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "window_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "geometry": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "name": "root",
+  "window": null,
+  "nodes": [
+    {
+      "id": 2147483647,
+      "type": "output",
+      "orientation": "horizontal",
+      "percent": null,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 3160,
+        "height": 1080
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "__i3",
+      "window": null,
+      "nodes": [
+        {
+          "id": 2147483646,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 3160,
+            "height": 1080
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "__i3_scratch",
+          "window": null,
+          "nodes": [],
+          "floating_nodes": [
+            {
+              "id": 7,
+              "type": "floating_con",
+              "orientation": "none",
+              "percent": null,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "none",
+              "current_border_width": 2,
+              "rect": {
+                "x": 480,
+                "y": 135,
+                "width": 960,
+                "height": 810
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 960,
+                "height": 810
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 1235,
+                "height": 1022
+              },
+              "name": "Azahar 7407e4f",
+              "window": 4194312,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "user_on",
+              "scratchpad_state": "fresh",
+              "pid": 1187,
+              "app_id": null,
+              "foreign_toplevel_identifier": "4f63613a06ccc97da40fcc0c7e7803c0",
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "sandbox_engine": null,
+              "sandbox_app_id": null,
+              "sandbox_instance_id": null,
+              "tag": null,
+              "idle_inhibitors": {
+                "user": "none",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Azahar",
+                "instance": "azahar",
+                "title": "Azahar 7407e4f",
+                "transient_for": null,
+                "window_type": "normal"
+              }
+            }
+          ],
+          "focus": [
+            7
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        2147483646
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "floating": null,
+      "scratchpad_state": null
+    },
+    {
+      "id": 4,
+      "type": "output",
+      "orientation": "none",
+      "percent": 0.60759493670886078,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "DSI-2",
+      "window": null,
+      "nodes": [
+        {
+          "id": 5,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "2",
+          "window": null,
+          "nodes": [],
+          "floating_nodes": [
+            {
+              "id": 9,
+              "type": "floating_con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": true,
+              "layout": "none",
+              "border": "none",
+              "current_border_width": 2,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 900,
+                "height": 1080
+              },
+              "name": "Azahar",
+              "window": 4194332,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "user_on",
+              "scratchpad_state": "none",
+              "pid": 1187,
+              "app_id": null,
+              "foreign_toplevel_identifier": "476ebd025bcde3b74433a0b596dcaeb1",
+              "visible": true,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "sandbox_engine": null,
+              "sandbox_app_id": null,
+              "sandbox_instance_id": null,
+              "tag": null,
+              "idle_inhibitors": {
+                "user": "none",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Azahar",
+                "instance": "azahar",
+                "title": "Azahar",
+                "transient_for": null,
+                "window_type": "normal"
+              }
+            }
+          ],
+          "focus": [
+            9
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 2,
+          "output": "DSI-2",
+          "representation": "H[]"
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        5
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "floating": null,
+      "scratchpad_state": null,
+      "primary": false,
+      "make": "Unknown",
+      "model": "Unknown",
+      "serial": "Unknown",
+      "modes": [
+        {
+          "width": 1080,
+          "height": 1920,
+          "refresh": 120000,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1080,
+          "height": 1920,
+          "refresh": 60000,
+          "picture_aspect_ratio": "none"
+        }
+      ],
+      "features": {
+        "adaptive_sync": false,
+        "hdr": false
+      },
+      "non_desktop": false,
+      "active": true,
+      "dpms": true,
+      "power": true,
+      "scale": 1.0,
+      "scale_filter": "nearest",
+      "transform": "90",
+      "adaptive_sync_status": "disabled",
+      "current_workspace": "2",
+      "current_mode": {
+        "width": 1080,
+        "height": 1920,
+        "refresh": 120000,
+        "picture_aspect_ratio": "none"
+      },
+      "max_render_time": 0,
+      "allow_tearing": false,
+      "hdr": false
+    },
+    {
+      "id": 3,
+      "type": "output",
+      "orientation": "none",
+      "percent": 0.39240506329113922,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 1920,
+        "y": 0,
+        "width": 1240,
+        "height": 1080
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "DSI-1",
+      "window": null,
+      "nodes": [
+        {
+          "id": 6,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 1920,
+            "y": 0,
+            "width": 1240,
+            "height": 1080
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "1",
+          "window": null,
+          "nodes": [],
+          "floating_nodes": [
+            {
+              "id": 8,
+              "type": "floating_con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "none",
+              "current_border_width": 2,
+              "rect": {
+                "x": 1920,
+                "y": 0,
+                "width": 1240,
+                "height": 1080
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1240,
+                "height": 1080
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 900,
+                "height": 1022
+              },
+              "name": "Azahar",
+              "window": 4194322,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "user_on",
+              "scratchpad_state": "none",
+              "pid": 1187,
+              "app_id": null,
+              "foreign_toplevel_identifier": "dc106efe9c4b91663a862c97b8523eb0",
+              "visible": true,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "sandbox_engine": null,
+              "sandbox_app_id": null,
+              "sandbox_instance_id": null,
+              "tag": null,
+              "idle_inhibitors": {
+                "user": "none",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Azahar",
+                "instance": "azahar",
+                "title": "Azahar",
+                "transient_for": null,
+                "window_type": "normal"
+              }
+            }
+          ],
+          "focus": [
+            8
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 1,
+          "output": "DSI-1",
+          "representation": "H[]"
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        6
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "floating": null,
+      "scratchpad_state": null,
+      "primary": false,
+      "make": "Unknown",
+      "model": "Unknown",
+      "serial": "Unknown",
+      "modes": [
+        {
+          "width": 1080,
+          "height": 1240,
+          "refresh": 59999,
+          "picture_aspect_ratio": "none"
+        }
+      ],
+      "features": {
+        "adaptive_sync": false,
+        "hdr": false
+      },
+      "non_desktop": false,
+      "active": true,
+      "dpms": true,
+      "power": true,
+      "scale": 1.0,
+      "scale_filter": "nearest",
+      "transform": "90",
+      "adaptive_sync_status": "disabled",
+      "current_workspace": "1",
+      "current_mode": {
+        "width": 1080,
+        "height": 1240,
+        "refresh": 59999,
+        "picture_aspect_ratio": "none"
+      },
+      "max_render_time": 0,
+      "allow_tearing": false,
+      "hdr": false
+    }
+  ],
+  "floating_nodes": [],
+  "focus": [
+    4,
+    3
+  ],
+  "fullscreen_mode": 0,
+  "sticky": false,
+  "floating": null,
+  "scratchpad_state": null
+}

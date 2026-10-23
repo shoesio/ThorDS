@@ -1,0 +1,56 @@
+2026-10-12T22:13:30+01:00
+{"sample": {"boottime": 80615.779338238, "timestamp": 1791839235.1270478, "status": "Charging", "capacity": 29, "charge_counter": 2398784, "current_now": 4032814, "voltage_now": 3940089, "power_now": 47195636, "temp": 250, "iv_watts": 15.889646080446, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1017600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 595200, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+{"sample": {"boottime": 80973.059018672, "timestamp": 1791839592.4067273, "status": "Charging", "capacity": 35, "charge_counter": 2909336, "current_now": 3605069, "voltage_now": 3996727, "power_now": 50721926, "temp": 290, "iv_watts": 14.408476609163, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1459200, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 595200, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=battery
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_STATUS=Charging
+POWER_SUPPLY_CHARGE_TYPE=Fast
+POWER_SUPPLY_HEALTH=Good
+POWER_SUPPLY_PRESENT=1
+POWER_SUPPLY_TECHNOLOGY=Li-ion
+POWER_SUPPLY_CYCLE_COUNT=0
+POWER_SUPPLY_VOLTAGE_MAX=4400000
+POWER_SUPPLY_VOLTAGE_NOW=4004706
+POWER_SUPPLY_VOLTAGE_OCV=3809379
+POWER_SUPPLY_CURRENT_NOW=3954077
+POWER_SUPPLY_POWER_NOW=48231567
+POWER_SUPPLY_CHARGE_COUNTER=2927164
+POWER_SUPPLY_CHARGE_CONTROL_START_THRESHOLD=0
+POWER_SUPPLY_CHARGE_CONTROL_END_THRESHOLD=0
+POWER_SUPPLY_CAPACITY=36
+POWER_SUPPLY_TEMP=280
+POWER_SUPPLY_TIME_TO_EMPTY_AVG=-1
+POWER_SUPPLY_TIME_TO_FULL_AVG=4925
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_INTERNAL_RESISTANCE=95396
+POWER_SUPPLY_STATE_OF_HEALTH=100
+POWER_SUPPLY_MODEL_NAME=7567856_QUECTEL_SG8550_8000MAH_PM8550B_AVERAGED_MASTERSLAVE_DEC7TH2024
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=qcom-battmgr-usb
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=9000000
+POWER_SUPPLY_VOLTAGE_NOW=8594000
+POWER_SUPPLY_CURRENT_MAX=3000000
+POWER_SUPPLY_CURRENT_NOW=2815000
+POWER_SUPPLY_INPUT_CURRENT_LIMIT=3000000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID
+2026-10-12T22:07:12+01:00 alarm systemd-logind[616]: Lid closed.
+2026-10-12T22:07:15+01:00 alarm systemd-sleep[24832]: Performing sleep operation 'suspend'...
+2026-10-12T22:07:15+01:00 alarm kernel: PM: suspend entry (s2idle)
+2026-10-12T22:13:12+01:00 alarm systemd-sleep[24832]: System returned from sleep operation 'suspend'.
+2026-10-12T22:13:12+01:00 alarm kernel: PM: suspend exit
+2026-10-12T22:13:12+01:00 alarm systemd-logind[616]: Lid opened.
+2026-10-12T22:13:12+01:00 alarm thords-sleep[24913]: Sleep lifecycle finished; battery snapshots saved

@@ -1,0 +1,34 @@
+2026-10-12T22:22:00+01:00
+{"sample": {"boottime": 81120.435233176, "timestamp": 1791839739.782942, "status": "Discharging", "capacity": 37, "charge_counter": 3029275, "current_now": -1293489, "voltage_now": 3761614, "power_now": 40713774, "temp": 280, "iv_watts": 4.865606331246, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1017600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 595200, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2457600, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+{"sample": {"boottime": 81482.535087409, "timestamp": 1791840101.8827963, "status": "Discharging", "capacity": 36, "charge_counter": 2958770, "current_now": -732440, "voltage_now": 3741567, "power_now": 22569448, "temp": 270, "iv_watts": 2.74047333348, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1228800, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2476800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=battery
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_STATUS=Discharging
+POWER_SUPPLY_CHARGE_TYPE=N/A
+POWER_SUPPLY_HEALTH=Good
+POWER_SUPPLY_PRESENT=1
+POWER_SUPPLY_TECHNOLOGY=Li-ion
+POWER_SUPPLY_CYCLE_COUNT=0
+POWER_SUPPLY_VOLTAGE_MAX=4400000
+POWER_SUPPLY_VOLTAGE_NOW=3699137
+POWER_SUPPLY_VOLTAGE_OCV=3792444
+POWER_SUPPLY_CURRENT_NOW=-1452062
+POWER_SUPPLY_POWER_NOW=22569448
+POWER_SUPPLY_CHARGE_COUNTER=2958770
+POWER_SUPPLY_CHARGE_CONTROL_START_THRESHOLD=0
+POWER_SUPPLY_CHARGE_CONTROL_END_THRESHOLD=0
+POWER_SUPPLY_CAPACITY=36
+POWER_SUPPLY_TEMP=270
+POWER_SUPPLY_TIME_TO_EMPTY_AVG=74175
+POWER_SUPPLY_TIME_TO_FULL_AVG=-1
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_INTERNAL_RESISTANCE=140047
+POWER_SUPPLY_STATE_OF_HEALTH=100
+POWER_SUPPLY_MODEL_NAME=7567856_QUECTEL_SG8550_8000MAH_PM8550B_AVERAGED_MASTERSLAVE_DEC7TH2024
+0

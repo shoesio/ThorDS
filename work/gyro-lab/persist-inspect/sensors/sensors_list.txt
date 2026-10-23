@@ -1,0 +1,17 @@
+mag
+mag_cal
+hall
+accel
+gyro
+tilt
+pedometer
+psmd
+step_detect
+sig_motion
+offbody_detect
+device_orient
+gyro_cal
+geomag_rv
+gravity
+game_rv
+rotv

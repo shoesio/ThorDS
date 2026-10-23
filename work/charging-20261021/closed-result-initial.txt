@@ -1,0 +1,22 @@
+2026-10-21T21:35:17+01:00
+{"sample": {"boottime": 376.632425921, "timestamp": 1792614694.0420744, "status": "Charging", "capacity": 11, "charge_counter": 684304, "current_now": 4161357, "voltage_now": 3969478, "power_now": 39284648, "temp": 230, "iv_watts": 16.518415061646, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1228800, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2342400, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 844800, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+{"sample": {"boottime": 582.977276476, "timestamp": 1792614900.3869247, "status": "Charging", "capacity": 19, "charge_counter": 1128271, "current_now": 4834836, "voltage_now": 3989136, "power_now": 37220614, "temp": 250, "iv_watts": 19.286818341696, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1017600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2592000, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 940800, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+{"sample": {"boottime": 600.304413879, "timestamp": 1792614917.7140625, "status": "Charging", "capacity": 19, "charge_counter": 1135728, "current_now": 3863254, "voltage_now": 3962666, "power_now": 40246051, "temp": 250, "iv_watts": 15.308785275164, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1670400, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2956800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=qcom-battmgr-usb
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=9000000
+POWER_SUPPLY_VOLTAGE_NOW=8588000
+POWER_SUPPLY_CURRENT_MAX=3000000
+POWER_SUPPLY_CURRENT_NOW=2812000
+POWER_SUPPLY_INPUT_CURRENT_LIMIT=3000000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID
+{"timestamp": 1792614914.2521462, "boottime": 596.842501548, "supplies": {"battery": {"status": "Charging", "capacity": "19", "charge_counter": "1128271", "current_now": "4180767", "voltage_now": "3975901", "voltage_ocv": "3843891", "power_now": "37220614", "temp": "250", "charge_control_start_threshold": "0", "charge_control_end_threshold": "0"}, "qcom-battmgr-usb": {"online": "1", "current_now": "2815000", "voltage_now": "8613000", "usb_type": "Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID", "input_current_limit": "3000000", "current_max": "3000000"}, "ucsi-source-psy-pmic_glink.ucsi.01": {"status": "Charging", "online": "1", "current_now": "2400000", "voltage_now": "0", "usb_type": "C [PD] PD_PPS", "current_max": "0"}, "qcom-battmgr-wls": {"online": "0", "current_now": "2819000", "voltage_now": "46000", "current_max": "0"}}}
+{"timestamp": 1792614916.2644475, "boottime": 598.854802301, "supplies": {"battery": {"status": "Charging", "capacity": "19", "charge_counter": "1135728", "current_now": "3866550", "voltage_now": "3963445", "voltage_ocv": "3844454", "power_now": "40246051", "temp": "250", "charge_control_start_threshold": "0", "charge_control_end_threshold": "0"}, "qcom-battmgr-usb": {"online": "1", "current_now": "2815000", "voltage_now": "8601000", "usb_type": "Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID", "input_current_limit": "3000000", "current_max": "3000000"}, "ucsi-source-psy-pmic_glink.ucsi.01": {"status": "Charging", "online": "1", "current_now": "2400000", "voltage_now": "0", "usb_type": "C [PD] PD_PPS", "current_max": "0"}, "qcom-battmgr-wls": {"online": "0", "current_now": "2812000", "voltage_now": "42000", "current_max": "0"}}}

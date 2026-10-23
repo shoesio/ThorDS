@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+state_dir="${HOME}/.config/thords"
+state_file="${state_dir}/frame-generation.state"
+log_file="/var/log/thords/framegen.log"
+mkdir -p "$state_dir" "$(dirname "$log_file")"
+
+read_state() {
+  if [[ -s "$state_file" ]] && grep -qxE 'on|off' "$state_file"; then
+    cat "$state_file"
+  else
+    printf 'on\n' >"$state_file"
+    printf 'frame generation defaulted to on at %s\n' "$(date)" >>"$log_file"
+    printf 'on\n'
+  fi
+}
+
+write_state() {
+  local value=$1
+  [[ "$value" == on || "$value" == off ]] || return 2
+  printf '%s\n' "$value" >"$state_file"
+  printf 'frame generation set to %s at %s\n' "$value" "$(date)" >>"$log_file"
+}
+
+update_mako_profile() {
+  local value=$1
+  local config="${state_dir}/mako-120.toml"
+  local toml_value=true
+  [[ "$value" == off ]] && toml_value=false
+  [[ -f "$config" ]] || return 1
+  sed -i "s/^frame_generation_enabled = .*/frame_generation_enabled = ${toml_value}/" "$config"
+}
+
+case "${1:-status}" in
+  status)
+    printf 'frame-generation=%s\n' "$(read_state)"
+    ;;
+  set)
+    value="${2:?expected on or off}"
+    write_state "$value"
+    update_mako_profile "$value" || true
+    ;;
+  toggle)
+    current=$(read_state)
+    [[ "$current" == on ]] && next=off || next=on
+    write_state "$next"
+    if update_mako_profile "$next"; then
+      printf 'MAKO live profile updated to %s\n' "$next" >>"$log_file"
+    else
+      printf 'MAKO profile not active; next launch uses %s\n' "$next" >>"$log_file"
+    fi
+    ;;
+  *)
+    printf 'usage: %s {status|toggle|set on|set off}\n' "$0" >&2
+    exit 2
+    ;;
+esac

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source_dir=/opt/thords-testdata
+user_dir="${HOME}/.local/share/azaharplus-emu"
+marker="${user_dir}/.thords-captain-toad-ready"
+cia_name='Captain Toad Treasure Tracker (CTR-P-BZPP) (E) (v0.0.0).standard.cia'
+cia_source="${source_dir}/game/${cia_name}"
+save_source="${source_dir}/save/0x01CB2 Captain Toad  Treasure Tracker/20251114-182505/GameData.bin"
+title_dir="${user_dir}/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200"
+save_dir="${user_dir}/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200/data/00000001"
+
+[[ -d "${source_dir}" ]] || exit 0
+
+install -d "${user_dir}/sysdata" "${user_dir}/nand"
+
+# These files are first-boot seed data, not a desired-state overlay.  Never
+# replace writable console state on a later session: doing so rolls HOME Menu
+# settings and game progress back to the copies baked into the image.
+if [[ ! -s "${user_dir}/boot9.bin" ]]; then
+  install -m 0600 "${source_dir}/system/boot9.bin" "${user_dir}/boot9.bin"
+fi
+cp -an "${source_dir}/system/sysdata/." "${user_dir}/sysdata/"
+cp -an "${source_dir}/system/nand/." "${user_dir}/nand/"
+if [[ ! -e "${marker}" && -f "${cia_source}" ]]; then
+  azahar --install "${cia_source}"
+fi
+
+# Do not create a data-only title directory: HOME Menu treats it as an
+# installed application and crashes when no TMD/content exists to describe it.
+if compgen -G "${title_dir}/content/*.tmd" >/dev/null &&
+   [[ ! -s "${save_dir}/GameData.bin" ]]; then
+  install -d "${save_dir}"
+  install -m 0600 "${save_source}" "${save_dir}/GameData.bin"
+fi
+
+touch "${marker}"
+printf 'Captain Toad, save data, and European HOME Menu prepared successfully.\n'

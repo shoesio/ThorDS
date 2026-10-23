@@ -1,0 +1,73 @@
+#!/usr/bin/bash
+# Armada's early drawer, adapted to mkinitcpio and the ThorDS Sway handoff.
+set -u
+umask 077
+state=/run/armada
+pidfile=$state/thords-splash.pid
+renderer=/usr/libexec/thords/early-splash-renderer
+asset=/usr/share/thords/boot-splash.asp
+
+owned_process() {
+    local pid=$1 exe arg
+    [[ "$pid" =~ ^[0-9]+$ && -r /proc/$pid/cmdline ]] || return 1
+    exe=$(readlink "/proc/$pid/exe" 2>/dev/null) || return 1
+    [[ "$exe" == "$renderer" || "$exe" == "$renderer (deleted)" ]] && return 0
+    [[ "$exe" == /usr/bin/bash || "$exe" == '/usr/bin/bash (deleted)' ]] || return 1
+    while IFS= read -r -d '' arg; do
+        [[ "$arg" == /usr/libexec/thords/early-splash ]] && return 0
+    done <"/proc/$pid/cmdline"
+    return 1
+}
+
+draw() {
+    trap 'exit 0' TERM INT
+    local i name
+    for ((i=0; i<100; i++)); do
+        [[ ! -e "$state/thords-splash.stopped" ]] || return 0
+        name=
+        read -r name </sys/class/graphics/fb0/name 2>/dev/null || true
+        [[ "$name" == msmdrmfb ]] && break
+        sleep 0.1
+    done
+    [[ -e /dev/fb0 && ! -e "$state/thords-splash.stopped" ]] || return 0
+    # Give the top OLED visible light if firmware started it at zero brightness.
+    # The normal hardware-default service subsequently restores user settings.
+    local level=1 maximum=0 backlight=/sys/class/backlight/ae96000.dsi.0
+    read -r level <"$backlight/brightness" 2>/dev/null || true
+    read -r maximum <"$backlight/max_brightness" 2>/dev/null || true
+    if [[ "$level" == 0 && "$maximum" =~ ^[0-9]+$ ]] && ((maximum > 0)); then
+        printf '%s\n' "$((maximum / 4))" >"$backlight/brightness" 2>/dev/null || true
+    fi
+    printf '\033[?25l\033[H\033[2J\033[3J' >/dev/tty0 2>/dev/null || true
+    # Preserve brightness; existing hardware defaults restore the user's levels.
+    exec -a @thords-splash "$renderer" --backend drm --connector DSI-2 \
+        --rotate 90 --keep-vt --layout split --logo-height 1080 --image "$asset"
+}
+
+case "${1:-}" in
+    start)
+        [[ -x "$renderer" && -r "$asset" ]] || exit 0
+        mkdir -p "$state"
+        chmod 0755 "$state"
+        [[ ! -e "$state/thords-splash.stopped" ]] || exit 0
+        pid=
+        read -r pid <"$pidfile" 2>/dev/null || true
+        if owned_process "$pid"; then exit 0; fi
+        : >"$state/thords-splash.log"
+        chmod 0644 "$state/thords-splash.log"
+        draw >>"$state/thords-splash.log" 2>&1 &
+        printf '%s\n' "$!" >"$pidfile"
+        ;;
+    stop)
+        mkdir -p "$state"
+        : >"$state/thords-splash.stopped"
+        # Armada's handshake drops DRM master while retaining scanout until
+        # Sway commits its own framebuffer, avoiding a black handoff frame.
+        printf 'thords-session\n' >"$state/takeover"
+        pid=
+        read -r pid <"$pidfile" 2>/dev/null || true
+        owned_process "$pid" && kill -TERM "$pid" 2>/dev/null || true
+        rm -f "$pidfile"
+        ;;
+    *) echo 'Usage: early-splash start|stop' >&2; exit 2 ;;
+esac

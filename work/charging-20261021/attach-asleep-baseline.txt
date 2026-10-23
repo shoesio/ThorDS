@@ -1,0 +1,4 @@
+2026-10-21T21:37:20+01:00
+{"sample": {"boottime": 723.419658185, "timestamp": 1792615040.829307, "status": "Discharging", "capacity": 22, "charge_counter": 1302072, "current_now": -1423497, "voltage_now": 3697580, "power_now": 29416781, "temp": 260, "iv_watts": 5.26349403726, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1670400, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2956800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+0
+Diagnostic logger restarted 14972

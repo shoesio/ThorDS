@@ -1,0 +1,12 @@
+[Unit]
+Description=CTGP-7 legacy update-check compatibility shim
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/lib/thords/ctgp-update-shim.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

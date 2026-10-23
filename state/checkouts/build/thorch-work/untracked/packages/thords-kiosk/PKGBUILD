@@ -1,0 +1,69 @@
+pkgname=thords-kiosk
+pkgver=0.2.0
+pkgrel=2
+pkgdesc='ThorDS dedicated Azahar Wayland session'
+arch=('aarch64')
+license=('MIT' 'GPL-2.0-or-later')
+backup=(etc/thords/power.conf)
+makedepends=(gcc make pkgconf libdrm)
+
+# seatd gives a system service direct, predictable DRM/input access without a desktop login manager.
+# sway is intentionally temporary: once the dual-panel policy is proven we can replace it with a tiny compositor.
+depends=(
+  azahar
+  sway
+  swaybg
+  seatd
+  foot
+  wayland
+  qt6-wayland
+  pipewire
+  pipewire-audio
+  pipewire-pulse
+  wireplumber
+  networkmanager
+  openssh
+  vulkan-icd-loader
+  thorch-mako
+  python
+  libdrm
+  libinput
+)
+
+build() {
+  make -C "$startdir/early-splash"
+}
+
+package() {
+  cp -a "$startdir/rootfs/." "$pkgdir/"
+  find "$pkgdir" -type d -name __pycache__ -prune -exec rm -rf {} +
+  chmod 0755 \
+    "$pkgdir/usr/bin/thords-diagnostics" \
+    "$pkgdir/usr/bin/thords-configure-controls" \
+    "$pkgdir/usr/bin/thords-configure-performance" \
+    "$pkgdir/usr/bin/thords-hardware-buttons" \
+    "$pkgdir/usr/bin/thords-performance" \
+    "$pkgdir/usr/bin/thords-irq-policy" \
+    "$pkgdir/usr/bin/thords-sleep-guard" \
+    "$pkgdir/usr/bin/thords-rgb-sleep" \
+    "$pkgdir/usr/bin/thords-low-battery-shutdown" \
+    "$pkgdir/usr/bin/thords-wake-policy" \
+    "$pkgdir/usr/bin/thords-power-sample" \
+    "$pkgdir/usr/bin/thords-prepare-testdata" \
+    "$pkgdir/usr/bin/thords-session" \
+    "$pkgdir/usr/bin/thords-window-manager" \
+    "$pkgdir/usr/bin/thords-framegen" \
+    "$pkgdir/usr/bin/thords-framegen-input" \
+    "$pkgdir/usr/bin/thords-azahar"
+  chmod 0644 "$pkgdir/usr/share/thords/boot-splash.png"
+  install -Dm755 "$startdir/early-splash/build/early-splash-renderer" \
+    "$pkgdir/usr/libexec/thords/early-splash-renderer"
+  install -Dm644 "$startdir/early-splash/LICENSE.md" \
+    "$pkgdir/usr/share/licenses/thords-early-splash/LICENSE.md"
+  install -Dm644 "$startdir/early-splash/UPSTREAM" \
+    "$pkgdir/usr/share/licenses/thords-early-splash/UPSTREAM"
+  chmod 0755 "$pkgdir/usr/libexec/thords/early-splash" \
+    "$pkgdir/usr/lib/initcpio/install/thords-splash" \
+    "$pkgdir/usr/lib/initcpio/hooks/thords-splash"
+  chmod 0440 "$pkgdir/etc/sudoers.d/thords-poweroff"
+}

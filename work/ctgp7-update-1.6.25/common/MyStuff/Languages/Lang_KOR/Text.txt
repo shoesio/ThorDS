@@ -1,0 +1,568 @@
+## CTGP-7 Korean translation file.
+##
+## This file has been generated from the Mario Kart Translation Project spreadsheet.
+## If you want to contribute, please join the following discord server:
+## https://discord.gg/ubgfE96
+
+#Bell Cup
+$700010 :: 벨 컵
+$710042 :: 콩코드 타운
+$710059 :: \uE035 마리오 서킷
+$710044 :: 갈바니 폭포
+$710045 :: \uE024\uE025 스카이 가든
+
+#Acorn Cup
+$700011 :: 도토리 컵
+$710046 :: 가을 숲
+$710068 :: \uE024\uE025 리버사이드 파크
+$710043 :: RMX 마리오 서킷 1
+$710049 :: \uE024\uE025 쿠파 성 3
+
+#Cloud Cup
+$700012 :: 구름 컵
+$710053 :: \uE035 프라페 스노우랜드
+$710054 :: \uE035 음매음매 목장
+$710052 :: \uE033 몬테 타운
+$710096 :: \uE034 마리오 서킷
+
+#Boo Cup
+$700013 :: 부끄부끄 컵
+$710055 :: 부끄부끄 늪 2
+$710062 :: 원소의 동굴
+$710057 :: \uE020\uE021 유령의 늪 2
+$710065 :: \uE033 뽀꾸뽀꾸 비치
+
+#Spring Cup
+$700014 :: 스프링 컵
+$710067 :: \uE033 똑딱시계 코스
+$710075 :: \uE034 버섯 브리지
+$710066 :: \uE033 썬썬 사막
+$710069 :: 시간의 성
+
+#Egg Cup
+$700015 :: 알 컵
+$710063 :: \uE033 요시알 폭포
+$710047 :: \uE023 초코 마운틴
+$710048 :: \uE033 버섯 고개
+$710051 :: CTR 크래쉬 바닷가
+
+#Bullet Cup
+$700016 :: 킬러 컵
+$710056 :: CTR 코텍스 성
+$710089 :: 레보 서킷
+$710061 :: \uE020\uE021 초코 아일랜드 2
+$710064 :: 스타 경사
+
+#Blooper Cup
+$700018 :: 징오징오 컵
+$710074 :: 모래 성 공원
+$710058 :: 정글 유적
+$710076 :: \uE034 루이지 서킷
+$710077 :: 화산 비치 유적
+
+#Feather Cup
+$700019 :: 깃털 컵
+$710078 :: \uE034 요시 서킷
+$710079 :: \uE024\uE025 피치 서킷
+$710080 :: 메트로 매드네스
+$710081 :: \uE024\uE025 루이지 서킷
+
+#Fire Cup
+$700020 :: 파이어볼 컵
+$710082 :: SMO RC카 챌린지
+$710083 :: \uE024\uE025 쿠파 성 4
+$710084 :: RMX 도넛 평야 1
+$710085 :: 숨바꼭질 피치 슬라이더
+
+#Bob-omb Cup
+$700021 :: 폭탄병 컵
+$710086 :: \uE033 와리오 스타디움
+$710087 :: 엘미 서킷
+$710088 :: \uE034 베이비 파크
+$710072 :: \uE034 쿠파 성
+
+#Cherry Cup
+$700022 :: 체리 컵
+$710090 :: \uE020\uE021 마리오 서킷 3
+$710091 :: 빅 블루
+$710092 :: \uE024\uE025 헤이호 비치
+$710093 :: 빙고 파티
+
+#Coin Cup
+$700023 :: 코인 컵
+$710094 :: 도지 사막
+$710095 :: \uE035 부끄부끄 늪
+$710050 :: \uE035 DK 정글 파크
+$710073 :: 미쿠의 생일 스펙타큘러 2
+
+#Rainbow Cup
+$700017 :: 무지개 컵
+$710070 :: \uE035 무지개 로드
+$710071 :: \uE024\uE025 무지개 로드
+$710114 :: RMX 무지개 로드 1
+$710097 :: 무지개 로드 DX
+
+#Pickaxe Cup
+$700024 :: 곡괭이 컵
+$710098 :: 스타게이즈 서밋
+$710099 :: 선셋 레이스웨이
+$710100 :: \uE024\uE025 고물 부두
+$710101 :: 빙하 광산
+
+#Mega Cup
+$700025 :: 메가 컵
+$710102 :: 꽃침대 요새
+$710103 :: 바닷가 궁전
+$710104 :: DKR 스타 시티
+$710105 :: 버섯 마운틴
+
+#Propeller Cup
+$700026 :: 프로펠러 컵
+$710106 :: \uE023 샤베트 랜드
+$710107 :: 블록 아일랜드
+$710108 :: \uE033 쿠파 성
+$710109 :: DKR 정글 폭포
+
+#POW Cup
+$700027 :: POW 컵
+$710110 :: 레트로 레이스웨이
+$710111 :: 얼어붙은 동굴
+$710112 :: \uE024\uE025 레이크사이드 파크
+$710113 :: 용무덤 그라운드
+
+#Rock Cup
+$700028 :: 바위 컵
+$710060 :: 토관 섬
+$710115 :: 네오 메트로폴리스
+$710116 :: 싸늘싸늘 고지
+$710117 :: 네스티 그노크의 굴
+
+#Moon Cup
+$700029 :: 문 컵
+$710118 :: RMX 바닐라 호수 1
+$710119 :: 벼랑 끝 서킷
+$710120 :: 인터스텔라 연구실
+$710121 :: 암흑 물질 요새
+
+#Hammer Cup
+$700030 :: 해머 컵
+$710122 :: \uE020\uE021 도넛 평야 2
+$710123 :: 깡충깡충 스카이 로드
+$710124 :: \uE035 쿠파 성
+$710125 :: \uE067 DK 스노보드 경기장
+
+#Wonder Cup
+$700031 :: 원더 컵
+$710126 :: 칠해진 늪 레이스웨이
+$710127 :: 룰렛 로드
+$710128 :: 궤도 전초기지
+$710129 :: \uE033 무지개 로드
+
+#Shine Cup
+$700032 :: 샤인 컵
+$710130 :: 산호 케이프
+$710131 :: \uE067 와리오 광산
+$710132 :: \uE033 피치 가든
+$710133 :: 바람과 눈의 요새
+
+#Dark Star Cup
+$700033 :: 다크스타 컵
+$710134 :: 다크 생츄어리
+$710135 :: 헬 피라미드
+$710136 :: \uE026\uE027 버섯 시티
+$710137 :: 다크스타 성
+
+#Save Data
+$7005 :: CTGP-7의 추가 데이터를\nSD 카드에 작성합니다.
+$7003 :: 추가 데이터 작성중...
+$7004 :: 추가 데이터가\n작성되었습니다.
+$7007 :: 마리오 카트 7 세이브 데이터가\n존재하지 않습니다.\n게임을 실행하여\n새로운 세이브 데이터를\n작성해 주세요.\nPOWER 버튼을 눌러 주세요.
+
+#First opening welcome message
+welc_t :: CTGP-7에 오신 것을 환영합니다!
+welc_1 :: 안녕하세요!\n게임 내 메뉴에서\n흥미로운 몇가지 기능들을\n사용하실 수 있습니다.\n메뉴를 여시려면,\n(SELECT) 버튼을 눌러 주세요.
+welc_2 :: 기능을 사용하려면, 커서를\n그 위에 올려서 A를\n눌러서 사용 설정해 주세요.
+welc_3 :: "CC 셀렉터" 등 기능은\n온라인 플레이 시는\n비활성화되는 것을\n염두해 주세요.
+welc_4 :: 당신의 기록 등은\n다른 사람들이 볼 수 있는\nCTGP-7 서버에 업로드 됩니다.\n(데이터는 익명화됩니다.)\n업로드 비활성화는\n게임 내 메뉴에서 해 주십시오.
+welc_5 :: CTGP-7 네트워크를 사용하심에 따라,\n그 규칙에 동의하는 것으로 간주됩니다.\n\n다음 링크에서 확인해 주세요.\nctgp-7.github.io/ctww.html
+welc_6 :: CTGP-7 디스코드 서버도\n한번 확인해 주세요!\n\n초대 링크:\ninvite.gg/ctgp7
+welc_7 :: 모드를 즐겨 주세요!\n^w^
+
+#Achievements
+achiev_all_gold :: 모든 커스텀 컵에서\n금 트로피를 얻었습니다.\n\n축하드립니다!
+achiev_all_1star :: 모든 커스텀 컵에서\n별 1개를 얻었습니다.\n\n축하드립니다!
+achiev_all_3star :: 모든 커스텀 컵에서\n별 3개 얻었습니다.\n\n축하드립니다!
+achiev_all_mission :: 모든 미션에서\n10점를 얻었습니다.\n\n축하드립니다!
+achiev_5000_vr :: CTWW에서\n5000 VR에 도달했습니다.\n\n축하드립니다!
+achiev_all_score_completed :: 스코어 어택의\n모든 트랙을 클리어 했습니다.\n\n축하드립니다!
+achiev_blue_coin :: 블루코인 을\n 모두 모았습니다!\n\n축하합니다!
+achiev_dodged_blue :: 가시돌이등껍질 3개 를\n피했습니다! 축하합니다!
+unlocked_item :: 잠금 해제됨:\n\n
+types_achievs :: 일반 도전과제 :: 스페셜 도전과제
+types_achievs_optional :: 선택적 업적
+gold_tro_achiev :: 모든 커스텀컵 1등
+1star_achiev :: 모든 커스텀컵 스타 한 개
+3star_achiev :: 모든 커스텀컵 스타 세 개
+10pts_msn_achiev :: 모든 미션에서 10포인트
+5000vr_achiev :: CTWW에서 5000VR
+score_all_achiev :: 스코어 어택의 모든 트랙 클리어
+blue_coin_achiev :: 모든 블루코인이 획득
+dodged_blue_achiev :: 가시돌이등껍질 3개를 피했습니다
+dodged_blue_amount :: 가시돌이등껍질 피하기
+custom_track_cups :: 커스텀코스 컵
+tro_gold :: 금 트로피
+tro_1star :: 1 스타
+tro_3star :: 3 스타
+tro_10pts :: 10 포인트
+tro_blue_collected :: 획득 수
+
+#General text
+warning :: 주의
+error :: 에러
+state :: 상태
+next :: 다음
+select :: 선택
+chng :: 변경
+custom :: 커스텀
+page :: 페이지
+race_noun :: 레이스
+state_mode :: 활성화됨 :: 비활성화됨
+state_inf :: 활성화 :: 비활성화
+allow_inf :: 허락 :: 거부
+valid_inf :: 유효 :: 무효
+num_betw :: 숫자가 %d와 %d 사이여야 합니다.
+settings :: 설정
+exit :: 나가기
+default :: 기본 설정
+button :: 버튼
+summary :: 요약
+continue :: 계속
+mode_type :: Mode :: Type
+
+#Folders
+gameplay_folder :: 게임플레이 기능 :: 추가적인 게임플레이 기능에 대한 설정.
+settings_folder :: 게임 설정 :: CTGP-7 게임 자체에 대한 설정.
+other_folder :: 그 외 옵션 :: 다른 여러 가지 정보나 기능에 대한 설정.
+
+#Entries
+spdmeter :: 속도계 :: 속도계를 상부 화면의 왼쪽 아래에 나오게 합니다.
+ccsel :: CC 셀렉터 :: 현재 CC를 원하는 값으로 정합니다. (레이스 전에 활성화 필요)
+itemled :: LED로 아이템 경고 :: 가시돌이등껍질이 사용되었을 때는 알림 LED가 파랑색으로 빛나고, 번개가 사용되었을 때는 노랑색으로 빛이 납니다.
+backcam :: 후방 카메라 :: 다른 마리오 카트 게임처럼, \uE002를 눌러서 뒤를 볼 수 있습니다! (주의: \uE002를 눌러서 아이템 사용이 불가해 집니다.
+charman :: 커스텀 캐릭터 매니저 :: 기본/커스텀 캐릭터를 적용할 수 있습니다.
+cuskart :: 커스텀 카트 :: MyStuff 폴더에서 커스텀 카트를 불러올 수 있습니다.
+trackorder :: 온라인 코스 순서 :: 온라인 플레이 중 컵들이 표시되는 순서를 정할 수 있습니다.
+itmprb :: 아이템 룰렛 개선 :: 랜덤한 아이템을 보이는 대신, 실제로 나올 확률이 있는 아이템만 보여줍니다.
+imtrick :: 점프 트릭 개선 :: 카트가 점프대 위에서 트릭을 할 시, 회전합니다. \uE077 서클 패드를 사용하면 회전 방향을 바꿀 수 있습니다.
+autoaccel :: 자동 가속 :: \uE000나 \uE003를 누르면 \uE001이 눌러질 때까지 자동으로 가속합니다.
+imbrakedrift :: 브레이크 드리프트 개선 :: \uE001을 드리프트 중에 눌러서 미니 터보를 잃지 않고 브레이크를 할 수 있습니다.
+autodelaydrift :: 자동 딜레이 드리프트 :: 드리프트를 시작할 때 속도를 잃는 것을 방지하게 돕습니다.
+improvedhorn :: 개선된 경적 :: 아이템 버튼을 눌렀을때 경적이 울리며, 멀티플레이어에서는 다른 플레이어의 경적도 들을 수 있습니다.
+achieventry :: 업적 :: CTGP-7 업적 진행 상황 보기.
+badgesentry :: 배지 :: 획득한 CTGP-7 배지 보기 (인터넷 연결 필요).
+optionsentry :: 설정 :: CTGP-7 옵션을 설정하기.
+servsett :: 서버 설정 :: CTGP-7 서버 관련 설정
+cloudsaveentry :: 클라우드 세이브 백업 :: 이 콘솔의 온라인 세이브 백업 관리하기
+
+#Speedometer text
+spd_set :: 속도계 설정
+spd_unit :: 단위
+spd_type :: 타입
+spd_sunit :: 속도계의 단위를 정해 주세요.
+spd_stype :: 속도계 타입을 정해 주세요.
+spd_types1 :: 디지털 :: 아날로그
+spd_types2 :: 더블 대시
+
+#CC Selector text
+cc_set :: CC 셀렉터 설정
+cc_val :: 값
+cc_entv :: 새로운 CC 값을 정해 주세요.
+cc_chgv :: 값 바꾸기
+
+#Course Manager
+track_ct :: 커스텀 트랙
+track_ori :: 오리지널 트랙
+ct_endis :: 커스텀 트랙 활성화됨 :: 커스텀 트랙 비활성화됨
+ori_endis :: 오리지널 트랙 활성화됨 :: 오리지널 트랙 비활성화됨
+
+#Community Code Generator
+def_spd :: 기본 스피드
+rand_tr :: 랜덤 트랙 강제하기
+code :: 코드
+cusitem :: 커스텀 아이템
+
+#Change Round Number
+chgrnd :: 라운드 수 변경 :: VS와 배틀 모드에서의 라운드 수를 바꿉니다.
+chgrnd_desc :: VS와 배틀 모드에서 플레이하는 라운드 수를 바꿉니다.\n다운로드 플레이에서는 작동하지 않습니다.\n로컬 멀티플레이에서는 모든 사람이 같은 설정이어야 합니다.
+rounds :: 라운드
+rnd_sel :: 라운드 수를 입력해 주세요.
+
+#Enhanced Local Map
+enhmap :: 로컬 맵 개선 :: \uE058 터치 스크린을 이용해서 하단 화면 맵에 확대 기능을 추가합니다.
+
+#Custom character manager text
+char_select :: 설정을 변경할 캐릭터를 선택해 주세요.
+reboot_req :: 기기 다시 시작 시 변경 적용
+face_raider_sel :: 얼굴을 선택해 주세요
+authors :: 창조자
+change_face :: 얼굴 바꾸기
+
+#Online track order
+order_mode :: 기본 :: 알파벳순
+
+#Auto Acceleration
+autoaccel_button :: 자동 가속을 활성화 할\n버튼을 선택해 주세요
+
+#Online update check
+update_check :: 업데이트 확인 중... :: 온라인 플레이를 위해서는\nCTGP-7의 최신 버전이 필요합니다. 
+fail_conn :: CTGP-7 서버의 접속을 실패했습니다. \n\n나중에 다시 시도해 주십시요.
+
+#CTWW
+cntdwn :: 카운트다운
+ctww :: CTWW
+vr :: VR
+CTWWtog :: 커스텀 트랙을\n활성화하시겠습니까? :: 커스텀 트랙을\n비활성화하시겠습니까?
+
+#VS Mode
+VSSet :: VS 설정
+CourOrd :: 코스 순서
+RacAm :: 레이스 수
+CpuAm :: CPU 플레이어
+RanCT :: 랜덤 (CT)
+RanOri :: 랜덤 (오리지널)
+RanAll :: 랜덤 (전부)
+OrderH :: 가로 순서
+OrderV :: 세로 순서
+NextRac :: 다음 트랙을 선택해 주세요.\n남아있는 레이스: 
+extra_diff :: 매우 어려움 :: 익스트림
+cusitem_notice :: 주의: 특정 상황에서는 기본값 아이템 (%s)이 출현할 수도 있습니다.
+item_mega :: 거대버섯
+item_fib :: 가짜 아이템박스
+item_boxes :: Item Boxes
+item_periodic :: Periodic :: Choose how often objects should\nbe given in seconds.
+item_color_rain :: Color Box Rain
+item_box_rain :: Item Box Rain
+item_triple :: Triple Items
+item_bs_show :: Blue Shell Showdown
+item_sel_mode :: Select item mode. :: Select type of items.
+
+#Reset Ghosts
+resghost :: 고스트 초기화 :: 특정 트랙의 고스트를 초기화할 수 있습니다.
+ghostseltrack :: 고스트를 초기화할 트랙을 선택해 주세요.
+ghostcantrecov :: 이 조작은 돌이킬 수 없습니다.\n계속하시겠습니까?
+
+#Server Settings
+serv_consID :: CTGP-7 콘솔 ID
+serv_communic :: 서버 통신 :: 이 기능은 서버 통신이\n활성화 되어 있어야 합니다.
+serv_displname :: 이름 표시 :: 이름을 표시할 모드를 선택해 주세요.
+serv_disphid :: 숨기기
+serv_dispmii :: Mii의 이름
+serv_dispcust :: 커스텀 이름 입력 :: 커스텀 이름은\n15글자까지입니다.
+serv_qrshow :: 표시하려면 \uE002를 누르세요.
+
+#Statistics
+statsentry :: 로컬 통계 :: 여기서 CTGP-7 사용 통계를 확인할 수 있습니다.
+stats_tpl :: 플레이 시간
+stats_tot :: 오프라인 레이스 합계 :: 온라인 레이스 합계
+stats_sc :: 스코어 어택 레이스 합계 :: 주간 챌린지 도전 횟수 합계
+stats_vnll :: 기본 코스
+stats_most :: 최다 플레이 코스 :: 최다 플레이 배틀 아레나
+stats_rpoints :: 레이스 포인트
+
+#Discord
+disc_info :: 디스코드 정보
+disc_notlink :: 본 콘솔은 디스코드 계졍과\n연결되어 있지 않습니다.\n연결하시겠습니까?
+disc_linksteps1 :: 다음 절차를 따라 주세요.
+disc_linksteps2 :: 1. CTGP-7 디스코드 서버에 가입해 주세요.\n(링크: invite.gg/ctgp7)
+disc_linksteps3 :: 2. \#bots 채널에 들어가 주세요.
+disc_linksteps4 :: 3. 다음 메시지를 보내 주세요.
+disc_data :: 계정 :: 닉네임
+disc_beta :: 비공개 베타 테스트 가능 :: 비공개 베타 테스트 불가능
+disc_unlink :: 연결 해제 :: 디스코드 계정과 연결을 해제 하시겠습니까?
+
+#Render Optimizations
+render_optim :: 렌더링 최적화 :: 상단 스크린의 3D 모드를 비활성화시켜, New 3DS의 CPU 개선사항을 활성화시킵니다.
+
+#Missions
+ms_miss :: 미션
+ms_desc :: 챌린지를 완수하고 최고의 등급을 얻는 것에 도전합니다
+ms_selmiss :: 미션 선택
+ms_rcrd :: 기록
+ms_gradelim :: 최대 등급 :: 최저 등급
+ms_timescor :: 시간 :: 점수
+ms_failed :: 미션 실패!
+ms_nodata :: 데이터 없음
+ms_delsave :: (세이브 삭제: \uE002) :: 이 미션의 저장 데이터를 삭제하시겠습니까?
+msstat_msnplay :: 플레이한 미션
+msstat_state :: 성공 :: 실패
+msstat_perfgrad :: (퍼펙트 등급)
+msstat_usermsn :: 유저 미션
+
+#Course Checksum
+course_check :: 코스 체크섬
+
+#Custom Server
+server_name :: 닌텐도 네트워크 :: CTGP-7 네트워크
+server_choice :: 온라인 서버를 선택해 주세요.\n\n%s:\n    - CTGP-7 플레이어 전용\n    - CTWW와 기존 트랙\n    - 강력한 안티치트\n%s:\n    - 모든 마리오 카트 7 플레이어용\n    - 기존 트랙과 커뮤니티\n    - 약한 안티치트
+server_ctgp7_conn :: CTGP-7 네트워크에 접속 중...
+server_ctgp7_dconn :: CTGP-7 네트워크\n연결을 해제하시겠어요?
+server_ctgp7_nocomm :: CTGP-7 네트워크에서는\n커뮤니티를 사용하실 수 없습니다.
+
+#Blue Coins
+blue_coins :: 블루코인
+blue_coins_desc :: 블루코인이 코스에 나타나게 됩니다. 블루코인을 모아 무언가를 해금하십시오!
+blue_coin_obtain :: $블루코인$\n획득! :: %d코스 남았습니다.
+blue_coin_all :: 모든 코인을\n획득하셨습니다!
+blue_coin_nocc :: CC선택자가 활성화되어 있다면,\n블루코인을 가져올 수 없습니다.
+
+#Lobby
+lobby_type :: 공개 방 :: 비공개 방
+choose_lobby :: 온라인 로비 선택:\n\n- 공개: 다른 CTGP-7 플레이어와 플레이하세요.\n- 비공개: 다른 플레이어와 비공개로 플레이하세요.\n\n메모: 마리오 카트 7 VR은 개인 로비에서 사용됩니다.
+enter_lobby_code :: 비공개 로비 코드를 입력해 주세요.\n이 코드를 다른 사람들과 공유하여 함께 플레이해 보세요! :: 로비 코드가 너무 짧습니다.
+
+#Proximity Chat
+proximity_chat :: 근접채팅 :: (\uE002로 전환하기)
+proximity_chat_desc :: 근접채팅 클라이언트를 연결해 주세요.\n더 자세히 알아보기: pastebin.com/ZPQs0FWR\n\n서버의주소: %s\n취소하려면 \uE001를 누르세요. :: 에러가 발생했습니다.\n돌아가려면 \uE001를 누르세요.
+
+#Badges
+badges_obtained :: 획득한 배지:
+badges_use_online :: 온라인 사용 :: 온라인 미사용
+badge_name_desc :: 배지 이름 :: 배지 설명
+badge_date :: 획득 날짜
+badge_msg :: 새로운 \nCTGP-7 배지를 획득했습니다. \n\n 축하드립니다!
+badge_date_fmt :: %Y-%m-%d
+
+#Score Attack Actions
+pts_action_0 :: 대시버섯!
+pts_action_1 :: 대시 플레이트
+pts_action_2 :: 미니 터보
+pts_action_3 :: 슈퍼 미니 터보
+pts_action_4 :: 미니 스타트 대쉬
+pts_action_5 :: 스타트 대시
+pts_action_6 :: 퍼펙트 스타트 대쉬
+pts_action_7 :: 점프 액션
+pts_action_8 :: 고급 점프 액션
+pts_action_9 :: 슬립 스트림
+pts_action_10 :: 황금대시버섯!
+pts_action_11 :: 코인
+pts_action_12 :: 스타링
+pts_action_13 :: 토관
+pts_action_14 :: 굼바
+pts_action_15 :: 스우푸
+pts_action_16 :: 라바콘
+pts_action_17 :: 바위
+pts_action_18 :: 뽀꾸뽀꾸
+pts_action_19 :: 진주조개
+pts_action_20 :: 게
+pts_action_21 :: 염소
+pts_action_22 :: Pot
+pts_action_23 :: 플라잉헤이호
+pts_action_24 :: 통
+pts_action_25 :: 티키 곤
+pts_action_26 :: 프로글
+pts_action_27 :: 자동차
+pts_action_28 :: 나무상자
+pts_action_29 :: 펭귄
+pts_action_30 :: 고드름
+pts_action_31 :: 쿵쿵
+pts_action_32 :: 가짜 풀숲
+pts_action_33 :: 가짜 굼바
+pts_action_34 :: 뻐끔플라워
+pts_action_35 :: 멍멍이
+pts_action_36 :: 피시본
+pts_action_37 :: 닻
+pts_action_38 :: 음표
+pts_action_39 :: 낙엽
+pts_action_40 :: 꽃충이
+pts_action_41 :: 킬러
+pts_action_42 :: 뚜
+pts_action_43 :: 눈사람
+pts_action_44 :: 스노우볼
+pts_action_45 :: 쇠공
+pts_action_46 :: 탁자
+pts_action_47 :: 선인장
+pts_action_48 :: 기차
+pts_action_49 :: 딱끔
+pts_action_50 :: 활공 시간
+pts_action_51 :: 초록등껍질 명중!
+pts_action_52 :: 빨강등껍질 명중!
+pts_action_53 :: 바나나 명중!
+pts_action_54 :: 가시돌이등껍질 명중!
+pts_action_55 :: 번개 명중!
+pts_action_56 :: 가짜 아이템 박스 명중!
+pts_action_57 :: 폭탄병 명중!
+pts_action_58 :: 파이어플라워 명중!
+pts_action_59 :: 슈퍼나뭇잎 명중!
+pts_action_60 :: 징오징오 명중!
+pts_action_61 :: 슈퍼스타 명중!
+pts_action_62 :: 거대버섯 명중!
+pts_action_63 :: 킬러 명중!
+pts_action_64 :: 킬러 추월
+pts_action_65 :: 복수!
+pts_action_66 :: 스매쉬!
+pts_action_67 :: 아이템 파괴됨
+pts_action_68 :: 아이템 튕겨짐
+pts_action_69 :: 가시돌이등껍질 회피!
+pts_action_70 :: 다음 랩!
+pts_action_71 :: 다음 구간!
+pts_action_72 :: Frenzy Finish!
+pts_action_73 :: 레이스 종료!
+
+#Score Attack
+score_attack :: 스코어 어택 :: 점프 액션을 연달아 성공시켜 가장 높은 포인트를 얻으세요
+sc_at_spc_cup :: 랜덤 코스 :: 주간 챌린지
+sc_at_race_start :: 레이스 시작
+sc_at_clear :: 코스 클리어 됨 :: 코스 클리어 안됨
+sc_at_save :: (세이브 삭제: \uE002) :: (없음)
+sc_at_score :: 최고 기록 :: 클리어 기록
+sc_at_delete :: 이 코스의 기록을 삭제하시겠습니까?
+sc_at_record :: 신기록 달성!
+sc_at_clear_small :: 클리어 완료! :: 아직 클리어 안 됨
+sc_at_cleared_tr :: 클리어 한 트랙
+sc_at_nice :: NICE!
+sc_at_great :: GREAT!
+sc_at_excel :: EXCELLENT!
+sc_at_fanta :: FANTASTIC!
+sc_at_combo :: Combo x
+
+#Score Attack Weekly
+sc_wc_ended :: Current Weekly Challenge has ended :: No data available
+sc_wc_curr :: 현재 챌린지 ::
+sc_wc_time :: 남은 시간 ::
+sc_wc_bonus :: 보너스 콤보: :: 당신의 보너스:
+sc_wc_board :: 순위표: 10위까지 :: 리더보드: 내 점수
+sc_wc_getting :: Getting Weekly Challenge info... :: Failed to get Weekly Challenge info.\nError: 0x%08X
+sc_wc_results :: Weekly Challenge Results
+sc_wc_score :: Previous score: :: New score:
+sc_wc_upload :: Would you like to publish your score? :: Publish
+sc_wc_uploading :: Uploading results... :: An error has occurred.
+sc_wc_retry :: Retry?
+
+#Local Multiplayer Error
+mult_error :: All participants must\nhave the latest CTGP-7\nversion installed. :: You have to update\nCTGP-7 to play in\nthis room.
+
+#Save Backup
+sbak_avail :: This option is only available\nwithin the "Singleplayer" menu.
+sbak_fetch :: Fetching save backup info... :: Failed to get save backup info:\n0x%08X
+sbak_info :: Save Backup Information
+sbak_found :: Save backup found. :: Save backup not found.
+sbak_created :: Created:
+sbak_cretime :: Today :: %d days ago
+sbak_create :: Create backup
+sbak_restore :: Restore backup
+sbak_delete :: Delete backup
+sbak_new :: A new online save backup will be\ncreated (excluding ghost data). :: The previous online backup will be overwritten.
+sbak_newprog :: Creating backup: %s
+sbak_newres :: Backup created successfully. :: Failed to create backup:\n0x%08X
+sbak_rest :: The online backup save data\nwill be restored. :: The current save data will\nbe backed up to the folders:
+sbak_restex :: The backup folders already exist\nand they will be deleted.
+sbak_restprog :: Restoring backup: %s
+sbak_restres :: Backup restored successfully. :: Failed to restore online backup:\n0x%08X
+sbak_restres2 :: Restore the following folders\nmanually to recover your old\nsave data: :: The game will now close.
+sbak_dele :: The online backup save data\nwill be deleted. :: This operation cannot be undone.
+sbak_deleprog :: Deleting backup...
+sbak_deleres :: Backup deleted successfully. :: Failed to delete backup:\n0x%08X
+
+#Photo Mode
+photo_inst :: Photo Mode Controls\n\nA: Take photo\nB: Back\nCPad: Move\nTouch: Look around\nL/R: Zoom\nX/Y: Change speed
+photo_saved :: Photo saved!

@@ -1,0 +1,42 @@
+2026-10-21T21:26:35+01:00
+ 21:26:35 up 1 min,  2 users,  load average: 1.88, 0.58, 0.20
+{"sample": {"boottime": 78.470711143, "timestamp": 1792614395.8803596, "status": "Charging", "capacity": 3, "charge_counter": 181257, "current_now": 4052224, "voltage_now": 3851143, "power_now": 39004786, "temp": 220, "iv_watts": 15.605694092032, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 2016000, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 1708800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=qcom-battmgr-usb
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=9000000
+POWER_SUPPLY_VOLTAGE_NOW=8610000
+POWER_SUPPLY_CURRENT_MAX=3000000
+POWER_SUPPLY_CURRENT_NOW=2815000
+POWER_SUPPLY_INPUT_CURRENT_LIMIT=3000000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=ucsi-source-psy-pmic_glink.ucsi.01
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_STATUS=Charging
+POWER_SUPPLY_CHARGE_TYPE=Trickle
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=0
+POWER_SUPPLY_VOLTAGE_MIN=0
+POWER_SUPPLY_VOLTAGE_NOW=0
+POWER_SUPPLY_CURRENT_MAX=0
+POWER_SUPPLY_CURRENT_NOW=2400000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=C [PD] PD_PPS
+POWER_SUPPLY_SCOPE=System
+e771ab967310bc210147d5d0f9e455802c35564584d1ed26e64a2eb4e9c2470c  /usr/lib/firmware/qcom/sm8550/ayn/thor/adsp.mbn
+660fd8f2051bd2dd8694d1b36b70bc339faf6d86b0f80462395e8d229f376477  /usr/lib/firmware/qcom/sm8550/ayn/thor/adsp_dtb.mbn
+qcom/sm8550/ayn/thor/adsp.mbn
+qcom/sm8550/ayn/cdsp.mbn

@@ -1,0 +1,32 @@
+b70edc39d6cc1b2b0a79cb8d8b274031f71e77148a4a5aadd151b437ccad3cbb  /usr/bin/thords-sleep-guard
+1c08b59c2b58a0b7aeffb4ea1407eeb2f2f9720929c0372c4d2d67ee754f628c  /usr/bin/thords-power-sample
+50dcba238a14aa2646a93c0a2807b0915bc054518f51e3344fbd7293b2ee4c2e  /usr/lib/modules/7.1.2-thorch19/Image
+linux-thorch 7.1.2-19
+thorch-bsp 1-41
+thorch-boot-bootstrap-ready 1-1
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda18      2.0G  169M  1.9G   9% /boot
+/dev/sda19      181G   51G  121G  30% /
+-rwxr-xr-x 1 root root 31K Sep 25 08:30 /usr/lib/thorch/boot-transaction
+-rwxr-xr-x 1 root root 24K Sep 25 08:30 /usr/lib/thorch/boot_image.py
+# Preserve all existing storage/firmware hooks and start the splash after udev.
+thords_hooks=()
+for thords_hook in "${HOOKS[@]}"; do
+    [[ "$thords_hook" == thords-splash ]] && continue
+    thords_hooks+=("$thords_hook")
+    [[ "$thords_hook" == udev ]] && thords_hooks+=(thords-splash)
+done
+HOOKS=("${thords_hooks[@]}")
+unset thords_hooks thords_hook
+# Generated on the actual Thor: trim the normal initramfs to detected hardware.
+# The fallback preset explicitly skips autodetect and keeps the complete image.
+# Do not include this local policy in images generated on a build VM.
+if [[ " ${HOOKS[*]} " != *" autodetect "* ]]; then
+    thords_boot_hooks=()
+    for thords_boot_hook in "${HOOKS[@]}"; do
+        thords_boot_hooks+=("$thords_boot_hook")
+        [[ "$thords_boot_hook" != udev ]] || thords_boot_hooks+=(autodetect)
+    done
+    HOOKS=("${thords_boot_hooks[@]}")
+    unset thords_boot_hooks thords_boot_hook
+fi

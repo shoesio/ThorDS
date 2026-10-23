@@ -1,0 +1,12 @@
+[Unit]
+Description=ThorDS power and RGB button mappings
+After=thorch-inputd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thords-hardware-buttons
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

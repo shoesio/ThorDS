@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Map Thor-only front buttons to ThorDS actions."""
+
+import glob
+import os
+import pwd
+import select
+import struct
+import subprocess
+import time
+
+EV_KEY = 1
+EV_SYN = 0
+KEY_POWER = 116
+KEY_VOLUMEDOWN = 114
+KEY_VOLUMEUP = 115
+KEY_RECORD = 167
+KEY_F23 = 193
+KEY_F24 = 194
+
+UI_SET_EVBIT = 0x40045564
+UI_SET_KEYBIT = 0x40045565
+UI_DEV_CREATE = 0x5501
+
+PALETTE = [
+    (0, 128, 255),   # 3DS blue
+    (255, 0, 0),     # red
+    (0, 255, 80),    # green
+    (160, 0, 255),   # purple
+    (255, 96, 0),    # orange
+    (255, 255, 255), # white
+]
+STATE_DIR = "/var/lib/thords"
+INDEX_FILE = os.path.join(STATE_DIR, "rgb-colour-index")
+ON_FILE = os.path.join(STATE_DIR, "rgb-enabled")
+
+
+def device_name(event_path):
+    event = os.path.basename(event_path)
+    try:
+        with open(f"/sys/class/input/{event}/device/name", encoding="utf-8") as source:
+            return source.read().strip()
+    except OSError:
+        return ""
+
+
+def run_rgb(*arguments):
+    subprocess.run(["/usr/bin/thorch-rgb", *arguments], check=False)
+
+
+def read_index():
+    try:
+        return int(open(INDEX_FILE, encoding="utf-8").read().strip()) % len(PALETTE)
+    except (OSError, ValueError):
+        return 0
+
+
+def save(path, value):
+    os.makedirs(STATE_DIR, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as target:
+        target.write(f"{value}\n")
+
+
+def rgb_enabled():
+    try:
+        return open(ON_FILE, encoding="utf-8").read().strip() != "0"
+    except OSError:
+        return True
+
+
+def apply_colour(index):
+    run_rgb("set", *(str(channel) for channel in PALETTE[index]))
+    save(INDEX_FILE, index)
+    save(ON_FILE, 1)
+
+
+def toggle_rgb():
+    if rgb_enabled():
+        run_rgb("off")
+        save(ON_FILE, 0)
+    else:
+        apply_colour(read_index())
+
+
+def cycle_rgb():
+    apply_colour((read_index() + 1) % len(PALETTE))
+
+
+def adjust_volume(direction):
+    """Change the kiosk user's PipeWire volume without opening a PAM session."""
+    account = pwd.getpwnam("thords")
+    environment = [
+        f"HOME={account.pw_dir}",
+        f"XDG_RUNTIME_DIR=/run/user/{account.pw_uid}",
+        f"DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/{account.pw_uid}/bus",
+    ]
+    command = [
+        "/usr/bin/setpriv",
+        f"--reuid={account.pw_uid}",
+        f"--regid={account.pw_gid}",
+        "--init-groups",
+        "/usr/bin/env",
+        *environment,
+        "/usr/bin/pactl",
+    ]
+    if direction == "up":
+        subprocess.run(
+            [*command, "set-sink-mute", "@DEFAULT_SINK@", "false"],
+            check=False,
+            timeout=2,
+        )
+    subprocess.run(
+        [
+            *command,
+            "set-sink-volume",
+            "@DEFAULT_SINK@",
+            "+5%" if direction == "up" else "-5%",
+        ],
+        check=False,
+        timeout=2,
+    )
+
+
+def make_keyboard():
+    import fcntl
+
+    keyboard = open("/dev/uinput", "wb", buffering=0)
+    fcntl.ioctl(keyboard, UI_SET_EVBIT, EV_KEY)
+    fcntl.ioctl(keyboard, UI_SET_KEYBIT, KEY_F23)
+    descriptor = bytearray(1116)
+    descriptor[: len(b"ThorDS Power Key")] = b"ThorDS Power Key"
+    keyboard.write(descriptor)
+    fcntl.ioctl(keyboard, UI_DEV_CREATE)
+    time.sleep(0.2)
+    return keyboard
+
+
+def emit(keyboard, code, value):
+    now = time.time()
+    seconds = int(now)
+    micros = int((now - seconds) * 1_000_000)
+    keyboard.write(struct.pack("llHHi", seconds, micros, EV_KEY, code, value))
+    keyboard.write(struct.pack("llHHi", seconds, micros, EV_SYN, 0, 0))
+
+
+def open_inputs():
+    wanted = {
+        "pmic_pwrkey": KEY_POWER,
+        "pmic_resin": KEY_VOLUMEDOWN,
+        "gpio-keys": KEY_VOLUMEUP,
+        "gpio-keys-ayn": KEY_F24,
+        "Thorch Hardware Keys": KEY_F24,
+        "Microsoft Xbox Series S|X Controller": KEY_RECORD,
+    }
+    opened = {}
+    for path in glob.glob("/dev/input/event*"):
+        name = device_name(path)
+        if name not in wanted:
+            continue
+        try:
+            opened[os.open(path, os.O_RDONLY | os.O_NONBLOCK)] = (path, wanted[name])
+        except OSError:
+            pass
+    return opened
+
+
+def main():
+    keyboard = make_keyboard()
+    inputs = {}
+    last_scan = 0.0
+    while True:
+        if time.monotonic() - last_scan > 2 or not inputs:
+            for descriptor in list(inputs):
+                try:
+                    os.close(descriptor)
+                except OSError:
+                    pass
+            inputs = open_inputs()
+            last_scan = time.monotonic()
+
+        readable, _, _ = select.select(list(inputs), [], [], 1)
+        for descriptor in readable:
+            try:
+                data = os.read(descriptor, 24 * 32)
+            except OSError:
+                inputs.pop(descriptor, None)
+                continue
+            expected = inputs[descriptor][1]
+            for offset in range(0, len(data), 24):
+                _, _, event_type, code, value = struct.unpack(
+                    "llHHi", data[offset : offset + 24]
+                )
+                if event_type != EV_KEY or code != expected:
+                    continue
+                if code == KEY_POWER:
+                    emit(keyboard, KEY_F23, value)
+                elif value in (1, 2) and code == KEY_VOLUMEUP:
+                    adjust_volume("up")
+                elif value in (1, 2) and code == KEY_VOLUMEDOWN:
+                    adjust_volume("down")
+                elif value == 1 and code == KEY_F24:
+                    toggle_rgb()
+                elif value == 1 and code == KEY_RECORD:
+                    cycle_rgb()
+
+
+if __name__ == "__main__":
+    main()

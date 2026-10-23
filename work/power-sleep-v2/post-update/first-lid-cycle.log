@@ -1,0 +1,105 @@
+2026-09-26T09:21:14+01:00
+2026-09-26T09:13:50+01:00 alarm sway[944]: 00:13:17.500 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:14:22+01:00 alarm sway[944]: 00:13:50.080 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:15:17+01:00 alarm sway[944]: 00:14:44.611 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:17:42+01:00 alarm sway[944]: 00:17:09.363 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:33+01:00 alarm systemd-logind[635]: Lid closed.
+2026-09-26T09:19:34+01:00 alarm kernel: sched_ext: BPF scheduler "lavd_1.1.2_aarch64_unknown_linux_gnu" disabled (unregistered from user space)
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.388 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.429 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.455 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.464 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.472 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.479 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.481 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.546 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.557 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.612 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.633 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.727 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.752 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.761 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.794 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.820 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.828 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.845 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.871 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.913 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:01.998 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.066 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.142 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.193 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.201 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.229 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:34+01:00 alarm sway[944]: 00:19:02.262 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.311 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.312 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.328 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.413 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.430 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.562 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.566 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.599 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.646 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.651 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.659 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.677 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.696 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.714 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.779 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.786 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.803 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.812 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.905 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.929 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.931 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.948 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.964 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:02.996 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:03.049 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:03.092 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:03.146 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:03.168 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:35+01:00 alarm sway[944]: 00:19:03.179 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:19:36+01:00 alarm sway[944]: 00:19:03.320 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:19:36+01:00 alarm systemd-sleep[31726]: Performing sleep operation 'suspend'...
+2026-09-26T09:19:36+01:00 alarm kernel: PM: suspend entry (s2idle)
+2026-09-26T09:20:50+01:00 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+2026-09-26T09:20:50+01:00 alarm systemd-sleep[31726]: System returned from sleep operation 'suspend'.
+2026-09-26T09:20:50+01:00 alarm systemd-logind[635]: Lid opened.
+2026-09-26T09:20:50+01:00 alarm systemd[1]: systemd-suspend.service: Deactivated successfully.
+2026-09-26T09:20:50+01:00 alarm kernel: PM: suspend exit
+2026-09-26T09:20:50+01:00 alarm systemd-logind[635]: Operation 'suspend' finished.
+2026-09-26T09:20:50+01:00 alarm systemd[1]: thords-sleep-guard.service: Deactivated successfully.
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.158 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.167 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.182 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.183 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.192 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.217 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.248 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:20:50+01:00 alarm sway[944]: 00:19:07.265 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.675 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.692 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.704 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.811 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.821 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:07.879 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm sway[944]: 00:19:08.108 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:20:51+01:00 alarm thorch-lavd-mode[31804]: 2026-09-26T08:20:51.728902Z  INFO ThreadId(01) scx_lavd: scheds/rust/scx_lavd/src/main.rs:1103: scx_lavd scheduler starts running.
+2026-09-26T09:20:53+01:00 alarm sway[944]: 00:19:09.798 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-1
+2026-09-26T09:20:56+01:00 alarm sway[944]: 00:19:12.788 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:21:02+01:00 alarm sway[944]: 00:19:18.731 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+2026-09-26T09:21:04+01:00 alarm sway[944]: 00:19:21.036 [ERROR] [sway/desktop/output.c:307] Page-flip failed on output DSI-2
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+active
+active
+Power save: off
+total 12
+-rw-r--r-- 1 root root 747 Sep 26 09:20 latest-post.json
+-rw-r--r-- 1 root root 744 Sep 26 09:19 latest-pre.json
+-rw-r--r-- 1 root root  62 Sep 26 09:20 wake-ledger.jsonl
+{"sample": {"boottime": 1165.843942795, "timestamp": 1790410775.9871507, "status": "Discharging", "capacity": 88, "charge_counter": 7118333, "current_now": -1765180, "voltage_now": 4067961, "power_now": 50251457, "temp": 310, "iv_watts": 7.18068339798, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 2016000, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2476800, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 940800, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 119, "ae96000.dsi.0": 2334}}}
+{"sample": {"boottime": 1240.552911823, "timestamp": 1790410850.6961198, "status": "Discharging", "capacity": 87, "charge_counter": 7091676, "current_now": -2522889, "voltage_now": 4058814, "power_now": 44001676, "temp": 310, "iv_watts": 10.239937193646, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1785600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2726400, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 1171200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 680000000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 119, "ae96000.dsi.0": 2334}}}

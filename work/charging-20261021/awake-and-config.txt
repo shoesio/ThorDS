@@ -1,0 +1,44 @@
+[s2idle] deep
+panic=30 audit=0 quiet loglevel=3 logo.nologo systemd.show_status=false rd.systemd.show_status=false vt.global_cursor_default=0 rw rootwait allow_mismatched_32bit_el0 fw_devlink.strict=1 pcie_ports=compat irqaffinity=3-7 cgroup.memory=nokmem,nosocket nosoftlockup usbcore.interrupt_interval_override=045e:028e:2 mem_sleep_default=s2idle ufshcd_core.uic_cmd_timeout=3000 console=tty0 console=ttyMSM0,115200n8 fbcon=rotate:1 root=UUID=90a0a59a-125f-46b3-adf2-535f4c97f322 rootfstype=ext4
+# /usr/lib/systemd/system/thords-sleep-guard.service
+[Unit]
+Description=ThorDS scheduler and battery sleep guard
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/thords-sleep-guard pre
+ExecStopPost=/usr/bin/thords-sleep-guard post
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+[Install]
+RequiredBy=sleep.target
+Oct 18 21:17:23 alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Oct 18 21:17:23 alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Oct 18 21:17:23 alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /usb0-sbu-mux
+Oct 18 21:17:23 alarm kernel: /usb0-sbu-mux: Fixed dependency cycle(s) with /pmic-glink/connector@0
+Oct 18 21:17:23 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier usb0-sbu-mux for /pmic-glink/connector@0
+Oct 18 21:17:23 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier 88e8000.phy for /pmic-glink/connector@0
+Oct 18 21:17:23 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier a600000.usb for /pmic-glink/connector@0
+Oct 18 21:17:24 alarm kernel: qcom,fastrpc 32300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 12
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 13
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 14
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 15
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 16
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 17
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 18
+Oct 18 21:17:24 alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 19
+Oct 18 21:17:24 alarm kernel: qcom,fastrpc 6800000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+Oct 18 21:17:24 alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 20
+Oct 18 21:17:24 alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 21
+Oct 18 21:17:24 alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 22
+Oct 18 21:17:24 alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 23
+Oct 18 21:17:24 alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 24
+Oct 18 21:17:24 alarm kernel: qcom,apr 6800000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:1
+Oct 18 21:17:24 alarm kernel: qcom,apr 6800000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:2
+Oct 18 21:17:24 alarm kernel: PDR: Indication received from msm/adsp/charger_pd, state: 0x1fffffff, trans-id: 1
+Oct 18 21:17:29 alarm kernel: platform 6800000.remoteproc:glink-edge:gpr:service@1:dais: Adding to iommu group 26

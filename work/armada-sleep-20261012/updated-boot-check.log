@@ -1,0 +1,211 @@
+2026-10-12T23:10:02+01:00
+7.1.2-thorch19
+ 23:10:02 up 1 min,  2 users,  load average: 1.25, 0.37, 0.13
+linux-thorch 7.1.2-19
+Startup finished in 4.425s (kernel) + 4.395s (userspace) = 8.821s 
+graphical.target reached after 4.395s in userspace.
+9.62 performance-ready
+15.68 emulator-launch
+23.41 render-windows-visible pid=1275
+10.44 session-start
+10.46 settings-ready
+10.46 seed-ready
+10.49 controls-ready
+10.50 performance-ready
+15.80 emulator-launch
+21.87 render-windows-visible pid=1218
+armada-splash: drm modeset ok 1080x1920 conn=39 crtc=109 pid=267
+  UNIT                                              LOAD   ACTIVE SUB    DESCRIPTION
+● systemd-backlight@backlight:ae94000.dsi.0.service loaded failed failed Load/Save Screen Backlight Brightness of backlight:ae94000.dsi.0
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+  UNIT                                LOAD   ACTIVE SUB     DESCRIPTION
+  dbus-broker.service                 loaded active running D-Bus System Message Bus
+  inputplumber.service                loaded active running InputPlumber Service
+  NetworkManager.service              loaded active running Network Manager
+  seatd.service                       loaded active running Seat management daemon
+  sshd.service                        loaded active running OpenSSH Daemon
+  systemd-journald.service            loaded active running Journal Service
+  systemd-logind.service              loaded active running User Login Management
+  systemd-resolved.service            loaded active running Network Name Resolution
+  systemd-timesyncd.service           loaded active running Network Time Synchronization
+  systemd-udevd.service               loaded active running Rule-based Manager for Device Events and Files
+  systemd-userdbd.service             loaded active running User Database Manager
+  thorch-fancontrol.service           loaded active running Apply Thorch PWM fan control profile
+  thorch-inputd.service               loaded active running Thorch hardware hotkey input daemon
+  thorch-lavd.service                 loaded active running Thorch LAVD sched_ext scheduler
+  thorch-rgb-battery.service          loaded active running Update Thorch Thor RGB LEDs from battery status
+  thords-hardware-buttons.service     loaded active running ThorDS power and RGB button mappings
+  thords-low-battery-shutdown.service loaded active running ThorDS clean shutdown on critically low battery
+  thords-session.service              loaded active running ThorDS console session
+  user@966.service                    loaded active running User Manager for UID 966
+  wpa_supplicant.service              loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+20 loaded units listed.
+  UNIT                           LOAD   ACTIVE SUB     DESCRIPTION
+  dbus-broker.service            loaded active running D-Bus User Message Bus
+  filter-chain.service           loaded active running PipeWire filter chain daemon
+  opensave-daemon.service        loaded active running OpenSave save-sync daemon
+  p11-kit-server.service         loaded active running p11-kit server
+  pipewire-pulse.service         loaded active running PipeWire PulseAudio
+  pipewire.service               loaded active running PipeWire Multimedia Service
+  thords-home-brightness.service loaded active running Follow HOME Menu brightness on Thor screens
+  wireplumber.service            loaded active running Multimedia Service Session Manager
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+8 loaded units listed.
+               total        used        free      shared  buff/cache   available
+Mem:           11448        2738        8244        1084        1734        8710
+Swap:           7771           0        7771
+    PID COMMAND           RSS
+   1218 azahar          1030964
+    991 sway            62096
+   1230 Xwayland        50860
+    637 inputplumber    42880
+    925 wireplumber     37632
+    636 NetworkManager  35528
+    928 opensave        26676
+   1016 swaybg          24876
+    650 scx_lavd        24068
+    927 pipewire-pulse  23756
+    923 pipewire        20304
+      1 systemd         20012
+    873 systemd         16988
+    447 systemd-journal 16692
+    488 systemd-udevd   16636
+systemd-homed.service masked
+systemd-homed-activate.service masked
+systemd-nsresourced.service masked
+systemd-nsresourced.socket masked
+systemd-importd.service masked
+systemd-importd.socket masked
+systemd-machined.service masked
+systemd-machined.socket masked
+systemd-confext.service masked
+systemd-sysext.service masked
+systemd-sysext.socket masked
+systemd-report.socket masked
+systemd-report-basic.socket masked
+systemd-report-cgroup.socket masked
+systemd-report-files.socket masked
+systemd-report-sign-plain.socket masked
+systemd-report-sign-tpm2.socket masked
+systemd-report-sign-tsm.socket masked
+systemd-sysupdate.socket masked
+systemd-sysupdate-notify-bootctl.socket masked
+systemd-sysupdate-notify-pcrlock.socket masked
+systemd-sysupdate-notify-sysext.socket masked
+systemd-coredumpd.service masked
+systemd-coredump-register.service masked
+systemd-coredump.socket masked
+serial-getty@ttyMSM0.service masked
+thorch-debug-report.timer masked
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=battery
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_STATUS=Discharging
+POWER_SUPPLY_CHARGE_TYPE=N/A
+POWER_SUPPLY_HEALTH=Good
+POWER_SUPPLY_PRESENT=1
+POWER_SUPPLY_TECHNOLOGY=Li-ion
+POWER_SUPPLY_CYCLE_COUNT=0
+POWER_SUPPLY_VOLTAGE_MAX=4400000
+POWER_SUPPLY_VOLTAGE_NOW=3581775
+POWER_SUPPLY_VOLTAGE_OCV=3742182
+POWER_SUPPLY_CURRENT_NOW=-1774702
+POWER_SUPPLY_POWER_NOW=28193971
+POWER_SUPPLY_CHARGE_COUNTER=1731824
+POWER_SUPPLY_CHARGE_CONTROL_START_THRESHOLD=0
+POWER_SUPPLY_CHARGE_CONTROL_END_THRESHOLD=0
+POWER_SUPPLY_CAPACITY=21
+POWER_SUPPLY_TEMP=320
+POWER_SUPPLY_TIME_TO_EMPTY_AVG=4398
+POWER_SUPPLY_TIME_TO_FULL_AVG=-1
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_INTERNAL_RESISTANCE=102672
+POWER_SUPPLY_STATE_OF_HEALTH=100
+POWER_SUPPLY_MODEL_NAME=7567856_QUECTEL_SG8550_8000MAH_PM8550B_AVERAGED_MASTERSLAVE_DEC7TH2024
+-rwxr-xr-x 1 root root 52M Oct 12 23:07 /boot/KERNEL
+-rwxr-xr-x 1 root root 34M Oct 12 23:07 /boot/initramfs-linux-thorch-fallback.img
+-rwxr-xr-x 1 root root 32M Oct 12 23:07 /boot/initramfs-linux-thorch.img
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm (udev-worker)[895]: js0: Process '/usr/bin/chmod 000 /dev/input/js0' failed with exit code 1.
+2026-10-12T23:09:05+01:00 alarm (udev-worker)[895]: js0: Process '/usr/bin/mv /dev/input/js0 /dev/inputplumber/sources/js0' failed with exit code 1.
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm (udev-worker)[898]: event3: Process '/usr/bin/chmod 000 /dev/input/event3' failed with exit code 1.
+2026-10-12T23:09:05+01:00 alarm (udev-worker)[898]: event3: Process '/usr/bin/mv /dev/input/event3 /dev/inputplumber/sources/event3' failed with exit code 1.
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm wpa_supplicant[918]: wlp1s0: nl80211: kernel reports: multicast RX registrations are not supported
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit does not give us MaxRealtimePriority, using 1
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit does not give us MinNiceLevel, using 0
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire[923]: mod.rt: RTKit does not give us RTTimeUSecMax, using -1
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit does not give us MaxRealtimePriority, using 1
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us MaxRealtimePriority, using 1
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit does not give us MinNiceLevel, using 0
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us MinNiceLevel, using 0
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm pipewire-pulse[927]: mod.rt: RTKit does not give us RTTimeUSecMax, using -1
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us RTTimeUSecMax, using -1
+2026-10-12T23:09:05+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T23:09:05+01:00 alarm wpa_supplicant[918]: p2p-dev-wlp1s0: nl80211: kernel reports: multicast RX registrations are not supported
+2026-10-12T23:09:05+01:00 alarm NetworkManager[636]: <warn>  [1791842945.9113] device (p2p-dev-wlp1s0): error setting IPv4 forwarding to '0': Resource temporarily unavailable
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us MaxRealtimePriority, using 1
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us MinNiceLevel, using 0
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit error: org.freedesktop.DBus.Error.ServiceUnknown
+2026-10-12T23:09:05+01:00 alarm wireplumber[925]: mod.rt: RTKit does not give us RTTimeUSecMax, using -1
+2026-10-12T23:09:06+01:00 alarm dbus-broker-launch[632]: Activation request for 'org.freedesktop.home1' failed.
+2026-10-12T23:09:06+01:00 alarm wireplumber[925]: default: Failed to get percentage from UPower: org.freedesktop.DBus.Error.NameHasNoOwner
+2026-10-12T23:09:06+01:00 alarm wireplumber[925]: spa.bluez5: BlueZ system service is not available
+2026-10-12T23:09:06+01:00 alarm dbus-broker-launch[632]: Activation request for 'org.freedesktop.home1' failed.
+2026-10-12T23:09:06+01:00 alarm wireplumber[925]: default: Failed to get percentage from UPower: org.freedesktop.DBus.Error.NameHasNoOwner
+2026-10-12T23:09:06+01:00 alarm wireplumber[925]: spa.bluez5: BlueZ system service is not available
+2026-10-12T23:09:09+01:00 alarm kernel: qcom-apm gprsvc:service:2:1: CMD timeout for [1001021] opcode
+2026-10-12T23:09:09+01:00 alarm kernel: qcom-soundwire 6d30000.soundwire: dout-ports (0) mismatch with controller (1)
+2026-10-12T23:09:11+01:00 alarm kernel: snd-sc8280xp sound: ASoC: Parent card not yet available, widget card binding deferred
+2026-10-12T23:09:11+01:00 alarm kernel: ALSA: Control name 'stream0.vol_ctrl0 MultiMedia1 Playback Volume' truncated to 'stream0.vol_ctrl0 MultiMedia1 Playback Volu'
+2026-10-12T23:09:11+01:00 alarm kernel: ALSA: Control name 'stream1.vol_ctrl1 MultiMedia2 Playback Volume' truncated to 'stream1.vol_ctrl1 MultiMedia2 Playback Volu'
+2026-10-12T23:09:11+01:00 alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+2026-10-12T23:09:14+01:00 alarm azahar[1218]: Failed to register with host portal QDBusError("org.freedesktop.DBus.Error.ServiceUnknown", "The name is not activatable")
+2026-10-12T23:09:15+01:00 alarm azahar[1218]: QPixmap::scaled: Pixmap is a null pixmap
+2026-10-12T23:09:21+01:00 alarm kernel: soundwire sdw-master-2-0: clock stop deprepare wait failed:-110
+2026-10-12T23:10:02+01:00 alarm dbus-broker-launch[632]: Activation request for 'org.freedesktop.home1' failed.

@@ -1,0 +1,68 @@
+From: ThorDS <noreply@thords.local>
+Subject: [PATCH] input: rsinput: release MCU supply across system sleep
+
+Adapt ARMADA 20261010 patch 1007 to the Thorch 7.1.2 driver.
+Keep the existing GPIO quiesce and restore sequence; balance supply
+references on suspend, resume failure and removal.
+Source: https://github.com/armada-os/armada/blob/20261010/packages/kernel/patches/1007-input-rsinput-drop-the-mcu-supply-across-system-sleep.patch
+
+--- a/drivers/input/joystick/rsinput.c
++++ b/drivers/input/joystick/rsinput.c
+@@ -130,6 +130,7 @@
+     struct input_dev *input;
+     struct platform_device *platform_dev;
+     struct regulator *vdd;
++    bool vdd_off;
+     struct gpio_desc *boot_gpio;
+     struct gpio_desc *enable_gpio;
+     struct gpio_desc *reset_gpio;
+@@ -624,24 +625,47 @@
+     if (drv->reset_gpio)
+         gpiod_set_value_cansleep(drv->reset_gpio, 0);
+ 
+-    regulator_disable(drv->vdd);
++    if (!drv->vdd_off)
++        regulator_disable(drv->vdd);
+ }
+ 
+ /* Quiesce reports before the parent UART suspends. Resume restores the MCU. */
+ static int rsinput_suspend(struct device *dev)
+ {
+     struct rsinput_driver *drv = dev_get_drvdata(dev);
++    int error;
+ 
+     if (drv->enable_gpio)
+         gpiod_set_value_cansleep(drv->enable_gpio, 0);
+     if (drv->reset_gpio)
+         gpiod_set_value_cansleep(drv->reset_gpio, 0);
++
++    if (!drv->vdd_off) {
++        error = regulator_disable(drv->vdd);
++        if (error) {
++            dev_err(dev, "Failed to disable MCU supply: %d\n", error);
++            rsinput_init_commands(drv);
++            return error;
++        }
++        drv->vdd_off = true;
++    }
+     return 0;
+ }
+ 
+ static int rsinput_resume(struct device *dev)
+ {
+-    return rsinput_init_commands(dev_get_drvdata(dev));
++    struct rsinput_driver *drv = dev_get_drvdata(dev);
++    int error;
++
++    if (drv->vdd_off) {
++        error = regulator_enable(drv->vdd);
++        if (error) {
++            dev_err(dev, "Failed to enable MCU supply: %d\n", error);
++            return error;
++        }
++        drv->vdd_off = false;
++    }
++    return rsinput_init_commands(drv);
+ }
+ 
+ static DEFINE_SIMPLE_DEV_PM_OPS(rsinput_pm_ops, rsinput_suspend, rsinput_resume);

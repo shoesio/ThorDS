@@ -1,0 +1,115 @@
+2026-10-21T21:43:49+01:00
+Charging
+26
+1
+#!/usr/bin/env python3
+"""Read-only battery/clock sampling; power_now is diagnostic, not authoritative."""
+import argparse
+import glob
+import json
+import statistics
+import time
+from pathlib import Path
+
+
+def read(path):
+    try:
+        value = Path(path).read_text().strip()
+        try:
+            return int(value)
+        except ValueError:
+            return value
+    except OSError:
+        return None
+
+
+def snapshot():
+    battery = Path('/sys/class/power_supply/battery')
+    result = {'boottime': time.clock_gettime(time.CLOCK_BOOTTIME),
+              'timestamp': time.time()}
+    for key in ('status', 'capacity', 'charge_counter', 'current_now',
+                'voltage_now', 'power_now', 'temp'):
+        result[key] = read(battery / key)
+    current, voltage = result['current_now'], result['voltage_now']
+    result['iv_watts'] = (abs(current * voltage) / 1e12
+                          if isinstance(current, int) and isinstance(voltage, int) else None)
+    result['cpu'] = {Path(p).name: {k: read(Path(p) / k) for k in
+                     ('scaling_governor', 'scaling_cur_freq', 'scaling_max_freq')}
+                     for p in glob.glob('/sys/devices/system/cpu/cpufreq/policy*')}
+    result['gpu'] = {k: read('/sys/class/devfreq/3d00000.gpu/' + k)
+                     for k in ('governor', 'cur_freq', 'min_freq', 'max_freq')}
+    result['brightness'] = {Path(p).name: read(Path(p) / 'brightness')
+                            for p in glob.glob('/sys/class/backlight/*')}
+    return result
+
+
+def summarize(samples):
+    first, last = samples[0], samples[-1]
+    seconds = last['boottime'] - first['boottime']
+    watts = [s['iv_watts'] for s in samples if s['iv_watts'] is not None]
+    result = {'seconds': seconds, 'samples': len(samples),
+              'median_iv_watts': statistics.median(watts) if watts else None,
+              'capacity_start': first['capacity'], 'capacity_end': last['capacity'],
+              'charge_delta_uah': None, 'charge_based_watts': None}
+    # Reject charge estimates across charging/discharging changes or a reset.
+    counters = [s['charge_counter'] for s in samples]
+    valid = (seconds > 0 and all(s['status'] == 'Discharging' for s in samples)
+             and all(isinstance(c, int) for c in counters)
+             and all(a >= b for a, b in zip(counters, counters[1:])))
+    voltages = [s['voltage_now'] for s in samples if isinstance(s['voltage_now'], int)]
+    if valid and voltages:
+        delta = counters[0] - counters[-1]
+        result['charge_delta_uah'] = delta
+        result['charge_based_watts'] = delta * 3600 / seconds * statistics.mean(voltages) / 1e12
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--seconds', type=int, default=120)
+    parser.add_argument('--interval', type=float, default=2)
+    parser.add_argument('--snapshot', action='store_true')
+    args = parser.parse_args()
+    if args.seconds < 1 or args.interval <= 0:
+        parser.error('duration and interval must be positive')
+    samples = [snapshot()]
+    print(json.dumps({'sample': samples[0]}), flush=True)
+    if args.snapshot:
+        return
+    deadline = samples[0]['boottime'] + args.seconds
+    while time.clock_gettime(time.CLOCK_BOOTTIME) < deadline:
+        time.sleep(min(args.interval, max(0, deadline - time.clock_gettime(time.CLOCK_BOOTTIME))))
+        samples.append(snapshot())
+        print(json.dumps({'sample': samples[-1]}), flush=True)
+    print(json.dumps({'summary': summarize(samples)}), flush=True)
+
+
+if __name__ == '__main__':
+    main()
+  systemd-battery-check.service                                                                                                                   loaded    inactive dead      Early Battery Level Check
+  systemd-poweroff.service                                                                                                                        loaded    inactive dead      System Power Off
+  thorch-rgb-battery.service                                                                                                                      loaded    active   running   Update Thorch Thor RGB LEDs from battery status
+  thorch-rgb-poweroff.service                                                                                                                     loaded    active   exited    Turn off Thorch Thor RGB LEDs during shutdown
+  thords-hardware-buttons.service                                                                                                                 loaded    active   running   ThorDS power and RGB button mappings
+  thords-low-battery-shutdown.service                                                                                                             loaded    active   running   ThorDS clean shutdown on critically low battery
+  poweroff.target                                                                                                                                 loaded    inactive dead      System Power Off
+/sys/devices/platform/pmic-glink/pmic_glink.ucsi.0/power_supply/ucsi-source-psy-pmic_glink.ucsi.01/power/wakeup
+/sys/devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/battery/power/wakeup
+/sys/devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-usb/power/wakeup
+/sys/devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-wls/power/wakeup
+/sys/devices/platform/soc@0/32300000.remoteproc/power/wakeup
+/sys/devices/platform/soc@0/6800000.remoteproc/power/wakeup
+ 13:       2232          0          0     363632          0          0          0          0    GICv3 261 Level     ipcc_0
+ 15:          6          0          0          0          0          0          0          0     ipcc   0 Edge      aoss-qmp
+ 16:          6          0          0       3524          0          0          0          0     ipcc 196610 Edge      smp2p-adsp
+ 17:          5          0          0          0          0          0          0          0     ipcc 393218 Edge      smp2p-cdsp
+ 18:          0          0          0          0          0          0          0          0     ipcc 131074 Edge      smp2p-modem
+ 21:          0          0          0          0          0          0          0          0 pmic_arb 1303088 Edge      pmic_pwrkey
+ 22:          0          0          0          0          0          0          0          0 pmic_arb 1294896 Edge      pmic_resin
+ 29:          0          0          0          0          0          0          0          0 pmic_arb 17433155 Edge      temp-alarm
+ 30:          0          0          0          0          0          0          0          0 pmic_arb 118096497 Edge      temp-alarm
+ 31:          0          0          0          0          0          0          0          0 pmic_arb 84542052 Edge      temp-alarm
+166:          0          0          0          0          0          0          0          0 pmic_arb 133177975 Edge      fifo-empty
+167:          0          0          0          0          0          0          0          0 pmic_arb 6431283 Edge      pm8xxx_rtc_alarm
+217:         47          0          0          8          1          0          0          0     ipcc 393216 Edge      glink-smem
+234:       2456          0          1     373373          0          0          0          0     ipcc 196608 Edge      glink-smem

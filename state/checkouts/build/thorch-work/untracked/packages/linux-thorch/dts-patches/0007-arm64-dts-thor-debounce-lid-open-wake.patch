@@ -1,0 +1,43 @@
+Subject: [PATCH] arm64: dts: Thor: pull up and debounce lid-open wake
+
+Adapted sleep-only changes from Armada qcs8550-ayn-thor.dts.patch.
+Use the deasserted (open) edge; retain ThorDS display and touch settings.
+--- a/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts
++++ b/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts
+@@ -4,6 +4,8 @@
+  */
+ 
+ /dts-v1/;
++
++#include <dt-bindings/input/gpio-keys.h>
+ 
+ #include "qcs8550-ayn-common.dtsi"
+ 
+@@ -30,9 +32,13 @@
+ 
+ 	gpio-keys-lid {
+ 		compatible = "gpio-keys";
++		pinctrl-0 = <&hall_lid_n>;
++		pinctrl-names = "default";
+ 
+ 		hall-lid-sensor {
+ 			label = "Hall Lid Sensor";
++			debounce-interval = <50>;
++			wakeup-event-action = <EV_ACT_DEASSERTED>;
+ 			gpios = <&tlmm 17 GPIO_ACTIVE_LOW>;
+ 			linux,input-type = <EV_SW>;
+ 			linux,code = <SW_LID>;
+@@ -446,6 +452,13 @@
+ };
+ 
+ &tlmm {
++	hall_lid_n: hall-lid-n-state {
++		pins = "gpio17";
++		function = "gpio";
++		bias-pull-up;
++		output-disable;
++	};
++
+ 	key_ayn_n: key-ayn-n-state {
+ 		pins = "gpio41";
+ 		function = "gpio";

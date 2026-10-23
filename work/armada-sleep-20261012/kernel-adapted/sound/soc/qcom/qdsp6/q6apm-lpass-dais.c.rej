@@ -1,0 +1,41 @@
+--- sound/soc/qcom/qdsp6/q6apm-lpass-dais.c
++++ sound/soc/qcom/qdsp6/q6apm-lpass-dais.c
+@@ -273,35 +334,11 @@
+ 		dai_data->graph[graph_id] = graph;
+ 	}
+ 
+-	cfg->direction = substream->stream;
+-	rc = q6apm_graph_media_format_pcm(dai_data->graph[dai->id], cfg);
+-	if (rc) {
+-		dev_err(dai->dev, "Failed to set media format %d\n", rc);
+-		goto err;
+-	}
+-
+-	rc = q6apm_graph_prepare(dai_data->graph[dai->id]);
+-	if (rc) {
+-		dev_err(dai->dev, "Failed to prepare Graph %d\n", rc);
++	rc = q6apm_lpass_dai_configure(dai->dev, dai_data, dai->id, substream->stream);
++	if (rc)
+ 		goto err;
+-	}
+ 
+-	/*
+-	 * aw88166 checks its PLL against BCLK at DAPM PRE_PMU, before the
+-	 * PCM trigger; start the port here so BCLK is up in time. The
+-	 * trigger's !is_port_started guard then no-ops. Playback only.
+-	 */
+-	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK &&
+-	    ((dai->id >= PRIMARY_MI2S_RX && dai->id <= QUATERNARY_MI2S_TX) ||
+-	     (dai->id >= QUINARY_MI2S_RX &&
+-	      dai->id <= QUINARY_MI2S_TX))) {
+-		rc = q6apm_graph_start(dai_data->graph[dai->id]);
+-		if (rc < 0) {
+-			dev_err(dai->dev, "Failed to start APM port %d\n", dai->id);
+-			goto err;
+-		}
+-		dai_data->is_port_started[dai->id] = true;
+-	}
++	dai_data->is_prepared[dai->id] = true;
+ 	return 0;
+ err:
+ 	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK) {

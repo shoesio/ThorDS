@@ -1,0 +1,11 @@
+make: Entering directory '/thords-early-splash'
+mkdir -p build
+cc -O2 -w -c src/stb_impl.c -o build/stb_impl.o
+cc -O2 -Wall -Wextra -I/usr/include/libdrm -o build/early-splash-renderer src/armada-splash.c build/stb_impl.o -ldrm -lm
+strip build/early-splash-renderer
+make: Leaving directory '/thords-early-splash'
+	linux-vdso.so.1 (0x0000fdfef49b9000)
+	libdrm.so.2 => not found
+	libm.so.6 => /usr/lib/libm.so.6 (0x0000fdfef4860000)
+	libc.so.6 => /usr/lib/libc.so.6 (0x0000fdfef4690000)
+	/lib/ld-linux-aarch64.so.1 => /usr/lib/ld-linux-aarch64.so.1 (0x0000fdfef4970000)

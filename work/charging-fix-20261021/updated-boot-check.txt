@@ -1,0 +1,38 @@
+2026-10-21T22:22:17+01:00
+ 22:22:17 up 56 min,  2 users,  load average: 2.16, 2.21, 2.10
+7.1.2-thorch19
+linux-thorch 7.1.2-19
+1c08b59c2b58a0b7aeffb4ea1407eeb2f2f9720929c0372c4d2d67ee754f628c  /usr/bin/thords-power-sample
+b70edc39d6cc1b2b0a79cb8d8b274031f71e77148a4a5aadd151b437ccad3cbb  /usr/bin/thords-sleep-guard
+{"sample": {"boottime": 3419.805458369, "timestamp": 1792617737.2151062, "status": "Charging", "capacity": 52, "charge_counter": 3010826, "current_now": 3815646, "voltage_now": 4059592, "power_now": 43416751, "temp": 310, "iv_watts": 15.489965976432, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1113600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 1977600, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2803200, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+  UNIT                                              LOAD   ACTIVE SUB    DESCRIPTION
+● systemd-backlight@backlight:ae94000.dsi.0.service loaded failed failed Load/Save Screen Backlight Brightness of backlight:ae94000.dsi.0
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+Oct 21 21:25:27 alarm kernel: qcom-hv-haptics c400000.spmi:pmic@7:qcom,hv-haptics@f000: Parse device-tree failed, rc = -517
+Oct 21 21:25:27 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier usb0-sbu-mux for /pmic-glink/connector@0
+Oct 21 21:25:27 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier 88e8000.phy for /pmic-glink/connector@0
+Oct 21 21:25:27 alarm kernel: msm_dpu ae01000.display-controller: Direct firmware load for qcom/a740_sqe.fw failed with error -2
+Oct 21 21:25:27 alarm kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] *ERROR* failed to load a740_sqe.fw
+Oct 21 21:25:27 alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier a600000.usb for /pmic-glink/connector@0
+Oct 21 21:25:27 alarm kernel: faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+Oct 21 21:25:27 alarm kernel: cfg80211: failed to load regulatory.db
+Oct 21 21:25:27 alarm kernel: msm_dpu ae01000.display-controller: Direct firmware load for qcom/a740_sqe.fw failed with error -2
+Oct 21 21:25:27 alarm kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] *ERROR* failed to load a740_sqe.fw
+Oct 21 21:25:27 alarm systemd[1]: Clear SysFail Entry If The Boot Is Successful skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/LoaderEntrySysFail-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+Oct 21 21:25:28 alarm kernel: bluetooth hci0: Direct firmware load for qca/hmtbtfw20.tlv failed with error -2
+Oct 21 21:25:28 alarm kernel: Bluetooth: hci0: QCA Failed to request file: qca/hmtbtfw20.tlv (-2)
+Oct 21 21:25:28 alarm kernel: Bluetooth: hci0: QCA Failed to request file: qca/hmtbtfw20.tlv (-2)
+Oct 21 21:25:45 alarm kernel: soundwire sdw-master-2-0: clock stop deprepare wait failed:-110
+Oct 21 21:31:34 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 21:35:00 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 21 21:35:00 alarm kernel: PM: suspend exit
+Oct 21 21:37:31 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 21:41:32 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 21 21:41:32 alarm kernel: PM: suspend exit
+Oct 21 22:02:06 alarm kernel: htr3212 3-003c: register write to 0x10 failed (error -6)
+Oct 21 22:02:06 alarm kernel: leds l:r2: Setting an LED's brightness failed (-6)

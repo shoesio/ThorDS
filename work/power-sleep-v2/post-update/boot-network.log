@@ -1,0 +1,1328 @@
+2026-09-26T09:13:05+01:00
+7.1.2-thorch17
+ 09:13:05 up 12 min,  3 users,  load average: 3.49, 3.19, 1.97
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+wlp1s0           UP             192.168.0.143/24 fd58:4d1:f80:4a24:4839:b1cb:838b:ebd4/64 fe80::96ce:bb8f:8cbc:f2d2/64 
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+[   12.360862] alarm systemd[1]: Starting Network Manager...
+[   12.739248] alarm systemd[1]: Starting ThorDS SM8550 interrupt and idle policy...
+[   13.540045] alarm thords-irq-policy[823]: ThorDS IRQs routed to CPU3-7; CPU0 deep idle enabled
+[   13.541981] alarm systemd[1]: Finished ThorDS SM8550 interrupt and idle policy.
+[   14.465726] alarm NetworkManager[630]: <info>  [1790409625.1536] NetworkManager (version 1.58.0-1) is starting... (boot:b303aded-5318-4ccf-abe9-439b1e81a670)
+[   14.465740] alarm NetworkManager[630]: <info>  [1790409625.1537] Read config: /etc/NetworkManager/NetworkManager.conf, /usr/lib/NetworkManager/conf.d/20-connectivity.conf
+[   14.479993] alarm NetworkManager[630]: <info>  [1790409625.1680] manager[0xaaaaeba15090]: monitoring kernel firmware directory '/lib/firmware'.
+[   14.564336] alarm NetworkManager[630]: <info>  [1790409625.2523] hostname: hostname: using hostnamed
+[   14.564353] alarm NetworkManager[630]: <info>  [1790409625.2523] hostname: static hostname changed from (none) to "alarm"
+[   14.564626] alarm NetworkManager[630]: <info>  [1790409625.2526] dns-mgr: init: dns=default,systemd-resolved rc-manager=symlink
+[   14.566556] alarm NetworkManager[630]: <info>  [1790409625.2545] rfkill1: found Wi-Fi radio killswitch (at /sys/devices/platform/soc@0/1c00000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/ieee80211/phy0/rfkill1) (driver ath12k_wifi7_pci)
+[   14.566885] alarm NetworkManager[630]: <info>  [1790409625.2549] manager[0xaaaaeba15090]: rfkill: Wi-Fi hardware radio set enabled
+[   14.566898] alarm NetworkManager[630]: <info>  [1790409625.2549] manager[0xaaaaeba15090]: rfkill: WWAN hardware radio set enabled
+[   14.571110] alarm NetworkManager[630]: <info>  [1790409625.2591] Loaded device plugin: NMAtmManager (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-adsl.so)
+[   14.611318] alarm NetworkManager[630]: <info>  [1790409625.2993] Loaded device plugin: NMBluezManager (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-bluetooth.so)
+[   14.623580] alarm NetworkManager[630]: <info>  [1790409625.3116] Loaded device plugin: NMOvsFactory (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-ovs.so)
+[   15.047763] alarm NetworkManager[630]: <info>  [1790409625.7357] Loaded device plugin: NMTeamFactory (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-team.so)
+[   15.060274] alarm NetworkManager[630]: <info>  [1790409625.7482] Loaded device plugin: NMWifiFactory (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-wifi.so)
+[   15.061759] alarm NetworkManager[630]: <info>  [1790409625.7497] Loaded device plugin: NMWwanFactory (/usr/lib/NetworkManager/1.58.0-1/libnm-device-plugin-wwan.so)
+[   15.062090] alarm NetworkManager[630]: <info>  [1790409625.7501] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+[   15.062132] alarm NetworkManager[630]: <info>  [1790409625.7501] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+[   15.062152] alarm NetworkManager[630]: <info>  [1790409625.7501] manager: Networking is enabled by state file
+[   15.062357] alarm NetworkManager[630]: <info>  [1790409625.7503] settings: Loaded settings plugin: keyfile (internal)
+[   15.066155] alarm NetworkManager[630]: <info>  [1790409625.7541] dhcp: init: Using DHCP client 'internal'
+[   15.066338] alarm NetworkManager[630]: <info>  [1790409625.7543] manager: (lo): new Loopback device (/org/freedesktop/NetworkManager/Devices/1)
+[   15.067149] alarm NetworkManager[630]: <info>  [1790409625.7551] device (lo): state change: unmanaged -> unavailable (reason 'connection-assumed', managed-type: 'external')
+[   15.067384] alarm NetworkManager[630]: <info>  [1790409625.7554] device (lo): state change: unavailable -> disconnected (reason 'connection-assumed', managed-type: 'external')
+[   15.067907] alarm NetworkManager[630]: <info>  [1790409625.7559] device (lo): Activation: starting connection 'lo' (cb5fd6eb-4157-40d3-9a40-ae09824efe52)
+[   15.068178] alarm NetworkManager[630]: <info>  [1790409625.7562] device (wlp1s0): driver supports Access Point (AP) mode
+[   15.068537] alarm NetworkManager[630]: <info>  [1790409625.7565] manager: (wlp1s0): new 802.11 Wi-Fi device (/org/freedesktop/NetworkManager/Devices/2)
+[   15.068697] alarm NetworkManager[630]: <info>  [1790409625.7567] device (wlp1s0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+[   15.128451] alarm NetworkManager[630]: <info>  [1790409625.8164] device (wlp1s0): set-hw-addr: set MAC address to 36:71:C6:CF:AA:32 (scanning)
+[   15.141383] alarm NetworkManager[630]: <info>  [1790409625.8294] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+[   15.141553] alarm systemd[1]: Started Network Manager.
+[   15.142180] alarm NetworkManager[630]: <info>  [1790409625.8302] ovsdb: disconnected from ovsdb
+[   15.142286] alarm NetworkManager[630]: <info>  [1790409625.8303] device (lo): state change: disconnected -> prepare (reason 'none', managed-type: 'external')
+[   15.142423] alarm NetworkManager[630]: <info>  [1790409625.8304] device (lo): state change: prepare -> config (reason 'none', managed-type: 'external')
+[   15.142511] alarm systemd[1]: Starting OpenSSH Daemon...
+[   15.142624] alarm NetworkManager[630]: <info>  [1790409625.8306] device (lo): state change: config -> ip-config (reason 'none', managed-type: 'external')
+[   15.142922] alarm NetworkManager[630]: <info>  [1790409625.8309] device (lo): state change: ip-config -> ip-check (reason 'none', managed-type: 'external')
+[   15.144867] alarm systemd[1]: Starting WPA supplicant...
+[   15.216378] alarm systemd[1]: Starting ThorDS performance profile...
+[   15.293111] alarm sshd[919]: Server listening on 0.0.0.0 port 22.
+[   15.293156] alarm sshd[919]: Server listening on :: port 22.
+[   15.293258] alarm systemd[1]: Started OpenSSH Daemon.
+[   15.341302] alarm NetworkManager[630]: <info>  [1790409626.0293] device (lo): state change: ip-check -> secondaries (reason 'none', managed-type: 'external')
+[   15.341432] alarm NetworkManager[630]: <info>  [1790409626.0294] device (lo): state change: secondaries -> activated (reason 'none', managed-type: 'external')
+[   15.341766] alarm NetworkManager[630]: <info>  [1790409626.0297] device (lo): Activation: successful, device activated.
+[   15.542011] alarm thords-performance[924]: ThorDS balanced profile: CPU=schedutil GPU=simple_ondemand (frequency limits unchanged)
+[   15.542831] alarm systemd[1]: Finished ThorDS performance profile.
+[   15.981618] alarm wpa_supplicant[921]: Successfully initialized wpa_supplicant
+[   15.981638] alarm systemd[1]: Started WPA supplicant.
+[   16.185290] alarm wpa_supplicant[921]: wlp1s0: nl80211: kernel reports: multicast RX registrations are not supported
+[   16.398516] alarm wpa_supplicant[921]: p2p-dev-wlp1s0: nl80211: kernel reports: multicast RX registrations are not supported
+[   16.399494] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=WORLD
+[   16.399614] alarm wpa_supplicant[921]: p2p-dev-wlp1s0: Channel list changed: 6 GHz was enabled
+[   16.399722] alarm wpa_supplicant[921]: wlp1s0: Channel list changed: 6 GHz was enabled
+[   16.399758] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=WORLD
+[   16.401139] alarm NetworkManager[630]: <info>  [1790409627.0891] device (wlp1s0): supplicant interface state: internal-starting -> disconnected
+[   16.401249] alarm NetworkManager[630]: <info>  [1790409627.0892] Wi-Fi P2P device controlled by interface wlp1s0 created
+[   16.401429] alarm NetworkManager[630]: <info>  [1790409627.0894] manager: (p2p-dev-wlp1s0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/3)
+[   16.401567] alarm NetworkManager[630]: <info>  [1790409627.0896] device (p2p-dev-wlp1s0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+[   16.401623] alarm NetworkManager[630]: <warn>  [1790409627.0896] device (p2p-dev-wlp1s0): error setting IPv4 forwarding to '0': Resource temporarily unavailable
+[   16.402059] alarm NetworkManager[630]: <info>  [1790409627.0900] device (wlp1s0): state change: unavailable -> disconnected (reason 'supplicant-available', managed-type: 'full')
+[   16.402408] alarm NetworkManager[630]: <info>  [1790409627.0904] device (p2p-dev-wlp1s0): state change: unavailable -> disconnected (reason 'none', managed-type: 'full')
+[   31.724738] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   31.725020] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   31.739828] alarm NetworkManager[630]: <info>  [1790409642.4278] policy: auto-activating connection 'ColchFibre_7C3F' (d2083d3b-ae05-4951-bd78-6c20e592d13d)
+[   31.741315] alarm NetworkManager[630]: <info>  [1790409642.4293] device (wlp1s0): Activation: starting connection 'ColchFibre_7C3F' (d2083d3b-ae05-4951-bd78-6c20e592d13d)
+[   31.741627] alarm NetworkManager[630]: <info>  [1790409642.4296] device (wlp1s0): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+[   31.742696] alarm NetworkManager[630]: <info>  [1790409642.4306] manager: NetworkManager state is now CONNECTING
+[   31.773818] alarm NetworkManager[630]: <info>  [1790409642.4618] device (wlp1s0): set-hw-addr: reset MAC address to 00:03:7F:75:89:97 (preserve)
+[   31.774333] alarm NetworkManager[630]: <info>  [1790409642.4623] device (wlp1s0): state change: prepare -> config (reason 'none', managed-type: 'full')
+[   31.774967] alarm NetworkManager[630]: <info>  [1790409642.4629] device (wlp1s0): Activation: (wifi) access point 'ColchFibre_7C3F' has security, but secrets are required.
+[   31.775031] alarm NetworkManager[630]: <info>  [1790409642.4630] device (wlp1s0): state change: config -> need-auth (reason 'none', managed-type: 'full')
+[   31.775406] alarm NetworkManager[630]: <info>  [1790409642.4634] sup-iface[245c67d88b702dfa,0,wlp1s0]: wps: type pbc start...
+[   31.777382] alarm NetworkManager[630]: <info>  [1790409642.4653] device (wlp1s0): state change: need-auth -> prepare (reason 'none', managed-type: 'full')
+[   31.778127] alarm NetworkManager[630]: <info>  [1790409642.4661] device (wlp1s0): state change: prepare -> config (reason 'none', managed-type: 'full')
+[   31.778482] alarm wpa_supplicant[921]: wlp1s0: WPS-CANCEL
+[   31.778608] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   31.778624] alarm NetworkManager[630]: <info>  [1790409642.4666] device (wlp1s0): Activation: (wifi) connection 'ColchFibre_7C3F' has security, and secrets exist.  No new secrets needed.
+[   31.778676] alarm NetworkManager[630]: <info>  [1790409642.4666] Config: added 'ssid' value 'ColchFibre_7C3F'
+[   31.778699] alarm NetworkManager[630]: <info>  [1790409642.4667] Config: added 'scan_ssid' value '1'
+[   31.778719] alarm NetworkManager[630]: <info>  [1790409642.4667] Config: added 'bgscan' value 'simple:30:-65:300'
+[   31.778750] alarm NetworkManager[630]: <info>  [1790409642.4667] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK SAE FT-SAE'
+[   31.778767] alarm NetworkManager[630]: <info>  [1790409642.4667] Config: added 'auth_alg' value 'OPEN'
+[   31.778781] alarm NetworkManager[630]: <info>  [1790409642.4668] Config: added 'psk' value '<hidden>'
+[   31.779463] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   31.788706] alarm wpa_supplicant[921]: wlp1s0: SME: Trying to authenticate with 34:60:f9:cc:7c:41 (SSID='ColchFibre_7C3F' freq=5240 MHz)
+[   32.052360] alarm NetworkManager[630]: <info>  [1790409642.7403] device (wlp1s0): supplicant interface state: disconnected -> authenticating
+[   32.052414] alarm NetworkManager[630]: <info>  [1790409642.7404] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> authenticating
+[   32.062652] alarm wpa_supplicant[921]: wlp1s0: Trying to associate with 34:60:f9:cc:7c:41 (SSID='ColchFibre_7C3F' freq=5240 MHz)
+[   32.064487] alarm NetworkManager[630]: <info>  [1790409642.7524] device (wlp1s0): supplicant interface state: authenticating -> associating
+[   32.064572] alarm NetworkManager[630]: <info>  [1790409642.7525] device (p2p-dev-wlp1s0): supplicant management interface state: authenticating -> associating
+[   32.106116] alarm wpa_supplicant[921]: wlp1s0: Associated with 34:60:f9:cc:7c:41
+[   32.106172] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+[   32.112225] alarm NetworkManager[630]: <info>  [1790409642.8002] device (wlp1s0): supplicant interface state: associating -> associated
+[   32.112249] alarm NetworkManager[630]: <info>  [1790409642.8002] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> associated
+[   32.201177] alarm NetworkManager[630]: <info>  [1790409642.8891] device (wlp1s0): supplicant interface state: associated -> 4way_handshake
+[   32.201207] alarm NetworkManager[630]: <info>  [1790409642.8892] device (p2p-dev-wlp1s0): supplicant management interface state: associated -> 4way_handshake
+[   32.249028] alarm wpa_supplicant[921]: wlp1s0: WPA: Key negotiation completed with 34:60:f9:cc:7c:41 [PTK=CCMP GTK=CCMP]
+[   32.249064] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-CONNECTED - Connection to 34:60:f9:cc:7c:41 completed [id=0 id_str=]
+[   32.251527] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   32.252431] alarm NetworkManager[630]: <info>  [1790409642.9404] device (wlp1s0): supplicant interface state: 4way_handshake -> completed
+[   32.252698] alarm wpa_supplicant[921]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=GB
+[   32.252502] alarm NetworkManager[630]: <info>  [1790409642.9405] device (wlp1s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "ColchFibre_7C3F"
+[   32.252532] alarm NetworkManager[630]: <info>  [1790409642.9405] device (p2p-dev-wlp1s0): supplicant management interface state: 4way_handshake -> completed
+[   32.252850] alarm NetworkManager[630]: <info>  [1790409642.9408] device (wlp1s0): state change: config -> ip-config (reason 'none', managed-type: 'full')
+[   32.253943] alarm NetworkManager[630]: <info>  [1790409642.9419] dhcp4 (wlp1s0): activation: beginning transaction (timeout in 45 seconds)
+[   32.262407] alarm NetworkManager[630]: <info>  [1790409642.9504] dhcp4 (wlp1s0): state changed new lease, address=192.168.0.143, acd pending
+[   32.420141] alarm NetworkManager[630]: <info>  [1790409643.1081] dhcp4 (wlp1s0): state changed new lease, address=192.168.0.143
+[   32.421195] alarm NetworkManager[630]: <info>  [1790409643.1092] policy: set 'ColchFibre_7C3F' (wlp1s0) as default for IPv4 routing and DNS
+[   32.601613] alarm NetworkManager[630]: <info>  [1790409643.2896] device (wlp1s0): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+[   32.629335] alarm NetworkManager[630]: <info>  [1790409643.3173] device (wlp1s0): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+[   32.629479] alarm NetworkManager[630]: <info>  [1790409643.3175] device (wlp1s0): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+[   32.629711] alarm NetworkManager[630]: <info>  [1790409643.3177] manager: NetworkManager state is now CONNECTED_SITE
+[   32.630870] alarm NetworkManager[630]: <info>  [1790409643.3188] device (wlp1s0): Activation: successful, device activated.
+[   32.631215] alarm NetworkManager[630]: <info>  [1790409643.3192] manager: startup complete
+[   33.896426] alarm NetworkManager[630]: <info>  [1790409644.5844] manager: NetworkManager state is now CONNECTED_GLOBAL
+[   54.004461] alarm NetworkManager[630]: <info>  [1790409664.1620] manager: NetworkManager state is now CONNECTED_SITE
+[   54.104566] alarm NetworkManager[630]: <info>  [1790409664.2621] manager: NetworkManager state is now CONNECTED_GLOBAL
+[  289.249110] alarm NetworkManager[630]: ((../NetworkManager/src/libnm-systemd-core/src/libsystemd/sd-event/sd-event.c:4458)): assertion '<dropped>' failed
+[  358.688521] alarm NetworkManager[630]: <info>  [1790409970.3401] manager: NetworkManager state is now CONNECTED_SITE
+[  378.794651] alarm NetworkManager[630]: <info>  [1790409990.4462] manager: NetworkManager state is now CONNECTED_GLOBAL
+[  382.716535] alarm sshd-session[10814]: Connection closed by 192.168.0.134 port 55953 [preauth]
+[  580.060799] alarm sshd-session[15894]: Accepted publickey for thords from 192.168.0.134 port 56094 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  580.064292] alarm sshd-session[15894]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  624.579371] alarm sshd-session[17174]: Accepted publickey for thords from 192.168.0.134 port 56096 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  624.584435] alarm sshd-session[17174]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  643.115666] alarm sshd-session[17663]: Accepted publickey for thords from 192.168.0.134 port 56099 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  643.118749] alarm sshd-session[17663]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  643.617152] alarm sshd-session[17663]: pam_unix(sshd:session): session closed for user thords
+[  651.186413] alarm sshd-session[17932]: Accepted publickey for thords from 192.168.0.134 port 56101 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  651.189782] alarm sshd-session[17932]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  661.272331] alarm sshd-session[18212]: Accepted publickey for thords from 192.168.0.134 port 56104 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  661.277889] alarm sshd-session[18212]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  668.970349] alarm sshd-session[18434]: Accepted publickey for thords from 192.168.0.134 port 56107 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  668.972943] alarm sshd-session[18434]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[  775.474007] alarm sshd-session[21200]: Accepted publickey for thords from 192.168.0.134 port 56115 ssh2: ED25519 SHA256:g1ZxVOw2Y+ywmBABXdU17PBvuNHqUJ1/Z9wahnRtBgs
+[  775.476749] alarm sshd-session[21200]: pam_unix(sshd:session): session opened for user thords(uid=967) by thords(uid=0)
+[    5.956818] alarm kernel: Booting Linux on physical CPU 0x0000000000 [0x411fd461]
+[    5.956889] alarm kernel: Linux version 7.1.2-thorch17 (root@f80a5a092e8a) (gcc (GCC) 16.1.1 20260430, GNU ld (GNU Binutils) 2.46.0) #2 SMP PREEMPT Fri Sep 25 07:44:29 UTC 2026
+[    5.956917] alarm kernel: KASLR enabled
+[    5.956938] alarm kernel: random: crng init done
+[    5.956957] alarm kernel: Machine model: AYN Thor
+[    5.956976] alarm kernel: efi: UEFI not found.
+[    5.957000] alarm kernel: [Firmware Bug]: Kernel image misaligned at boot, please fix your bootloader!
+[    5.957024] alarm kernel: OF: reserved mem: 0x0000000080000000..0x00000000809fffff (10240 KiB) nomap non-reusable hyp-region@80000000
+[    5.957044] alarm kernel: OF: reserved mem: 0x0000000080a00000..0x0000000080dfffff (4096 KiB) nomap non-reusable cpusys-vm-region@80a00000
+[    5.957063] alarm kernel: OF: reserved mem: 0x0000000080e00000..0x00000000811cffff (3904 KiB) nomap non-reusable hyp-tags-region@80e00000
+[    5.957083] alarm kernel: OF: reserved mem: 0x00000000d8100000..0x00000000d813ffff (256 KiB) nomap non-reusable xbl-sc-region@d8100000
+[    5.957102] alarm kernel: OF: reserved mem: 0x00000000811d0000..0x00000000811fffff (192 KiB) nomap non-reusable hyp-tags-reserved-region@811d0000
+[    5.957121] alarm kernel: OF: reserved mem: 0x0000000081a00000..0x0000000081c5ffff (2432 KiB) nomap non-reusable xbl-dt-log-merged-region@81a00000
+[    5.957141] alarm kernel: OF: reserved mem: 0x0000000081c60000..0x0000000081c7ffff (128 KiB) nomap non-reusable aop-cmd-db-region@81c60000
+[    5.957165] alarm kernel: OF: reserved mem: 0x0000000081c80000..0x0000000081cf3fff (464 KiB) nomap non-reusable aop-config-merged-region@81c80000
+[    5.957185] alarm kernel: OF: reserved mem: 0x0000000081f00000..0x0000000081f1ffff (128 KiB) nomap non-reusable adsp-mhi-region@81f00000
+[    5.957207] alarm kernel: OF: reserved mem: 0x0000000082600000..0x00000000826fffff (1024 KiB) nomap non-reusable global-sync-region@82600000
+[    5.957226] alarm kernel: OF: reserved mem: 0x0000000082700000..0x00000000827fffff (1024 KiB) nomap non-reusable tz-stat-region@82700000
+[    5.957245] alarm kernel: OF: reserved mem: 0x000000009b09a000..0x000000009b09bfff (8 KiB) nomap non-reusable gpu-micro-code-region@9b09a000
+[    5.957264] alarm kernel: OF: reserved mem: 0x000000009b100000..0x000000009b27ffff (1536 KiB) nomap non-reusable spss-region@9b100000
+[    5.957282] alarm kernel: OF: reserved mem: 0x000000009bb00000..0x000000009c1fffff (7168 KiB) nomap non-reusable video-region@9bb00000
+[    5.957301] alarm kernel: OF: reserved mem: 0x000000009c200000..0x000000009c8fffff (7168 KiB) nomap non-reusable cvp-region@9c200000
+[    5.957320] alarm kernel: OF: reserved mem: 0x000000009c900000..0x000000009e8fffff (32768 KiB) nomap non-reusable cdsp-region@9c900000
+[    5.957339] alarm kernel: OF: reserved mem: 0x000000009e900000..0x000000009e97ffff (512 KiB) nomap non-reusable q6-cdsp-dtb-region@9e900000
+[    5.957358] alarm kernel: OF: reserved mem: 0x000000009e980000..0x000000009e9fffff (512 KiB) nomap non-reusable q6-adsp-dtb-region@9e980000
+[    5.957377] alarm kernel: OF: reserved mem: 0x000000009ea00000..0x00000000a2a7ffff (66048 KiB) nomap non-reusable adspslpi-region@9ea00000
+[    5.957396] alarm kernel: OF: reserved mem: 0x00000000d8140000..0x00000000d82fffff (1792 KiB) nomap non-reusable cpucp-fw-region@d8140000
+[    5.957414] alarm kernel: OF: reserved mem: 0x00000000d8300000..0x00000000d87fffff (5120 KiB) nomap non-reusable qtee-region@d8300000
+[    5.957433] alarm kernel: OF: reserved mem: 0x00000000e6440000..0x00000000e671cfff (2932 KiB) nomap non-reusable hwfence-shbuf-region@e6440000
+[    5.957456] alarm kernel: OF: reserved mem: 0x00000000fce00000..0x00000000ff6fffff (41984 KiB) nomap non-reusable hyp-ext-tags-region@fce00000
+[    5.957475] alarm kernel: OF: reserved mem: 0x00000000ff700000..0x00000000ff7fffff (1024 KiB) nomap non-reusable hyp-ext-reserved-region@ff700000
+[    5.957494] alarm kernel: OF: reserved mem: 0x0000000081d00000..0x0000000081efffff (2048 KiB) nomap non-reusable smem-region@81d00000
+[    5.957513] alarm kernel: OF: reserved mem: 0x000000009b280000..0x000000009b2fffff (512 KiB) nomap non-reusable spu-secure-shared-memory-region@9b280000
+[    5.957532] alarm kernel: OF: reserved mem: 0x0000000081cf4000..0x0000000081cf4fff (4 KiB) nomap non-reusable chipinfo-region@81cf4000
+[    5.957551] alarm kernel: OF: reserved mem: 0x00000000ff800000..0x00000000ffdfffff (6144 KiB) nomap non-reusable llcc_lpi_region@ff800000
+[    5.957570] alarm kernel: OF: reserved mem: 0x00000000b8000000..0x00000000baafffff (44032 KiB) nomap non-reusable splash_region@b8000000
+[    5.957589] alarm kernel: NUMA: Faking a node at [mem 0x0000000080000000-0x0000000affffffff]
+[    5.957607] alarm kernel: NODE_DATA(0) allocated [mem 0xafe7e8940-0xafe7eb7bf]
+[    5.957626] alarm kernel: cma: Reserved 32 MiB at 0x00000000fae00000
+[    5.957645] alarm kernel: psci: probing for conduit method from DT.
+[    5.957672] alarm kernel: psci: PSCIv1.1 detected in firmware.
+[    5.957690] alarm kernel: psci: Using standard PSCI v0.2 function IDs
+[    5.957708] alarm kernel: psci: MIGRATE_INFO_TYPE not supported.
+[    5.957728] alarm kernel: psci: SMC Calling Convention v1.3
+[    5.957746] alarm kernel: psci: OSI mode supported.
+[    5.957764] alarm kernel: Zone ranges:
+[    5.957786] alarm kernel:   DMA      [mem 0x0000000080000000-0x00000000ffffffff]
+[    5.957804] alarm kernel:   DMA32    empty
+[    5.957822] alarm kernel:   Normal   [mem 0x0000000100000000-0x0000000affffffff]
+[    5.957840] alarm kernel: Movable zone start for each node
+[    5.957858] alarm kernel: Early memory node ranges
+[    5.957876] alarm kernel:   node   0: [mem 0x0000000080000000-0x0000000080dfffff]
+[    5.957895] alarm kernel:   node   0: [mem 0x00000000811d0000-0x00000000811fffff]
+[    5.957913] alarm kernel:   node   0: [mem 0x0000000081200000-0x00000000819fffff]
+[    5.957931] alarm kernel:   node   0: [mem 0x0000000081a00000-0x0000000081cf4fff]
+[    5.957949] alarm kernel:   node   0: [mem 0x0000000081cf5000-0x0000000081cfffff]
+[    5.957967] alarm kernel:   node   0: [mem 0x0000000081d00000-0x0000000081f1ffff]
+[    5.957984] alarm kernel:   node   0: [mem 0x0000000081f20000-0x00000000825fffff]
+[    5.958002] alarm kernel:   node   0: [mem 0x0000000082600000-0x00000000827fffff]
+[    5.958020] alarm kernel:   node   0: [mem 0x0000000082800000-0x000000009b099fff]
+[    5.958037] alarm kernel:   node   0: [mem 0x000000009b09a000-0x000000009b09bfff]
+[    5.958055] alarm kernel:   node   0: [mem 0x000000009b09c000-0x000000009b0fffff]
+[    5.958073] alarm kernel:   node   0: [mem 0x000000009b100000-0x000000009b2fffff]
+[    5.958095] alarm kernel:   node   0: [mem 0x000000009b300000-0x000000009bafffff]
+[    5.958113] alarm kernel:   node   0: [mem 0x000000009bb00000-0x00000000a2a7ffff]
+[    5.958131] alarm kernel:   node   0: [mem 0x00000000a2a80000-0x00000000b7ffffff]
+[    5.958150] alarm kernel:   node   0: [mem 0x00000000b8000000-0x00000000baafffff]
+[    5.958168] alarm kernel:   node   0: [mem 0x00000000bab00000-0x00000000d7ffffff]
+[    5.958186] alarm kernel:   node   0: [mem 0x00000000d8140000-0x00000000d815ffff]
+[    5.958204] alarm kernel:   node   0: [mem 0x00000000e1bb0000-0x00000000e643ffff]
+[    5.958221] alarm kernel:   node   0: [mem 0x00000000e6440000-0x00000000e671cfff]
+[    5.958239] alarm kernel:   node   0: [mem 0x00000000e671d000-0x00000000fcdfffff]
+[    5.958257] alarm kernel:   node   0: [mem 0x00000000fce00000-0x00000000ffdfffff]
+[    5.958275] alarm kernel:   node   0: [mem 0x00000000ffe00000-0x00000000ffffffff]
+[    5.958293] alarm kernel:   node   0: [mem 0x0000000880000000-0x00000008b99fffff]
+[    5.958311] alarm kernel:   node   0: [mem 0x00000008c0000000-0x0000000affffffff]
+[    5.958330] alarm kernel: Initmem setup node 0 [mem 0x0000000080000000-0x0000000affffffff]
+[    5.958348] alarm kernel: On node 0, zone DMA: 976 pages in unavailable ranges
+[    5.958366] alarm kernel: On node 0, zone DMA: 320 pages in unavailable ranges
+[    5.958388] alarm kernel: On node 0, zone DMA: 39504 pages in unavailable ranges
+[    5.958406] alarm kernel: On node 0, zone Normal: 26112 pages in unavailable ranges
+[    5.958426] alarm kernel: percpu: Embedded 35 pages/cpu s104664 r8192 d30504 u143360
+[    5.958444] alarm kernel: pcpu-alloc: s104664 r8192 d30504 u143360 alloc=35*4096
+[    5.958464] alarm kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    5.958482] alarm kernel: Detected PIPT I-cache on CPU0
+[    5.958501] alarm kernel: CPU features: detected: Address authentication (architected QARMA5 algorithm)
+[    5.958519] alarm kernel: CPU features: detected: GICv3 CPU interface
+[    5.958538] alarm kernel: CPU features: detected: Spectre-v4
+[    5.958556] alarm kernel: CPU features: detected: ARM erratum 2457168
+[    5.958574] alarm kernel: CPU features: detected: ARM erratum 2658417
+[    5.958592] alarm kernel: CPU features: detected: ARM errata 2966298, 3117295
+[    5.958610] alarm kernel: alternatives: applying boot alternatives
+[    5.958632] alarm kernel: Kernel command line: panic=30 audit=0 quiet loglevel=3 logo.nologo systemd.show_status=false rd.systemd.show_status=false vt.global_cursor_default=0 rw rootwait allow_mismatched_32bit_el0 fw_devlink.strict=1 pcie_ports=compat irqaffinity=3-7 cgroup.memory=nokmem,nosocket nosoftlockup usbcore.interrupt_interval_override=045e:028e:2 mem_sleep_default=s2idle ufshcd_core.uic_cmd_timeout=3000 console=tty0 console=ttyMSM0,115200n8 fbcon=rotate:1 root=UUID=946afe76-cd9d-4ee6-b06f-96d9dce46f66 rootfstype=btrfs
+[    5.959202] alarm kernel: audit: disabled (until reboot)
+[    5.959232] alarm kernel: Unknown kernel command line parameters "nosoftlockup", will be passed to user space.
+[    5.959251] alarm kernel: printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    5.959270] alarm kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    5.959289] alarm kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    5.959307] alarm kernel: software IO TLB: area num 8.
+[    5.959325] alarm kernel: software IO TLB: mapped [mem 0x00000000f6e00000-0x00000000fae00000] (64MB)
+[    5.959344] alarm kernel: Fallback order for Node 0: 0 
+[    5.959362] alarm kernel: Built 1 zonelists, mobility grouping on.  Total pages: 3078816
+[    5.959381] alarm kernel: Policy zone: Normal
+[    5.959399] alarm kernel: mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    5.959418] alarm kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    5.959437] alarm kernel: ftrace: allocating 67937 entries in 266 pages
+[    5.959455] alarm kernel: ftrace: allocated 266 pages with 3 groups
+[    5.959473] alarm kernel: rcu: Preemptible hierarchical RCU implementation.
+[    5.959493] alarm kernel: rcu:         RCU event tracing is enabled.
+[    5.959512] alarm kernel: rcu:         RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=8.
+[    5.959531] alarm kernel:         Trampoline variant of Tasks RCU enabled.
+[    5.959553] alarm kernel:         Rude variant of Tasks RCU enabled.
+[    5.959572] alarm kernel:         Tracing variant of Tasks RCU enabled.
+[    5.959591] alarm kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    5.959609] alarm kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    5.959627] alarm kernel: RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    5.959646] alarm kernel: RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    5.959665] alarm kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    5.959694] alarm kernel: GICv3: 988 SPIs implemented
+[    5.959713] alarm kernel: GICv3: 0 Extended SPIs implemented
+[    5.959731] alarm kernel: Root IRQ handler: gic_handle_irq
+[    5.959749] alarm kernel: GICv3: GICv3 features: 16 PPIs, DirectLPI
+[    5.959770] alarm kernel: GICv3: GICD_CTLR.DS=1, SCR_EL3.FIQ=0
+[    5.959788] alarm kernel: GICv3: Enabling SGIs without active state
+[    5.959810] alarm kernel: GICv3: CPU0: found redistributor 0 region 0:0x0000000017180000
+[    5.959833] alarm kernel: ITS [mem 0x17140000-0x1717ffff]
+[    5.959851] alarm kernel: ITS@0x0000000017140000: Devices Table too large, reduce ids 32->19
+[    5.959871] alarm kernel: ITS@0x0000000017140000: Devices too large, reduce ITS pages 1024->256
+[    5.959889] alarm kernel: ITS@0x0000000017140000: allocated 131072 Devices @880300000 (indirect, esz 8, psz 4K, shr 1)
+[    5.959906] alarm kernel: ITS@0x0000000017140000: allocated 4096 Interrupt Collections @88025b000 (flat, esz 1, psz 4K, shr 1)
+[    5.959923] alarm kernel: GICv3: using LPI property table @0x0000000880290000
+[    5.959940] alarm kernel: GICv3: CPU0: using allocated LPI pending table @0x00000008802a0000
+[    5.959957] alarm kernel: GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] /cpus/cpu@200[2] }
+[    5.959974] alarm kernel: GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@300[3] /cpus/cpu@400[4] }
+[    5.959994] alarm kernel: GICv3: GIC: PPI partition interrupt-partition-2[2] { /cpus/cpu@500[5] /cpus/cpu@600[6] }
+[    5.960048] alarm kernel: GICv3: GIC: PPI partition interrupt-partition-3[3] { /cpus/cpu@700[7] }
+[    5.960067] alarm kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    5.960084] alarm kernel: arch_timer: cp15 timer running at 19.20MHz (virt).
+[    5.960101] alarm kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    5.960118] alarm kernel: sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    5.960135] alarm kernel: arm-pv: using stolen time PV
+[    5.960154] alarm kernel: Console: colour dummy device 80x25
+[    5.960173] alarm kernel: printk: legacy console [tty0] enabled
+[    5.960191] alarm kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    5.960209] alarm kernel: pid_max: default: 32768 minimum: 301
+[    5.960236] alarm kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    5.960256] alarm kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    5.960274] alarm kernel: VFS: Finished mounting rootfs on nullfs
+[    5.960292] alarm kernel: rcu: Hierarchical SRCU implementation.
+[    5.960310] alarm kernel: rcu:         Max phase no-delay instances is 1000.
+[    5.960329] alarm kernel: Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    5.960347] alarm kernel: EFI services will not be available.
+[    5.960365] alarm kernel: smp: Bringing up secondary CPUs ...
+[    5.960383] alarm kernel: Detected PIPT I-cache on CPU1
+[    5.960404] alarm kernel: GICv3: CPU1: found redistributor 100 region 0:0x00000000171c0000
+[    5.960422] alarm kernel: GICv3: CPU1: using allocated LPI pending table @0x00000008802b0000
+[    5.960441] alarm kernel: CPU1: Booted secondary processor 0x0000000100 [0x411fd461]
+[    5.960459] alarm kernel: Detected PIPT I-cache on CPU2
+[    5.960477] alarm kernel: GICv3: CPU2: found redistributor 200 region 0:0x0000000017200000
+[    5.960495] alarm kernel: GICv3: CPU2: using allocated LPI pending table @0x00000008802c0000
+[    5.960513] alarm kernel: CPU2: Booted secondary processor 0x0000000200 [0x411fd461]
+[    5.960532] alarm kernel: CPU features: detected: Spectre-BHB
+[    5.960549] alarm kernel: CPU features: detected: ARM erratum 2645198
+[    5.960570] alarm kernel: CPU features: detected: SSBS not fully self-synchronizing
+[    5.960589] alarm kernel: Detected PIPT I-cache on CPU3
+[    5.960607] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU3: 0x00000010212122
+[    5.960626] alarm kernel: CPU features: Unsupported CPU feature variation detected.
+[    5.960644] alarm kernel: GICv3: CPU3: found redistributor 300 region 0:0x0000000017240000
+[    5.960662] alarm kernel: GICv3: CPU3: using allocated LPI pending table @0x00000008802d0000
+[    5.960680] alarm kernel: CPU3: Booted secondary processor 0x0000000300 [0x411fd4d0]
+[    5.960698] alarm kernel: Detected PIPT I-cache on CPU4
+[    5.960717] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU4: 0x00000010212122
+[    5.960739] alarm kernel: GICv3: CPU4: found redistributor 400 region 0:0x0000000017280000
+[    5.960757] alarm kernel: GICv3: CPU4: using allocated LPI pending table @0x00000008802e0000
+[    5.960775] alarm kernel: CPU4: Booted secondary processor 0x0000000400 [0x411fd4d0]
+[    5.960793] alarm kernel: CPU features: detected: ARM erratum 2067961 or 2054223
+[    5.960811] alarm kernel: CPU features: detected: Broken broadcast TLBI completion
+[    5.960829] alarm kernel: Detected PIPT I-cache on CPU5
+[    5.960847] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU5: 0x00000010212122
+[    5.960865] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_MMFR4_EL1. Boot CPU: 0x00000001021111, CPU5: 0x00000001021110
+[    5.960887] alarm kernel: GICv3: CPU5: found redistributor 500 region 0:0x00000000172c0000
+[    5.960905] alarm kernel: GICv3: CPU5: using allocated LPI pending table @0x00000008802f0000
+[    5.960924] alarm kernel: CPU5: Booted secondary processor 0x0000000500 [0x412fd470]
+[    5.960941] alarm kernel: Detected PIPT I-cache on CPU6
+[    5.960960] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU6: 0x00000010212122
+[    5.960979] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_MMFR4_EL1. Boot CPU: 0x00000001021111, CPU6: 0x00000001021110
+[    5.960997] alarm kernel: GICv3: CPU6: found redistributor 600 region 0:0x0000000017300000
+[    5.961015] alarm kernel: GICv3: CPU6: using allocated LPI pending table @0x0000000880800000
+[    5.961033] alarm kernel: CPU6: Booted secondary processor 0x0000000600 [0x412fd470]
+[    5.961053] alarm kernel: Detected PIPT I-cache on CPU7
+[    5.961072] alarm kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU7: 0x00000010212122
+[    5.961090] alarm kernel: GICv3: CPU7: found redistributor 700 region 0:0x0000000017340000
+[    5.961107] alarm kernel: GICv3: CPU7: using allocated LPI pending table @0x0000000880810000
+[    5.961125] alarm kernel: CPU7: Booted secondary processor 0x0000000700 [0x411fd4e0]
+[    5.961143] alarm kernel: smp: Brought up 1 node, 8 CPUs
+[    5.961160] alarm kernel: SMP: Total of 8 processors activated.
+[    5.961178] alarm kernel: CPU: All CPU(s) started at EL1
+[    5.961196] alarm kernel: CPU features: detected: Branch Target Identification
+[    5.961217] alarm kernel: CPU features: detected: ARMv8.4 Translation Table Level
+[    5.961235] alarm kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    5.961254] alarm kernel: CPU features: detected: Common not Private translations
+[    5.961272] alarm kernel: CPU features: detected: CRC32 instructions
+[    5.961290] alarm kernel: CPU features: detected: Data independent timing control (DIT)
+[    5.961308] alarm kernel: CPU features: detected: E0PD
+[    5.961325] alarm kernel: CPU features: detected: Enhanced Virtualization Traps
+[    5.961344] alarm kernel: CPU features: detected: Generic authentication (architected QARMA5 algorithm)
+[    5.961365] alarm kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+[    5.961383] alarm kernel: CPU features: detected: LSE atomic instructions
+[    5.961401] alarm kernel: CPU features: detected: Privileged Access Never
+[    5.961419] alarm kernel: CPU features: detected: PMUv3
+[    5.961438] alarm kernel: CPU features: detected: Speculation barrier (SB)
+[    5.961456] alarm kernel: CPU features: detected: Stage-2 Force Write-Back
+[    5.961475] alarm kernel: CPU features: detected: TLB range maintenance instructions
+[    5.961493] alarm kernel: CPU features: detected: XNX
+[    5.961511] alarm kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    5.961533] alarm kernel: alternatives: applying system-wide alternatives
+[    5.961551] alarm kernel: CPU features: detected: Activity Monitors Unit (AMU) on CPU0-7
+[    5.961570] alarm kernel: CPU features: detected: Hardware dirty bit management on CPU0-7
+[    5.961588] alarm kernel: Memory: 11642112K/12315264K available (23104K kernel code, 3210K rwdata, 16920K rodata, 2816K init, 694K bss, 627568K reserved, 32768K cma-reserved)
+[    5.961606] alarm kernel: devtmpfs: initialized
+[    5.961625] alarm kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    5.961643] alarm kernel: posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    5.961662] alarm kernel: futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+[    5.961680] alarm kernel: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    5.961702] alarm kernel: 0 pages in range for non-PLT usage
+[    5.961720] alarm kernel: 512544 pages in range for PLT usage
+[    5.961739] alarm kernel: DMI: not present or invalid.
+[    5.961757] alarm kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    5.961775] alarm kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    5.961793] alarm kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    5.961811] alarm kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    5.961829] alarm kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    5.961848] alarm kernel: cpuidle: using governor menu
+[    5.961869] alarm kernel: NET: Registered PF_QIPCRTR protocol family
+[    5.961888] alarm kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    5.961906] alarm kernel: ASID allocator initialised with 65536 entries
+[    5.961924] alarm kernel: CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[    5.961943] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.961962] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+[    5.961980] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+[    5.961999] alarm kernel: /soc@0/interconnect@16e0000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962020] alarm kernel: /soc@0/phy@1c06000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962038] alarm kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+[    5.962056] alarm kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962075] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+[    5.962093] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962111] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+[    5.962130] alarm kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962148] alarm kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962167] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.962190] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.962208] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.962227] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962246] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962264] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.962283] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.962302] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.962324] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962343] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.962362] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+[    5.962381] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.962400] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+[    5.962418] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962437] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962456] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.962478] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.962496] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962515] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0
+[    5.962534] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.962553] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+[    5.962572] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962590] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962609] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.962630] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.962649] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.962668] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.962687] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+[    5.962705] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+[    5.962724] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962743] alarm kernel: /soc@0/phy@88e3000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962764] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.962782] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+[    5.962800] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962819] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.962838] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e3000
+[    5.962858] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+[    5.962877] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962896] alarm kernel: /soc@0/interrupt-controller@17100000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17100000
+[    5.962914] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.962936] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+[    5.962954] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+[    5.962972] alarm kernel: /soc@0/interconnect@16e0000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.962991] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+[    5.963008] alarm kernel: /soc@0/phy@1c06000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963026] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+[    5.963043] alarm kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+[    5.963061] alarm kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963079] alarm kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+[    5.963096] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+[    5.963113] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963134] alarm kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+[    5.963152] alarm kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963171] alarm kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963189] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.963208] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.963227] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.963245] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963264] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963283] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.963301] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.963320] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.963342] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963362] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.963380] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+[    5.963399] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.963417] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+[    5.963436] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963454] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963472] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.963491] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.963510] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963529] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0
+[    5.963547] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    5.963569] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+[    5.963588] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963606] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963625] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000
+[    5.963643] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.963662] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963680] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963698] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963717] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963735] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963753] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963776] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963795] alarm kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.963813] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.963831] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+[    5.963851] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+[    5.963870] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963889] alarm kernel: /soc@0/phy@88e3000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.963908] alarm kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.963926] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.963944] alarm kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.963963] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.963981] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+[    5.964042] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.964074] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+[    5.964098] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.964117] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e3000
+[    5.964136] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+[    5.964160] alarm kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.964193] alarm kernel: /soc@0/rsc@17a00000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-0/bob2
+[    5.964210] alarm kernel: /soc@0/rsc@17a00000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-0/bob1
+[    5.964228] alarm kernel: /soc@0/rsc@17a00000/regulators-3: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-3/smps4
+[    5.964245] alarm kernel: /soc@0/rsc@17a00000/regulators-5: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-5/smps4
+[    5.964262] alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.964278] alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/usb@a600000
+[    5.964295] alarm kernel: /pmic-glink/connector@0: Fixed dependency cycle(s) with /usb0-sbu-mux
+[    5.964311] alarm kernel: /usb0-sbu-mux: Fixed dependency cycle(s) with /pmic-glink/connector@0
+[    5.964331] alarm kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    5.964348] alarm kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    5.964364] alarm kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    5.964381] alarm kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    5.964397] alarm kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    5.964413] alarm kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    5.964431] alarm kernel: HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    5.964448] alarm kernel: HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    5.964463] alarm kernel: raid6: neonx8   gen() 30176 MB/s
+[    5.964483] alarm kernel: raid6: neonx4   gen() 25240 MB/s
+[    5.964499] alarm kernel: raid6: neonx2   gen() 21644 MB/s
+[    5.964515] alarm kernel: raid6: neonx1   gen() 19334 MB/s
+[    5.964534] alarm kernel: raid6: int64x8  gen() 11010 MB/s
+[    5.964550] alarm kernel: raid6: int64x4  gen() 10352 MB/s
+[    5.964565] alarm kernel: raid6: int64x2  gen()  9439 MB/s
+[    5.964581] alarm kernel: raid6: int64x1  gen()  7828 MB/s
+[    5.964597] alarm kernel: raid6: using algorithm neonx8 gen() 30176 MB/s
+[    5.964614] alarm kernel: raid6: .... xor() 22034 MB/s, rmw enabled
+[    5.964631] alarm kernel: raid6: using neon recovery algorithm
+[    5.964647] alarm kernel: ACPI: Interpreter disabled.
+[    5.964664] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.964683] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.964700] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    5.964716] alarm kernel: iommu: Default domain type: Translated
+[    5.964732] alarm kernel: iommu: DMA domain TLB invalidation policy: strict mode
+[    5.964749] alarm kernel: SCSI subsystem initialized
+[    5.964765] alarm kernel: usbcore: registered new interface driver usbfs
+[    5.964782] alarm kernel: usbcore: registered new interface driver hub
+[    5.964798] alarm kernel: usbcore: registered new device driver usb
+[    5.964814] alarm kernel: mc: Linux media interface: v0.10
+[    5.964829] alarm kernel: videodev: Linux video capture interface: v2.00
+[    5.964848] alarm kernel: pps_core: LinuxPPS API ver. 1 registered
+[    5.964864] alarm kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    5.964880] alarm kernel: PTP clock support registered
+[    5.964896] alarm kernel: EDAC MC: Ver: 3.0.0
+[    5.964912] alarm kernel: scmi_core: SCMI protocol bus registered
+[    5.964929] alarm kernel: Advanced Linux Sound Architecture Driver Initialized.
+[    5.964946] alarm kernel: CPU features: Asymmetric 32-bit EL0 support detected on CPU 3; CPU hot-unplug disabled on CPU 0
+[    5.964962] alarm kernel: vgaarb: loaded
+[    5.964981] alarm kernel: clocksource: Switched to clocksource arch_sys_counter
+[    5.964997] alarm kernel: VFS: Disk quotas dquot_6.6.0
+[    5.965013] alarm kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    5.965029] alarm kernel: pnp: PnP ACPI: disabled
+[    5.965046] alarm kernel: NET: Registered PF_INET protocol family
+[    5.965062] alarm kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    5.965079] alarm kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    5.965096] alarm kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    5.965112] alarm kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    5.965131] alarm kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    5.965148] alarm kernel: TCP: Hash tables configured (established 131072 bind 65536)
+[    5.965164] alarm kernel: UDP hash table entries: 8192 (order: 7, 524288 bytes, linear)
+[    5.965180] alarm kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    5.965197] alarm kernel: RPC: Registered named UNIX socket transport module.
+[    5.965213] alarm kernel: RPC: Registered udp transport module.
+[    5.965229] alarm kernel: RPC: Registered tcp transport module.
+[    5.965244] alarm kernel: RPC: Registered tcp-with-tls transport module.
+[    5.965260] alarm kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    5.965278] alarm kernel: PCI: CLS 0 bytes, default 64
+[    5.965294] alarm kernel: Unpacking initramfs...
+[    5.965310] alarm kernel: kvm [1]: HYP mode not available
+[    5.965326] alarm kernel: Initialise system trusted keyrings
+[    5.965342] alarm kernel: workingset: timestamp_bits=42 (anon: 38) max_order=22 bucket_order=0 (anon: 0)
+[    5.965359] alarm kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    5.965374] alarm kernel: fuse: init (API version 7.45)
+[    5.965390] alarm kernel: NET: Registered PF_ALG protocol family
+[    5.965406] alarm kernel: Key type asymmetric registered
+[    5.965425] alarm kernel: Asymmetric key parser 'x509' registered
+[    5.965440] alarm kernel: Asymmetric key parser 'pkcs8' registered
+[    5.965457] alarm kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    5.965472] alarm kernel: io scheduler mq-deadline registered
+[    5.965488] alarm kernel: io scheduler kyber registered
+[    5.965504] alarm kernel: io scheduler bfq registered
+[    5.965520] alarm kernel: xor: measuring software checksum speed
+[    5.965535] alarm kernel:    eor3            : 44676 MB/sec
+[    5.965551] alarm kernel:    32regs          : 35832 MB/sec
+[    5.965570] alarm kernel:    8regs           : 39945 MB/sec
+[    5.965586] alarm kernel: xor: using function: eor3 (44676 MB/sec)
+[    5.965602] alarm kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    5.965618] alarm kernel: ------------[ cut here ]------------
+[    5.965634] alarm kernel: disp_cc_mdss_mdp_clk_src: rcg didn't update its configuration.
+[    5.965651] alarm kernel: WARNING: drivers/clk/qcom/clk-rcg2.c:136 at update_config+0xdc/0x100, CPU#7: swapper/0/1
+[    5.965667] alarm kernel: Modules linked in:
+[    5.965684] alarm kernel: CPU: 7 UID: 0 PID: 1 Comm: swapper/0 Tainted: G S                  7.1.2-thorch17 #2 PREEMPT 
+[    5.965702] alarm kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+[    5.965718] alarm kernel: Hardware name: AYN Thor (DT)
+[    5.965734] alarm kernel: pstate: 61400005 (nZCv daif +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+[    5.965750] alarm kernel: pc : update_config+0xdc/0x100
+[    5.965765] alarm kernel: lr : update_config+0xdc/0x100
+[    5.965782] alarm kernel: sp : ffff80008005b9c0
+[    5.965798] alarm kernel: x29: ffff80008005b9d0 x28: ffff000803cb2200 x27: ffffcbbfd3c55b70
+[    5.965814] alarm kernel: x26: 0000000000000004 x25: ffff000803c81480 x24: 0000000000000003
+[    5.965830] alarm kernel: x23: 0000000000000000 x22: ffffcbbfd424b828 x21: ffffcbbfd424b828
+[    5.965849] alarm kernel: x20: ffffcbbfd4ffd420 x19: 0000000000000000 x18: 000000000000000a
+[    5.965865] alarm kernel: x17: 632d6b636f6c632e x16: 303030306564613a x15: 0000000000000100
+[    5.965881] alarm kernel: x14: 0000000000000000 x13: 2e6e6f6974617275 x12: 6769666e6f632073
+[    5.965897] alarm kernel: x11: 7469206574616470 x10: 752074276e646964 x9 : ffffcbbfd26205d8
+[    5.965913] alarm kernel: x8 : 3fffffffffffefff x7 : ffffcbbfd4f086d0 x6 : 0000000000000525
+[    5.965929] alarm kernel: x5 : 00000000000001b8 x4 : 00000000000001b7 x3 : 0000000000000000
+[    5.965945] alarm kernel: x2 : 0000000000000000 x1 : 0000000000000000 x0 : ffff000800983300
+[    5.965961] alarm kernel: Call trace:
+[    5.965977] alarm kernel:  update_config+0xdc/0x100 (P)
+[    5.965996] alarm kernel:  clk_rcg2_shared_disable+0x58/0x90
+[    5.966012] alarm kernel:  clk_rcg2_shared_init+0x18/0x30
+[    5.966027] alarm kernel:  __clk_register+0x508/0xa00
+[    5.966044] alarm kernel:  devm_clk_hw_register+0x64/0xe8
+[    5.966060] alarm kernel:  devm_clk_register_regmap+0x4c/0xa0
+[    5.966076] alarm kernel:  qcom_cc_really_probe+0x318/0x528
+[    5.966092] alarm kernel:  disp_cc_sm8550_probe+0x130/0x240
+[    5.966108] alarm kernel:  platform_probe+0x88/0xc0
+[    5.966126] alarm kernel:  really_probe+0xc8/0x400
+[    5.966143] alarm kernel:  __driver_probe_device+0x90/0x1a8
+[    5.966158] alarm kernel:  driver_probe_device+0x44/0x128
+[    5.966174] alarm kernel:  __driver_attach+0xd0/0x208
+[    5.966190] alarm kernel:  bus_for_each_dev+0x84/0xf0
+[    5.966207] alarm kernel:  driver_attach+0x2c/0x40
+[    5.966222] alarm kernel:  bus_add_driver+0x124/0x280
+[    5.966238] alarm kernel:  driver_register+0x70/0x138
+[    5.966277] alarm kernel:  __platform_driver_register+0x28/0x40
+[    5.969383] alarm kernel:  disp_cc_sm8550_driver_init+0x24/0x38
+[    5.969408] alarm kernel:  do_one_initcall+0x5c/0x418
+[    5.969424] alarm kernel:  kernel_init_freeable+0x230/0x2c0
+[    5.969439] alarm kernel:  kernel_init+0x2c/0x150
+[    5.969455] alarm kernel:  ret_from_fork+0x10/0x20
+[    5.969469] alarm kernel: ---[ end trace 0000000000000000 ]---
+[    5.969484] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969499] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969514] alarm kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969529] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969549] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969564] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    5.969579] alarm kernel: vreg_s1g_1p2: Setting 1200000-1300000uV
+[    5.969593] alarm kernel: vreg_s2g_0p8: Setting 800000-1000000uV
+[    5.969608] alarm kernel: vreg_s3g_0p7: Setting 300000-1004000uV
+[    5.969623] alarm kernel: vreg_s4g_1p3: Setting 1200000-1352000uV
+[    5.969638] alarm kernel: vreg_s5g_0p8: Setting 500000-1004000uV
+[    5.969653] alarm kernel: vreg_s6g_1p8: Setting 1800000-2000000uV
+[    5.969668] alarm kernel: vreg_l1g_1p2: Setting 1200000-1200000uV
+[    5.969683] alarm kernel: vreg_l3g_1p2: Setting 1200000-1200000uV
+[    5.969702] alarm kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    5.969717] alarm kernel: msm_serial: driver initialized
+[    5.969731] alarm kernel: loop: module loaded
+[    5.970093] alarm kernel: spmi_pmic_arb c400000.spmi: PMIC arbiter version v7 (0x70000001)
+[    5.970120] alarm kernel: VFIO - User Level meta-driver version: 0.3
+[    5.970135] alarm kernel: usbcore: registered new interface driver usb-storage
+[    5.970151] alarm kernel: usbcore: registered new device driver onboard-usb-dev
+[    5.970165] alarm kernel: usbcore: registered new interface driver xpad
+[    5.970255] alarm kernel: qcom-hv-haptics c400000.spmi:pmic@7:qcom,hv-haptics@f000: Parse device-tree failed, rc = -517
+[    5.970274] alarm kernel: i2c_dev: i2c /dev entries driver
+[    5.970290] alarm kernel: input: pmic_pwrkey as /devices/platform/soc@0/c400000.spmi/spmi-0/0-00/c400000.spmi:pmic@0:pon@1300/c400000.spmi:pmic@0:pon@1300:pwrkey/input/input1
+[    5.970305] alarm kernel: input: pmic_resin as /devices/platform/soc@0/c400000.spmi/spmi-0/0-00/c400000.spmi:pmic@0:pon@1300/c400000.spmi:pmic@0:pon@1300:resin/input/input2
+[    5.970539] alarm kernel: qcom-tsens c271000.thermal-sensor: leaving TSENS uplow IRQ 23 as non-wakeup on AYN Thor
+[    5.970758] alarm kernel: qcom-tsens c272000.thermal-sensor: leaving TSENS uplow IRQ 25 as non-wakeup on AYN Thor
+[    5.970982] alarm kernel: qcom-tsens c273000.thermal-sensor: leaving TSENS uplow IRQ 27 as non-wakeup on AYN Thor
+[    5.971003] alarm kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    5.971019] alarm kernel: clocksource: arch_mmio_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    5.971229] alarm kernel: arch-timer-mmio 17420000.timer: mmio timer running at 19.20MHz (virt)
+[    5.971250] alarm kernel: hid: raw HID events driver (C) Jiri Kosina
+[    5.971265] alarm kernel: usbcore: registered new interface driver usbhid
+[    5.971280] alarm kernel: usbhid: USB HID core driver
+[    5.971299] alarm kernel: hw perfevents: enabled with armv9_cortex_a510 PMU driver, 7 (0,8000003f) counters available
+[    5.971315] alarm kernel: hw perfevents: enabled with armv9_cortex_a710 PMU driver, 7 (0,8000003f) counters available
+[    5.971330] alarm kernel: hw perfevents: enabled with armv9_cortex_a715 PMU driver, 7 (0,8000003f) counters available
+[    5.971346] alarm kernel: hw perfevents: enabled with armv9_cortex_x3 PMU driver, 7 (0,8000003f) counters available
+[    5.971361] alarm kernel: usbcore: registered new interface driver snd-usb-audio
+[    5.971377] alarm kernel: NET: Registered PF_INET6 protocol family
+[    5.971392] alarm kernel: Segment Routing with IPv6
+[    5.971407] alarm kernel: In-situ OAM (IOAM) with IPv6
+[    5.971422] alarm kernel: NET: Registered PF_PACKET protocol family
+[    5.971440] alarm kernel: Key type dns_resolver registered
+[    5.971455] alarm kernel: registered taskstats version 1
+[    5.971471] alarm kernel: Loading compiled-in X.509 certificates
+[    5.971485] alarm kernel: Demotion targets for Node 0: null
+[    5.971501] alarm kernel: Btrfs loaded, zoned=no, fsverity=no
+[    5.971516] alarm kernel: qcom_scm: convention: smc arm 64
+[    5.971721] alarm kernel: qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+[    5.971915] alarm kernel: qcom_scm firmware:scm: qseecom: untested machine, skipping
+[    5.972199] alarm kernel: qcom-ice 1d88000.crypto: Found QC Inline Crypto Engine (ICE) v4.0.1
+[    5.972393] alarm kernel: qcom-ice 1d88000.crypto: QC Hardware Key Manager (HWKM) version v2
+[    5.972580] alarm kernel: qcom-ice 1d88000.crypto: A supported HWKM is not present. Supporting raw keys only.
+[    5.972597] alarm kernel: vreg_bob1: Setting 3296000-3960000uV
+[    5.972611] alarm kernel: vreg_bob2: Setting 2720000-3960000uV
+[    5.972624] alarm kernel: vreg_l2b_3p0: Setting 3008000-3008000uV
+[    5.972638] alarm kernel: vreg_l5b_3p1: Setting 3104000-3104000uV
+[    5.972651] alarm kernel: vreg_l6b_1p8: Setting 1800000-3008000uV
+[    5.972669] alarm kernel: vreg_l7b_1p8: Setting 1800000-3008000uV
+[    5.972683] alarm kernel: vreg_l8b_1p8: Setting 1800000-3008000uV
+[    5.972697] alarm kernel: vreg_l9b_2p9: Setting 2960000-3008000uV
+[    5.972710] alarm kernel: vreg_l11b_1p2: Setting 1200000-1504000uV
+[    5.972723] alarm kernel: vreg_l12b_1p8: Setting 1800000-1800000uV
+[    5.972737] alarm kernel: vreg_s4e_0p95: Setting 904000-984000uV
+[    5.972750] alarm kernel: vreg_l13b_3p0: Setting 3000000-3000000uV
+[    5.972763] alarm kernel: vreg_l14b_3p2: Setting 3200000-3200000uV
+[    5.972777] alarm kernel: vreg_l15b_1p8: Setting 1800000-1800000uV
+[    5.972793] alarm kernel: vreg_l16b_2p8: Setting 2800000-2800000uV
+[    5.972806] alarm kernel: vreg_l17b_2p5: Setting 2504000-2504000uV
+[    5.972820] alarm kernel: vreg_s5e_1p08: Setting 1010000-1120000uV
+[    5.972833] alarm kernel: vreg_l1e_0p88: Setting 880000-912000uV
+[    5.973032] alarm kernel: arm-smmu 3da0000.iommu: probing hardware configuration...
+[    5.973223] alarm kernel: arm-smmu 3da0000.iommu: SMMUv2 with:
+[    5.973240] alarm kernel: vreg_l2e_0p9: Setting 870000-970000uV
+[    5.973428] alarm kernel: arm-smmu 3da0000.iommu:         stage 1 translation
+[    5.973620] alarm kernel: arm-smmu 3da0000.iommu:         coherent table walk
+[    5.973808] alarm kernel: arm-smmu 3da0000.iommu:         stream matching with 24 register groups
+[    5.973997] alarm kernel: arm-smmu 3da0000.iommu:         22 context banks (0 stage-2 only)
+[    5.974184] alarm kernel: arm-smmu 3da0000.iommu:         Supported page sizes: 0x61311000
+[    5.974372] alarm kernel: arm-smmu 3da0000.iommu:         Stage-1: 48-bit VA -> 36-bit IPA
+[    5.974562] alarm kernel: arm-smmu 3da0000.iommu:         preserved 0 boot mappings
+[    5.974579] alarm kernel: vreg_l3e_1p2: Setting 1200000-1200000uV
+[    5.974765] alarm kernel: platform 3d00000.gpu: Adding to iommu group 0
+[    5.974955] alarm kernel: platform 3d6a000.gmu: Adding to iommu group 1
+[    5.975149] alarm kernel: arm-smmu 15000000.iommu: probing hardware configuration...
+[    5.975336] alarm kernel: arm-smmu 15000000.iommu: SMMUv2 with:
+[    5.975521] alarm kernel: arm-smmu 15000000.iommu:         stage 1 translation
+[    5.975709] alarm kernel: arm-smmu 15000000.iommu:         coherent table walk
+[    5.975893] alarm kernel: arm-smmu 15000000.iommu:         stream matching with 105 register groups
+[    5.976154] alarm kernel: arm-smmu 15000000.iommu:         70 context banks (0 stage-2 only)
+[    5.976341] alarm kernel: arm-smmu 15000000.iommu:         Supported page sizes: 0x61311000
+[    5.976509] alarm kernel: arm-smmu 15000000.iommu:         Stage-1: 36-bit VA -> 36-bit IPA
+[    5.976679] alarm kernel: arm-smmu 15000000.iommu:         preserved 0 boot mappings
+[    5.976857] alarm kernel: platform 800000.dma-controller: Adding to iommu group 2
+[    5.977029] alarm kernel: platform 8c0000.geniqup: Adding to iommu group 3
+[    5.977209] alarm kernel: platform a00000.dma-controller: Adding to iommu group 4
+[    5.977378] alarm kernel: platform ac0000.geniqup: Adding to iommu group 5
+[    5.977562] alarm kernel: platform 1dc4000.dma-controller: Adding to iommu group 6
+[    5.977742] alarm kernel: platform 1dfa000.crypto: Adding to iommu group 6
+[    5.977921] alarm kernel: platform 1d84000.ufshc: Adding to iommu group 7
+[    5.978096] alarm kernel: platform 8804000.mmc: Adding to iommu group 8
+[    5.978269] alarm kernel: platform aa00000.video-codec: Adding to iommu group 9
+[    5.978446] alarm kernel: platform ae00000.display-subsystem: Adding to iommu group 10
+[    5.978646] alarm kernel: platform a600000.usb: Adding to iommu group 11
+[    5.978819] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869a500, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.978994] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.979170] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.979345] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869b200, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.979521] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.979701] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.979873] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869bb80, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.980107] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.980286] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.980450] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869c400, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.980623] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.980788] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.980952] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869cc00, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.981113] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.981280] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.981442] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869d300, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.981603] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.981764] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.981923] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869dc00, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.982083] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.982242] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.982401] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869e900, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.982563] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.982725] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.982892] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869f200, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.983055] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.983221] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.983385] alarm kernel: arm-smmu 15000000.iommu: Unhandled context fault: fsr=0x402, iova=0xb869fa00, fsynr=0x7a0021, cbfrsynra=0x1c00, cb=8
+[    5.983546] alarm kernel: arm-smmu 15000000.iommu: FSR    = 00000402 [Format=2 TF], SID=0x1c00
+[    5.983717] alarm kernel: arm-smmu 15000000.iommu: FSYNR0 = 007a0021 [S1CBNDX=122 PNU PLVL=1]
+[    5.983732] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.983745] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.983758] alarm kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.983770] alarm kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@ae90000
+[    5.983783] alarm kernel: /soc@0/display-subsystem@ae00000/displayport-controller@ae90000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    5.983799] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+[    5.983811] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.983824] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0
+[    5.983836] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.983995] alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier usb0-sbu-mux for /pmic-glink/connector@0
+[    5.984164] alarm kernel: qcom-hv-haptics c400000.spmi:pmic@7:qcom,hv-haptics@f000: haptics revision: HAP_CFG 0x4, HAP_PTN 0x4, HAP_HBST 0x2
+[    5.984178] alarm kernel: OF: /soc@0/spmi@c400000/pmic@7/qcom,hv-haptics@f000: Read of boolean property 'qcom,use-erm' with a value.
+[    5.984232] alarm kernel: qcom-hv-haptics c400000.spmi:pmic@7:qcom,hv-haptics@f000: Set Vmax to 5000 mV
+[    5.984245] alarm kernel: input: qcom-hv-haptics as /devices/platform/soc@0/c400000.spmi/spmi-0/0-07/c400000.spmi:pmic@7:qcom,hv-haptics@f000/input/input3
+[    5.984441] alarm kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: registered as rtc0
+[    5.984614] alarm kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: setting system clock to 2026-09-26T08:00:11 UTC (1790409611)
+[    5.984764] alarm kernel: sdhci_msm 8804000.mmc: Got CD GPIO
+[    5.984916] alarm kernel: ufshcd-qcom 1d84000.ufshc: freq-table-hz property not specified
+[    5.985068] alarm kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    5.985237] alarm kernel: cpu cpu0: EM: OPP:307200 is inefficient
+[    5.985396] alarm kernel: cpu cpu0: EM: created perf domain
+[    5.985556] alarm kernel: cpu cpu3: EM: created perf domain
+[    5.985714] alarm kernel: cpu cpu7: EM: created perf domain
+[    5.985729] alarm kernel: energy_model: updating cpu0 cpu_cap=222 old capacity=326
+[    5.985876] alarm kernel: cpu cpu0: EM: OPP:307200 is inefficient
+[    5.985889] alarm kernel: energy_model: updating cpu3 cpu_cap=657 old capacity=693
+[    5.985901] alarm kernel: 898000.serial: ttyHS1 at MMIO 0x898000 (irq = 188, base_baud = 0) is a MSM
+[    5.986088] alarm kernel: serial serial0: tty port ttyHS1 registered
+[    5.986106] alarm kernel: 89c000.serial: ttyHS2 at MMIO 0x89c000 (irq = 189, base_baud = 0) is a MSM
+[    5.986292] alarm kernel: serial serial1: tty port ttyHS2 registered
+[    5.986491] alarm kernel: rsinput serial1-0: DT axis-range override applied: ±1024
+[    5.986507] alarm kernel: input: AYN Odin2 Gamepad as /devices/platform/soc@0/8c0000.geniqup/89c000.serial/89c000.serial:0/89c000.serial:0.0/serial1/serial1-0/input/input4
+[    5.986654] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    5.986798] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    5.986944] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    5.987087] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    5.987230] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    5.987243] alarm kernel: a9c000.serial: ttyMSM0 at MMIO 0xa9c000 (irq = 192, base_baud = 0) is a MSM
+[    5.987254] alarm kernel: printk: legacy console [ttyMSM0] enabled
+[    5.987265] alarm kernel: vreg_l3c_0p9: Setting 880000-912000uV
+[    5.987276] alarm kernel: vreg_l1d_0p88: Setting 880000-920000uV
+[    5.987286] alarm kernel: Freeing initrd memory: 32760K
+[    5.987298] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+[    5.987311] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[    5.987323] alarm kernel: vreg_s4f_0p5: Setting 300000-700000uV
+[    5.987334] alarm kernel: vreg_l1f_0p9: Setting 880000-912000uV
+[    5.987344] alarm kernel: vreg_l2f_0p88: Setting 880000-912000uV
+[    5.987356] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0
+[    5.987367] alarm kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+[    5.987377] alarm kernel: vreg_l3f_0p88: Setting 880000-912000uV
+[    5.987528] alarm kernel: ufshcd-qcom 1d84000.ufshc: freq-table-hz property not specified
+[    5.987678] alarm kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    5.987824] alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier 88e8000.phy for /pmic-glink/connector@0
+[    5.987974] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    5.988155] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    5.988308] alarm kernel: msm_dpu ae01000.display-controller: bound ae94000.dsi (ops dsi_ops)
+[    5.988455] alarm kernel: msm_dpu ae01000.display-controller: bound ae96000.dsi (ops dsi_ops)
+[    5.988588] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    5.988720] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    5.988851] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    5.988997] alarm kernel: msm_dpu ae01000.display-controller: bound ae90000.displayport-controller (ops msm_dp_display_comp_ops)
+[    5.989138] alarm kernel: adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+[    5.989291] alarm kernel: adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+[    5.989305] alarm kernel: mmc0: SDHCI controller on 8804000.mmc [8804000.mmc] using ADMA 64-bit
+[    5.989449] alarm kernel: msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops a3xx_ops)
+[    5.989462] alarm kernel: [drm:dpu_kms_hw_init:1168] dpu hardware revision:0x90000000
+[    5.989472] alarm kernel: [drm] Initialized msm 1.13.0 for ae01000.display-controller on minor 0
+[    5.989615] alarm kernel: msm_dpu ae01000.display-controller: Direct firmware load for qcom/a740_sqe.fw failed with error -2
+[    5.989760] alarm kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] *ERROR* failed to load a740_sqe.fw
+[    5.989777] alarm kernel: mmc0: new high speed SDXC card at address 59b4
+[    5.989787] alarm kernel: mmcblk0: mmc0:59b4 SDU1 58.6 GiB
+[    5.989797] alarm kernel:  mmcblk0: p1 p2
+[    5.989973] alarm kernel: [66B blob data]
+[    5.989987] alarm kernel: input: bottom_touchscreen as /devices/platform/soc@0/9c0000.geniqup/98c000.i2c/i2c-1/1-0038/input/input5
+[    5.990156] alarm kernel: rsinput serial1-0: MCU parameters set successfully
+[    5.990169] alarm kernel: input: top_touchscreen as /devices/platform/soc@0/ac0000.geniqup/a90000.i2c/i2c-4/4-0038/input/input6
+[    5.990179] alarm kernel: fb0: sys_fillrect: framebuffer is not in virtual address space.
+[    5.990189] alarm kernel: fb0: sys_imageblit: framebuffer is not in virtual address space.
+[    5.990203] alarm kernel: Console: switching to colour frame buffer device 155x67
+[    5.990376] alarm kernel: msm_dpu ae01000.display-controller: [drm] fb0: msmdrmfb frame buffer device
+[    5.990512] alarm kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier a600000.usb for /pmic-glink/connector@0
+[    5.990653] alarm kernel: ufshcd-qcom 1d84000.ufshc: freq-table-hz property not specified
+[    5.990794] alarm kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    5.990938] alarm kernel: scsi host0: ufshcd
+[    5.991099] alarm kernel: scsi 0:0:0:49488: Well-known LUN    KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.991242] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    5.991376] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    5.991507] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    5.991641] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    5.991773] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    5.991785] alarm kernel: input: gpio-keys as /devices/platform/gpio-keys/input/input7
+[    5.991940] alarm kernel: scsi 0:0:0:49476: Well-known LUN    KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.991955] alarm kernel: input: gpio-keys-ayn as /devices/platform/gpio-keys-ayn/input/input8
+[    5.991966] alarm kernel: input: gpio-keys-lid as /devices/platform/gpio-keys-lid/input/input9
+[    5.991981] alarm kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    5.992212] alarm kernel: scsi 0:0:0:49456: Well-known LUN    KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.992370] alarm kernel: scsi 0:0:0:0: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.992513] alarm kernel: sd 0:0:0:0: [sda] 59293696 4096-byte logical blocks: (243 GB/226 GiB)
+[    5.992658] alarm kernel: scsi 0:0:0:1: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.992797] alarm kernel: sd 0:0:0:0: [sda] Write Protect is off
+[    5.992934] alarm kernel: sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    5.993081] alarm kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    5.993221] alarm kernel: sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+[    5.993361] alarm kernel: sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    5.993504] alarm kernel: scsi 0:0:0:2: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.993647] alarm kernel: sd 0:0:0:1: [sdb] 5120 4096-byte logical blocks: (21.0 MB/20.0 MiB)
+[    5.993785] alarm kernel: sd 0:0:0:1: [sdb] Write Protect is off
+[    5.993924] alarm kernel: sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    5.994071] alarm kernel: scsi 0:0:0:3: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.994210] alarm kernel: sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, supports DPO and FUA
+[    5.994348] alarm kernel: sd 0:0:0:1: [sdb] Preferred minimum I/O size 4096 bytes
+[    5.994487] alarm kernel: sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    5.994621] alarm kernel: sd 0:0:0:2: [sdc] 5120 4096-byte logical blocks: (21.0 MB/20.0 MiB)
+[    5.994760] alarm kernel: sd 0:0:0:2: [sdc] Write Protect is off
+[    5.994904] alarm kernel: sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    5.995049] alarm kernel: sd 0:0:0:2: [sdc] Write cache: disabled, read cache: enabled, supports DPO and FUA
+[    5.995178] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    5.995303] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    5.995440] alarm kernel: sd 0:0:0:2: [sdc] Preferred minimum I/O size 4096 bytes
+[    5.995579] alarm kernel: sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    5.995704] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    5.995829] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    5.995954] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    5.996125] alarm kernel: sd 0:0:0:3: [sdd] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    5.996266] alarm kernel: scsi 0:0:0:4: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.996402] alarm kernel: sd 0:0:0:3: [sdd] Write Protect is off
+[    5.996533] alarm kernel: sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    5.996663] alarm kernel: sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    5.996791] alarm kernel: sd 0:0:0:3: [sdd] Preferred minimum I/O size 4096 bytes
+[    5.996922] alarm kernel: sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    5.997055] alarm kernel: scsi 0:0:0:5: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.997185] alarm kernel: sd 0:0:0:4: [sde] 1048576 4096-byte logical blocks: (4.29 GB/4.00 GiB)
+[    5.997319] alarm kernel: sd 0:0:0:4: [sde] Write Protect is off
+[    5.997450] alarm kernel: sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    5.997581] alarm kernel: sd 0:0:0:4: [sde] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    5.997712] alarm kernel: sd 0:0:0:4: [sde] Preferred minimum I/O size 4096 bytes
+[    5.997842] alarm kernel: sd 0:0:0:4: [sde] Optimal transfer size 524288 bytes
+[    5.997972] alarm kernel: sd 0:0:0:5: [sdf] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    5.998102] alarm kernel: sd 0:0:0:5: [sdf] Write Protect is off
+[    5.998239] alarm kernel: scsi 0:0:0:6: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.998368] alarm kernel: sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    5.998498] alarm kernel: sd 0:0:0:5: [sdf] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    5.998511] alarm kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    5.998639] alarm kernel: sd 0:0:0:5: [sdf] Preferred minimum I/O size 4096 bytes
+[    5.998769] alarm kernel: sd 0:0:0:5: [sdf] Optimal transfer size 524288 bytes
+[    5.998781] alarm kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    5.998892] alarm kernel: faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+[    5.998908] alarm kernel: cfg80211: failed to load regulatory.db
+[    5.998917] alarm kernel: clk: Disabling unused clocks
+[    5.998926] alarm kernel: PM: genpd: Disabling unused power domains
+[    5.998936] alarm kernel: ALSA device list:
+[    5.998944] alarm kernel:   No soundcards found.
+[    5.999076] alarm kernel: scsi 0:0:0:7: Direct-Access     KIOXIA   THGJFJT1E45BATPC 0300 PQ: 0 ANSI: 6
+[    5.999206] alarm kernel: sd 0:0:0:6: [sdg] 1048576 4096-byte logical blocks: (4.29 GB/4.00 GiB)
+[    5.999336] alarm kernel: sd 0:0:0:6: [sdg] Write Protect is off
+[    5.999467] alarm kernel: sd 0:0:0:6: [sdg] Mode Sense: 00 32 00 10
+[    5.999597] alarm kernel: sd 0:0:0:6: [sdg] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    5.999725] alarm kernel: sd 0:0:0:6: [sdg] Preferred minimum I/O size 4096 bytes
+[    5.999856] alarm kernel: sd 0:0:0:6: [sdg] Optimal transfer size 524288 bytes
+[    5.999987] alarm kernel: sd 0:0:0:7: [sdh] 1048576 4096-byte logical blocks: (4.29 GB/4.00 GiB)
+[    6.000155] alarm kernel: sd 0:0:0:7: [sdh] Write Protect is off
+[    6.000279] alarm kernel: sd 0:0:0:7: [sdh] Mode Sense: 00 32 00 10
+[    6.000401] alarm kernel: sd 0:0:0:7: [sdh] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    6.000527] alarm kernel: sd 0:0:0:7: [sdh] Preferred minimum I/O size 4096 bytes
+[    6.000650] alarm kernel: sd 0:0:0:7: [sdh] Optimal transfer size 524288 bytes
+[    6.000661] alarm kernel:  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15 sda16 sda17
+[    6.000783] alarm kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+[    6.000896] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    6.001009] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    6.001122] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    6.001232] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    6.001346] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    6.001356] alarm kernel:  sdc: sdc1 sdc2 sdc3 sdc4 sdc5
+[    6.001365] alarm kernel:  sdd: sdd1 sdd2 sdd3
+[    6.001487] alarm kernel: sd 0:0:0:2: [sdc] Attached SCSI disk
+[    6.001609] alarm kernel: sd 0:0:0:3: [sdd] Attached SCSI disk
+[    6.001730] alarm kernel: sd 0:0:0:7: [sdh] Attached SCSI disk
+[    6.001741] alarm kernel:  sdf: sdf1 sdf2 sdf3 sdf4 sdf5
+[    6.001863] alarm kernel: sd 0:0:0:5: [sdf] Attached SCSI disk
+[    6.001878] alarm kernel:  sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48 sde49 sde50 sde51 sde52 sde53 sde54 sde55 sde56 sde57 sde58 sde59 sde60 sde61 sde62 sde63 sde64 sde65 sde66 sde67 sde68 sde69 sde70 sde71 sde72 sde73 sde74 sde75 sde76 sde77 sde78 sde79 sde80
+[    6.001887] alarm kernel:  sdb: sdb1 sdb2 sdb3 sdb4 sdb5
+[    6.002009] alarm kernel: sd 0:0:0:1: [sdb] Attached SCSI disk
+[    6.002131] alarm kernel: sd 0:0:0:4: [sde] Attached SCSI disk
+[    6.002253] alarm kernel: sd 0:0:0:6: [sdg] Attached SCSI disk
+[    6.002365] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    6.002477] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    6.002587] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    6.002701] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    6.002813] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    6.002922] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    6.003032] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    6.003142] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    6.003252] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    6.003361] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    6.003372] alarm kernel: Freeing unused kernel memory: 2816K
+[    6.003381] alarm kernel: Run /init as init process
+[    6.003390] alarm kernel:   with arguments:
+[    6.003399] alarm kernel:     /init
+[    6.003410] alarm kernel:     nosoftlockup
+[    6.003419] alarm kernel:   with environment:
+[    6.003428] alarm kernel:     HOME=/
+[    6.003438] alarm kernel:     TERM=linux
+[    6.003447] alarm kernel: BTRFS: device label THORCH_ROOT devid 1 transid 3124 /dev/mmcblk0p2 (179:2) scanned by mount (375)
+[    6.003456] alarm kernel: BTRFS info (device mmcblk0p2): first mount of filesystem 946afe76-cd9d-4ee6-b06f-96d9dce46f66
+[    6.003465] alarm kernel: BTRFS info (device mmcblk0p2): using crc32c checksum algorithm
+[    6.003474] alarm kernel: BTRFS info (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 39, gen 0
+[    6.003483] alarm kernel: BTRFS info (device mmcblk0p2): enabling ssd optimizations
+[    6.003493] alarm kernel: BTRFS info (device mmcblk0p2): turning on async discard
+[    6.003502] alarm kernel: BTRFS info (device mmcblk0p2): enabling free space tree
+[    6.003513] alarm systemd[1]: systemd 261.2-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK -BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+[    6.003525] alarm systemd[1]: Detected architecture arm64.
+[    6.003536] alarm systemd[1]: Hostname set to <alarm>.
+[    6.003546] alarm systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[    6.003556] alarm kernel: zram: Added device: zram0
+[    6.003567] alarm systemd[1]: Queued start job for default target Graphical Interface.
+[    6.003577] alarm systemd[1]: Created slice Slice /system/dirmngr.
+[    6.003587] alarm systemd[1]: Created slice Slice /system/getty.
+[    6.003596] alarm systemd[1]: Created slice Slice /system/gpg-agent.
+[    6.003605] alarm systemd[1]: Created slice Slice /system/gpg-agent-browser.
+[    6.003615] alarm systemd[1]: Created slice Slice /system/gpg-agent-extra.
+[    6.003625] alarm systemd[1]: Created slice Slice /system/gpg-agent-ssh.
+[    6.003634] alarm systemd[1]: Created slice Slice /system/keyboxd.
+[    6.003645] alarm systemd[1]: Created slice Slice /system/modprobe.
+[    6.003655] alarm systemd[1]: Created slice Slice /system/serial-getty.
+[    6.003664] alarm systemd[1]: Created slice Slice /system/systemd-fsck.
+[    6.003674] alarm systemd[1]: Created slice Slice /system/systemd-zram-setup.
+[    6.003683] alarm systemd[1]: Created slice User and Session Slice.
+[    6.003693] alarm systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    6.003702] alarm systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    6.003711] alarm systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    6.003723] alarm systemd[1]: Expecting device /dev/disk/by-uuid/676C-4A80...
+[    6.003733] alarm systemd[1]: Expecting device /dev/ttyMSM0...
+[    6.003742] alarm systemd[1]: Expecting device /dev/zram0...
+[    6.003751] alarm systemd[1]: Reached target Image Downloads.
+[    6.003761] alarm systemd[1]: Reached target Local Integrity Protected Volumes.
+[    6.003770] alarm systemd[1]: Reached target Path Units.
+[    6.003780] alarm systemd[1]: Reached target Remote Encrypted Volumes.
+[    6.003789] alarm systemd[1]: Reached target Remote File Systems.
+[    6.003798] alarm systemd[1]: Reached target Remote Integrity Protected Volumes.
+[    6.003809] alarm systemd[1]: Reached target Remote Verity Protected Volumes.
+[    6.003819] alarm systemd[1]: Reached target Slice Units.
+[    6.003828] alarm systemd[1]: Reached target Local Verity Protected Volumes.
+[    6.003838] alarm systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    6.003848] alarm systemd[1]: Listening on Query the User Interactively for a Password.
+[    6.003859] alarm systemd[1]: Listening on Process Core Dump Socket.
+[    6.003868] alarm systemd[1]: Listening on Credential Encryption/Decryption.
+[    6.003877] alarm systemd[1]: Listening on Factory Reset Management.
+[    6.003887] alarm systemd[1]: Listening on Hostname Service Socket.
+[    6.003899] alarm systemd[1]: Journal Audit Socket skipped, unmet condition check ConditionSecurity=audit
+[    6.003909] alarm systemd[1]: Listening on Journal Socket (/dev/log).
+[    6.003918] alarm systemd[1]: Listening on Journal Sockets.
+[    6.003927] alarm systemd[1]: Listening on DDI File System Mounter Socket.
+[    6.003936] alarm systemd[1]: Listening on Console Output Muting Service Socket.
+[    6.003946] alarm systemd[1]: Listening on Namespace Resource Manager Socket.
+[    6.003955] alarm systemd[1]: TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-os
+[    6.003966] alarm systemd[1]: Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    6.003975] alarm systemd[1]: Listening on Disk Repartitioning Service Socket.
+[    6.003984] alarm systemd[1]: Listening on Report System Basic Metrics Socket.
+[    6.003993] alarm systemd[1]: Listening on CGroup Report Varlink Socket.
+[    6.004021] alarm systemd[1]: Listening on Resolve Monitor Varlink Socket.
+[    6.004031] alarm systemd[1]: Listening on Resolve Service Varlink Socket.
+[    6.004041] alarm systemd[1]: Listening on Simple Block Device Backed Storage Provider.
+[    6.004050] alarm systemd[1]: Listening on Simple File System Backed Storage Provider.
+[    6.004068] alarm systemd[1]: Listening on udev Control Socket.
+[    6.004077] alarm systemd[1]: Listening on udev Kernel Socket.
+[    6.004087] alarm systemd[1]: Listening on udev Varlink Socket.
+[    6.004097] alarm systemd[1]: Listening on User Database Manager Socket.
+[    6.004105] alarm systemd[1]: Mounting Huge Pages File System...
+[    6.004114] alarm systemd[1]: Mounting POSIX Message Queue File System...
+[    6.004124] alarm systemd[1]: Mounting Kernel Debug File System...
+[    6.004133] alarm systemd[1]: Mounting Kernel Trace File System...
+[    6.004142] alarm systemd[1]: Starting Create List of Static Device Nodes...
+[    6.004153] alarm systemd[1]: Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[    6.004162] alarm systemd[1]: Mounting Kernel Configuration File System...
+[    6.004170] alarm systemd[1]: Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[    6.004179] alarm systemd[1]: Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+[    6.004188] alarm systemd[1]: Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+[    6.004197] alarm systemd[1]: Mounting FUSE Control File System...
+[    6.004206] alarm systemd[1]: Clear SysFail Entry If The Boot Is Successful skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/LoaderEntrySysFail-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+[    6.004215] alarm systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[    6.004225] alarm systemd[1]: Starting Journal Service...
+[    6.004234] alarm systemd[1]: Starting Load Kernel Modules...
+[    6.004243] alarm systemd[1]: Starting Generate Network Units from Kernel Command Line...
+[    6.004252] alarm systemd[1]: TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[    6.004260] alarm systemd[1]: TPM PCR OS Separator skipped, unmet condition check ConditionSecurity=measured-os
+[    6.004269] alarm systemd[1]: Starting Remount Root and Kernel File Systems...
+[    6.004277] alarm systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-os
+[    6.004286] alarm systemd[1]: TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[    6.004295] alarm systemd[1]: Reached target Local Encrypted Volumes.
+[    6.004305] alarm systemd[1]: TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[    6.004314] alarm systemd[1]: Starting Load udev Rules from Credentials...
+[    6.004323] alarm systemd[1]: Starting Coldplug All udev Devices...
+[    6.004331] alarm systemd[1]: Finished Create List of Static Device Nodes.
+[    6.004340] alarm systemd[1]: Finished Load Kernel Modules.
+[    6.004348] alarm systemd[1]: Mounted Huge Pages File System.
+[    6.004356] alarm systemd[1]: Mounted Kernel Configuration File System.
+[    6.004365] alarm systemd[1]: Mounted FUSE Control File System.
+[    6.004374] alarm systemd[1]: Finished Generate Network Units from Kernel Command Line.
+[    6.004406] alarm systemd-journald[436]: Collecting audit messages is disabled.
+[    6.004428] alarm systemd[1]: Reached target Preparation for Network.
+[    6.004437] alarm systemd[1]: Starting Apply Kernel Variables...
+[    6.004446] alarm systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+[    6.004457] alarm systemd[1]: Mounted POSIX Message Queue File System.
+[    6.004466] alarm systemd[1]: Mounted Kernel Trace File System.
+[    6.004474] alarm systemd[1]: Mounted Kernel Debug File System.
+[    6.004483] alarm systemd[1]: Finished Load udev Rules from Credentials.
+[    6.004492] alarm systemd[1]: Finished Apply Kernel Variables.
+[    6.008060] alarm systemd[1]: Started Journal Service.
+[    6.112092] alarm kernel: BTRFS info (device mmcblk0p2 state M): use zstd compression, level 1
+[    7.734208] alarm systemd-journald[436]: Received client request to flush runtime journal.
+[    7.737203] alarm kernel: tun: Universal TUN/TAP device driver, 1.6
+[    8.364592] alarm kernel: zram0: detected capacity change from 0 to 15917056
+[    8.387941] alarm kernel: irq: IRQ205: trimming hierarchy from :soc@0:interrupt-controller@b220000-9
+[    8.392035] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.392623] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.393041] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.393439] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.393849] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.424251] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.424868] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.425318] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.425756] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.426177] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.438838] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.441748] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.442467] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.442701] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.443531] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.504161] alarm kernel: Bluetooth: Core ver 2.22
+[    8.504297] alarm kernel: NET: Registered PF_BLUETOOTH protocol family
+[    8.504325] alarm kernel: Bluetooth: HCI device and connection manager initialized
+[    8.504339] alarm kernel: Bluetooth: HCI socket layer initialized
+[    8.504354] alarm kernel: Bluetooth: L2CAP socket layer initialized
+[    8.504366] alarm kernel: Bluetooth: SCO socket layer initialized
+[    8.556063] alarm kernel: Bluetooth: HCI UART driver ver 2.3
+[    8.556139] alarm kernel: Bluetooth: HCI UART protocol H4 registered
+[    8.556154] alarm kernel: Bluetooth: HCI UART protocol LL registered
+[    8.556169] alarm kernel: Bluetooth: HCI UART protocol QCA registered
+[    8.564026] alarm kernel: remoteproc remoteproc0: adsp is available
+[    8.566242] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.588022] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.612040] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.612432] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.612590] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.660100] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.672122] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.675444] alarm kernel: Adding 7958524k swap on /dev/zram0.  Priority:100 extents:1 across:7958524k SSDsc
+[    8.680021] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.680684] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.681060] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.711034] alarm kernel: remoteproc remoteproc1: cdsp is available
+[    8.720023] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.720230] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.720368] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.720493] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.720624] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.912342] alarm kernel: pwrseq-qcom_wcn wcn7850-pmu: supply vddio1p2 not found, using dummy regulator
+[    8.917037] alarm kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    8.917255] alarm kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+[    8.917404] alarm kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    8.917541] alarm kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[    8.917672] alarm kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+[    8.917797] alarm kernel: Bluetooth: hci0: setting up wcn7850
+[    8.984333] alarm kernel: Bluetooth: hci0: QCA Product ID   :0x00000019
+[    8.984431] alarm kernel: Bluetooth: hci0: QCA SOC Version  :0x40170200
+[    8.984455] alarm kernel: Bluetooth: hci0: QCA ROM Version  :0x00000200
+[    8.984473] alarm kernel: Bluetooth: hci0: QCA Patch Version:0x000043fb
+[    8.992257] alarm kernel: Bluetooth: hci0: QCA controller version 0x02000200
+[    8.992344] alarm kernel: Bluetooth: hci0: QCA Downloading qca/hmtbtfw20.tlv
+[    8.992377] alarm kernel: bluetooth hci0: Direct firmware load for qca/hmtbtfw20.tlv failed with error -2
+[    8.992620] alarm kernel: Bluetooth: hci0: QCA Failed to request file: qca/hmtbtfw20.tlv (-2)
+[    8.992646] alarm kernel: Bluetooth: hci0: QCA Failed to request file: qca/hmtbtfw20.tlv (-2)
+[    8.992662] alarm kernel: Bluetooth: hci0: HFP non-HCI data transport is supported
+[    8.992679] alarm kernel: Bluetooth: hci0: unexpected event for opcode 0xfc48
+[    9.084455] alarm kernel: qcom-pcie 1c00000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[    9.284337] alarm kernel: qcom-pcie 1c00000.pcie: PCIe Gen.2 x2 link up
+[    9.285286] alarm kernel: qcom-pcie 1c00000.pcie: PCI host bridge to bus 0000:00
+[    9.285448] alarm kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+[    9.285619] alarm kernel: pci_bus 0000:00: root bus resource [io  0x0000-0xfffff]
+[    9.285823] alarm kernel: pci_bus 0000:00: root bus resource [mem 0x60300000-0x63ffffff]
+[    9.286118] alarm kernel: pci 0000:00:00.0: [17cb:0113] type 01 class 0x060400 PCIe Root Port
+[    9.286475] alarm kernel: pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    9.286795] alarm kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    9.287121] alarm kernel: pci 0000:00:00.0:   bridge window [io  0x0000-0x0fff]
+[    9.287320] alarm kernel: pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    9.287611] alarm kernel: pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    9.288503] alarm kernel: pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    9.288708] alarm kernel: pci 0000:00:00.0: Adding to iommu group 12
+[    9.288893] alarm kernel: pci 0000:01:00.0: [17cb:1107] type 00 class 0x028000 PCIe Endpoint
+[    9.289103] alarm kernel: pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+[    9.289298] alarm kernel: pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[    9.289480] alarm kernel: pci 0000:01:00.0: Adding to iommu group 12
+[    9.296080] alarm kernel: pci 0000:01:00.0: ASPM: default states L0s L1
+[    9.297187] alarm kernel: pci 0000:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01-ff] add_size 1000
+[    9.297961] alarm kernel: pci 0000:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01-ff] add_size 200000 add_align 100000
+[    9.298709] alarm kernel: pci 0000:00:00.0: bridge window [mem 0x60400000-0x605fffff]: assigned
+[    9.299397] alarm kernel: pci 0000:00:00.0: bridge window [mem 0x60600000-0x607fffff 64bit pref]: assigned
+[    9.300360] alarm kernel: pci 0000:00:00.0: BAR 0 [mem 0x60300000-0x60300fff]: assigned
+[    9.301668] alarm kernel: pci 0000:00:00.0: bridge window [io  0x1000-0x1fff]: assigned
+[    9.302259] alarm kernel: pci 0000:01:00.0: BAR 0 [mem 0x60400000-0x605fffff 64bit]: assigned
+[    9.302862] alarm kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    9.303560] alarm kernel: pci 0000:00:00.0:   bridge window [io  0x1000-0x1fff]
+[    9.304195] alarm kernel: pci 0000:00:00.0:   bridge window [mem 0x60400000-0x605fffff]
+[    9.304805] alarm kernel: pci 0000:00:00.0:   bridge window [mem 0x60600000-0x607fffff 64bit pref]
+[    9.305351] alarm kernel: pci_bus 0000:00: resource 4 [io  0x0000-0xfffff]
+[    9.305832] alarm kernel: pci_bus 0000:00: resource 5 [mem 0x60300000-0x63ffffff]
+[    9.306280] alarm kernel: pci_bus 0000:01: resource 0 [io  0x1000-0x1fff]
+[    9.306768] alarm kernel: pci_bus 0000:01: resource 1 [mem 0x60400000-0x605fffff]
+[    9.307225] alarm kernel: pci_bus 0000:01: resource 2 [mem 0x60600000-0x607fffff 64bit pref]
+[    9.536946] alarm kernel: remoteproc remoteproc1: powering up cdsp
+[    9.548088] alarm kernel: remoteproc remoteproc1: Booting fw image qcom/sm8550/ayn/cdsp.mbn, size 7086504
+[    9.654093] alarm kernel: remoteproc remoteproc1: remote processor cdsp is now up
+[    9.654831] alarm kernel: qcom,fastrpc 32300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[    9.656097] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 13
+[    9.660057] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 14
+[    9.660404] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 15
+[    9.668127] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 16
+[    9.688094] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 17
+[    9.688463] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 18
+[    9.692091] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 19
+[    9.696075] alarm kernel: platform 32300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 20
+[    9.960154] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: BAR 0 [mem 0x60400000-0x605fffff 64bit]: assigned
+[    9.960537] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[    9.964369] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: Wi-Fi 7 Hardware name: wcn7850 hw2.0
+[    9.966216] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: MSI vectors: 16
+[   10.025120] alarm kernel: mhi mhi0: Requested to power ON
+[   10.026819] alarm kernel: mhi mhi0: Power on setup success
+[   10.656837] alarm kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
+[   10.681963] alarm kernel: remoteproc remoteproc0: powering up adsp
+[   10.703544] alarm kernel: remoteproc remoteproc0: Booting fw image qcom/sm8550/ayn/thor/adsp.mbn, size 28379480
+[   11.012395] alarm kernel: remoteproc remoteproc0: remote processor adsp is now up
+[   11.016048] alarm kernel: qcom,fastrpc 6800000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[   11.020101] alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 21
+[   11.020380] alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 22
+[   11.024150] alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 23
+[   11.028214] alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 24
+[   11.028424] alarm kernel: platform 6800000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 25
+[   11.039588] alarm kernel: PDR: Indication received from msm/adsp/audio_pd, state: 0x1fffffff, trans-id: 1
+[   11.039631] alarm kernel: qcom,apr 6800000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:1
+[   11.039839] alarm kernel: qcom,apr 6800000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:2
+[   11.056029] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: chip_id 0x2 chip_family 0x4 board_id 0xff soc_id 0x40170200
+[   11.056585] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: fw_version 0x110cffff fw_build_timestamp 2025-06-25 09:26 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.HMT.1.1.c5-00302-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1.115823.3
+[   11.068038] alarm kernel: PDR: Indication received from msm/adsp/charger_pd, state: 0x1fffffff, trans-id: 1
+[   11.100627] alarm kernel: qcom_q6v5_pas 6800000.remoteproc: Handover signaled, but it already happened
+[   11.292055] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: Generated MAC_ADDR: 00:03:7f:75:89:97
+[   11.293025] alarm kernel: ath12k_wifi7_pci 0000:01:00.0: MAC_ADDR set to 00:03:7f:75:89:97
+[   11.293612] alarm kernel: ieee80211 phy0: copying sband (band 1) due to VHT EXT NSS BW flag
+[   11.308052] alarm kernel: ath12k_wifi7_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[   12.524047] alarm kernel: input: Thorch Hardware Keys as /devices/virtual/input/input10
+[   13.800053] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   13.940855] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   13.941215] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   13.941367] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   13.941473] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   13.941575] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.032638] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.056344] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436242] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436374] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436398] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436419] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436432] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.436452] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.444017] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.444059] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.444069] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.444082] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.444095] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.460065] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.460089] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.464024] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.464074] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.464092] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.480125] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.480148] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.480166] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.480175] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.480184] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.556030] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.556088] alarm kernel: input: ThorDS Power Key as /devices/virtual/input/input11
+[   14.568019] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.572025] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.572040] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.572049] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.608019] alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+[   14.608053] alarm kernel: ops->cpu_acquire/release() are deprecated, use sched_switch TP instead
+[   14.656056] alarm kernel: sched_ext: BPF scheduler "lavd_1.1.2_aarch64_unknown_linux_gnu" enabled
+[   15.344296] alarm kernel: input: InputPlumber Keyboard as /devices/virtual/input/input12
+[   15.344345] alarm kernel: input: InputPlumber Mouse as /devices/virtual/input/input13
+[   15.344396] alarm kernel: input: Microsoft Xbox Series S|X Controller as /devices/virtual/input/input14
+[   16.094441] alarm kernel: qcom-apm gprsvc:service:2:1: CMD timeout for [1001021] opcode
+[   16.095135] alarm kernel: platform 6800000.remoteproc:glink-edge:gpr:service@1:dais: Adding to iommu group 26
+[   16.264085] alarm kernel: qcom-soundwire 6d30000.soundwire: dout-ports (0) mismatch with controller (1)
+[   16.264366] alarm kernel: wcd938x_codec audio-codec: bound sdw:2:0:0217:010d:00:4 (ops wcd_sdw_component_ops [snd_soc_wcd_common])
+[   16.264509] alarm kernel: wcd938x_codec audio-codec: bound sdw:3:0:0217:010d:00:3 (ops wcd_sdw_component_ops [snd_soc_wcd_common])
+[   17.516462] alarm kernel: snd-sc8280xp sound: ASoC: Parent card not yet available, widget card binding deferred
+[   17.536051] alarm kernel: ALSA: Control name 'stream0.vol_ctrl0 MultiMedia1 Playback Volume' truncated to 'stream0.vol_ctrl0 MultiMedia1 Playback Volu'
+[   17.536124] alarm kernel: ALSA: Control name 'stream1.vol_ctrl1 MultiMedia2 Playback Volume' truncated to 'stream1.vol_ctrl1 MultiMedia2 Playback Volu'
+[   17.536196] alarm kernel: input: AYN-Thor Headset Jack as /devices/platform/sound/sound/card0/input15
+[   17.536246] alarm kernel: input: AYN-Thor DP0 Jack as /devices/platform/sound/sound/card0/input16
+[   18.208510] alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+[   22.592019] alarm kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded qcom/a740_sqe.fw from new location
+[   22.599640] alarm kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded qcom/gmu_gen70200.bin from new location
+[   22.617341] alarm kernel: [drm] Loaded GMU firmware v4.1.9
+[   26.092208] alarm kernel: soundwire sdw-master-2-0: clock stop deprepare wait failed:-110
+[   26.336032] alarm kernel: gcc-sm8550 100000.clock-controller: sync_state() pending due to 3d6a000.gmu
+[   26.336427] alarm kernel: gpu_cc-sm8550 3d90000.clock-controller: sync_state() pending due to 3d6a000.gmu
+[   31.712102] alarm kernel: hap-swr-slave-reg: disabling
+[   32.052544] alarm kernel: wlp1s0: authenticate with 34:60:f9:cc:7c:41 (local address=00:03:7f:75:89:97)
+[   32.052947] alarm kernel: wlp1s0: send auth to 34:60:f9:cc:7c:41 (try 1/3)
+[   32.064043] alarm kernel: wlp1s0: authenticated
+[   32.064114] alarm kernel: wlp1s0: associate with 34:60:f9:cc:7c:41 (try 1/3)
+[   32.084056] alarm kernel: wlp1s0: RX AssocResp from 34:60:f9:cc:7c:41 (capab=0x111 status=0 aid=28)
+[   32.108024] alarm kernel: wlp1s0: associated
+[   32.164040] alarm kernel: wlp1s0: Limiting TX power to 30 (30 - 0) dBm as advertised by 34:60:f9:cc:7c:41
+[   96.215543] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[   96.215665] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 40, gen 0
+[   96.424196] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[   96.424469] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 41, gen 0
+[  388.980640] alarm systemd-journald[436]: Time jumped backwards, rotating.
+[  532.820067] alarm kernel: [drm:dpu_crtc_get_vblank_counter] *ERROR* no encoder found for crtc 1
+[  578.713334] alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+[  624.864152] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  624.864276] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 42, gen 0
+[  651.364157] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.364437] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 43, gen 0
+[  651.368035] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.368140] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 44, gen 0
+[  651.368215] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  651.368274] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 45, gen 0
+[  651.384033] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384163] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 46, gen 0
+[  651.384226] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384278] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 47, gen 0
+[  651.384356] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  651.384406] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 48, gen 0
+[  651.390241] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390336] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 49, gen 0
+[  651.390404] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390470] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 50, gen 0
+[  651.390529] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  651.390571] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 51, gen 0
+[  661.470742] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.470887] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 52, gen 0
+[  661.471019] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.471043] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 53, gen 0
+[  661.472023] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 2404352 csum 0x13fd1040 expected csum 0x8742cc57 mirror 1
+[  661.472061] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 54, gen 0
+[  661.490413] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490493] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 55, gen 0
+[  661.490523] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490539] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 56, gen 0
+[  661.490559] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4026368 csum 0x7fb19f62 expected csum 0x66d6fa1a mirror 1
+[  661.490573] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 57, gen 0
+[  661.500039] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500133] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 58, gen 0
+[  661.500153] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500167] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 59, gen 0
+[  661.500185] alarm kernel: BTRFS warning (device mmcblk0p2): csum failed root 5 ino 79396 off 4796416 csum 0x7fb19f62 expected csum 0x49976b51 mirror 1
+[  661.500199] alarm kernel: BTRFS error (device mmcblk0p2): bdev /dev/mmcblk0p2 errs: wr 0, rd 0, flush 0, corrupt 60, gen 0

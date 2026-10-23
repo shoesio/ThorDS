@@ -1,0 +1,13 @@
+Subject: [PATCH] arm64: dts: AYN: do not wake on volume up
+
+Adapted from Armada wake-source policy; do not change SD timings.
+--- a/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi
++++ b/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi
+@@ -51,7 +51,6 @@
+ 			gpios = <&pm8550_gpios 6 GPIO_ACTIVE_LOW>;
+ 			linux,code = <KEY_VOLUMEUP>;
+ 			linux,can-disable;
+-			wakeup-source;
+ 		};
+ 	};
+ 

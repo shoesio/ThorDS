@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Debounced hidden L3+R3 toggle for the ThorDS presentation layer."""
+import glob
+import os
+import select
+import struct
+import subprocess
+import time
+
+BTN_THUMBL = 0x13D
+BTN_THUMBR = 0x13E
+EVENT = struct.Struct("llHHi")
+WINDOW = 0.30
+
+
+def main():
+    fds = []
+    for path in glob.glob("/dev/input/event*"):
+        try:
+            fds.append(os.open(path, os.O_RDONLY | os.O_NONBLOCK))
+        except OSError:
+            pass
+    if not fds:
+        return 0
+
+    left = right = False
+    last = {BTN_THUMBL: 0.0, BTN_THUMBR: 0.0}
+    consumed = False
+    try:
+        while True:
+            ready, _, _ = select.select(fds, [], [], 1.0)
+            for fd in ready:
+                while True:
+                    try:
+                        data = os.read(fd, EVENT.size)
+                    except BlockingIOError:
+                        break
+                    if len(data) != EVENT.size:
+                        break
+                    _, _, event_type, code, value = EVENT.unpack(data)
+                    if event_type != 1 or code not in (BTN_THUMBL, BTN_THUMBR):
+                        continue
+                    pressed = value != 0
+                    if code == BTN_THUMBL:
+                        left = pressed
+                    else:
+                        right = pressed
+                    if pressed:
+                        last[code] = time.monotonic()
+                    if left and right and not consumed:
+                        if abs(last[BTN_THUMBL] - last[BTN_THUMBR]) <= WINDOW:
+                            subprocess.run(["/usr/bin/thords-framegen", "toggle"], check=False)
+                            consumed = True
+                    if not left and not right:
+                        consumed = False
+    finally:
+        for fd in fds:
+            os.close(fd)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,72 @@
+[
+  {
+    "path": "upstream/thorch",
+    "origin": "https://github.com/thorch-os/thorch.git",
+    "commit": "82e7472e6cad5c08a55c3aef92ef5be218621b2c"
+  },
+  {
+    "path": "upstream/azahar",
+    "origin": "https://github.com/azahar-emu/azahar.git",
+    "commit": "6673171512d5fef7b54216acbb77dc35332b71df"
+  },
+  {
+    "path": "build/thorch-work",
+    "origin": "https://github.com/thorch-os/thorch.git",
+    "commit": "82e7472e6cad5c08a55c3aef92ef5be218621b2c"
+  },
+  {
+    "path": "work/compatibility-reference-20261018",
+    "origin": "https://github.com/azahar-emu/compatibility-list.git",
+    "commit": "d282515cd6a66b694ac0657eef250c24b7410495"
+  },
+  {
+    "path": "work/gyro-lab/pd-mapper",
+    "origin": "https://github.com/linux-msm/pd-mapper.git",
+    "commit": "5ecd2fe926aca7abfe40724177f63b942cff3947"
+  },
+  {
+    "path": "work/gyro-lab/qrtr",
+    "origin": "https://github.com/linux-msm/qrtr.git",
+    "commit": "0428c6541d230cdd253bfa76cef83341e1c2d178"
+  },
+  {
+    "path": "work/gyro-lab/firmware-ayn-odin",
+    "origin": "https://gitlab.com/jenneron/firmware-ayn-odin.git",
+    "commit": "d4e14a46e39cf48eeb53ffba772fd91c3f4f3108"
+  },
+  {
+    "path": "work/gyro-lab/hexagonrpc",
+    "origin": "https://github.com/linux-msm/hexagonrpc.git",
+    "commit": "435ed1cd68e20f8a9fe4871233ed1f8ce7ccf9e8"
+  },
+  {
+    "path": "work/mako-source",
+    "origin": "https://github.com/eugeniosegala/MAKO.git",
+    "commit": "0534110a381672dc33a285d45a61662ff06f44ae"
+  },
+  {
+    "path": "work/3dsconv",
+    "origin": "https://github.com/ihaveamac/3dsconv.git",
+    "commit": "50a30d292e039a8b315eaccef85a067a8f48c500"
+  },
+  {
+    "path": "work/hexagonrpc",
+    "origin": "https://github.com/linux-msm/hexagonrpc.git",
+    "commit": "435ed1cd68e20f8a9fe4871233ed1f8ce7ccf9e8"
+  },
+  {
+    "path": "work/gyro-kettle-reference",
+    "origin": "https://github.com/kettlelinux/kettlelinux.git",
+    "commit": "1a3f558a3284b89374e483ca361ea0474749d505"
+  },
+  {
+    "path": "work/rocknix-distribution",
+    "origin": "https://github.com/ROCKNIX/distribution.git",
+    "commit": "e7650bd7fc72e610a105e0eb0e04d34316f2be2d"
+  },
+  {
+    "path": "work/armada",
+    "origin": "https://github.com/armada-os/armada.git",
+    "commit": "9bdf8f7c6186075d80c7159cc42a8e27338adb88"
+  }
+]

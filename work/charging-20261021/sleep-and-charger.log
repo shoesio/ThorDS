@@ -1,0 +1,117 @@
+/var/log/thords:
+total 164K
+-rw-r--r-- 1 thords thords 3.4K Oct 20 18:04 audio.log
+-rw-r--r-- 1 thords thords 122K Oct 20 18:04 azahar.log
+-rw-r--r-- 1 thords thords 5.0K Oct 20 18:04 boot-timing.log
+-rw-r--r-- 1 thords thords    0 Oct 11 17:02 controls.log
+-rw-r--r-- 1 thords thords 2.5K Oct 11 23:31 framegen.log
+-rw-r--r-- 1 thords thords  14K Oct 20 16:31 hardware.txt
+-rw-r--r-- 1 thords thords    0 Oct 11 17:02 performance.log
+drwxr-xr-x 2 root   root   4.0K Oct 11 19:25 sleep
+-rw-r--r-- 1 thords thords    0 Oct 11 17:02 testdata.log
+
+/var/log/thords/sleep:
+total 12K
+-rw-r--r-- 1 root root  745 Oct 21 21:21 latest-post.json
+-rw-r--r-- 1 root root  745 Oct 21 18:35 latest-pre.json
+-rw-r--r-- 1 root root 1.6K Oct 21 21:21 wake-ledger.jsonl
+#!/usr/bin/env python3
+"""Save/restore wake settings; only gate power when a working closed lid can wake."""
+import fcntl
+import json
+import sys
+import time
+from pathlib import Path
+
+STATE = Path('/run/thords-sleep/wake-settings.json')
+LOG = Path('/var/log/thords/sleep/wake-ledger.jsonl')
+
+
+def wake_path(event):
+    for parent in (event / 'device').resolve().parents:
+        path = parent / 'power/wakeup'
+        if path.is_file() and path.read_text().strip() in ('enabled', 'disabled'):
+            return path
+    return None
+
+
+def restore():
+    if not STATE.exists():
+        return
+    pending = {}
+    for name, value in json.loads(STATE.read_text()).items():
+        path = Path(name)
+        if not str(path.resolve()).startswith('/sys/devices/') or value not in ('enabled', 'disabled'):
+            raise ValueError('Invalid saved wake setting')
+        try:
+            path.write_text(value)
+        except OSError:
+            pending[name] = value
+    if pending:
+        STATE.write_text(json.dumps(pending))
+        raise OSError('Could not restore all wake sources')
+    STATE.unlink()
+
+
+def prepare():
+    restore()
+    events = list(Path('/sys/class/input').glob('event*'))
+    lid_closed = False
+    lid_wake = False
+    for event in events:
+        if (event / 'device/name').read_text().strip() != 'gpio-keys-lid':
+            continue
+        try:
+            with open('/dev/input/' + event.name, 'rb', buffering=0) as device:
+                switches = bytearray(4)
+                fcntl.ioctl(device, 0x8004451B, switches, True)  # EVIOCGSW(4)
+                lid_closed = bool(int.from_bytes(switches, sys.byteorder) & 1)
+            path = wake_path(event)
+            lid_wake = path is not None and path.read_text().strip() == 'enabled'
+        except OSError:
+            pass  # Preserve power-key wake if the lid cannot be verified.
+    saved = {}
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    for event in events:
+        name = (event / 'device/name').read_text().strip()
+        if name == 'pmic_resin' or (name == 'pmic_pwrkey' and lid_closed and lid_wake):
+            path = wake_path(event)
+            if path is None or path.read_text().strip() != 'enabled':
+                continue
+            saved[str(path)] = 'enabled'
+            STATE.write_text(json.dumps(saved))  # Record before changing hardware.
+            path.write_text('disabled')
+    print(f'Wake policy: closed_lid={lid_closed}, lid_wake={lid_wake}, gated={list(saved)}')
+
+
+def ledger():
+    try:
+        irq = Path('/sys/power/pm_wakeup_irq').read_text().strip()
+    except OSError:
+        irq = ''
+    line = next((line.strip() for line in Path('/proc/interrupts').read_text().splitlines()
+                 if irq and line.split(':', 1)[0].strip() == irq), '')
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    lines = LOG.read_text().splitlines()[-249:] if LOG.exists() else []
+    lines.append(json.dumps({'time': time.time(), 'wake_irq': irq, 'interrupt': line}))
+    LOG.write_text('\n'.join(lines) + '\n')
+
+
+if __name__ == '__main__':
+    if sys.argv[1:] == ['pre']:
+        prepare()
+    elif sys.argv[1:] == ['post']:
+        restore()
+        ledger()
+    else:
+        raise SystemExit('Usage: thords-wake-policy pre|post')
+-- No entries --
+Oct 20 17:27:27 alarm kernel: PM: suspend entry (s2idle)
+Oct 20 17:51:53 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 20 17:51:53 alarm kernel: PM: suspend exit
+Oct 20 18:14:26 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 18:35:23 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 21 18:35:23 alarm kernel: PM: suspend exit
+Oct 21 18:35:52 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 21:21:39 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 21 21:21:39 alarm kernel: PM: suspend exit

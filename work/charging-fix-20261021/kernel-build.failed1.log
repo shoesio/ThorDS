@@ -1,0 +1,244 @@
+==> using existing Thor kernel source checkout at /build/kernel-src
+==> skipping kernel patch application for existing source checkout
+==> copying ROCKNIX SM8550 DTS overlays
+==> applying Thorch DTS patches
+warning: ROCKNIX kernel patch is already applied, skipping: packages/linux-thorch/dts-patches/0002-arm64-dts-qcom-sm8550-add-ice-iface-clock-power-domain.patch
+warning: ROCKNIX kernel patch is already applied, skipping: packages/linux-thorch/dts-patches/0003-arm64-dts-qcom-sm8550-add-lowest-gpu-opp.patch
+==> applying ROCKNIX kernel patch with fuzz packages/linux-thorch/dts-patches/0005-arm64-dts-qcom-qcs8550-ayn-thor-retain-bottom-touch-power.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0006-arm64-dts-qcom-qcs8550-ayn-common-s2idle-power.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0007-arm64-dts-qcom-qcs8550-ayn-thor-set-gamepad-axis-range.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0007-arm64-dts-thor-debounce-lid-open-wake.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0008-arm64-dts-ayn-disable-volume-up-wake.patch
+==> reusing kernel build directory at /build/kernel-build
+==> applying Thorch kernel feature config
+==> resolving kernel config
+make: Entering directory '/build/kernel-src'
+make[1]: Entering directory '/build/kernel-build'
+#
+# No change to .config
+#
+make[1]: Leaving directory '/build/kernel-build'
+make: Leaving directory '/build/kernel-src'
+==> building Thor kernel, 13 ROCKNIX SM8550 DTBs, and modules
+make: Entering directory '/build/kernel-src'
+make[1]: Entering directory '/build/kernel-build'
+  SYNC    include/config/auto.conf
+  UPD     include/config/kernel.release
+  UPD     include/generated/compile.h
+  UPD     include/generated/utsrelease.h
+  DESCEND bpf/resolve_btfids
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dtb
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:293.12-296.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:240.8-249.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:164.12-167.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:193.7-202.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:204.7-238.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:209.8-279.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:92.7-100.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:113.7-183.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:102.7-120.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:185.7-207.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+  INSTALL libsubcmd_headers
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6-top-dpad.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rpnova.dtb
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:295.8-365.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:195.7-265.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:267.7-293.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+  CC      init/version.o
+  CC      kernel/sys.o
+  AR      init/built-in.a
+  CC      kernel/module/main.o
+  AR      kernel/module/built-in.a
+  UPD     kernel/config_data
+  CC      drivers/base/firmware_loader/main.o
+  GZIP    kernel/config_data.gz
+  CC      kernel/configs.o
+  AR      kernel/built-in.a
+  AR      drivers/base/firmware_loader/built-in.a
+  AR      drivers/base/built-in.a
+  CC      drivers/mailbox/qcom-ipcc.o
+  AR      drivers/mailbox/built-in.a
+  AR      drivers/built-in.a
+  AR      built-in.a
+  AR      vmlinux.a
+  LD      vmlinux.o
+  MODPOST Module.symvers
+  UPD     include/generated/utsversion.h
+  CC      init/version-timestamp.o
+  KSYMS   .tmp_vmlinux0.kallsyms.S
+  AS      .tmp_vmlinux0.kallsyms.o
+  LD      .tmp_vmlinux1
+  BTF     .tmp_vmlinux1
+  NM      .tmp_vmlinux1.syms
+  KSYMS   .tmp_vmlinux1.kallsyms.S
+  AS      .tmp_vmlinux1.kallsyms.o
+  LD      .tmp_vmlinux2
+  NM      .tmp_vmlinux2.syms
+  KSYMS   .tmp_vmlinux2.kallsyms.S
+  AS      .tmp_vmlinux2.kallsyms.o
+  LD      .tmp_vmlinux3
+  NM      .tmp_vmlinux3.syms
+  KSYMS   .tmp_vmlinux3.kallsyms.S
+  AS      .tmp_vmlinux3.kallsyms.o
+  LD      vmlinux.unstripped
+  BTFIDS  vmlinux.unstripped
+  NM      System.map
+  SORTTAB vmlinux.unstripped
+  OBJCOPY vmlinux
+  GEN     modules.builtin.modinfo
+  GEN     modules.builtin
+objcopy: stfEtHhu[.debug_abbrev]: No space left on device
+make[3]: *** [/build/kernel-src/scripts/Makefile.vmlinux:100: vmlinux] Error 1
+make[3]: *** Deleting file 'vmlinux'
+make[3]: unlink: vmlinux: Input/output error
+make[2]: *** [/build/kernel-src/Makefile:1338: vmlinux] Error 2
+make[1]: *** [/build/kernel-src/Makefile:248: __sub-make] Error 2
+make[1]: Leaving directory '/build/kernel-build'
+make: *** [Makefile:248: __sub-make] Error 2
+make: Leaving directory '/build/kernel-src'

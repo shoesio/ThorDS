@@ -1,0 +1,162 @@
+2026-10-12T22:05:54+01:00
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=battery
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_STATUS=Charging
+POWER_SUPPLY_CHARGE_TYPE=Fast
+POWER_SUPPLY_HEALTH=Good
+POWER_SUPPLY_PRESENT=1
+POWER_SUPPLY_TECHNOLOGY=Li-ion
+POWER_SUPPLY_CYCLE_COUNT=0
+POWER_SUPPLY_VOLTAGE_MAX=4400000
+POWER_SUPPLY_VOLTAGE_NOW=3918485
+POWER_SUPPLY_VOLTAGE_OCV=3794649
+POWER_SUPPLY_CURRENT_NOW=4238630
+POWER_SUPPLY_POWER_NOW=46010826
+POWER_SUPPLY_CHARGE_COUNTER=2305588
+POWER_SUPPLY_CHARGE_CONTROL_START_THRESHOLD=0
+POWER_SUPPLY_CHARGE_CONTROL_END_THRESHOLD=0
+POWER_SUPPLY_CAPACITY=28
+POWER_SUPPLY_TEMP=250
+POWER_SUPPLY_TIME_TO_EMPTY_AVG=-1
+POWER_SUPPLY_TIME_TO_FULL_AVG=5393
+POWER_SUPPLY_TYPE=Battery
+POWER_SUPPLY_INTERNAL_RESISTANCE=97459
+POWER_SUPPLY_STATE_OF_HEALTH=100
+POWER_SUPPLY_MODEL_NAME=7567856_QUECTEL_SG8550_8000MAH_PM8550B_AVERAGED_MASTERSLAVE_DEC7TH2024
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=qcom-battmgr-usb
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=9000000
+POWER_SUPPLY_VOLTAGE_NOW=8594000
+POWER_SUPPLY_CURRENT_MAX=3000000
+POWER_SUPPLY_CURRENT_NOW=2812000
+POWER_SUPPLY_INPUT_CURRENT_LIMIT=3000000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=Unknown [SDP] DCP CDP ACA C PD PD_DRP PD_PPS BrickID
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=qcom-battmgr-wls
+POWER_SUPPLY_TYPE=Wireless
+POWER_SUPPLY_ONLINE=0
+POWER_SUPPLY_VOLTAGE_MAX=0
+POWER_SUPPLY_VOLTAGE_NOW=22000
+POWER_SUPPLY_CURRENT_MAX=0
+POWER_SUPPLY_CURRENT_NOW=2812000
+POWER_SUPPLY_TYPE=Wireless
+DEVTYPE=power_supply
+OF_NAME=pmic-glink
+OF_FULLNAME=/pmic-glink
+OF_COMPATIBLE_0=qcom,sm8550-pmic-glink
+OF_COMPATIBLE_1=qcom,pmic-glink
+OF_COMPATIBLE_N=2
+POWER_SUPPLY_NAME=ucsi-source-psy-pmic_glink.ucsi.01
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_STATUS=Charging
+POWER_SUPPLY_CHARGE_TYPE=Trickle
+POWER_SUPPLY_ONLINE=1
+POWER_SUPPLY_VOLTAGE_MAX=0
+POWER_SUPPLY_VOLTAGE_MIN=0
+POWER_SUPPLY_VOLTAGE_NOW=0
+POWER_SUPPLY_CURRENT_MAX=0
+POWER_SUPPLY_CURRENT_NOW=2400000
+POWER_SUPPLY_TYPE=USB
+POWER_SUPPLY_USB_TYPE=C [PD] PD_PPS
+POWER_SUPPLY_SCOPE=System
+usb_power_delivery
+2026-10-12T22:00:59+01:00 alarm kernel: Freezing user space processes
+2026-10-12T22:00:59+01:00 alarm kernel: Freezing user space processes completed (elapsed 0.001 seconds)
+2026-10-12T22:00:59+01:00 alarm kernel: OOM killer disabled.
+2026-10-12T22:00:59+01:00 alarm kernel: Freezing remaining freezable tasks
+2026-10-12T22:00:59+01:00 alarm kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+2026-10-12T22:00:59+01:00 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l3f_0p88: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l2f_0p88: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l1f_0p9: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s4f_0p5: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l1d_0p88: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l3c_0p9: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l17b_2p5: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l16b_2p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l14b_3p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l13b_3p0: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l12b_1p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l11b_1p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l9b_2p9: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l3e_1p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l8b_1p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l2e_0p9: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l7b_1p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l1e_0p88: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l6b_1p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s5e_1p08: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l5b_3p1: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s4e_0p95: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l2b_3p0: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_bob1: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l3g_1p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_l1g_1p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s6g_1p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s5g_0p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s4g_1p3: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s3g_0p7: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s2g_0p8: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: vreg_s1g_1p2: No configuration
+2026-10-12T22:00:59+01:00 alarm kernel: qcom-pcie 1c00000.pcie: PCIe Gen.2 x2 link up
+2026-10-12T22:00:59+01:00 alarm kernel: mhi mhi0: Requested to power ON
+2026-10-12T22:00:59+01:00 alarm kernel: mhi mhi0: Power on setup success
+2026-10-12T22:00:59+01:00 alarm kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
+2026-10-12T22:00:59+01:00 alarm kernel: ath12k_wifi7_pci 0000:01:00.0: chip_id 0x2 chip_family 0x4 board_id 0xff soc_id 0x40170200
+2026-10-12T22:00:59+01:00 alarm kernel: ath12k_wifi7_pci 0000:01:00.0: fw_version 0x110cffff fw_build_timestamp 2025-06-25 09:26 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.HMT.1.1.c5-00302-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1.115823.3
+2026-10-12T22:00:59+01:00 alarm kernel: [66B blob data]
+2026-10-12T22:00:59+01:00 alarm kernel: rsinput serial1-0: MCU parameters set successfully
+2026-10-12T22:00:59+01:00 alarm kernel: hwmon hwmon45: PM: parent phy0 should not be sleeping
+2026-10-12T22:00:59+01:00 alarm kernel: OOM killer enabled.
+2026-10-12T22:00:59+01:00 alarm kernel: Restarting tasks: Starting
+2026-10-12T22:00:59+01:00 alarm kernel: Restarting tasks: Done
+2026-10-12T22:00:59+01:00 alarm kernel: random: crng reseeded on system resumption
+2026-10-12T22:00:59+01:00 alarm kernel: PM: suspend exit
+2026-10-12T22:01:00+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:00+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:00+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+2026-10-12T22:01:01+01:00 alarm kernel: sched_ext: BPF scheduler "lavd_1.1.3_aarch64_unknown_linux_gnu" enabled
+2026-10-12T22:01:04+01:00 alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: authenticate with 34:60:f9:cc:7c:41 (local address=00:03:7f:75:89:97)
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: send auth to 34:60:f9:cc:7c:41 (try 1/3)
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: authenticated
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: associate with 34:60:f9:cc:7c:41 (try 1/3)
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: RX AssocResp from 34:60:f9:cc:7c:41 (capab=0x111 status=0 aid=31)
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: associated
+2026-10-12T22:01:15+01:00 alarm kernel: wlp1s0: Limiting TX power to 30 (30 - 0) dBm as advertised by 34:60:f9:cc:7c:41
+2026-10-12T22:05:36+01:00 alarm kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2

@@ -1,0 +1,1355 @@
+==> using existing Thor kernel source checkout at /build/kernel-src
+==> skipping kernel patch application for existing source checkout
+==> copying ROCKNIX SM8550 DTS overlays
+==> applying Thorch DTS patches
+warning: ROCKNIX kernel patch is already applied, skipping: packages/linux-thorch/dts-patches/0002-arm64-dts-qcom-sm8550-add-ice-iface-clock-power-domain.patch
+warning: ROCKNIX kernel patch is already applied, skipping: packages/linux-thorch/dts-patches/0003-arm64-dts-qcom-sm8550-add-lowest-gpu-opp.patch
+==> applying ROCKNIX kernel patch with fuzz packages/linux-thorch/dts-patches/0005-arm64-dts-qcom-qcs8550-ayn-thor-retain-bottom-touch-power.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0006-arm64-dts-qcom-qcs8550-ayn-common-s2idle-power.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0007-arm64-dts-qcom-qcs8550-ayn-thor-set-gamepad-axis-range.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0007-arm64-dts-thor-debounce-lid-open-wake.patch
+==> applying ROCKNIX kernel patch packages/linux-thorch/dts-patches/0008-arm64-dts-ayn-disable-volume-up-wake.patch
+==> reusing kernel build directory at /build/kernel-build
+==> applying Thorch kernel feature config
+==> resolving kernel config
+make: Entering directory '/build/kernel-src'
+make[1]: Entering directory '/build/kernel-build'
+#
+# No change to .config
+#
+make[1]: Leaving directory '/build/kernel-build'
+make: Leaving directory '/build/kernel-src'
+==> building Thor kernel, 13 ROCKNIX SM8550 DTBs, and modules
+make: Entering directory '/build/kernel-src'
+make[1]: Entering directory '/build/kernel-build'
+  SYNC    include/config/auto.conf
+  UPD     include/generated/compile.h
+  DESCEND bpf/resolve_btfids
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dtb
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:293.12-296.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:164.12-167.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:240.8-249.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:92.7-100.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2mini.dts:102.7-120.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:193.7-202.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2.dts:204.7-238.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:4304.27-4378.6: Warning (avoid_unnecessary_addr_size): /soc@0/display-subsystem@ae00000/dsi@ae94000: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" or "ranges" property
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:209.8-279.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:113.7-183.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts:185.7-207.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+  INSTALL libsubcmd_headers
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6-top-dpad.dtb
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dtb
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:295.8-365.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:195.7-265.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-thor.dts:267.7-293.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+  DTC     arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rpnova.dtb
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1245.21-1268.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@880000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@880000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1295.21-1318.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@884000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@884000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1345.22-1368.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@888000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@888000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1395.22-1418.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@88c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@88c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1445.22-1468.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@890000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@890000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:983.8-986.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:277.8-347.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1495.22-1518.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@894000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@894000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/spi@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1563.22-1586.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/i2c@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1588.22-1611.6: Warning (unique_unit_address): /soc@0/geniqup@8c0000/spi@89c000: duplicate unit-address (also used in node /soc@0/geniqup@8c0000/serial@89c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1890.21-1913.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a80000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a80000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:973.7-976.3
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-retroidpocket-rp6.dts:205.7-275.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1940.21-1963.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a84000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a84000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:1990.21-2013.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a88000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a88000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2040.21-2063.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a8c000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a8c000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2090.21-2113.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a90000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a90000)
+  also defined at /build/kernel-src/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi:978.7-981.3
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2140.21-2163.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a94000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a94000)
+/build/kernel-src/arch/arm64/boot/dts/qcom/sm8550.dtsi:2190.21-2213.6: Warning (unique_unit_address): /soc@0/geniqup@ac0000/i2c@a98000: duplicate unit-address (also used in node /soc@0/geniqup@ac0000/spi@a98000)
+  CC      init/version.o
+  AR      init/built-in.a
+  AR      built-in.a
+  AR      vmlinux.a
+  LD      vmlinux.o
+  MODPOST Module.symvers
+  UPD     include/generated/utsversion.h
+  CC      init/version-timestamp.o
+  KSYMS   .tmp_vmlinux0.kallsyms.S
+  AS      .tmp_vmlinux0.kallsyms.o
+  LD      .tmp_vmlinux1
+  BTF     .tmp_vmlinux1
+  NM      .tmp_vmlinux1.syms
+  KSYMS   .tmp_vmlinux1.kallsyms.S
+  AS      .tmp_vmlinux1.kallsyms.o
+  LD      .tmp_vmlinux2
+  NM      .tmp_vmlinux2.syms
+  KSYMS   .tmp_vmlinux2.kallsyms.S
+  AS      .tmp_vmlinux2.kallsyms.o
+  LD      .tmp_vmlinux3
+  NM      .tmp_vmlinux3.syms
+  KSYMS   .tmp_vmlinux3.kallsyms.S
+  AS      .tmp_vmlinux3.kallsyms.o
+  LD      vmlinux.unstripped
+  BTFIDS  vmlinux.unstripped
+  NM      System.map
+  SORTTAB vmlinux.unstripped
+  OBJCOPY vmlinux
+  GEN     modules.builtin.modinfo
+  GEN     modules.builtin
+  OBJCOPY arch/arm64/boot/Image
+  CC [M]  .module-common.o
+  LD [M]  mm/zsmalloc.ko
+  LD [M]  fs/ntfs/ntfs.ko
+  LD [M]  fs/pstore/ramoops.ko
+  LD [M]  fs/fuse/cuse.ko
+  BTF [M] mm/zsmalloc.ko
+  BTF [M] fs/pstore/ramoops.ko
+  BTF [M] fs/fuse/cuse.ko
+  BTF [M] fs/ntfs/ntfs.ko
+  LD [M]  fs/ntfs3/ntfs3.ko
+  LD [M]  fs/ubifs/ubifs.ko
+  LD [M]  crypto/crypto_engine.ko
+  BTF [M] crypto/crypto_engine.ko
+  BTF [M] fs/ntfs3/ntfs3.ko
+  BTF [M] fs/ubifs/ubifs.ko
+  LD [M]  crypto/sm3.ko
+  BTF [M] crypto/sm3.ko
+  LD [M]  crypto/sm4.ko
+  BTF [M] crypto/sm4.ko
+  LD [M]  crypto/sm4_generic.ko
+  LD [M]  crypto/arc4.ko
+  BTF [M] crypto/sm4_generic.ko
+  BTF [M] crypto/arc4.ko
+  LD [M]  crypto/deflate.ko
+  BTF [M] crypto/deflate.ko
+  LD [M]  crypto/lz4.ko
+  BTF [M] crypto/lz4.ko
+  LD [M]  crypto/algif_aead.ko
+  LD [M]  lib/crypto/libchacha.ko
+  BTF [M] lib/crypto/libchacha.ko
+  BTF [M] crypto/algif_aead.ko
+  LD [M]  lib/crypto/libchacha20poly1305.ko
+  BTF [M] lib/crypto/libchacha20poly1305.ko
+  LD [M]  lib/crypto/libcurve25519.ko
+  BTF [M] lib/crypto/libcurve25519.ko
+  LD [M]  lib/crypto/libpoly1305.ko
+  BTF [M] lib/crypto/libpoly1305.ko
+  LD [M]  lib/crypto/libsm3.ko
+  LD [M]  lib/lz4/lz4_compress.ko
+  BTF [M] lib/crypto/libsm3.ko
+  BTF [M] lib/lz4/lz4_compress.ko
+  LD [M]  lib/lz4/lz4hc_compress.ko
+  BTF [M] lib/lz4/lz4hc_compress.ko
+  LD [M]  lib/reed_solomon/reed_solomon.ko
+  BTF [M] lib/reed_solomon/reed_solomon.ko
+  LD [M]  drivers/bus/mhi/host/mhi_pci_generic.ko
+  LD [M]  drivers/phy/cadence/phy-cadence-torrent.ko
+  BTF [M] drivers/bus/mhi/host/mhi_pci_generic.ko
+  BTF [M] drivers/phy/cadence/phy-cadence-torrent.ko
+  LD [M]  drivers/phy/cadence/cdns-dphy-rx.ko
+  BTF [M] drivers/phy/cadence/cdns-dphy-rx.ko
+  LD [M]  drivers/phy/cadence/phy-cadence-sierra.ko
+  BTF [M] drivers/phy/cadence/phy-cadence-sierra.ko
+  LD [M]  drivers/phy/cadence/phy-cadence-salvo.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-m31.ko
+  BTF [M] drivers/phy/cadence/phy-cadence-salvo.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-m31.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-pcie2.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-pcie2.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-qmp-pcie-msm8996.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-qmp-pcie-msm8996.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-qusb2.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-usb-hs.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-qusb2.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-usb-hs.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-usb-hs-28nm.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-usb-ss.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-usb-hs-28nm.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-usb-ss.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-snps-femto-v2.ko
+  LD [M]  drivers/phy/qualcomm/phy-qcom-sgmii-eth.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-snps-femto-v2.ko
+  BTF [M] drivers/phy/qualcomm/phy-qcom-sgmii-eth.ko
+  LD [M]  drivers/phy/phy-can-transceiver.ko
+  LD [M]  drivers/pinctrl/qcom/pinctrl-sm8550-lpass-lpi.ko
+  BTF [M] drivers/phy/phy-can-transceiver.ko
+  BTF [M] drivers/pinctrl/qcom/pinctrl-sm8550-lpass-lpi.ko
+  LD [M]  drivers/pinctrl/qcom/pinctrl-lpass-lpi.ko
+  LD [M]  drivers/gpio/gpio-aggregator.ko
+  BTF [M] drivers/pinctrl/qcom/pinctrl-lpass-lpi.ko
+  BTF [M] drivers/gpio/gpio-aggregator.ko
+  LD [M]  drivers/gpio/gpio-shared-proxy.ko
+  LD [M]  drivers/pci/pwrctrl/pci-pwrctrl-pwrseq.ko
+  BTF [M] drivers/gpio/gpio-shared-proxy.ko
+  BTF [M] drivers/pci/pwrctrl/pci-pwrctrl-pwrseq.ko
+  LD [M]  drivers/pci/pwrctrl/pci-pwrctrl-tc9563.ko
+  LD [M]  drivers/pci/endpoint/functions/pci-epf-test.ko
+  BTF [M] drivers/pci/pwrctrl/pci-pwrctrl-tc9563.ko
+  BTF [M] drivers/pci/endpoint/functions/pci-epf-test.ko
+  LD [M]  drivers/pci/controller/dwc/pci-meson.ko
+  BTF [M] drivers/pci/controller/dwc/pci-meson.ko
+  LD [M]  drivers/char/ipmi/ipmi_msghandler.ko
+  BTF [M] drivers/char/ipmi/ipmi_msghandler.ko
+  LD [M]  drivers/char/ipmi/ipmi_devintf.ko
+  LD [M]  drivers/char/ipmi/ipmi_si.ko
+  BTF [M] drivers/char/ipmi/ipmi_devintf.ko
+  BTF [M] drivers/char/ipmi/ipmi_si.ko
+  LD [M]  drivers/clk/qcom/lpass-gfm-sm8250.ko
+  BTF [M] drivers/clk/qcom/lpass-gfm-sm8250.ko
+  LD [M]  drivers/soc/qcom/wcnss_ctrl.ko
+  BTF [M] drivers/soc/qcom/wcnss_ctrl.ko
+  LD [M]  drivers/regulator/vctrl-regulator.ko
+  BTF [M] drivers/regulator/vctrl-regulator.ko
+  LD [M]  drivers/reset/reset-gpio.ko
+  BTF [M] drivers/reset/reset-gpio.ko
+  LD [M]  drivers/gpu/drm/panel/panel-lvds.ko
+  BTF [M] drivers/gpu/drm/panel/panel-lvds.ko
+  LD [M]  drivers/gpu/drm/panel/panel-simple.ko
+  BTF [M] drivers/gpu/drm/panel/panel-simple.ko
+  LD [M]  drivers/gpu/drm/bridge/tda998x.ko
+  BTF [M] drivers/gpu/drm/bridge/tda998x.ko
+  LD [M]  drivers/gpu/drm/bridge/simple-bridge.ko
+  LD [M]  drivers/base/regmap/regmap-sdw.ko
+  BTF [M] drivers/base/regmap/regmap-sdw.ko
+  BTF [M] drivers/gpu/drm/bridge/simple-bridge.ko
+  LD [M]  drivers/block/zram/zram.ko
+  BTF [M] drivers/block/zram/zram.ko
+  LD [M]  drivers/misc/eeprom/at24.ko
+  BTF [M] drivers/misc/eeprom/at24.ko
+  LD [M]  drivers/misc/eeprom/at25.ko
+  LD [M]  drivers/misc/qcom-coincell.ko
+  BTF [M] drivers/misc/eeprom/at25.ko
+  BTF [M] drivers/misc/qcom-coincell.ko
+  LD [M]  drivers/misc/pci_endpoint_test.ko
+  LD [M]  drivers/misc/uacce/uacce.ko
+  BTF [M] drivers/misc/pci_endpoint_test.ko
+  BTF [M] drivers/misc/uacce/uacce.ko
+  LD [M]  drivers/mtd/nand/raw/brcmnand/iproc_nand.ko
+  BTF [M] drivers/mtd/nand/raw/brcmnand/iproc_nand.ko
+  LD [M]  drivers/mtd/nand/raw/brcmnand/bcmbca_nand.ko
+  BTF [M] drivers/mtd/nand/raw/brcmnand/bcmbca_nand.ko
+  LD [M]  drivers/mtd/nand/raw/brcmnand/brcmstb_nand.ko
+  LD [M]  drivers/mtd/nand/raw/brcmnand/brcmnand.ko
+  BTF [M] drivers/mtd/nand/raw/brcmnand/brcmstb_nand.ko
+  LD [M]  drivers/mtd/ubi/ubi.ko
+  BTF [M] drivers/mtd/nand/raw/brcmnand/brcmnand.ko
+  LD [M]  drivers/mtd/hyperbus/hyperbus-core.ko
+  BTF [M] drivers/mtd/ubi/ubi.ko
+  BTF [M] drivers/mtd/hyperbus/hyperbus-core.ko
+  LD [M]  drivers/spi/spidev.ko
+  LD [M]  drivers/spi/spi-dw.ko
+  BTF [M] drivers/spi/spidev.ko
+  BTF [M] drivers/spi/spi-dw.ko
+  LD [M]  drivers/spi/spi-dw-mmio.ko
+  LD [M]  drivers/net/phy/mdio_bus.ko
+  BTF [M] drivers/spi/spi-dw-mmio.ko
+  BTF [M] drivers/net/phy/mdio_bus.ko
+  LD [M]  drivers/net/phy/phylink.ko
+  LD [M]  drivers/net/phy/libphy.ko
+  BTF [M] drivers/net/phy/phylink.ko
+  LD [M]  drivers/net/phy/mdio_devres.ko
+  BTF [M] drivers/net/phy/mdio_devres.ko
+  LD [M]  drivers/net/phy/phy_package.ko
+  BTF [M] drivers/net/phy/libphy.ko
+  BTF [M] drivers/net/phy/phy_package.ko
+  LD [M]  drivers/net/phy/ax88796b.ko
+  LD [M]  drivers/net/phy/fixed_phy.ko
+  BTF [M] drivers/net/phy/ax88796b.ko
+  BTF [M] drivers/net/phy/fixed_phy.ko
+  LD [M]  drivers/net/phy/realtek/realtek.ko
+  LD [M]  drivers/net/mdio/acpi_mdio.ko
+  BTF [M] drivers/net/phy/realtek/realtek.ko
+  BTF [M] drivers/net/mdio/acpi_mdio.ko
+  LD [M]  drivers/net/mdio/fwnode_mdio.ko
+  LD [M]  drivers/net/mdio/of_mdio.ko
+  BTF [M] drivers/net/mdio/fwnode_mdio.ko
+  BTF [M] drivers/net/mdio/of_mdio.ko
+  LD [M]  drivers/net/wireless/ath/ath12k/ath12k.ko
+  LD [M]  drivers/net/wireless/ath/ath12k/wifi7/ath12k_wifi7.ko
+  BTF [M] drivers/net/wireless/ath/ath12k/wifi7/ath12k_wifi7.ko
+  LD [M]  drivers/net/usb/rtl8150.ko
+  LD [M]  drivers/net/usb/r8152.ko
+  BTF [M] drivers/net/usb/rtl8150.ko
+  BTF [M] drivers/net/usb/r8152.ko
+  BTF [M] drivers/net/wireless/ath/ath12k/ath12k.ko
+  LD [M]  drivers/net/usb/asix.ko
+  BTF [M] drivers/net/usb/asix.ko
+  LD [M]  drivers/net/usb/ax88179_178a.ko
+  BTF [M] drivers/net/usb/ax88179_178a.ko
+  LD [M]  drivers/net/usb/cdc_ether.ko
+  BTF [M] drivers/net/usb/cdc_ether.ko
+  LD [M]  drivers/net/usb/rndis_host.ko
+  BTF [M] drivers/net/usb/rndis_host.ko
+  LD [M]  drivers/net/usb/usbnet.ko
+  BTF [M] drivers/net/usb/usbnet.ko
+  LD [M]  drivers/net/usb/ipheth.ko
+  BTF [M] drivers/net/usb/ipheth.ko
+  LD [M]  drivers/net/usb/cdc_ncm.ko
+  LD [M]  drivers/net/usb/r8153_ecm.ko
+  BTF [M] drivers/net/usb/cdc_ncm.ko
+  BTF [M] drivers/net/usb/r8153_ecm.ko
+  LD [M]  drivers/net/wireguard/wireguard.ko
+  LD [M]  drivers/net/mii.ko
+  BTF [M] drivers/net/mii.ko
+  LD [M]  drivers/net/tun.ko
+  BTF [M] drivers/net/wireguard/wireguard.ko
+  BTF [M] drivers/net/tun.ko
+  LD [M]  drivers/net/veth.ko
+  LD [M]  drivers/net/mhi_net.ko
+  BTF [M] drivers/net/veth.ko
+  BTF [M] drivers/net/mhi_net.ko
+  LD [M]  drivers/usb/host/xhci-pci-renesas.ko
+  BTF [M] drivers/usb/host/xhci-pci-renesas.ko
+  LD [M]  drivers/usb/typec/tcpm/fusb302.ko
+  BTF [M] drivers/usb/typec/tcpm/fusb302.ko
+  LD [M]  drivers/usb/typec/tcpm/tcpci.ko
+  BTF [M] drivers/usb/typec/tcpm/tcpci.ko
+  LD [M]  drivers/usb/typec/ucsi/ucsi_ccg.ko
+  BTF [M] drivers/usb/typec/ucsi/ucsi_ccg.ko
+  LD [M]  drivers/usb/typec/tipd/tps6598x.ko
+  BTF [M] drivers/usb/typec/tipd/tps6598x.ko
+  LD [M]  drivers/usb/typec/hd3ss3220.ko
+  LD [M]  drivers/usb/class/cdc-acm.ko
+  BTF [M] drivers/usb/typec/hd3ss3220.ko
+  BTF [M] drivers/usb/class/cdc-acm.ko
+  LD [M]  drivers/input/keyboard/adc-keys.ko
+  BTF [M] drivers/input/keyboard/adc-keys.ko
+  LD [M]  drivers/input/keyboard/gpio_keys_polled.ko
+  BTF [M] drivers/input/keyboard/gpio_keys_polled.ko
+  LD [M]  drivers/input/mouse/elan_i2c.ko
+  LD [M]  drivers/input/misc/pm8xxx-vibrator.ko
+  BTF [M] drivers/input/mouse/elan_i2c.ko
+  BTF [M] drivers/input/misc/pm8xxx-vibrator.ko
+  LD [M]  drivers/input/misc/pwm-vibra.ko
+  BTF [M] drivers/input/misc/pwm-vibra.ko
+  LD [M]  drivers/i2c/algos/i2c-algo-bit.ko
+  BTF [M] drivers/i2c/algos/i2c-algo-bit.ko
+  LD [M]  drivers/i2c/busses/i2c-gpio.ko
+  LD [M]  drivers/i2c/busses/i2c-qcom-cci.ko
+  BTF [M] drivers/i2c/busses/i2c-gpio.ko
+  BTF [M] drivers/i2c/busses/i2c-qcom-cci.ko
+  LD [M]  drivers/media/v4l2-core/v4l2-async.ko
+  BTF [M] drivers/media/v4l2-core/v4l2-async.ko
+  LD [M]  drivers/media/v4l2-core/v4l2-fwnode.ko
+  BTF [M] drivers/media/v4l2-core/v4l2-fwnode.ko
+  LD [M]  drivers/media/v4l2-core/v4l2-mem2mem.ko
+  LD [M]  drivers/media/common/videobuf2/videobuf2-dma-contig.ko
+  BTF [M] drivers/media/v4l2-core/v4l2-mem2mem.ko
+  BTF [M] drivers/media/common/videobuf2/videobuf2-dma-contig.ko
+  LD [M]  drivers/media/common/videobuf2/videobuf2-dma-sg.ko
+  BTF [M] drivers/media/common/videobuf2/videobuf2-dma-sg.ko
+  LD [M]  drivers/media/platform/qcom/camss/qcom-camss.ko
+  LD [M]  drivers/media/platform/qcom/iris/qcom-iris.ko
+  LD [M]  drivers/media/platform/qcom/venus/venus-core.ko
+  BTF [M] drivers/media/platform/qcom/camss/qcom-camss.ko
+  LD [M]  drivers/media/platform/qcom/venus/venus-dec.ko
+  BTF [M] drivers/media/platform/qcom/venus/venus-core.ko
+  BTF [M] drivers/media/platform/qcom/venus/venus-dec.ko
+  BTF [M] drivers/media/platform/qcom/iris/qcom-iris.ko
+  LD [M]  drivers/media/platform/qcom/venus/venus-enc.ko
+  BTF [M] drivers/media/platform/qcom/venus/venus-enc.ko
+  LD [M]  drivers/power/reset/nvmem-reboot-mode.ko
+  LD [M]  drivers/power/sequencing/pwrseq-qcom-wcn.ko
+  BTF [M] drivers/power/reset/nvmem-reboot-mode.ko
+  BTF [M] drivers/power/sequencing/pwrseq-qcom-wcn.ko
+  LD [M]  drivers/power/supply/qcom_battmgr.ko
+  BTF [M] drivers/power/supply/qcom_battmgr.ko
+  LD [M]  drivers/power/supply/sbs-battery.ko
+  LD [M]  drivers/hwmon/jc42.ko
+  BTF [M] drivers/power/supply/sbs-battery.ko
+  BTF [M] drivers/hwmon/jc42.ko
+  LD [M]  drivers/hwmon/pwm-fan.ko
+  BTF [M] drivers/hwmon/pwm-fan.ko
+  LD [M]  drivers/thermal/thermal-generic-adc.ko
+  BTF [M] drivers/thermal/thermal-generic-adc.ko
+  LD [M]  drivers/cpufreq/cppc_cpufreq.ko
+  BTF [M] drivers/cpufreq/cppc_cpufreq.ko
+  LD [M]  drivers/firmware/efi/capsule-loader.ko
+  LD [M]  drivers/crypto/hisilicon/hpre/hisi_hpre.ko
+  BTF [M] drivers/firmware/efi/capsule-loader.ko
+  BTF [M] drivers/crypto/hisilicon/hpre/hisi_hpre.ko
+  LD [M]  drivers/crypto/hisilicon/sec2/hisi_sec2.ko
+  BTF [M] drivers/crypto/hisilicon/sec2/hisi_sec2.ko
+  LD [M]  drivers/crypto/hisilicon/hisi_qm.ko
+  LD [M]  drivers/crypto/hisilicon/zip/hisi_zip.ko
+  BTF [M] drivers/crypto/hisilicon/hisi_qm.ko
+  LD [M]  drivers/crypto/hisilicon/trng/hisi-trng-v2.ko
+  BTF [M] drivers/crypto/hisilicon/zip/hisi_zip.ko
+  BTF [M] drivers/crypto/hisilicon/trng/hisi-trng-v2.ko
+  LD [M]  drivers/crypto/ccree/ccree.ko
+  BTF [M] drivers/crypto/ccree/ccree.ko
+  LD [M]  drivers/crypto/amlogic/amlogic-gxl-crypto.ko
+  LD [M]  drivers/hid/hid-multitouch.ko
+  LD [M]  drivers/hid/i2c-hid/i2c-hid.ko
+  BTF [M] drivers/crypto/amlogic/amlogic-gxl-crypto.ko
+  BTF [M] drivers/hid/hid-multitouch.ko
+  BTF [M] drivers/hid/i2c-hid/i2c-hid.ko
+  LD [M]  drivers/hid/i2c-hid/i2c-hid-acpi.ko
+  BTF [M] drivers/hid/i2c-hid/i2c-hid-acpi.ko
+  LD [M]  drivers/hid/i2c-hid/i2c-hid-of.ko
+  BTF [M] drivers/hid/i2c-hid/i2c-hid-of.ko
+  LD [M]  drivers/hid/i2c-hid/i2c-hid-of-elan.ko
+  LD [M]  drivers/staging/media/max96712/max96712.ko
+  BTF [M] drivers/hid/i2c-hid/i2c-hid-of-elan.ko
+  BTF [M] drivers/staging/media/max96712/max96712.ko
+  LD [M]  drivers/remoteproc/qcom_pil_info.ko
+  BTF [M] drivers/remoteproc/qcom_pil_info.ko
+  LD [M]  drivers/remoteproc/qcom_common.ko
+  LD [M]  drivers/remoteproc/qcom_q6v5.ko
+  BTF [M] drivers/remoteproc/qcom_common.ko
+  BTF [M] drivers/remoteproc/qcom_q6v5.ko
+  LD [M]  drivers/remoteproc/qcom_q6v5_adsp.ko
+  BTF [M] drivers/remoteproc/qcom_q6v5_adsp.ko
+  LD [M]  drivers/remoteproc/qcom_q6v5_mss.ko
+  BTF [M] drivers/remoteproc/qcom_q6v5_mss.ko
+  LD [M]  drivers/remoteproc/qcom_q6v5_pas.ko
+  LD [M]  drivers/remoteproc/qcom_sysmon.ko
+  BTF [M] drivers/remoteproc/qcom_q6v5_pas.ko
+  BTF [M] drivers/remoteproc/qcom_sysmon.ko
+  LD [M]  drivers/remoteproc/qcom_wcnss_pil.ko
+  BTF [M] drivers/remoteproc/qcom_wcnss_pil.ko
+  LD [M]  drivers/devfreq/governor_passive.ko
+  BTF [M] drivers/devfreq/governor_passive.ko
+  LD [M]  drivers/iio/buffer/industrialio-triggered-buffer.ko
+  LD [M]  drivers/iio/buffer/kfifo_buf.ko
+  BTF [M] drivers/iio/buffer/industrialio-triggered-buffer.ko
+  BTF [M] drivers/iio/buffer/kfifo_buf.ko
+  LD [M]  drivers/perf/arm-cci.ko
+  BTF [M] drivers/perf/arm-cci.ko
+  LD [M]  drivers/perf/arm-ccn.ko
+  BTF [M] drivers/perf/arm-ccn.ko
+  LD [M]  drivers/perf/arm-cmn.ko
+  LD [M]  drivers/perf/arm_dsu_pmu.ko
+  BTF [M] drivers/perf/arm-cmn.ko
+  BTF [M] drivers/perf/arm_dsu_pmu.ko
+  LD [M]  drivers/perf/arm_smmuv3_pmu.ko
+  BTF [M] drivers/perf/arm_smmuv3_pmu.ko
+  LD [M]  drivers/perf/arm_spe_pmu.ko
+  BTF [M] drivers/perf/arm_spe_pmu.ko
+  LD [M]  drivers/perf/arm_dmc620_pmu.ko
+  LD [M]  drivers/perf/arm_cspmu/arm_cspmu_module.ko
+  BTF [M] drivers/perf/arm_dmc620_pmu.ko
+  BTF [M] drivers/perf/arm_cspmu/arm_cspmu_module.ko
+  LD [M]  drivers/perf/arm_cspmu/nvidia_cspmu.ko
+  BTF [M] drivers/perf/arm_cspmu/nvidia_cspmu.ko
+  LD [M]  drivers/nvmem/layouts/sl28vpd.ko
+  BTF [M] drivers/nvmem/layouts/sl28vpd.ko
+  LD [M]  drivers/nvmem/nvmem-rmem.ko
+  LD [M]  drivers/mux/mux-gpio.ko
+  LD [M]  drivers/mux/mux-mmio.ko
+  BTF [M] drivers/nvmem/nvmem-rmem.ko
+  BTF [M] drivers/mux/mux-mmio.ko
+  BTF [M] drivers/mux/mux-gpio.ko
+  LD [M]  drivers/slimbus/slimbus.ko
+  BTF [M] drivers/slimbus/slimbus.ko
+  LD [M]  drivers/slimbus/slim-qcom-ngd-ctrl.ko
+  BTF [M] drivers/slimbus/slim-qcom-ngd-ctrl.ko
+  LD [M]  drivers/bluetooth/hci_uart.ko
+  LD [M]  drivers/bluetooth/btqca.ko
+  BTF [M] drivers/bluetooth/hci_uart.ko
+  BTF [M] drivers/bluetooth/btqca.ko
+  LD [M]  drivers/soundwire/soundwire-bus.ko
+  BTF [M] drivers/soundwire/soundwire-bus.ko
+  LD [M]  drivers/soundwire/soundwire-qcom.ko
+  BTF [M] drivers/soundwire/soundwire-qcom.ko
+  LD [M]  drivers/counter/counter.ko
+  LD [M]  sound/drivers/snd-aloop.ko
+  BTF [M] drivers/counter/counter.ko
+  BTF [M] sound/drivers/snd-aloop.ko
+  LD [M]  sound/soc/codecs/snd-soc-bt-sco.ko
+  BTF [M] sound/soc/codecs/snd-soc-bt-sco.ko
+  LD [M]  sound/soc/codecs/snd-soc-dmic.ko
+  BTF [M] sound/soc/codecs/snd-soc-dmic.ko
+  LD [M]  sound/soc/codecs/snd-soc-spdif-rx.ko
+  BTF [M] sound/soc/codecs/snd-soc-spdif-rx.ko
+  LD [M]  sound/soc/codecs/snd-soc-spdif-tx.ko
+  BTF [M] sound/soc/codecs/snd-soc-spdif-tx.ko
+  LD [M]  sound/soc/codecs/snd-soc-wcd-classh.ko
+  BTF [M] sound/soc/codecs/snd-soc-wcd-classh.ko
+  LD [M]  sound/soc/codecs/snd-soc-wcd-common.ko
+  BTF [M] sound/soc/codecs/snd-soc-wcd-common.ko
+  LD [M]  sound/soc/codecs/snd-soc-wcd-mbhc.ko
+  BTF [M] sound/soc/codecs/snd-soc-wcd-mbhc.ko
+  LD [M]  sound/soc/codecs/snd-soc-wcd938x.ko
+  BTF [M] sound/soc/codecs/snd-soc-wcd938x.ko
+  LD [M]  sound/soc/codecs/snd-soc-wcd938x-sdw.ko
+  BTF [M] sound/soc/codecs/snd-soc-wcd938x-sdw.ko
+  LD [M]  sound/soc/codecs/snd-soc-wsa884x.ko
+  BTF [M] sound/soc/codecs/snd-soc-wsa884x.ko
+  LD [M]  sound/soc/codecs/snd-soc-simple-amplifier.ko
+  BTF [M] sound/soc/codecs/snd-soc-simple-amplifier.ko
+  LD [M]  sound/soc/codecs/snd-soc-lpass-macro-common.ko
+  BTF [M] sound/soc/codecs/snd-soc-lpass-macro-common.ko
+  LD [M]  sound/soc/codecs/snd-soc-lpass-wsa-macro.ko
+  BTF [M] sound/soc/codecs/snd-soc-lpass-wsa-macro.ko
+  LD [M]  sound/soc/codecs/snd-soc-lpass-va-macro.ko
+  BTF [M] sound/soc/codecs/snd-soc-lpass-va-macro.ko
+  LD [M]  sound/soc/codecs/snd-soc-lpass-rx-macro.ko
+  BTF [M] sound/soc/codecs/snd-soc-lpass-rx-macro.ko
+  LD [M]  sound/soc/codecs/snd-soc-lpass-tx-macro.ko
+  BTF [M] sound/soc/codecs/snd-soc-lpass-tx-macro.ko
+  LD [M]  sound/soc/codecs/snd-soc-simple-mux.ko
+  BTF [M] sound/soc/codecs/snd-soc-simple-mux.ko
+  LD [M]  sound/soc/generic/snd-soc-simple-card-utils.ko
+  BTF [M] sound/soc/generic/snd-soc-simple-card-utils.ko
+  LD [M]  sound/soc/generic/snd-soc-simple-card.ko
+  BTF [M] sound/soc/generic/snd-soc-simple-card.ko
+  LD [M]  sound/soc/generic/snd-soc-audio-graph-card.ko
+  BTF [M] sound/soc/generic/snd-soc-audio-graph-card.ko
+  LD [M]  sound/soc/generic/snd-soc-audio-graph-card2.ko
+  BTF [M] sound/soc/generic/snd-soc-audio-graph-card2.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-audmix.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-audmix.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-asrc.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-asrc.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-sai.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-sai.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-ssi.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-ssi.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-spdif.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-spdif.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-esai.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-esai.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-micfil.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-micfil.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-utils.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-utils.ko
+  LD [M]  sound/soc/fsl/snd-soc-fsl-easrc.ko
+  BTF [M] sound/soc/fsl/snd-soc-fsl-easrc.ko
+  LD [M]  sound/soc/fsl/snd-soc-imx-audmux.ko
+  BTF [M] sound/soc/fsl/snd-soc-imx-audmux.ko
+  LD [M]  sound/soc/qcom/snd-soc-lpass-cpu.ko
+  BTF [M] sound/soc/qcom/snd-soc-lpass-cpu.ko
+  LD [M]  sound/soc/qcom/snd-soc-lpass-platform.ko
+  BTF [M] sound/soc/qcom/snd-soc-lpass-platform.ko
+  LD [M]  sound/soc/qcom/snd-soc-lpass-apq8016.ko
+  BTF [M] sound/soc/qcom/snd-soc-lpass-apq8016.ko
+  LD [M]  sound/soc/qcom/snd-soc-apq8016-sbc.ko
+  BTF [M] sound/soc/qcom/snd-soc-apq8016-sbc.ko
+  LD [M]  sound/soc/qcom/snd-soc-sc8280xp.ko
+  BTF [M] sound/soc/qcom/snd-soc-sc8280xp.ko
+  LD [M]  sound/soc/qcom/snd-soc-qcom-common.ko
+  BTF [M] sound/soc/qcom/snd-soc-qcom-common.ko
+  LD [M]  sound/soc/qcom/snd-soc-qcom-sdw.ko
+  BTF [M] sound/soc/qcom/snd-soc-qcom-sdw.ko
+  LD [M]  sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
+  BTF [M] sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6core.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6core.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6afe.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6afe.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6afe-dai.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6afe-dai.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6afe-clocks.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6adm.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6afe-clocks.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6adm.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6routing.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6routing.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6asm.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6asm.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6asm-dai.ko
+  LD [M]  sound/soc/qcom/qdsp6/snd-q6apm.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6asm-dai.ko
+  BTF [M] sound/soc/qcom/qdsp6/snd-q6apm.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6apm-dai.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6apm-dai.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6apm-lpass-dais.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6apm-lpass-dais.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6prm.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6prm.ko
+  LD [M]  sound/soc/qcom/qdsp6/q6prm-clocks.ko
+  BTF [M] sound/soc/qcom/qdsp6/q6prm-clocks.ko
+  LD [M]  net/core/selftests.ko
+  BTF [M] net/core/selftests.ko
+  LD [M]  net/802/psnap.ko
+  BTF [M] net/802/psnap.ko
+  LD [M]  net/802/stp.ko
+  BTF [M] net/802/stp.ko
+  LD [M]  net/sched/act_gact.ko
+  BTF [M] net/sched/act_gact.ko
+  LD [M]  net/sched/act_mirred.ko
+  BTF [M] net/sched/act_mirred.ko
+  LD [M]  net/sched/act_gate.ko
+  BTF [M] net/sched/act_gate.ko
+  LD [M]  net/sched/sch_ingress.ko
+  BTF [M] net/sched/sch_ingress.ko
+  LD [M]  net/sched/sch_mqprio.ko
+  BTF [M] net/sched/sch_mqprio.ko
+  LD [M]  net/sched/sch_mqprio_lib.ko
+  BTF [M] net/sched/sch_mqprio_lib.ko
+  LD [M]  net/sched/sch_cbs.ko
+  LD [M]  net/sched/sch_etf.ko
+  BTF [M] net/sched/sch_cbs.ko
+  BTF [M] net/sched/sch_etf.ko
+  LD [M]  net/sched/sch_taprio.ko
+  BTF [M] net/sched/sch_taprio.ko
+  LD [M]  net/sched/cls_basic.ko
+  BTF [M] net/sched/cls_basic.ko
+  LD [M]  net/sched/cls_flower.ko
+  LD [M]  net/netfilter/nfnetlink.ko
+  BTF [M] net/netfilter/nfnetlink.ko
+  BTF [M] net/sched/cls_flower.ko
+  LD [M]  net/netfilter/nf_conntrack.ko
+  LD [M]  net/netfilter/nf_log_syslog.ko
+  BTF [M] net/netfilter/nf_log_syslog.ko
+  BTF [M] net/netfilter/nf_conntrack.ko
+  LD [M]  net/netfilter/nf_nat.ko
+  LD [M]  net/netfilter/nf_tables.ko
+  BTF [M] net/netfilter/nf_nat.ko
+  LD [M]  net/netfilter/nft_nat.ko
+  BTF [M] net/netfilter/nf_tables.ko
+  BTF [M] net/netfilter/nft_nat.ko
+  LD [M]  net/netfilter/nft_masq.ko
+  LD [M]  net/netfilter/nft_chain_nat.ko
+  BTF [M] net/netfilter/nft_masq.ko
+  BTF [M] net/netfilter/nft_chain_nat.ko
+  LD [M]  net/netfilter/xt_mark.ko
+  BTF [M] net/netfilter/xt_mark.ko
+  LD [M]  net/netfilter/xt_nat.ko
+  LD [M]  net/netfilter/xt_LOG.ko
+  LD [M]  net/netfilter/xt_MASQUERADE.ko
+  BTF [M] net/netfilter/xt_MASQUERADE.ko
+  BTF [M] net/netfilter/xt_LOG.ko
+  BTF [M] net/netfilter/xt_nat.ko
+  LD [M]  net/netfilter/xt_addrtype.ko
+  BTF [M] net/netfilter/xt_addrtype.ko
+  LD [M]  net/netfilter/xt_ipvs.ko
+  LD [M]  net/netfilter/xt_conntrack.ko
+  LD [M]  net/netfilter/ipvs/ip_vs.ko
+  BTF [M] net/netfilter/xt_conntrack.ko
+  BTF [M] net/netfilter/xt_ipvs.ko
+  BTF [M] net/netfilter/ipvs/ip_vs.ko
+  LD [M]  net/ipv4/netfilter/nf_defrag_ipv4.ko
+  BTF [M] net/ipv4/netfilter/nf_defrag_ipv4.ko
+  LD [M]  net/ipv4/netfilter/nf_reject_ipv4.ko
+  LD [M]  net/ipv4/ip_tunnel.ko
+  BTF [M] net/ipv4/netfilter/nf_reject_ipv4.ko
+  BTF [M] net/ipv4/ip_tunnel.ko
+  LD [M]  net/ipv4/udp_tunnel.ko
+  BTF [M] net/ipv4/udp_tunnel.ko
+  LD [M]  net/ipv4/tunnel4.ko
+  LD [M]  net/ipv4/tcp_bic.ko
+  BTF [M] net/ipv4/tunnel4.ko
+  LD [M]  net/ipv4/tcp_westwood.ko
+  BTF [M] net/ipv4/tcp_bic.ko
+  BTF [M] net/ipv4/tcp_westwood.ko
+  LD [M]  net/ipv4/tcp_htcp.ko
+  LD [M]  net/ipv6/netfilter/nf_defrag_ipv6.ko
+  LD [M]  net/ipv6/netfilter/nf_reject_ipv6.ko
+  BTF [M] net/ipv4/tcp_htcp.ko
+  LD [M]  net/ipv6/sit.ko
+  BTF [M] net/ipv6/netfilter/nf_reject_ipv6.ko
+  BTF [M] net/ipv6/netfilter/nf_defrag_ipv6.ko
+  BTF [M] net/ipv6/sit.ko
+  LD [M]  net/ipv6/ip6_udp_tunnel.ko
+  LD [M]  net/8021q/8021q.ko
+  LD [M]  net/llc/llc.ko
+  BTF [M] net/ipv6/ip6_udp_tunnel.ko
+  LD [M]  net/bridge/bridge.ko
+  BTF [M] net/8021q/8021q.ko
+  BTF [M] net/llc/llc.ko
+  LD [M]  net/bridge/br_netfilter.ko
+  LD [M]  net/bluetooth/bluetooth.ko
+  LD [M]  net/bluetooth/hidp/hidp.ko
+  BTF [M] net/bridge/br_netfilter.ko
+  BTF [M] net/bridge/bridge.ko
+  BTF [M] net/bluetooth/hidp/hidp.ko
+  BTF [M] net/bluetooth/bluetooth.ko
+make[1]: Leaving directory '/build/kernel-build'
+make: Leaving directory '/build/kernel-src'
+==> installing modules for 7.1.2-thorch20
+make: Entering directory '/build/kernel-src'
+make[1]: Entering directory '/build/kernel-build'
+  SYMLINK /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/build
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/modules.order
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/modules.builtin
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/modules.builtin.modinfo
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/mm/zsmalloc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/mm/zsmalloc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/fuse/cuse.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/fuse/cuse.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/pstore/ramoops.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/pstore/ramoops.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ntfs/ntfs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ntfs/ntfs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ntfs3/ntfs3.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ntfs3/ntfs3.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ubifs/ubifs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/fs/ubifs/ubifs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/crypto_engine.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/crypto_engine.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm3.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm3.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm4_generic.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/sm4_generic.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/arc4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/arc4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/deflate.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/deflate.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/lz4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/lz4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/algif_aead.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/crypto/algif_aead.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libchacha.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libchacha.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libchacha20poly1305.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libchacha20poly1305.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libcurve25519.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libcurve25519.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libpoly1305.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libpoly1305.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libsm3.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/crypto/libsm3.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/lz4/lz4_compress.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/lz4/lz4_compress.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/lz4/lz4hc_compress.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/lz4/lz4hc_compress.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/reed_solomon/reed_solomon.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/lib/reed_solomon/reed_solomon.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bus/mhi/host/mhi_pci_generic.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bus/mhi/host/mhi_pci_generic.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-torrent.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-torrent.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/cdns-dphy-rx.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/cdns-dphy-rx.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-sierra.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-sierra.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-salvo.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/cadence/phy-cadence-salvo.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-m31.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-m31.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-pcie2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-pcie2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-qmp-pcie-msm8996.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-qmp-pcie-msm8996.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-qusb2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-qusb2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-hs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-hs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-hs-28nm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-hs-28nm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-ss.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-usb-ss.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-snps-femto-v2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-snps-femto-v2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-sgmii-eth.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/qualcomm/phy-qcom-sgmii-eth.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/phy-can-transceiver.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/phy/phy-can-transceiver.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pinctrl/qcom/pinctrl-sm8550-lpass-lpi.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pinctrl/qcom/pinctrl-sm8550-lpass-lpi.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pinctrl/qcom/pinctrl-lpass-lpi.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pinctrl/qcom/pinctrl-lpass-lpi.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpio/gpio-aggregator.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpio/gpio-aggregator.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpio/gpio-shared-proxy.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpio/gpio-shared-proxy.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/pwrctrl/pci-pwrctrl-pwrseq.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/pwrctrl/pci-pwrctrl-pwrseq.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/pwrctrl/pci-pwrctrl-tc9563.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/pwrctrl/pci-pwrctrl-tc9563.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/endpoint/functions/pci-epf-test.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/endpoint/functions/pci-epf-test.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/controller/dwc/pci-meson.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/pci/controller/dwc/pci-meson.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_msghandler.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_msghandler.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_devintf.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_devintf.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_si.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/char/ipmi/ipmi_si.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/clk/qcom/lpass-gfm-sm8250.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/clk/qcom/lpass-gfm-sm8250.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soc/qcom/wcnss_ctrl.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soc/qcom/wcnss_ctrl.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/regulator/vctrl-regulator.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/regulator/vctrl-regulator.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/reset/reset-gpio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/reset/reset-gpio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/panel/panel-lvds.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/panel/panel-lvds.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/panel/panel-simple.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/panel/panel-simple.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/bridge/tda998x.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/bridge/tda998x.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/bridge/simple-bridge.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/gpu/drm/bridge/simple-bridge.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/base/regmap/regmap-sdw.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/base/regmap/regmap-sdw.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/block/zram/zram.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/block/zram/zram.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/eeprom/at24.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/eeprom/at24.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/eeprom/at25.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/eeprom/at25.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/qcom-coincell.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/qcom-coincell.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/pci_endpoint_test.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/pci_endpoint_test.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/uacce/uacce.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/misc/uacce/uacce.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/iproc_nand.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/iproc_nand.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/bcmbca_nand.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/bcmbca_nand.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/brcmstb_nand.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/brcmstb_nand.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/brcmnand.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/nand/raw/brcmnand/brcmnand.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/ubi/ubi.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/ubi/ubi.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/hyperbus/hyperbus-core.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mtd/hyperbus/hyperbus-core.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spidev.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spidev.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spi-dw.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spi-dw.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spi-dw-mmio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/spi/spi-dw-mmio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/mdio_bus.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/mdio_bus.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/phylink.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/phylink.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/libphy.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/libphy.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/mdio_devres.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/mdio_devres.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/phy_package.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/phy_package.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/ax88796b.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/ax88796b.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/fixed_phy.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/fixed_phy.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/realtek/realtek.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/phy/realtek/realtek.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/acpi_mdio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/acpi_mdio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/fwnode_mdio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/fwnode_mdio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/of_mdio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mdio/of_mdio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireless/ath/ath12k/ath12k.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireless/ath/ath12k/ath12k.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireless/ath/ath12k/wifi7/ath12k_wifi7.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireless/ath/ath12k/wifi7/ath12k_wifi7.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/rtl8150.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/rtl8150.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/r8152.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/r8152.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/asix.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/asix.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/ax88179_178a.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/ax88179_178a.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/cdc_ether.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/cdc_ether.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/rndis_host.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/rndis_host.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/usbnet.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/usbnet.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/ipheth.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/ipheth.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/cdc_ncm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/cdc_ncm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/r8153_ecm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/usb/r8153_ecm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireguard/wireguard.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/wireguard/wireguard.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mii.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mii.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/tun.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/tun.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/veth.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/veth.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mhi_net.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/net/mhi_net.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/host/xhci-pci-renesas.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/host/xhci-pci-renesas.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tcpm/fusb302.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tcpm/fusb302.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tcpm/tcpci.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tcpm/tcpci.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/ucsi/ucsi_ccg.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/ucsi/ucsi_ccg.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tipd/tps6598x.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/tipd/tps6598x.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/hd3ss3220.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/typec/hd3ss3220.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/class/cdc-acm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/usb/class/cdc-acm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/keyboard/adc-keys.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/keyboard/adc-keys.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/keyboard/gpio_keys_polled.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/keyboard/gpio_keys_polled.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/mouse/elan_i2c.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/mouse/elan_i2c.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/misc/pm8xxx-vibrator.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/misc/pm8xxx-vibrator.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/misc/pwm-vibra.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/input/misc/pwm-vibra.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/algos/i2c-algo-bit.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/algos/i2c-algo-bit.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/busses/i2c-gpio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/busses/i2c-gpio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/busses/i2c-qcom-cci.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/i2c/busses/i2c-qcom-cci.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-async.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-async.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-fwnode.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-fwnode.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-mem2mem.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/v4l2-core/v4l2-mem2mem.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/common/videobuf2/videobuf2-dma-contig.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/common/videobuf2/videobuf2-dma-contig.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/common/videobuf2/videobuf2-dma-sg.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/common/videobuf2/videobuf2-dma-sg.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/camss/qcom-camss.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/camss/qcom-camss.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/iris/qcom-iris.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/iris/qcom-iris.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-core.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-core.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-dec.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-dec.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-enc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/media/platform/qcom/venus/venus-enc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/reset/nvmem-reboot-mode.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/reset/nvmem-reboot-mode.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/sequencing/pwrseq-qcom-wcn.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/sequencing/pwrseq-qcom-wcn.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/supply/qcom_battmgr.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/supply/qcom_battmgr.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/supply/sbs-battery.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/power/supply/sbs-battery.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hwmon/jc42.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hwmon/jc42.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hwmon/pwm-fan.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hwmon/pwm-fan.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/thermal/thermal-generic-adc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/thermal/thermal-generic-adc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/cpufreq/cppc_cpufreq.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/cpufreq/cppc_cpufreq.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/firmware/efi/capsule-loader.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/firmware/efi/capsule-loader.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/hpre/hisi_hpre.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/hpre/hisi_hpre.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/sec2/hisi_sec2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/sec2/hisi_sec2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/hisi_qm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/hisi_qm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/zip/hisi_zip.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/zip/hisi_zip.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/trng/hisi-trng-v2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/hisilicon/trng/hisi-trng-v2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/ccree/ccree.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/ccree/ccree.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/amlogic/amlogic-gxl-crypto.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/crypto/amlogic/amlogic-gxl-crypto.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/hid-multitouch.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/hid-multitouch.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-acpi.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-acpi.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-of.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-of.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-of-elan.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/hid/i2c-hid/i2c-hid-of-elan.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/staging/media/max96712/max96712.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/staging/media/max96712/max96712.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_pil_info.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_pil_info.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_common.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_common.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_adsp.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_adsp.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_mss.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_mss.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_pas.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_q6v5_pas.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_sysmon.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_sysmon.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_wcnss_pil.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/remoteproc/qcom_wcnss_pil.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/devfreq/governor_passive.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/devfreq/governor_passive.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/iio/buffer/industrialio-triggered-buffer.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/iio/buffer/kfifo_buf.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/iio/buffer/kfifo_buf.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-cci.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-cci.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-ccn.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-ccn.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-cmn.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm-cmn.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_dsu_pmu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_dsu_pmu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_smmuv3_pmu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_smmuv3_pmu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_spe_pmu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_spe_pmu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_dmc620_pmu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_dmc620_pmu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_cspmu/arm_cspmu_module.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_cspmu/arm_cspmu_module.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_cspmu/nvidia_cspmu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/perf/arm_cspmu/nvidia_cspmu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/nvmem/layouts/sl28vpd.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/nvmem/layouts/sl28vpd.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/nvmem/nvmem-rmem.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/nvmem/nvmem-rmem.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mux/mux-gpio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mux/mux-gpio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mux/mux-mmio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/mux/mux-mmio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/slimbus/slimbus.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/slimbus/slimbus.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/slimbus/slim-qcom-ngd-ctrl.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/slimbus/slim-qcom-ngd-ctrl.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bluetooth/hci_uart.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bluetooth/hci_uart.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bluetooth/btqca.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/bluetooth/btqca.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soundwire/soundwire-bus.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soundwire/soundwire-bus.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soundwire/soundwire-qcom.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/soundwire/soundwire-qcom.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/counter/counter.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/drivers/counter/counter.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/drivers/snd-aloop.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/drivers/snd-aloop.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-bt-sco.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-bt-sco.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-dmic.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-dmic.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-spdif-rx.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-spdif-rx.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-spdif-tx.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-spdif-tx.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-classh.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-classh.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-common.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-common.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-mbhc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd-mbhc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd938x.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd938x.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd938x-sdw.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wcd938x-sdw.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wsa884x.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-wsa884x.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-simple-amplifier.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-simple-amplifier.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-macro-common.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-macro-common.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-wsa-macro.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-wsa-macro.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-va-macro.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-va-macro.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-rx-macro.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-rx-macro.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-tx-macro.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-lpass-tx-macro.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-simple-mux.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/codecs/snd-soc-simple-mux.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-simple-card-utils.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-simple-card-utils.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-simple-card.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-simple-card.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-audio-graph-card.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-audio-graph-card.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-audio-graph-card2.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/generic/snd-soc-audio-graph-card2.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-audmix.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-audmix.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-asrc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-asrc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-sai.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-sai.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-ssi.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-ssi.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-spdif.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-spdif.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-esai.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-esai.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-micfil.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-micfil.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-utils.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-utils.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-easrc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-fsl-easrc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-imx-audmux.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/fsl/snd-soc-imx-audmux.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-cpu.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-cpu.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-platform.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-platform.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-apq8016.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-lpass-apq8016.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-apq8016-sbc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-apq8016-sbc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-sc8280xp.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-sc8280xp.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-qcom-common.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-qcom-common.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-qcom-sdw.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/snd-soc-qcom-sdw.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6core.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6core.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe-dai.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe-dai.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe-clocks.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6afe-clocks.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6adm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6adm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6routing.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6routing.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6asm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6asm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6asm-dai.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6asm-dai.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/snd-q6apm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/snd-q6apm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6apm-dai.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6apm-dai.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6apm-lpass-dais.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6apm-lpass-dais.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6prm.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6prm.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6prm-clocks.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/sound/soc/qcom/qdsp6/q6prm-clocks.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/core/selftests.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/core/selftests.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/802/psnap.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/802/psnap.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/802/stp.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/802/stp.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_gact.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_gact.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_mirred.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_mirred.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_gate.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/act_gate.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_ingress.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_ingress.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_mqprio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_mqprio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_mqprio_lib.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_mqprio_lib.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_cbs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_cbs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_etf.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_etf.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_taprio.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/sch_taprio.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/cls_basic.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/cls_basic.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/cls_flower.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/sched/cls_flower.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nfnetlink.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nfnetlink.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_conntrack.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_conntrack.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_log_syslog.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_log_syslog.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_nat.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_nat.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_tables.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nf_tables.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_nat.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_nat.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_masq.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_masq.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_chain_nat.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/nft_chain_nat.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_mark.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_mark.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_nat.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_nat.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_LOG.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_LOG.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_MASQUERADE.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_MASQUERADE.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_addrtype.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_addrtype.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_conntrack.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_conntrack.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_ipvs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/xt_ipvs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/ipvs/ip_vs.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/netfilter/ipvs/ip_vs.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/netfilter/nf_reject_ipv4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/netfilter/nf_reject_ipv4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/ip_tunnel.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/ip_tunnel.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/udp_tunnel.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/udp_tunnel.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tunnel4.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tunnel4.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_bic.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_bic.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_westwood.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_westwood.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_htcp.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv4/tcp_htcp.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/netfilter/nf_reject_ipv6.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/netfilter/nf_reject_ipv6.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/sit.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/sit.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/ip6_udp_tunnel.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/ipv6/ip6_udp_tunnel.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/8021q/8021q.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/8021q/8021q.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/llc/llc.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/llc/llc.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bridge/bridge.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bridge/bridge.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bridge/br_netfilter.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bridge/br_netfilter.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bluetooth/bluetooth.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bluetooth/bluetooth.ko
+  INSTALL /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bluetooth/hidp/hidp.ko
+  STRIP   /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20/kernel/net/bluetooth/hidp/hidp.ko
+  DEPMOD  /build/kernel-build/modules-stage/lib/modules/7.1.2-thorch20
+make[1]: Leaving directory '/build/kernel-build'
+make: Leaving directory '/build/kernel-src'
+==> repacking Android boot template with source-built kernel and ROCKNIX SM8550 DTBs
+appending 13 DTB(s): qcs8550-ayaneo-pocketace.dtb,qcs8550-ayaneo-pocketdmg.dtb qcs8550-ayaneo-pocketds.dtb,qcs8550-ayaneo-pocketevo.dtb qcs8550-ayaneo-pockets1k.dtb,qcs8550-ayaneo-pockets2k.dtb qcs8550-ayn-odin2.dtb,qcs8550-ayn-odin2mini.dtb qcs8550-ayn-odin2portal.dtb,qcs8550-ayn-thor.dtb qcs8550-retroidpocket-rp6-top-dpad.dtb,qcs8550-retroidpocket-rp6.dtb qcs8550-retroidpocket-rpnova.dtb
+==> verifying embedded BinderFS kernel config
+==> installing source-built Thor kernel artifacts into /build/vendor/rocknix-kernel
+==> Thorch source-built feature kernel ready in /build/vendor/rocknix-kernel (7.1.2-thorch20)

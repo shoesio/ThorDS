@@ -1,0 +1,33 @@
+import socket,concurrent.futures,select,os,time
+chosen=None
+for attempt in range(4):
+ def connect(_):
+  try:
+   s=socket.create_connection(('192.168.0.143',22),2)
+   s.settimeout(2)
+   banner=s.recv(256)
+   return s,banner
+  except OSError:
+   try:s.close()
+   except Exception:pass
+   return None
+ with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+  for r in pool.map(connect,range(8)):
+   if r and chosen is None: chosen=r
+   elif r:r[0].close()
+ if chosen:break
+if chosen is None:raise SystemExit(1)
+s,banner=chosen
+os.write(1,banner)
+s.settimeout(None)
+while True:
+ ready,_,_=select.select([s,0],[],[])
+ if s in ready:
+  data=s.recv(65536)
+  if not data:break
+  os.write(1,data)
+ if 0 in ready:
+  data=os.read(0,65536)
+  if not data:break
+  s.sendall(data)
+s.close()

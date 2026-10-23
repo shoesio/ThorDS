@@ -1,0 +1,567 @@
+diff --git a/Makefile b/Makefile
+index 33dff88..58a4b79 100644
+--- a/Makefile
++++ b/Makefile
+@@ -7,7 +7,7 @@ ROCKNIX_REF ?= $(shell bash -c 'source "$(THORCH_CONFIG)" >/dev/null 2>&1; print
+ BOOT_DIR ?=
+ ROOT_DIR ?=
+ KERNEL_REF ?= $(ROCKNIX_REF)
+-THORCH_SUDO_ENV := THORCH_USER,THORCH_PASSWORD,THORCH_ENABLE_SSH,THORCH_IMAGE_SIZE,THORCH_IMAGE_AUTO_HEADROOM,THORCH_ROOT_FSTYPE,THORCH_BTRFS_MOUNT_OPTIONS,THORCH_USER_CACHE_TMPFS_SIZE,THORCH_BOOT_SIZE,THORCH_DEFAULT_SESSION,THORCH_IMAGE_PACKAGES,THORCH_BUILD_DIR,THORCH_ROOTFS_RUNNER,THORCH_OUTPUT_DIR,THORCH_LOCAL_REPO_DIR,THORCH_ROCKNIX_DIR,THORCH_FIRMWARE_DIR,THORCH_ROCKNIX_KERNEL_DIR,THORCH_ROCKNIX_RUNTIME_DIR,THORCH_KERNEL_SOURCE_BUILD,THORCH_WAYDROID_KERNEL_REQUIRED,THORCH_KERNEL_REPO,THORCH_KERNEL_REF,THORCH_KERNEL_TARBALL_URL,THORCH_KERNEL_TARBALL_SHA256,THORCH_KERNEL_CONFIG,THORCH_KERNEL_CONFIG_FRAGMENT,THORCH_KERNEL_PATCH_DIRS,THORCH_KERNEL_DTS_DIR,THORCH_KERNEL_SOURCE_DIR,THORCH_KERNEL_BUILD_DIR,THORCH_KERNEL_CROSS_COMPILE,THORCH_KERNEL_JOBS,THORCH_PACKAGE_JOBS,ROCKNIX_REF,ROCKNIX_REPO,ROCKNIX_KERNEL_SOURCE,ROCKNIX_KERNEL_RELEASE,ROCKNIX_KERNEL_PLATFORM,ROCKNIX_KERNEL_IMAGE_URL,ROCKNIX_KERNEL_IMAGE_SHA256,ROCKNIX_KERNEL_SHA256_URL,ROCKNIX_KERNEL_ALLOW_UNVERIFIED,ROCKNIX_KERNEL_CACHE_DIR,ALARM_ROOTFS_URL,ALARM_ROOTFS_SIG_URL,ALARM_ROOTFS_SHA256,ALARM_ROOTFS_SIGNING_KEYS,ALARM_ROOTFS_KEYRING_URL,ALARM_ROOTFS_KEYSERVER,ALARM_ROOTFS_KEY_FETCH_TIMEOUT,ALARM_MIRRORS,ALARM_MIRROR
++THORCH_SUDO_ENV := THORCH_USER,THORCH_PASSWORD,THORCH_ENABLE_SSH,THORCH_IMAGE_SIZE,THORCH_IMAGE_AUTO_HEADROOM,THORCH_ROOT_FSTYPE,THORCH_BTRFS_MOUNT_OPTIONS,THORCH_USER_CACHE_TMPFS_SIZE,THORCH_BOOT_SIZE,THORCH_DEFAULT_SESSION,THORCH_IMAGE_PACKAGES,THORCH_BUILD_DIR,THORCH_ROOTFS_RUNNER,THORCH_OUTPUT_DIR,THORCH_LOCAL_REPO_DIR,THORCH_ROCKNIX_DIR,THORCH_FIRMWARE_DIR,THORCH_ROCKNIX_KERNEL_DIR,THORCH_ROCKNIX_RUNTIME_DIR,THORCH_KERNEL_SOURCE_BUILD,THORCH_WAYDROID_KERNEL_REQUIRED,THORCH_KERNEL_REPO,THORCH_KERNEL_REF,THORCH_KERNEL_TARBALL_URL,THORCH_KERNEL_TARBALL_SHA256,THORCH_KERNEL_CONFIG,THORCH_KERNEL_CONFIG_FRAGMENT,THORCH_KERNEL_PATCH_DIRS,THORCH_KERNEL_DTS_DIR,THORCH_KERNEL_SOURCE_DIR,THORCH_KERNEL_BUILD_DIR,THORCH_KERNEL_CROSS_COMPILE,THORCH_KERNEL_JOBS,THORCH_PACKAGE_JOBS,THORDS_TESTDATA_DIR,ROCKNIX_REF,ROCKNIX_REPO,ROCKNIX_KERNEL_SOURCE,ROCKNIX_KERNEL_RELEASE,ROCKNIX_KERNEL_PLATFORM,ROCKNIX_KERNEL_IMAGE_URL,ROCKNIX_KERNEL_IMAGE_SHA256,ROCKNIX_KERNEL_SHA256_URL,ROCKNIX_KERNEL_ALLOW_UNVERIFIED,ROCKNIX_KERNEL_CACHE_DIR,ALARM_ROOTFS_URL,ALARM_ROOTFS_SIG_URL,ALARM_ROOTFS_SHA256,ALARM_ROOTFS_SIGNING_KEYS,ALARM_ROOTFS_KEYRING_URL,ALARM_ROOTFS_KEYSERVER,ALARM_ROOTFS_KEY_FETCH_TIMEOUT,ALARM_MIRRORS,ALARM_MIRROR
+ THORCH_SUDO := sudo --preserve-env=$(THORCH_SUDO_ENV)
+ 
+ comma := ,
+@@ -30,7 +30,13 @@ HOST_GID ?= $(shell id -g)
+ ifeq ($(shell uname -s),Darwin)
+ THORCH_DOCKER_BUILD_DIR ?= /thorch-build
+ THORCH_DOCKER_BUILD_VOLUME ?= thorch-build-$(shell printf '%s' '$(CURDIR)' | cksum | awk '{print $$1}')
+-THORCH_DOCKER_BUILD_ARGS := --volume "$(THORCH_DOCKER_BUILD_VOLUME):$(THORCH_DOCKER_BUILD_DIR)" --env THORCH_BUILD_DIR="$(THORCH_DOCKER_BUILD_DIR)"
++THORCH_DOCKER_ROCKNIX_VOLUME ?= thorch-rocknix-$(shell printf '%s' '$(CURDIR)' | cksum | awk '{print $$1}')
++
++THORCH_DOCKER_BUILD_ARGS := \
++  --volume "$(THORCH_DOCKER_BUILD_VOLUME):$(THORCH_DOCKER_BUILD_DIR)" \
++  --volume "$(THORCH_DOCKER_BUILD_VOLUME):$(THORCH_DOCKER_WORKDIR)/.thords-native" \
++  --volume "$(THORCH_DOCKER_ROCKNIX_VOLUME):$(THORCH_DOCKER_WORKDIR)/.rocknix-native" \
++  --env THORCH_BUILD_DIR="$(THORCH_DOCKER_BUILD_DIR)"
+ else
+ THORCH_DOCKER_BUILD_ARGS :=
+ endif
+diff --git a/README.md b/README.md
+index 15eb658..b7af338 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,27 @@
+ # Thorch
+ 
++## 120 Hz presentation proof of concept
++
++The kiosk path requests `1920x1080@120Hz` on the top DSI output and forces
++Azahar's `skip_presenting_duplicate_frames` setting before every launch. Azahar
++continues to run at 100% emulation speed; the setting only prevents redundant
++presentation of unchanged frames so an external Vulkan frame-generation layer
++can see the real cadence.
++
++The `thorch-mako` package builds a pinned MAKO Renderer revision for AArch64,
++including the Vulkan layer, launcher, and CLI. `thords-azahar` is the single
++launch boundary for the real HOME Menu and all titles. It creates a private
++ThorDS MAKO profile with adaptive 120 FPS output and a 5x ceiling, then uses
++`mako-launch` automatically. If the layer is unavailable or the launch fails,
++the helper launches Azahar normally. This keeps the image bootable while the
++native renderer is being validated on the actual Thor GPU.
++
++The hidden L3+R3 chord is handled by `thords-framegen-input`. It requires both
++stick-clicks within 300 ms, ignores repeats until release, and persists the
++state in `~/.config/thords/frame-generation.state`. Development status is
++available with `thords-framegen status`; runtime diagnostics are written to
++`/var/log/thords/framegen.log`.
++
+ Thorch is an experimental Arch Linux ARM image for the AYN Thor, built on top of
+ public ROCKNIX work. It syncs ROCKNIX's SM8550 kernel recipe, patch stack, Thor
+ DTS overlays, firmware, runtime graphics pieces, FEX assets, device
+diff --git a/config/thorch.conf b/config/thorch.conf
+index 0ac02c6..eb86c34 100644
+--- a/config/thorch.conf
++++ b/config/thorch.conf
+@@ -37,19 +37,19 @@ THORCH_BUILD_DIR="${THORCH_BUILD_DIR:-build}"
+ THORCH_ROOTFS_RUNNER="${THORCH_ROOTFS_RUNNER:-chroot}"
+ THORCH_OUTPUT_DIR="${THORCH_OUTPUT_DIR:-output}"
+ THORCH_LOCAL_REPO_DIR="${THORCH_LOCAL_REPO_DIR:-${THORCH_OUTPUT_DIR}/repo}"
+-THORCH_ROCKNIX_DIR="${THORCH_ROCKNIX_DIR:-vendor/rocknix-sm8550}"
++THORCH_ROCKNIX_DIR="${THORCH_ROCKNIX_DIR:-.rocknix-native}"
+ THORCH_FIRMWARE_DIR="${THORCH_FIRMWARE_DIR:-${THORCH_ROCKNIX_DIR}/firmware}"
+-THORCH_ROCKNIX_KERNEL_DIR="${THORCH_ROCKNIX_KERNEL_DIR:-vendor/rocknix-kernel}"
+-THORCH_ROCKNIX_RUNTIME_DIR="${THORCH_ROCKNIX_RUNTIME_DIR:-vendor/rocknix-runtime}"
++THORCH_ROCKNIX_KERNEL_DIR="${THORCH_ROCKNIX_KERNEL_DIR:-.thords-native/vendor/rocknix-kernel}"
++THORCH_ROCKNIX_RUNTIME_DIR="${THORCH_ROCKNIX_RUNTIME_DIR:-.thords-native/vendor/rocknix-runtime}"
+ ROCKNIX_KERNEL_SOURCE="${ROCKNIX_KERNEL_SOURCE:-nightly}"
+ # Keep image-derived firmware and runtime packages reproducible. Rolling
+ # nightlies can still override this explicitly, but must also advance package
+ # identities when their payload bytes change.
+-ROCKNIX_KERNEL_RELEASE="${ROCKNIX_KERNEL_RELEASE:-nightly-20260730}"
++ROCKNIX_KERNEL_RELEASE="${ROCKNIX_KERNEL_RELEASE:-latest}"
+ ROCKNIX_KERNEL_PLATFORM="${ROCKNIX_KERNEL_PLATFORM:-SM8550}"
+ # An explicitly empty override opts into trusting only the release's adjacent
+ # checksum asset while testing a different nightly.
+-ROCKNIX_KERNEL_IMAGE_SHA256="${ROCKNIX_KERNEL_IMAGE_SHA256-83b894b2fa89304f91d554d5f9268d846c42b0a90ad970b7a6900839c531ff99}"
++ROCKNIX_KERNEL_IMAGE_SHA256="${ROCKNIX_KERNEL_IMAGE_SHA256-}"
+ THORCH_KERNEL_SOURCE_BUILD="${THORCH_KERNEL_SOURCE_BUILD:-1}"
+ THORCH_KERNEL_REPO="${THORCH_KERNEL_REPO:-https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git}"
+ THORCH_KERNEL_REF="${THORCH_KERNEL_REF:-v7.1.2}"
+diff --git a/manifests/packages.json b/manifests/packages.json
+index 7c31ead..874b3ff 100644
+--- a/manifests/packages.json
++++ b/manifests/packages.json
+@@ -7,103 +7,162 @@
+     {
+       "name": "thorch-bsp",
+       "path": "packages/thorch-bsp",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-boot-bootstrap-ready",
+       "path": "packages/thorch-boot-bootstrap-ready",
+-      "profiles": ["build", "image"],
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "linux-thorch",
+       "path": "packages/linux-thorch",
+-      "profiles": ["build", "image", "release"],
+-      "build_inputs": ["THORCH_ROCKNIX_KERNEL_DIR"]
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": [
++        "THORCH_ROCKNIX_KERNEL_DIR"
++      ]
+     },
+     {
+       "name": "thorch-firmware-rocknix",
+       "path": "packages/thorch-firmware-rocknix",
+-      "profiles": ["build", "image", "release"],
+-      "build_inputs": ["THORCH_FIRMWARE_DIR", "THORCH_ROCKNIX_KERNEL_DIR"]
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": [
++        "THORCH_FIRMWARE_DIR",
++        "THORCH_ROCKNIX_KERNEL_DIR"
++      ]
+     },
+     {
+       "name": "thorch-mesa",
+       "path": "packages/thorch-mesa",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "kwin",
+       "path": "packages/kwin",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "plasma-keyboard",
+       "path": "packages/plasma-keyboard",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-kde-defaults",
+       "path": "packages/thorch-kde-defaults",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-firstboot",
+       "path": "packages/thorch-firstboot",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-installer",
+       "path": "packages/thorch-installer",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-fex-bin",
+       "path": "packages/thorch-fex-bin",
+-      "profiles": ["build", "image", "release"],
+-      "build_inputs": ["THORCH_ROCKNIX_RUNTIME_DIR"]
++      "profiles": [
++        "build"
++      ],
++      "build_inputs": [
++        "THORCH_ROCKNIX_RUNTIME_DIR"
++      ]
+     },
+     {
+       "name": "thorch-gamescope",
+       "path": "packages/thorch-gamescope",
+-      "profiles": ["build", "image", "release"],
+-      "build_inputs": ["THORCH_ROCKNIX_DIR/packages/apps/gamescope/patches"]
++      "profiles": [
++        "build"
++      ],
++      "build_inputs": [
++        "THORCH_ROCKNIX_DIR/packages/apps/gamescope/patches"
++      ]
+     },
+     {
+       "name": "thorch-gaming-installers",
+       "path": "packages/thorch-gaming-installers",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-waydroid-installer",
+       "path": "packages/thorch-waydroid-installer",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-inputplumber",
+       "path": "packages/thorch-inputplumber",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
+       "build_inputs": []
+     },
+     {
+       "name": "thorch-rocknix-quirks",
+       "path": "packages/thorch-rocknix-quirks",
+-      "profiles": ["build", "image", "release"],
+-      "build_inputs": ["THORCH_ROCKNIX_DIR/packages/hardware/quirks/platforms/SM8550"]
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": [
++        "THORCH_ROCKNIX_DIR/packages/hardware/quirks/platforms/SM8550"
++      ]
+     },
+     {
+       "name": "thorch-mangohud",
+       "path": "packages/thorch-mangohud",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build"
++      ],
+       "build_inputs": [
+         "THORCH_ROCKNIX_DIR/packages/apps/mangohud/patches/SM8550",
+         "THORCH_ROCKNIX_DIR/packages/apps/mangohud/config"
+@@ -112,7 +171,41 @@
+     {
+       "name": "thorch-gamepadcalibration",
+       "path": "packages/thorch-gamepadcalibration",
+-      "profiles": ["build", "image", "release"],
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": []
++    },
++    {
++      "name": "azahar",
++      "path": "packages/azahar",
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": []
++    },
++    {
++      "name": "thorch-mako",
++      "path": "packages/thorch-mako",
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
++      "build_inputs": []
++    },
++    {
++      "name": "thords-kiosk",
++      "path": "packages/thords-kiosk",
++      "profiles": [
++        "build",
++        "image",
++        "release"
++      ],
+       "build_inputs": []
+     }
+   ]
+diff --git a/packages/linux-thorch/PKGBUILD b/packages/linux-thorch/PKGBUILD
+index 40fb706..66ce52a 100644
+--- a/packages/linux-thorch/PKGBUILD
++++ b/packages/linux-thorch/PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=linux-thorch
+ pkgver=7.1.2
+-pkgrel=16
++pkgrel=20
+ pkgdesc='Thorch-packaged ROCKNIX Linux kernel artifacts for AYN Thor / Qualcomm SM8550'
+ arch=(aarch64)
+ url='https://github.com/ROCKNIX/distribution'
+diff --git a/packages/linux-thorch/patches/0009-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch b/packages/linux-thorch/patches/0009-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch
+deleted file mode 100644
+index 41ca480..0000000
+--- a/packages/linux-thorch/patches/0009-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch
++++ /dev/null
+@@ -1,24 +0,0 @@
+-From: jaewun <jaewun@users.noreply.github.com>
+-Subject: [PATCH] mailbox: qcom-ipcc: drop IRQF_NO_SUSPEND
+-
+-IRQF_NO_SUSPEND keeps the IPCC parent IRQ enabled through
+-suspend_device_irqs(). It is not wake configuration.
+-
+-Let the PM core mask the IRQ during suspend; wake-capable users should use the
+-normal wake IRQ path.
+-
+-Signed-off-by: jaewun <jaewun@users.noreply.github.com>
+-
+-diff --git a/drivers/mailbox/qcom-ipcc.c b/drivers/mailbox/qcom-ipcc.c
+-index d957d989c..2e4bb5efb 100644
+---- a/drivers/mailbox/qcom-ipcc.c
+-+++ b/drivers/mailbox/qcom-ipcc.c
+-@@ -321,7 +321,7 @@ static int qcom_ipcc_probe(struct platform_device *pdev)
+- 		goto err_mbox;
+- 
+- 	ret = devm_request_irq(&pdev->dev, ipcc->irq, qcom_ipcc_irq_fn,
+--			       IRQF_TRIGGER_HIGH | IRQF_NO_SUSPEND |
+-+			       IRQF_TRIGGER_HIGH |
+- 			       IRQF_NO_THREAD, name, ipcc);
+- 	if (ret < 0) {
+- 		dev_err(&pdev->dev, "Failed to register the irq: %d\n", ret);
+diff --git a/packages/thorch-bsp/PKGBUILD b/packages/thorch-bsp/PKGBUILD
+index 9577017..1a153ff 100644
+--- a/packages/thorch-bsp/PKGBUILD
++++ b/packages/thorch-bsp/PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=thorch-bsp
+ pkgver=1
+-pkgrel=38
++pkgrel=41
+ pkgdesc='Thorch AYN Thor boot and board support package'
+ arch=(aarch64)
+ url='https://github.com/ROCKNIX/distribution'
+diff --git a/packages/thorch-bsp/inputd/thorch-inputd.rs b/packages/thorch-bsp/inputd/thorch-inputd.rs
+index 5738dbc..4bf0c7f 100644
+--- a/packages/thorch-bsp/inputd/thorch-inputd.rs
++++ b/packages/thorch-bsp/inputd/thorch-inputd.rs
+@@ -357,7 +357,9 @@ fn thorch_user() -> String {
+         }
+     }
+ 
+-    "thorch".to_string()
++    // ThorDS images use the dedicated `thords` kiosk account. Images with an
++    // SDDM autologin declaration above still select their configured user.
++    "thords".to_string()
+ }
+ 
+ fn passwd_home(user: &str) -> Option<String> {
+diff --git a/packages/thorch-bsp/payload/etc/systemd/logind.conf.d/50-thorch-native-suspend.conf b/packages/thorch-bsp/payload/etc/systemd/logind.conf.d/50-thorch-native-suspend.conf
+index a0962f8..90d3567 100644
+--- a/packages/thorch-bsp/payload/etc/systemd/logind.conf.d/50-thorch-native-suspend.conf
++++ b/packages/thorch-bsp/payload/etc/systemd/logind.conf.d/50-thorch-native-suspend.conf
+@@ -2,7 +2,9 @@
+ # systemd-logind owns native suspend policy for the lid switch and power key.
+ # The Thor DTB marks the Hall lid GPIO as a wake source so opening the lid can
+ # wake the system after logind has put it to sleep.
+-HandlePowerKey=suspend
++# ThorDS relays a short press to Azahar's emulated 3DS Power button. The lid
++# remains the native suspend/wake control, matching a real clamshell handheld.
++HandlePowerKey=ignore
+ HandlePowerKeyLongPress=ignore
+ HandleSuspendKey=suspend
+ HandleLidSwitch=suspend
+diff --git a/packages/thorch-bsp/payload/etc/thorch/hardware.conf b/packages/thorch-bsp/payload/etc/thorch/hardware.conf
+index a562dad..fda7a8f 100644
+--- a/packages/thorch-bsp/payload/etc/thorch/hardware.conf
++++ b/packages/thorch-bsp/payload/etc/thorch/hardware.conf
+@@ -39,7 +39,7 @@ THORCH_FAN_SENSOR_MODE=max
+ #   static  - apply THORCH_RGB_STATIC_* once at boot
+ #   off     - keep the stick LEDs off
+ THORCH_RGB_MODE=battery
+-THORCH_RGB_BRIGHTNESS=255
++THORCH_RGB_BRIGHTNESS=128
+ THORCH_RGB_STATIC_R=0
+ THORCH_RGB_STATIC_G=128
+ THORCH_RGB_STATIC_B=255
+diff --git a/packages/thorch-bsp/payload/etc/thorch/inputd.conf b/packages/thorch-bsp/payload/etc/thorch/inputd.conf
+index 3a4dfb3..86e4c87 100644
+--- a/packages/thorch-bsp/payload/etc/thorch/inputd.conf
++++ b/packages/thorch-bsp/payload/etc/thorch/inputd.conf
+@@ -9,7 +9,7 @@
+ #   BTN_TL    + East/West/Back/North = screenshot/MangoHud/screen switch/game guide hooks
+ #
+ # Values are whitespace-separated Linux input event names or numeric codes.
+-#THORCH_INPUTD_DEVICE_NAMES="gpio-keys gpio-keys-ayn pmic_resin AYN Odin2 Gamepad RSInput Gamepad InputPlumber Keyboard Microsoft Xbox Series S|X Controller"
++THORCH_INPUTD_DEVICE_NAMES="AYN Odin2 Gamepad RSInput Gamepad InputPlumber Keyboard Microsoft Xbox Series S|X Controller"
+ # Never add gpio-keys-lid: the hall lid switch must stay ungrabbed so
+ # systemd-logind sees SW_LID and can suspend on lid close.
+ #THORCH_INPUTD_BRIGHTNESS_MODIFIERS=BTN_MODE
+diff --git a/packages/thorch-bsp/payload/usr/bin/thorch-rebuild-abl-kernel b/packages/thorch-bsp/payload/usr/bin/thorch-rebuild-abl-kernel
+index 6baf758..5749159 100755
+--- a/packages/thorch-bsp/payload/usr/bin/thorch-rebuild-abl-kernel
++++ b/packages/thorch-bsp/payload/usr/bin/thorch-rebuild-abl-kernel
+@@ -153,7 +153,7 @@ python3 "${boot_tool}" prepare-repack "${source_kernel}" "${tmpdir}"
+ 
+ # shellcheck disable=SC1091
+ . "${tmpdir}/bootimg.env"
+-cmdline="panic=30 audit=0 quiet rw rootwait rootdelay=15 allow_mismatched_32bit_el0 fw_devlink.strict=1 pcie_ports=compat irqaffinity=0-2 cgroup.memory=nokmem,nosocket nosoftlockup usbcore.interrupt_interval_override=045e:028e:2 mem_sleep_default=s2idle ufshcd_core.uic_cmd_timeout=3000 console=tty0 console=ttyMSM0,115200n8 fbcon=rotate:1 root=UUID=${root_uuid} rootfstype=${rootfstype}"
++cmdline="panic=30 audit=0 quiet loglevel=3 logo.nologo systemd.show_status=false rd.systemd.show_status=false vt.global_cursor_default=0 rw rootwait allow_mismatched_32bit_el0 fw_devlink.strict=1 pcie_ports=compat irqaffinity=3-7 cgroup.memory=nokmem,nosocket nosoftlockup usbcore.interrupt_interval_override=045e:028e:2 mem_sleep_default=s2idle ufshcd_core.uic_cmd_timeout=3000 console=tty0 console=ttyMSM0,115200n8 fbcon=rotate:1 root=UUID=${root_uuid} rootfstype=${rootfstype}"
+ mkbootimg_args=(
+   --kernel "${tmpdir}/kernel"
+   --ramdisk "${initrd_image}"
+diff --git a/packages/thorch-bsp/payload/usr/lib/systemd/system-preset/80-thorch.preset b/packages/thorch-bsp/payload/usr/lib/systemd/system-preset/80-thorch.preset
+index 5afc6d6..e5e3e0b 100644
+--- a/packages/thorch-bsp/payload/usr/lib/systemd/system-preset/80-thorch.preset
++++ b/packages/thorch-bsp/payload/usr/lib/systemd/system-preset/80-thorch.preset
+@@ -1,5 +1,6 @@
+ enable thorch-boot-confirm.service
+-enable thorch-debug-report.service
++disable thorch-debug-report.service
++enable thorch-debug-report.timer
+ enable thorch-fancontrol.service
+ enable thorch-hw-defaults.service
+ enable thorch-inputd.service
+diff --git a/packages/thorch-bsp/payload/usr/lib/udev/rules.d/99-thorch-sm8550-usb-autosuspend.rules b/packages/thorch-bsp/payload/usr/lib/udev/rules.d/99-thorch-sm8550-usb-autosuspend.rules
+index 9874e43..3aac619 100644
+--- a/packages/thorch-bsp/payload/usr/lib/udev/rules.d/99-thorch-sm8550-usb-autosuspend.rules
++++ b/packages/thorch-bsp/payload/usr/lib/udev/rules.d/99-thorch-sm8550-usb-autosuspend.rules
+@@ -1,4 +1,4 @@
+ # The primary SM8550 DWC3 controller otherwise remains runtime-active and
+ # holds its 1 GB/s USB-to-DDR interconnect vote while idle. Runtime PM honours
+ # attached-device activity, so only an idle controller is autosuspended.
+-ACTION=="add", SUBSYSTEM=="platform", KERNEL=="a600000.usb", ATTR{power/control}="auto"
++ACTION=="add|bind", SUBSYSTEM=="platform", KERNEL=="a600000.usb", ATTR{power/control}="auto"
+diff --git a/packages/thorch-firmware-rocknix/PKGBUILD b/packages/thorch-firmware-rocknix/PKGBUILD
+index 368bd38..37699c6 100644
+--- a/packages/thorch-firmware-rocknix/PKGBUILD
++++ b/packages/thorch-firmware-rocknix/PKGBUILD
+@@ -2,7 +2,7 @@
+ 
+ pkgname=thorch-firmware-rocknix
+ pkgver=1
+-pkgrel=13
++pkgrel=14
+ pkgdesc='Public and image-derived ROCKNIX SM8550 firmware packaged for Thorch'
+ arch=(aarch64)
+ url='https://github.com/ROCKNIX/distribution'
+diff --git a/scripts/build-image.sh b/scripts/build-image.sh
+index c1a3dea..6308fae 100755
+--- a/scripts/build-image.sh
++++ b/scripts/build-image.sh
+@@ -636,19 +636,23 @@ cat > "${rootfs_dir}/etc/locale.conf" <<'EOF'
+ LANG=C.UTF-8
+ EOF
+ run_rootfs "for g in wheel adm video input audio storage render; do getent group \$g >/dev/null || groupadd -r \$g; done"
+-run_rootfs "id ${thorch_user_q} >/dev/null 2>&1 || useradd -m -s /bin/bash -G wheel,adm,video,input,audio,storage,render ${thorch_user_q}"
++run_rootfs "if id ${thorch_user_q} >/dev/null 2>&1; then usermod -aG wheel,adm,video,input,audio,storage,render ${thorch_user_q}; else useradd -m -s /bin/bash -G wheel,adm,video,input,audio,storage,render ${thorch_user_q}; fi"
+ if [[ "${THORCH_USER}" != "alarm" ]]; then
+   run_rootfs "if id alarm >/dev/null 2>&1; then userdel -r alarm >/dev/null 2>&1 || usermod -L -s /usr/bin/nologin alarm; fi"
+ fi
+ initialize_rootfs_passwords
+-case "${THORCH_DEFAULT_SESSION}" in
+-  plasma|plasma-desktop) default_session_mode=desktop ;;
+-  mobile|plasma-mobile) default_session_mode=mobile ;;
+-  *) die "unsupported THORCH_DEFAULT_SESSION: ${THORCH_DEFAULT_SESSION}" ;;
+-esac
+-THORCH_SESSIONCTL_ROOT="${rootfs_dir}" \
+-  "${rootfs_dir}/usr/bin/thorch-sessionctl" set "${default_session_mode}" \
+-    --user "${THORCH_USER}" --no-restart >/dev/null
++if [[ -x "${rootfs_dir}/usr/bin/thorch-sessionctl" ]]; then
++  case "${THORCH_DEFAULT_SESSION}" in
++    plasma|plasma-desktop) default_session_mode=desktop ;;
++    mobile|plasma-mobile) default_session_mode=mobile ;;
++    *) die "unsupported THORCH_DEFAULT_SESSION: ${THORCH_DEFAULT_SESSION}" ;;
++  esac
++  THORCH_SESSIONCTL_ROOT="${rootfs_dir}" \
++    "${rootfs_dir}/usr/bin/thorch-sessionctl" set "${default_session_mode}" \
++      --user "${THORCH_USER}" --no-restart >/dev/null
++else
++  log "selected package profile has no thorch-sessionctl; using its packaged service presets"
++fi
+ rsync -a "${rootfs_dir}/etc/skel/." "${rootfs_dir}/home/${THORCH_USER}/"
+ install -d -m 0700 "${rootfs_dir}/home/${THORCH_USER}/.cache"
+ rm -f \
+@@ -657,6 +661,17 @@ rm -f \
+   "${rootfs_dir}/home/${THORCH_USER}/Desktop/thorch-expand-root.desktop" \
+   "${rootfs_dir}/home/${THORCH_USER}/Desktop/thorch-install-waydroid.desktop"
+ run_rootfs "chown -R ${THORCH_USER}:${THORCH_USER} /home/${THORCH_USER}"
++
++# Private console/game data is deliberately kept outside package sources. A
++# local test build may opt in by mounting a payload and setting this variable.
++rm -rf "${rootfs_dir}/opt/thords-testdata"
++if [[ -n "${THORDS_TESTDATA_DIR:-}" ]]; then
++  [[ -d "${THORDS_TESTDATA_DIR}" ]] || die "THORDS_TESTDATA_DIR is not a directory: ${THORDS_TESTDATA_DIR}"
++  log "staging local ThorDS test payload"
++  install -d -m 0700 "${rootfs_dir}/opt/thords-testdata"
++  rsync -a "${THORDS_TESTDATA_DIR}/" "${rootfs_dir}/opt/thords-testdata/"
++  run_rootfs "chown -R ${THORCH_USER}:${THORCH_USER} /opt/thords-testdata && find /opt/thords-testdata -type d -exec chmod 0700 {} + && find /opt/thords-testdata -type f -exec chmod 0600 {} +"
++fi
+ # The ALARM tarball may not include an empty /boot entry once boot contents are excluded.
+ install -d "${rootfs_dir}/boot"
+ root_uuid="$(uuidgen)"
+diff --git a/scripts/sync-rocknix-sources.sh b/scripts/sync-rocknix-sources.sh
+index 772b192..d0b8d27 100755
+--- a/scripts/sync-rocknix-sources.sh
++++ b/scripts/sync-rocknix-sources.sh
+@@ -98,7 +98,7 @@ sync_required_dir() {
+   [[ -d "${from}" ]] || die "required ROCKNIX path missing: ${from}"
+   rm -rf "${to}"
+   install -d "$(dirname "${to}")"
+-  rsync -a "${from}/" "${to}/"
++  rsync -a --no-owner --no-group "${from}/" "${to}/"
+ }
+ 
+ sync_optional_dir() {
+@@ -109,7 +109,7 @@ sync_optional_dir() {
+     return 0
+   fi
+   install -d "$(dirname "${to}")"
+-  rsync -a "${from}/" "${to}/"
++  rsync -a --no-owner --no-group "${from}/" "${to}/"
+ }
+ 
+ install -d "${dest_abs}"
+@@ -135,7 +135,7 @@ if [[ "${with_firmware}" -eq 1 ]]; then
+   fw_src="${src}/filesystem/usr/lib/kernel-overlays/base/lib/firmware"
+   rm -rf "${dest_abs}/firmware"
+   install -d "${dest_abs}/firmware"
+-  rsync -a "${fw_src}/" "${dest_abs}/firmware/"
++  rsync -a --no-owner --no-group "${fw_src}/" "${dest_abs}/firmware/"
+   {
+     printf 'ROCKNIX_REPO=%s\n' "${ROCKNIX_REPO}"
+     printf 'REQUESTED_REF=%s\n' "${ref}"

@@ -1,0 +1,10 @@
+2026-10-21T21:36:14+01:00
+{"sample": {"boottime": 657.442695675, "timestamp": 1792614974.852344, "status": "Charging", "capacity": 21, "charge_counter": 1231519, "current_now": 4031349, "voltage_now": 3984076, "power_now": 40287208, "temp": 260, "iv_watts": 16.061200798524, "cpu": {"policy0": {"scaling_governor": "schedutil", "scaling_cur_freq": 1017600, "scaling_max_freq": 2016000}, "policy7": {"scaling_governor": "schedutil", "scaling_cur_freq": 2592000, "scaling_max_freq": 3187200}, "policy3": {"scaling_governor": "schedutil", "scaling_cur_freq": 2457600, "scaling_max_freq": 2803200}}, "gpu": {"governor": "simple_ondemand", "cur_freq": 680000000, "min_freq": 124800000, "max_freq": 680000000}, "brightness": {"ae94000.dsi.0": 63, "ae96000.dsi.0": 1433}}}
+1
+Oct 21 21:31:34 alarm kernel: PM: suspend entry (s2idle)
+Oct 21 21:35:00 alarm kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Oct 21 21:35:00 alarm kernel: PM: suspend exit
+/home/thords/charging-20261021/1792604152.876990-pre.json
+/home/thords/charging-20261021/1792614099.359220-post.json
+/home/thords/charging-20261021/1792614694.042074-pre.json
+/home/thords/charging-20261021/1792614900.386925-post.json

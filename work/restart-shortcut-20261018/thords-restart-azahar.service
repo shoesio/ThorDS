@@ -1,0 +1,11 @@
+[Unit]
+Description=Restart kiosk Azahar after Home and Back hold
+
+[Service]
+Type=oneshot
+User=thords
+Group=thords
+ExecStart=/usr/local/libexec/thords/thords-restart-azahar
+TimeoutStartSec=30
+NoNewPrivileges=yes
+ProtectSystem=strict

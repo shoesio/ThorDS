@@ -1,0 +1,50 @@
+Subject: [PATCH] input: rsinput: quiesce and restore Thor MCU across sleep
+
+Adapted for the pinned ROCKNIX driver from Armada 0508 and 1005.
+Source: https://github.com/armada-os/armada/tree/main/packages/kernel/patches
+Originally-by: Luke Johnson <jaewun@me.com>
+This driver has no rumble workqueue; preserve its existing input path.
+--- a/drivers/input/joystick/rsinput.c
++++ b/drivers/input/joystick/rsinput.c
+@@ -18,6 +18,7 @@
+ #include <linux/serdev.h>
+ #include <linux/slab.h>
+ #include <linux/platform_device.h>
++#include <linux/pm.h>
+ #include <uapi/linux/sched/types.h>
+ 
+ static int update_params=0;
+@@ -626,6 +627,25 @@
+     regulator_disable(drv->vdd);
+ }
+ 
++/* Quiesce reports before the parent UART suspends. Resume restores the MCU. */
++static int rsinput_suspend(struct device *dev)
++{
++    struct rsinput_driver *drv = dev_get_drvdata(dev);
++
++    if (drv->enable_gpio)
++        gpiod_set_value_cansleep(drv->enable_gpio, 0);
++    if (drv->reset_gpio)
++        gpiod_set_value_cansleep(drv->reset_gpio, 0);
++    return 0;
++}
++
++static int rsinput_resume(struct device *dev)
++{
++    return rsinput_init_commands(dev_get_drvdata(dev));
++}
++
++static DEFINE_SIMPLE_DEV_PM_OPS(rsinput_pm_ops, rsinput_suspend, rsinput_resume);
++
+ static const struct of_device_id rsinput_of_match[] = {
+     { .compatible = "gamepad,rsinput" },
+     { /* sentinel */ }
+@@ -638,6 +658,7 @@
+     .driver = {
+         .name = "rsinput",
+         .of_match_table = rsinput_of_match,
++        .pm = pm_sleep_ptr(&rsinput_pm_ops),
+     },
+ };
+ 

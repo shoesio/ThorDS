@@ -1,0 +1,232 @@
+#!/usr/bin/env bash
+set -u
+
+# Only one session helper may own Azahar and its writable NAND/SDMC state.
+# An old Sway process can otherwise orphan its helper during maintenance and
+# race a replacement session, risking title database and save corruption.
+session_lock="/run/user/$(id -u)/thords-session.lock"
+exec 9>"$session_lock"
+if ! flock -n 9; then
+  exit 0
+fi
+
+export QT_QPA_PLATFORM=wayland
+# The Thor's high-density handheld panels make Azahar's desktop-sized
+# launcher controls too small for reliable touch input.
+export QT_SCALE_FACTOR=1.5
+export QT_FONT_DPI=144
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCALE_FACTOR_ROUNDING_POLICY=PassThrough
+export SDL_VIDEODRIVER=wayland
+export SDL_AUDIODRIVER=pulseaudio
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=ThorDS
+export THORDS_POWEROFF_ON_GUEST_SHUTDOWN=1
+
+mkdir -p "$HOME/.config/azaharplus-emu" "$HOME/.local/share/azaharplus-emu" /var/log/thords 2>/dev/null || true
+
+# Avoid the first-run game-folder chooser. Installed SD/NAND titles are the
+# only libraries needed by the dedicated kiosk image.
+qt_config="$HOME/.config/azaharplus-emu/qt-config.ini"
+if [[ ! -f "$qt_config" ]]; then
+  cat >"$qt_config" <<'EOF'
+[Paths]
+gamedirs\1\deep_scan=false
+gamedirs\1\expanded=true
+gamedirs\1\path=INSTALLED
+gamedirs\2\deep_scan=false
+gamedirs\2\expanded=true
+gamedirs\2\path=SYSTEM
+gamedirs\size=2
+
+[Layout]
+layout_option=6
+layout_option\default=false
+custom_top_x=0
+custom_top_y=0
+custom_top_width=1920
+custom_top_height=1080
+custom_bottom_x=1920
+custom_bottom_y=75
+custom_bottom_width=1242
+custom_bottom_height=930
+
+[UI]
+singleWindowMode=true
+singleWindowMode\default=false
+fullscreen=true
+fullscreen\default=false
+EOF
+fi
+
+# Use Azahar's separate Vulkan windows so the 120 Hz top panel is not paced by
+# the 60 Hz lower panel. The kiosk window manager places each render surface
+# independently on its physical output.
+sed -i 's/^singleWindowMode=.*/singleWindowMode=false/' "$qt_config"
+sed -i 's/^singleWindowMode\\default=.*/singleWindowMode\\default=false/' "$qt_config"
+sed -i 's/^layout_option=.*/layout_option=4/' "$qt_config"
+sed -i 's/^layout_option\\default=.*/layout_option\\default=false/' "$qt_config"
+sed -i 's/^fullscreen=.*/fullscreen=false/' "$qt_config"
+sed -i 's/^fullscreen\\default=.*/fullscreen\\default=false/' "$qt_config"
+# Match each custom viewport to its non-overlapping physical output.
+sed -i 's/^custom_top_width=.*/custom_top_width=1920/' "$qt_config"
+sed -i 's/^custom_bottom_x=.*/custom_bottom_x=1920/' "$qt_config"
+# Two pixels of right-edge bleed make the viewport width exactly divisible by
+# the 3x render scale. They are clipped beyond DSI-1, preventing fractional
+# sampling at the game viewport edge.
+sed -i 's/^custom_bottom_width=.*/custom_bottom_width=1242/' "$qt_config"
+# Cubeb cannot create a stream against ThorDS's PipeWire-Pulse service. SDL2's
+# PulseAudio backend is reliable on this image (SinkType::SDL2 = 4).
+sed -i 's/^output_type=.*/output_type=4/' "$qt_config"
+sed -i 's/^output_type\\default=.*/output_type\\default=false/' "$qt_config"
+# Three-times native is a balanced quality profile on Adreno 740: noticeably
+# cleaner than 2x while avoiding much of the fill-rate cost of 4x.
+sed -i 's/^resolution_factor=.*/resolution_factor=3/' "$qt_config"
+sed -i 's/^resolution_factor\\default=.*/resolution_factor\\default=false/' "$qt_config"
+# Anime4K sharpens the original low-resolution textures before the 3x render
+# is presented, improving detail without softening the final integer-scaled
+# image. TextureFilter::Anime4K = 1.
+sed -i 's/^texture_filter=.*/texture_filter=1/' "$qt_config"
+sed -i 's/^texture_filter\\default=.*/texture_filter\\default=false/' "$qt_config"
+# Small HOME Menu glyphs (notably the date and time) develop visible halos
+# under Anime4K. Keep the global game filter, but render HOME Menu textures
+# unfiltered through its per-title override.
+home_menu_config="$HOME/.config/azaharplus-emu/custom/0004003000009802.ini"
+if [[ -f "$home_menu_config" ]]; then
+  if grep -q '^texture_filter=' "$home_menu_config"; then
+    sed -i 's/^texture_filter=.*/texture_filter=0/' "$home_menu_config"
+  else
+    sed -i '/^texture_filter\\use_global=/i texture_filter=0' "$home_menu_config"
+  fi
+  sed -i 's/^texture_filter\\use_global=.*/texture_filter\\use_global=false/' "$home_menu_config"
+fi
+# Avoid rendering the unused stereoscopic eye and favour the faster shader
+# multiplication path. ThorDS has no stereoscopic display.
+sed -i 's/^disable_right_eye_render=.*/disable_right_eye_render=true/' "$qt_config"
+sed -i 's/^disable_right_eye_render\\default=.*/disable_right_eye_render\\default=false/' "$qt_config"
+sed -i 's/^shaders_accurate_mul=.*/shaders_accurate_mul=false/' "$qt_config"
+sed -i 's/^shaders_accurate_mul\\default=.*/shaders_accurate_mul\\default=false/' "$qt_config"
+# Nearest filtering is both sharper at integer scale and slightly cheaper.
+sed -i 's/^filter_mode=.*/filter_mode=false/' "$qt_config"
+sed -i 's/^filter_mode\\default=.*/filter_mode\\default=false/' "$qt_config"
+
+/usr/bin/thords-diagnostics 9>&- &
+/home/thords/.local/bin/thords-window-manager 9>&- &
+/usr/bin/thords-brightness-hotkeys 9>&- &
+/usr/bin/thords-prepare-testdata >>/var/log/thords/testdata.log 2>&1 || true
+/usr/bin/thords-configure-controls >>/var/log/thords/controls.log 2>&1 || true
+/usr/bin/thords-configure-performance >>/var/log/thords/performance.log 2>&1 || true
+/usr/bin/thords-framegen-input >>/var/log/thords/framegen.log 2>&1 &
+
+# SDL chooses its PulseAudio target only once during Azahar startup. PipeWire
+# itself answers several seconds before WirePlumber has created the Thor's ALSA
+# speaker sink, so merely waiting for `wpctl status` is racy and can leave the
+# whole session attached to a permanent null output. Give the real sink only a
+# short head start; a background check below retries Azahar if it loses the
+# race, rather than holding every boot at the splash screen.
+find_speaker_sink() {
+  pactl list short sinks 2>/dev/null | awk '
+    /HiFi__Speaker__sink/ { print $1 " " $2; exit }
+  '
+}
+
+prepare_speaker_sink() {
+  local sink=$1
+  pactl set-default-sink "$sink" >/dev/null 2>&1 || true
+  pactl set-sink-mute "$sink" 0 >/dev/null 2>&1 || true
+}
+
+watch_azahar_audio() {
+  local azahar_pid=$1 sink_info sink_id sink_name
+  while kill -0 "$azahar_pid" 2>/dev/null; do
+    sink_info=$(find_speaker_sink)
+    if [[ -n "$sink_info" ]]; then
+      read -r sink_id sink_name <<<"$sink_info"
+      prepare_speaker_sink "$sink_name"
+      # Allow SDL a few seconds to create its playback stream once the sink is
+      # present. If it cannot, this process was bound before the route existed.
+      for _ in {1..60}; do
+        kill -0 "$azahar_pid" 2>/dev/null || return 0
+        if pactl list short sink-inputs 2>/dev/null | \
+            awk -v id="$sink_id" '$2 == id { found=1 } END { exit !found }'; then
+          printf 'Azahar playback ready on %s at %s\n' "$sink_name" "$(date)" \
+            >>/var/log/thords/audio.log
+          return 0
+        fi
+        sleep 0.5
+      done
+      # A missing/late speaker route must not kill the emulator. SDL may
+      # attach to the sink later, and killing Azahar here hides the UI behind
+      # the kiosk artwork and makes display debugging impossible.
+      printf 'Speaker route not ready; leaving Azahar running at %s\n' "$(date)" \
+        >>/var/log/thords/audio.log
+      return 0
+    fi
+    sleep 0.5
+  done
+}
+
+for _ in {1..10}; do
+  audio_sink_info=$(find_speaker_sink)
+  if [[ -n "$audio_sink_info" ]]; then
+    read -r audio_sink_id audio_sink <<<"$audio_sink_info"
+    prepare_speaker_sink "$audio_sink"
+    break
+  fi
+  sleep 0.5
+done
+
+home_menu="$HOME/.local/share/azaharplus-emu/nand/00000000000000000000000000000000/title/00040030/00009802/content/00000089.app"
+otp="$HOME/.local/share/azaharplus-emu/sysdata/otp.bin"
+
+quick_failures=0
+auto_boot_home=true
+if [[ -e "$HOME/.config/thords/disable-home-autoboot" ]]; then
+  auto_boot_home=false
+  printf 'HOME Menu autoboot disabled by recovery marker\n' \
+    >>/var/log/thords/azahar.log
+fi
+
+while true; do
+  if command -v azahar >/dev/null 2>&1; then
+    started_at=$(date +%s)
+    if [[ "$auto_boot_home" == true && -f "$home_menu" && -s "$otp" ]]; then
+      thords-azahar --boot-home-menu-europe 9>&- >>/var/log/thords/azahar.log 2>&1 &
+    else
+      thords-azahar 9>&- >>/var/log/thords/azahar.log 2>&1 &
+    fi
+    azahar_pid=$!
+    watch_azahar_audio "$azahar_pid" 9>&- &
+    audio_watch_pid=$!
+    wait "$azahar_pid"
+    rc=$?
+    kill "$audio_watch_pid" >/dev/null 2>&1 || true
+    wait "$audio_watch_pid" 2>/dev/null || true
+    runtime=$(($(date +%s) - started_at))
+    printf 'Azahar exited %s at %s\n' "$rc" "$(date)" >>/var/log/thords/azahar.log
+
+    # Recover normal crashes by relaunching HOME Menu. Three failures during
+    # its first 30 seconds disable automatic boot for this session and expose
+    # the launcher, avoiding an unusable splash/crash loop.
+    if [[ "$auto_boot_home" == true && "$runtime" -lt 30 ]]; then
+      quick_failures=$((quick_failures + 1))
+      if [[ "$quick_failures" -ge 3 ]]; then
+        auto_boot_home=false
+        printf 'HOME Menu failed quickly 3 times; falling back to launcher\n' \
+          >>/var/log/thords/azahar.log
+      fi
+    else
+      quick_failures=0
+    fi
+    sleep 2
+  else
+    foot --title="ThorDS bring-up" sh -lc '
+      clear
+      printf "\n  ThorDS 0.1\n\n"
+      printf "  Azahar is not installed or did not build.\n"
+      printf "  Hardware report: /var/log/thords/hardware.txt\n\n"
+      exec bash
+    '
+    sleep 2
+  fi
+done

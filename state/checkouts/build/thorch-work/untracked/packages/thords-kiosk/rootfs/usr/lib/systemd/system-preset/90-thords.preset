@@ -1,0 +1,12 @@
+enable thords-session.service
+enable thords-performance.service
+enable thords-hardware-buttons.service
+enable seatd.service
+enable NetworkManager.service
+enable sshd.service
+disable getty@tty1.service
+
+enable thords-irq-policy.service
+enable thords-sleep-guard.service
+enable thords-early-splash.service
+enable thords-low-battery-shutdown.service

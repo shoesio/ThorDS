@@ -1,0 +1,86 @@
+--- work/clock-fix-20261018/shared_page.cpp.before	2026-10-18 18:19:32
++++ work/clock-fix-20261018/shared_page.cpp	2026-10-18 18:20:27
+@@ -61,6 +61,26 @@
+     return static_cast<u8>(Service::PTM::ChargeLevels::CompletelyFull);
+ }
+ 
++static std::chrono::milliseconds GetHostTime() {
++    auto now = std::chrono::system_clock::now();
++    // If the system time is in daylight saving, we give an additional hour to console time
++    std::time_t now_time_t = std::chrono::system_clock::to_time_t(now);
++    std::tm* now_tm = std::localtime(&now_time_t);
++    if (now_tm && now_tm->tm_isdst > 0)
++        now = now + std::chrono::hours(1);
++
++    // add the offset
++    s64 init_time_offset = Settings::values.init_time_offset.GetValue();
++    long long days_offset = init_time_offset / 86400;
++    long long days_offset_in_seconds = days_offset * 86400; // h/m/s truncated
++    unsigned long long seconds_offset =
++        std::abs(init_time_offset) - std::abs(days_offset_in_seconds);
++
++    now = now + std::chrono::seconds(seconds_offset);
++    now = now + std::chrono::seconds(days_offset_in_seconds);
++    return std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch());
++}
++
+ std::chrono::seconds GetInitTime(u64 override_init_time) {
+     if (override_init_time != 0) {
+         // Override the clock init time with the one in the movie
+@@ -68,25 +88,8 @@
+     }
+ 
+     switch (Settings::values.init_clock.GetValue()) {
+-    case Settings::InitClock::SystemTime: {
+-        auto now = std::chrono::system_clock::now();
+-        // If the system time is in daylight saving, we give an additional hour to console time
+-        std::time_t now_time_t = std::chrono::system_clock::to_time_t(now);
+-        std::tm* now_tm = std::localtime(&now_time_t);
+-        if (now_tm && now_tm->tm_isdst > 0)
+-            now = now + std::chrono::hours(1);
+-
+-        // add the offset
+-        s64 init_time_offset = Settings::values.init_time_offset.GetValue();
+-        long long days_offset = init_time_offset / 86400;
+-        long long days_offset_in_seconds = days_offset * 86400; // h/m/s truncated
+-        unsigned long long seconds_offset =
+-            std::abs(init_time_offset) - std::abs(days_offset_in_seconds);
+-
+-        now = now + std::chrono::seconds(seconds_offset);
+-        now = now + std::chrono::seconds(days_offset_in_seconds);
+-        return std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch());
+-    }
++    case Settings::InitClock::SystemTime:
++        return std::chrono::duration_cast<std::chrono::seconds>(GetHostTime());
+     case Settings::InitClock::FixedTime:
+         return std::chrono::seconds(Settings::values.init_time.GetValue());
+     default:
+@@ -127,8 +130,15 @@
+ }
+ 
+ u64 Handler::GetSystemTimeSince2000() const {
+-    std::chrono::milliseconds now =
+-        init_time + std::chrono::duration_cast<std::chrono::milliseconds>(timing.GetGlobalTimeUs());
++    // The real 3DS RTC advances while the lid is closed. Emulated ticks
++    // stop during host suspend and lag behind at less than full speed.
++    // Fixed clocks and movie time overrides retain deterministic timing.
++    const bool use_host_clock =
++        Settings::values.init_clock.GetValue() == Settings::InitClock::SystemTime &&
++        Core::System::GetInstance().Movie().GetOverrideInitTime() == 0;
++    const std::chrono::milliseconds now = use_host_clock
++        ? GetHostTime()
++        : init_time + std::chrono::duration_cast<std::chrono::milliseconds>(timing.GetGlobalTimeUs());
+ 
+     // 3DS system does't allow user to set a time before Jan 1 2000,
+     // so we use it as an auxiliary epoch to calculate the console time.
+@@ -171,8 +181,8 @@
+     shared_page.battery_state.is_adapter_connected.Assign(HostAdapterConnected());
+     shared_page.battery_state.is_charging.Assign(HostBatteryCharging());
+ 
+-    // HOME reads the shared page; refresh it when the charger or charge level changes.
+-    timing.ScheduleEvent(msToCycles(5 * 1000) - cycles_late, update_time_event);
++    // Refresh the shared-page RTC within one emulated second after resume.
++    timing.ScheduleEvent(msToCycles(1000) - cycles_late, update_time_event);
+ }
+ 
+ void Handler::SetMacAddress(const MacAddress& addr) {

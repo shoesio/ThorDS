@@ -1,0 +1,11 @@
+README.md: OK
+UPSTREAM.json: OK
+install.sh: OK
+linux-thorch-7.1.2-19-aarch64.pkg.tar.xz: OK
+linux-thorch-7.1.2-20-aarch64.pkg.tar.xz: OK
+rollback.sh: OK
+thords-power-sample: OK
+thords-sleep-guard: OK
+linux-thorch 7.1.2-20
+7.1.2-thorch19
+38

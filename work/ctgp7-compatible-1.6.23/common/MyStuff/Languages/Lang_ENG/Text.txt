@@ -1,0 +1,564 @@
+## CTGP-7 English translation file.
+##
+## This file has been generated from the Mario Kart Translation Project spreadsheet.
+## If you want to contribute, please join the following discord server:
+## https://discord.gg/ubgfE96
+
+#Bell Cup
+$700010 :: Bell Cup
+$710042 :: Concord Town
+$710059 :: \uE022\uE023 Mario Raceway
+$710044 :: Galvarny Falls
+$710045 :: \uE024\uE025 Sky Garden
+
+#Acorn Cup
+$700011 :: Acorn Cup
+$710046 :: Autumn Forest
+$710068 :: \uE024\uE025 Riverside Park
+$710043 :: RMX Mario Circuit 1
+$710049 :: \uE024\uE025 Bowser Castle 3
+
+#Cloud Cup
+$700012 :: Cloud Cup
+$710053 :: \uE022\uE023 Frappe Snowland
+$710054 :: \uE022\uE023 Moo Moo Farm
+$710052 :: \uE033 Delfino Square
+$710096 :: \uE026\uE027 Mario Circuit
+
+#Boo Cup
+$700013 :: Boo Cup
+$710055 :: Banshee Boardwalk 2
+$710062 :: Elemental Cave
+$710057 :: \uE031\uE032 Ghost Valley 2
+$710065 :: \uE033 Cheep Cheep Beach
+
+#Spring Cup
+$700014 :: Spring Cup
+$710067 :: \uE033 Tick Tock Clock
+$710075 :: \uE026\uE027 Mushroom Bridge
+$710066 :: \uE033 Desert Hills
+$710069 :: Castle of Time
+
+#Egg Cup
+$700015 :: Egg Cup
+$710063 :: \uE033 Yoshi Falls
+$710047 :: \uE022\uE023 Choco Mountain
+$710048 :: \uE033 Shroom Ridge
+$710051 :: CTR Crash Cove
+
+#Bullet Cup
+$700016 :: Bullet Cup
+$710056 :: CTR Cortex Castle
+$710089 :: Revo Circuit
+$710061 :: \uE031\uE032 Choco Island 2
+$710064 :: Star Slope
+
+#Blooper Cup
+$700018 :: Blooper Cup
+$710074 :: Sandcastle Park
+$710058 :: Jungle Ruins
+$710076 :: \uE026\uE027 Luigi Circuit
+$710077 :: Volcano Beach Ruins
+
+#Feather Cup
+$700019 :: Feather Cup
+$710078 :: \uE026\uE027 Yoshi Circuit
+$710079 :: \uE024\uE025 Peach Circuit
+$710080 :: Metro Madness
+$710081 :: \uE024\uE025 Luigi Circuit
+
+#Fire Cup
+$700020 :: Fireball Cup
+$710082 :: SMO RC Challenge
+$710083 :: \uE024\uE025 Bowser Castle 4
+$710084 :: RMX Donut Plains 1
+$710085 :: Secret Slide
+
+#Bob-omb Cup
+$700021 :: Bob-omb Cup
+$710086 :: \uE033 Wario Stadium
+$710087 :: Ermii Circuit
+$710088 :: \uE026\uE027 Baby Park
+$710072 :: \uE026\uE027 Bowser Castle
+
+#Cherry Cup
+$700022 :: Cherry Cup
+$710090 :: \uE031\uE032 Mario Circuit 3
+$710091 :: Big Blue
+$710092 :: \uE024\uE025 Shy Guy Beach
+$710093 :: Bingo Party
+
+#Coin Cup
+$700023 :: Coin Cup
+$710094 :: Doge Desert
+$710095 :: \uE022\uE023 Banshee Boardwalk
+$710050 :: \uE022\uE023 DK's Jungle Parkway
+$710073 :: Miku's Birthday Spec. 2
+
+#Rainbow Cup
+$700017 :: Rainbow Cup
+$710070 :: \uE022\uE023 Rainbow Road
+$710071 :: \uE024\uE025 Rainbow Road
+$710114 :: RMX Rainbow Road 1
+$710097 :: Rainbow Road DX
+
+#Pickaxe Cup
+$700024 :: Pickaxe Cup
+$710098 :: Stargaze Summit
+$710099 :: Sunset Raceway
+$710100 :: \uE024\uE025 Broken Pier
+$710101 :: Glacier Mine
+
+#Mega Cup
+$700025 :: Mega Cup
+$710102 :: Flowerbed Fortress
+$710103 :: Seaside Palace
+$710104 :: DKR Star City
+$710105 :: Mushroom Mountain
+
+#Propeller Cup
+$700026 :: Propeller Cup
+$710106 :: \uE022\uE023 Sherbet Land
+$710107 :: Block Island
+$710108 :: \uE033 Bowser Castle
+$710109 :: DKR Jungle Falls
+
+#POW Cup
+$700027 :: POW Cup
+$710110 :: Retro Raceway
+$710111 :: Frozen Grotto
+$710112 :: \uE024\uE025 Lakeside Park
+$710113 :: Dragon Burial Grounds
+
+#Rock Cup
+$700028 :: Rock Cup
+$710060 :: Warp Pipe Island
+$710115 :: Neo Metropolis
+$710116 :: Frosty Heights
+$710117 :: Gnasty Gnorc's Lair
+
+#Moon Cup
+$700029 :: Moon Cup
+$710118 :: RMX Vanilla Lake 1
+$710119 :: Cliffside Circuit
+$710120 :: Interstellar Laboratory
+$710121 :: Dark Matter Fortress
+
+#Hammer Cup
+$700030 :: Hammer Cup
+$710122 :: \uE031\uE032 Donut Plains 2
+$710123 :: Soaring Skyway
+$710124 :: \uE022\uE023 Bowser's Castle
+$710125 :: \uE067 DK Summit
+
+#Wonder Cup
+$700031 :: Wonder Cup
+$710126 :: Painted Swamp Raceway
+$710127 :: Roulette Road
+$710128 :: Orbital Outpost
+$710129 :: \uE033 Rainbow Road
+
+#Shine Cup
+$700032 :: Shine Cup
+$710130 :: Coral Cape
+$710131 :: \uE067 Wario's Gold Mine
+$710132 :: \uE033 Peach Gardens
+$710133 :: Breezechill Citadel
+
+#Dark Star Cup
+$700033 :: Dark Star Cup
+$710134 :: Dark Sanctuary
+$710135 :: Hell Pyramid
+$710136 :: \uE026\uE027 Mushroom City
+$710137 :: Dark Star Castle
+
+#Save Data
+$7005 :: Extra save data for CTGP-7\nwill be created in the SD card.
+$7003 :: Creating extra save data...
+$7004 :: Extra save data\nhas been created.
+$7007 :: Mario Kart 7 save data\ndoesn't exist, please launch\nthe game to generate new\nsave data.\n\nPress the POWER button. 
+
+#First opening welcome message
+welc_t :: Welcome to CTGP-7
+welc_1 :: Hello there!\nFrom the options menu,\nyou will be able to\nuse some interesting features.\nTo open the options menu,\nuse the (SELECT) button.
+welc_2 :: To use any feature, place the\ncursor over an entry and\npress A to enable/configure it.
+welc_3 :: Keep in mind that some features\nsuch as "CC Selector" will be\ndisabled while playing online.
+welc_4 :: Your statistics will be uploaded\nto the CTGP-7 Server so they\nare available to the public to see.\n(Data is anonymized.)\nServer communication can be\ndisabled from the options menu.
+welc_5 :: By using CTGP-7 Network\nyou agree to its rules.\n\nYou can check them here:\nctgp-7.github.io/ctww.html
+welc_6 :: Remember to check out\nthe CTGP-7 discord server!\n\nInvitation link:\ninvite.gg/ctgp7
+welc_7 :: We hope you enjoy the mod!\n^w^
+
+#Achievements
+achiev_all_gold :: You have got a gold trophy\nin all custom cups.\n\nCongratulations!
+achiev_all_1star :: You have got 1 star\nin all custom cups.\n\nCongratulations!
+achiev_all_3star :: You have got 3 stars\nin all custom cups.\n\nCongratulations!
+achiev_all_mission :: You have got 10 points\nin all missions.\n\nCongratulations!
+achiev_5000_vr :: You have got 5000 VR\nin custom tracks worldwide.\n\nCongratulations!
+achiev_all_score_completed :: You have cleared all\ntracks in Score Attack.\n\nCongratulations!
+achiev_blue_coin :: You have collected\nall blue coins!\n\nCongratulations!
+achiev_dodged_blue :: You have dodged\n3 blue shells!\n\nCongratulations!
+unlocked_item :: You have unlocked:\n\n
+types_achievs :: Normal achievements :: Special achievements
+types_achievs_optional :: Optional achievements
+gold_tro_achiev :: Gold in all custom track cups
+1star_achiev :: 1 star in all custom track cups
+3star_achiev :: 3 star in all custom track cups
+10pts_msn_achiev :: 10 points in all missions
+5000vr_achiev :: 5000VR in CTWW
+score_all_achiev :: All tracks cleared in Score Attack
+blue_coin_achiev :: All blue coins collected
+dodged_blue_achiev :: Dodged 3 blue shells
+dodged_blue_amount :: Blue shells dodged
+custom_track_cups :: Custom Track Cups
+tro_gold :: Gold
+tro_1star :: 1 Star
+tro_3star :: 3 Star
+tro_10pts :: 10 points
+tro_blue_collected :: Collected
+
+#General text
+warning :: WARNING
+error :: ERROR
+state :: State
+next :: Next
+select :: Select
+chng :: Change
+custom :: Custom
+page :: Page
+race_noun :: Race
+state_mode :: Enabled :: Disabled
+state_inf :: Enable :: Disable
+allow_inf :: Allow :: Disallow
+valid_inf :: Valid :: Invalid
+num_betw :: Number must be between %d and %d.
+settings :: Settings
+exit :: Exit
+default :: Default
+button :: Button
+summary :: Summary
+continue :: Continue
+mode_type :: Mode :: Type
+
+#Folders
+gameplay_folder :: Gameplay Features :: Configuration for additional gameplay features.
+settings_folder :: Game Settings :: CTGP-7 specific settings.
+other_folder :: Other Options :: Other miscellaneous information and features.
+
+#Entries
+spdmeter :: Speedometer :: Shows a speedometer in the top screen bottom right corner.
+ccsel :: CC Selector :: Sets the current CC to a certain value (has to be enabled before loading a race).
+itemled :: Warn Items With LED :: The notification LED blinks Blue when a Blue Shell is used and Yellow when a Lightning is used.
+backcam :: Backwards Camera :: Press \uE002 to see what's behind you, just like other Mario Kart games! (Note: The \uE002 button will no longer use items.)
+charman :: Custom Character Manager :: Switch between original and custom characters.
+cuskart :: Custom Karts :: Load custom karts from the MyStuff folder.
+trackorder :: Online Track Order :: Choose how the tracks will be ordered in cups online.
+itmprb :: Improved Item Roulette :: Displays the real item probabilities in the item roulette instead of showing random items.
+imtrick :: Improved Tricks ::  Karts will spin when doing a trick on a boost ramp. Use the \uE077 Circle Pad to change the spin direction.
+autoaccel :: Auto Acceleration :: Pressing \uE000 or \uE003 will enable automatic acceleration until \uE001 is pressed.  
+imbrakedrift :: Improved Brake Drift :: Hold \uE001 while drifting to brake without losing your miniturbo.
+autodelaydrift :: Automatic Delay Drift :: Helps preventing the kart from losing speed when starting a drift.
+improvedhorn :: Improved Horn :: Allows playing the horn with the item button and hearing other player's horns in multiplayer.
+achieventry :: Achievements :: Check the progress on CTGP-7 achievements.
+badgesentry :: Badges :: View obtained CTGP-7 badges (requires internet connection).
+optionsentry :: Options :: Configure CTGP-7 options.
+servsett :: Server Settings :: CTGP-7 server related settings.
+cloudsaveentry :: Cloud Save Backup :: Manage online save backups created from this console.
+
+#Speedometer text
+spd_set :: Speedometer settings.
+spd_unit :: Unit
+spd_type :: Type
+spd_sunit :: Select speedometer unit.
+spd_stype :: Select speedometer type.
+spd_types1 :: Digital :: Analog
+spd_types2 :: Double Dash
+
+#CC Selector text
+cc_set :: CC selector settings.
+cc_val :: Value
+cc_entv :: Enter new CC value.
+cc_chgv :: Change value
+
+#Course Manager
+track_ct :: Custom Tracks
+track_ori :: Original Tracks
+ct_endis :: Custom Tracks enabled :: Custom Tracks disabled
+ori_endis :: Original Tracks enabled :: Original Tracks disabled
+
+#Community Code Generator
+def_spd :: Default speed
+rand_tr :: Force random tracks
+code :: Code
+cusitem :: Custom items
+
+#Change Round Number
+chgrnd :: Change Round Number :: Changes the amount of rounds in VS and battle modes.
+chgrnd_desc :: Select the number of rounds to be\nplayed in VS or battle modes.\nNOTE: Doesn't work in download play.\nIn local multiplayer, everyone has\nto have the same settings.
+rounds :: Rounds
+rnd_sel :: Select the number of rounds.
+
+#Enhanced Local Map
+enhmap :: Enhanced Local Map :: Adds zoom functionality to the bottom screen local map by using the \uE058 touch screen.
+
+#Custom character manager text
+char_select :: Select a character to configure.
+reboot_req :: Reboot required to apply changes.
+face_raider_sel :: Select a face
+authors :: Authors
+change_face :: Change face
+
+#Online track order
+order_mode :: Default :: Alphabetical
+
+#Auto Acceleration
+autoaccel_button :: Choose the button that will\nactivate auto-acceleration.
+
+#Online update check
+update_check :: Checking for updates... :: The latest version of CTGP-7\nis required to play online.
+fail_conn :: Failed to connect\nwith the CTGP-7 server\n\nPlease try again later.
+
+#CTWW
+cntdwn :: Countdown
+ctww :: CTWW
+vr :: VR
+CTWWtog :: Would you like to enable\nCustom Tracks Worldwide? :: Would you like to disable\nCustom Tracks Worldwide?
+
+#VS Mode
+VSSet :: VS Settings
+CourOrd :: Course Order
+RacAm :: Race Amount
+CpuAm :: CPU Racers
+RanCT :: Random (CTs)
+RanOri :: Random (Original)
+RanAll :: Random (All)
+OrderH :: Horizontal Order
+OrderV :: Vertical Order
+NextRac :: Select next track.\nRemaining races:
+extra_diff :: Very Hard :: EXTREME
+cusitem_notice :: NOTE: The default item (%s) may still appear in some cases.
+item_mega :: Mega Mushroom
+item_fib :: Fake Item Box
+item_boxes :: Item Boxes
+item_periodic :: Periodic :: Choose how often objects should\nbe given in seconds.
+item_color_rain :: Color Box Rain
+item_box_rain :: Item Box Rain
+item_triple :: Triple Items
+item_bs_show :: Blue Shell Showdown
+item_sel_mode :: Select item mode. :: Select type of items.
+
+#Reset Ghosts
+resghost :: Reset Ghost :: Allows resetting the ghost from any track.
+ghostseltrack :: Select the track to reset the ghost from:
+ghostcantrecov :: This operation cannot be undone.\nProceed? :: The ghost has been reset.
+
+#Server Settings
+serv_consID :: CTGP-7 ConsoleID
+serv_communic :: Server Communication :: This functionality requires server\ncommunication to be enabled.
+serv_displname :: Display Name :: Select display name mode.
+serv_disphid :: Hidden
+serv_dispmii :: Mii Name
+serv_dispcust :: Enter custom name. :: Custom name can only be\n15 characters long.
+serv_qrshow :: Press \uE002 to show.
+
+#Statistics
+statsentry :: Local Statistics :: Check your CTGP-7 private usage statistics here.
+stats_tpl :: Times Played
+stats_tot :: Total Offline Races :: Total Online Races
+stats_sc :: Total Score Attack Races :: Total Weekly Challenge Attempts
+stats_vnll :: Vanilla
+stats_most :: Most Played Tracks :: Most Played Battle Arenas
+stats_rpoints :: Race Points
+
+#Discord
+disc_info :: Discord Info
+disc_notlink :: This console is not linked\nto a Discord account.\n\nWould you like to link your account?
+disc_linksteps1 :: Follow these steps to link your\nDiscord account:
+disc_linksteps2 :: 1. Join the CTGP-7 Discord server.\n(Link: invite.gg/ctgp7)
+disc_linksteps3 :: 2. Go to the \#bots channel.
+disc_linksteps4 :: 3. Send the following message:
+disc_data :: Account :: Nickname
+disc_beta :: Eligible for private beta tests. :: Not eligible for private beta tests.
+disc_unlink :: Unlink :: Would you like to unlink your\ndiscord account?
+
+#Render Optimizations
+render_optim :: Render Optimizations :: Disables the top screen 3D mode and enables the New 3DS CPU improvements.
+
+#Missions
+ms_miss :: Missions
+ms_desc :: Complete the challenges and get the best grade.
+ms_selmiss :: Select Mission
+ms_rcrd :: Record
+ms_gradelim :: Max. Grade :: Min. Grade
+ms_timescor :: Time :: Score
+ms_failed :: Mission Failed!
+ms_nodata :: No Data
+ms_delsave :: (Delete Save: \uE002) :: Delete this mission save data?
+msstat_msnplay :: Missions Played
+msstat_state :: Completed :: Failed
+msstat_perfgrad :: (with perfect grade)
+msstat_usermsn :: User Missions
+
+#Course Checksum
+course_check :: Course Checksum
+
+#Custom Server
+server_name :: Nintendo Network :: CTGP-7 Network
+server_choice :: Please select online server:\n\n%s:\n    - Only for CTGP-7 players\n    - CTWW and original tracks\n    - Strong anti-cheat\n%s:\n    - For all MK7 players\n    - Original tracks and communities\n    - Weak anti-cheat
+server_ctgp7_conn :: Connecting to\nCTGP-7 Network...
+server_ctgp7_dconn :: Disconnect from\nCTGP-7 Network?
+server_ctgp7_nocomm :: Communities are not available\nin CTGP-7 Network.
+
+#Blue Coins
+blue_coins :: Blue Coins
+blue_coins_desc :: A blue coin will appear in every track. Collect them all to unlock something!
+blue_coin_obtain :: $Blue Coin$\ncollected! :: %d tracks\nremaining.
+blue_coin_all :: All coins have\nbeen collected!
+blue_coin_nocc :: Blue Coins cannot be\nobtained with the CC\nselector enabled.
+
+#Lobby
+lobby_type :: Public lobby :: Private lobby
+choose_lobby :: Choose online lobby:\n\n- Public: Play with other CTGP-7 players.\n- Private: Play with other players privately.\n\nNOTE: Vanilla VR will be used in private lobbies.
+enter_lobby_code :: Enter private lobby code.\nShare this code with others to play together! :: Lobby code is too short.
+
+#Proximity Chat
+proximity_chat :: Proximity Chat :: (press \uE002 to toggle)
+proximity_chat_desc :: Please connect the proximity chat client.\nLearn more: pastebin.com/ZPQs0FWR\n\nServer address: %s\nPress \uE001 to cancel. :: An error has occurred.\nPress \uE001 to exit.
+
+#Badges
+badges_obtained :: Obtained badges:
+badges_use_online :: Use online :: Do not use online
+badge_name_desc :: Badge name :: Badge description
+badge_date :: Date obtained
+badge_msg :: You have obtained new\nCTGP-7 badges.\n\nCongratulations!
+badge_date_fmt :: %Y-%m-%d
+
+#Score Attack Actions
+pts_action_0 :: Mushroom!
+pts_action_1 :: Dash Panel
+pts_action_2 :: Mini-Turbo
+pts_action_3 :: Super Mini-Turbo
+pts_action_4 :: Small Rocket Start
+pts_action_5 :: Rocket Start
+pts_action_6 :: Perfect Rocket Start
+pts_action_7 :: Trick
+pts_action_8 :: Advanced Trick
+pts_action_9 :: Slipstream
+pts_action_10 :: Golden Mushroom!
+pts_action_11 :: Coin
+pts_action_12 :: Star Ring
+pts_action_13 :: Pipe
+pts_action_14 :: Goomba
+pts_action_15 :: Swoop
+pts_action_16 :: Traffic Cone
+pts_action_17 :: Boulder
+pts_action_18 :: Cheep Cheep
+pts_action_19 :: Clampy
+pts_action_20 :: Sidestepper
+pts_action_21 :: Goat
+pts_action_22 :: Pot
+pts_action_23 :: Carpet Shy Guy
+pts_action_24 :: Barrel
+pts_action_25 :: Tiki Goon
+pts_action_26 :: Frogoon
+pts_action_27 :: Car
+pts_action_28 :: Crate
+pts_action_29 :: Penguin
+pts_action_30 :: Icicle
+pts_action_31 :: Thwomp
+pts_action_32 :: Fake Bush
+pts_action_33 :: Fake Goomba
+pts_action_34 :: Piranha Plant
+pts_action_35 :: Chain Chomp
+pts_action_36 :: Fish Bone
+pts_action_37 :: Anchor
+pts_action_38 :: Music Bash
+pts_action_39 :: Leaf Pile
+pts_action_40 :: Wiggler
+pts_action_41 :: Bullet Bill
+pts_action_42 :: Rocky Wrench
+pts_action_43 :: Snowman
+pts_action_44 :: Snowball
+pts_action_45 :: Metal Ball
+pts_action_46 :: Table
+pts_action_47 :: Cactus
+pts_action_48 :: Train
+pts_action_49 :: Stingby
+pts_action_50 :: Glide Time
+pts_action_51 :: Green Shell Hit!
+pts_action_52 :: Red Shell Hit!
+pts_action_53 :: Banana Hit!
+pts_action_54 :: Spiny Shell Hit!
+pts_action_55 :: Lightning Hit!
+pts_action_56 :: Fake Box Hit!
+pts_action_57 :: Bob-omb Hit!
+pts_action_58 :: Fire Flower Hit!
+pts_action_59 :: Super Leaf Hit!
+pts_action_60 :: Blooper Deploy!
+pts_action_61 :: Star Hit!
+pts_action_62 :: Mega Mush Hit!
+pts_action_63 :: Bullet Bill Hit!
+pts_action_64 :: Bullet Overtake
+pts_action_65 :: Payback!
+pts_action_66 :: Smash!
+pts_action_67 :: Item Destroyed
+pts_action_68 :: Item Deflected
+pts_action_69 :: Spiny Shell Dodge!
+pts_action_70 :: Next Lap!
+pts_action_71 :: Next Section!
+pts_action_72 :: Frenzy Finish!
+pts_action_73 :: Race Finish!
+
+#Score Attack
+score_attack :: Score Attack :: Chain actions to get the most points.
+sc_at_spc_cup :: Random Course :: Weekly Challenge
+sc_at_race_start :: Race Start
+sc_at_clear :: Course Cleared :: Course Not Cleared
+sc_at_save :: (Delete Save: \uE002) :: (None)
+sc_at_score :: Best score :: Clear score
+sc_at_delete :: Delete this course save data?
+sc_at_record :: New Record!
+sc_at_clear_small :: Cleared! :: Not Cleared
+sc_at_cleared_tr :: Cleared tracks
+sc_at_nice :: NICE!
+sc_at_great :: GREAT!
+sc_at_excel :: EXCELLENT!
+sc_at_fanta :: FANTASTIC!
+sc_at_combo :: Combo x
+
+#Score Attack Weekly
+sc_wc_ended :: Current Weekly Challenge has ended :: No data available
+sc_wc_curr :: Current challenge:
+sc_wc_time :: Time remaining:
+sc_wc_bonus :: Bonus combo: :: Your bonus:
+sc_wc_board :: Leaderboard: Top 10 :: Leaderboard: My Score
+sc_wc_getting :: Getting Weekly Challenge info... :: Failed to get Weekly Challenge info.\nError: 0x%08X
+sc_wc_results :: Weekly Challenge Results
+sc_wc_score :: Previous score: :: New score:
+sc_wc_upload :: Would you like to publish your score? :: Publish
+sc_wc_uploading :: Uploading results... :: An error has occurred.
+sc_wc_retry :: Retry?
+
+#Local Multiplayer Error
+mult_error :: All participants must\nhave the latest CTGP-7\nversion installed. :: You have to update\nCTGP-7 to play in\nthis room.
+
+#Save Backup
+sbak_avail :: This option is only available\nwithin the "Singleplayer" menu.
+sbak_fetch :: Fetching save backup info... :: Failed to get save backup info:\n0x%08X
+sbak_info :: Save Backup Information
+sbak_found :: Save backup found. :: Save backup not found.
+sbak_created :: Created:
+sbak_cretime :: Today :: %d days ago
+sbak_create :: Create backup
+sbak_restore :: Restore backup
+sbak_delete :: Delete backup
+sbak_new :: A new online save backup will be\ncreated (excluding ghost data). :: The previous online backup will be overwritten.
+sbak_newprog :: Creating backup: %s
+sbak_newres :: Backup created successfully. :: Failed to create backup:\n0x%08X
+sbak_rest :: The online backup save data\nwill be restored. :: The current save data will\nbe backed up to the folders:
+sbak_restex :: The backup folders already exist\nand they will be deleted.
+sbak_restprog :: Restoring backup: %s
+sbak_restres :: Backup restored successfully. :: Failed to restore online backup:\n0x%08X
+sbak_restres2 :: Restore the following folders\nmanually to recover your old\nsave data: :: The game will now close.
+sbak_dele :: The online backup save data\nwill be deleted. :: This operation cannot be undone.
+sbak_deleprog :: Deleting backup...
+sbak_deleres :: Backup deleted successfully. :: Failed to delete backup:\n0x%08X

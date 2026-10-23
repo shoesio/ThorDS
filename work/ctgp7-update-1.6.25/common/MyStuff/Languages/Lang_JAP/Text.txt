@@ -1,0 +1,568 @@
+## CTGP-7 Japanese translation file.
+##
+## This file has been generated from the Mario Kart Translation Project spreadsheet.
+## If you want to contribute, please join the following discord server:
+## https://discord.gg/ubgfE96
+
+#Bell Cup
+$700010 :: ベルカップ
+$710042 :: コンコルドタウン
+$710059 :: \uE035 マリオサーキット
+$710044 :: ガルバニーフォールズ
+$710045 :: \uE024\uE025 スカイガーデン
+
+#Acorn Cup
+$700011 :: ドングリカップ
+$710046 :: オータムフォレスト
+$710068 :: \uE024\uE025 リバーサイドパーク
+$710043 :: RMX マリオサーキット 1
+$710049 :: \uE024\uE025 クッパキャッスル 3
+
+#Cloud Cup
+$700012 :: くもフラワーカップ
+$710053 :: \uE035 フラッペスノーランド
+$710054 :: \uE035 モーモーファーム
+$710052 :: \uE033 モンテタウン
+$710096 :: \uE034 マリオサーキット
+
+#Boo Cup
+$700013 :: テレサカップ
+$710055 :: ヒュ～ドロいけ 2
+$710062 :: エレメンタルケイブ
+$710057 :: \uE020\uE021 おばけぬま 2
+$710065 :: \uE033 プクプクビーチ
+
+#Spring Cup
+$700014 :: バネキノコカップ
+$710067 :: \uE033 チクタクロック
+$710075 :: \uE034 キノコブリッジ
+$710066 :: \uE033 サンサンさばく
+$710069 :: キャッスルオブタイム
+
+#Egg Cup
+$700015 :: たまごカップ
+$710063 :: \uE033 ヨッシーフォールズ
+$710047 :: \uE035 チョコマウンテン
+$710048 :: \uE033 キノコリッジウェイ
+$710051 :: CBR タスマニアだいばくそう
+
+#Bullet Cup
+$700016 :: キラーカップ
+$710056 :: CBR クモクモキャッスル
+$710089 :: レボサーキット
+$710061 :: \uE020\uE021 チョコレーとう 2
+$710064 :: スタースロープ
+
+#Blooper Cup
+$700018 :: ゲッソーカップ
+$710074 :: サンドキャッスルパーク
+$710058 :: ジャングルいせき
+$710076 :: \uE034 ルイージサーキット
+$710077 :: ボルケーノビーチいせき
+
+#Feather Cup
+$700019 :: ハネカップ
+$710078 :: \uE034 ヨッシーサーキット
+$710079 :: \uE024\uE025 ピーチサーキット
+$710080 :: メトロマッドネス
+$710081 :: \uE024\uE025 ルイージサーキット
+
+#Fire Cup
+$700020 :: ファイアボールカップ
+$710082 :: SMO ミニカーチャレンジ
+$710083 :: \uE024\uE025 クッパキャッスル 4
+$710084 :: RMX ドーナツへいや 1
+$710085 :: ピーチのかくれスライダー
+
+#Bob-omb Cup
+$700021 :: ボムへいカップ
+$710086 :: \uE033 ワリオスタジアム
+$710087 :: エルミーサーキット
+$710088 :: \uE034 ベビィパーク
+$710072 :: \uE034 クッパキャッスル
+
+#Cherry Cup
+$700022 :: チェリーカップ
+$710090 :: \uE020\uE021 マリオサーキット 3
+$710091 :: ビッグブルー
+$710092 :: \uE024\uE025 ヘイホービーチ
+$710093 :: ビンゴパーティー
+
+#Coin Cup
+$700023 :: コインカップ
+$710094 :: ドージさばく
+$710095 :: \uE035 ヒュ～ドロいけ
+$710050 :: \uE035 DKジャングルパーク
+$710073 :: ミクのバースデースペクタキュラー2
+
+#Rainbow Cup
+$700017 :: レインボーカップ
+$710070 :: \uE035 レインボーロード
+$710071 :: \uE024\uE025 レインボーロード
+$710114 :: RMX レインボーロード 1
+$710097 :: レインボーロードDX
+
+#Pickaxe Cup
+$700024 :: ツルハシカップ
+$710098 :: スターゲイズサミット
+$710099 :: サンセットレースウェイ
+$710100 :: \uE024\uE025 オンボロさんばし
+$710101 :: グレイシアマイン
+
+#Mega Cup
+$700025 :: きょだいカップ
+$710102 :: フラワーベッドフォートレス
+$710103 :: シーサイドきゅうでん
+$710104 :: DKR スターシティ
+$710105 :: キノコマウンテン
+
+#Propeller Cup
+$700026 :: プロペラカップ
+$710106 :: \uE035 シャーベットランド
+$710107 :: ブロックアイランド
+$710108 :: \uE033 クッパキャッスル
+$710109 :: DKR ジャングルフォール
+
+#POW Cup
+$700027 :: POWカップ
+$710110 :: レトロレースウェイ
+$710111 :: こおりのどうくつ
+$710112 :: \uE024\uE025 レイクサイドパーク
+$710113 :: ドラゴングレイブヤード
+
+#Rock Cup
+$700028 :: ゴロいわカップ
+$710060 :: ワープどかんアイランド
+$710115 :: ネオ・メトロポリス
+$710116 :: ひんやりこうち
+$710117 :: ナスティ・ノークのかくれが
+
+#Moon Cup
+$700029 :: ムーンカップ
+$710118 :: RMX バニラレイク 1
+$710119 :: クリフサイドサーキット
+$710120 :: インターステララボラトリー
+$710121 :: ダークマターフォートレス
+
+#Hammer Cup
+$700030 :: ハンマーカップ
+$710122 :: \uE020\uE021 ドーナツへいや 2
+$710123 :: ぴょんぴょんスカイロード
+$710124 :: \uE035 クッパキャッスル
+$710125 :: \uE067 DKスノーボードクロス
+
+#Wonder Cup
+$700031 :: ワンダーカップ
+$710126 :: えのなかのぬまちレースウェイ
+$710127 :: ルーレットロード
+$710128 :: オービタルツイスター
+$710129 :: \uE033 レインボーロード
+
+#Shine Cup
+$700032 :: シャインカップ
+$710130 :: コーラルみさき
+$710131 :: \uE067 ワリオこうざん
+$710132 :: \uE033 ピーチガーデン
+$710133 :: ゆきかぜのとりで
+
+#Dark Star Cup
+$700033 :: ダークスターカップ
+$710134 :: ダークサンクチュアリ
+$710135 :: ヘルピラミッド
+$710136 :: \uE034 キノコシティ
+$710137 :: ダークスターキャッスル
+
+#Save Data
+$7005 :: CTGP-7の追加データを\nSDカードに作成します。
+$7003 :: 追加データの作成をしています...
+$7004 :: 追加データが\n作成されました。
+$7007 :: マリオカート7のセーブデータが存在しません。\n電源ボタンを押し、ゲームを起動してセーブデータを作成してください。
+
+#First opening welcome message
+welc_t :: CTGP-7へようこそ！
+welc_1 :: こんにちは！\nゲームメニューから、\nさまざまなついかきのうを\nつかうことができます。\nゲームメニューをひらくには、\nSELECTボタンをおします。
+welc_2 :: きのうをしようするには、\nつかいたいきのうに\nカーソルをあわせ、Aをおして\nゆうこうか/むこうかします。
+welc_3 :: オンラインでプレイしている\nあいだは「CCセレクター」などの\nいちぶのきのうがむこうに\nなることにちゅういしてください。
+welc_4 :: とうけいじょうほうはCTGP-7\nサーバーにアップロードされるため、\nいっぱんにこうかいされます。\n(データはとくめいかされます。)\nサーバー通信は\nオプションメニューからオフにできます。
+welc_5 :: CTGP-7ネットワークをしようすることで、\nルールにどういしたことになります。\n\nここでかくにんできます:\nctgp-7.github.io/ctww.html
+welc_6 :: CTGP-7のサーバーをかくにん\nすることをわすれないでください！\n\nしょうたいリンク:\ninvite.gg/ctgp7
+welc_7 :: modをおたのしみください！\n^w^
+
+#Achievements
+achiev_all_gold :: すべてのカスタムカップで\nゴールドトロフィーをとりました。\n\nおめでとうございます！
+achiev_all_1star :: すべてのカスタムカップで\nほし1つをとりました。\n\nおめでとうございます！
+achiev_all_3star :: すべてのカスタムカップで\nほし3つをとりました。\n\nおめでとうございます！
+achiev_all_mission :: すべてのミッションで\n10ptsをとりました。\n\nおめでとうございます！
+achiev_5000_vr :: CTWWで\n5000 VRに到達しました。\n\nおめでとうございます！
+achiev_all_score_completed :: スコアアタックで\nすべてのコースをクリアしました。\n\nおめでとうございます！
+achiev_blue_coin :: すべての\nあおコインをあつめました。\n\nおめでとうございます！
+achiev_dodged_blue :: トゲゾーこうらを\n3個かいひしました！\n\nおめでとうございます！
+unlocked_item :: 入手しました！\n\n
+types_achievs :: ノーマル実績 :: スペシャル実績
+types_achievs_optional :: 任意の実績
+gold_tro_achiev :: 全てのカスタムカップで1位
+1star_achiev :: 全てのカスタムカップで星1
+3star_achiev :: 全てのカスタムカップで星3
+10pts_msn_achiev :: 全てのミッションで10 pts
+5000vr_achiev :: CTWWで5000VR
+score_all_achiev :: スコアアタックで全コースクリア
+blue_coin_achiev :: 全てのあおコインをゲット
+dodged_blue_achiev :: トゲゾーこうらを3個回避する
+dodged_blue_amount :: トゲゾーこうらを回避
+custom_track_cups :: カスタムトラックカップ
+tro_gold :: 金トロフィー
+tro_1star :: 星1
+tro_3star :: 星3
+tro_10pts :: 10 pts
+tro_blue_collected :: 集めた数
+
+#General text
+warning :: 警告
+error :: エラー
+state :: 状態
+next :: 次へ
+select :: 選ぶ
+chng :: 変える
+custom :: カスタム
+page :: ページ
+race_noun :: レース
+state_mode :: 有効 :: 無効
+state_inf :: 有効 :: 無効
+allow_inf :: 許可する :: 許可しない
+valid_inf :: 有効 :: 無効
+num_betw :: 値は%d - %dの間でなければなりません。
+settings :: 設定
+exit :: 戻る
+default :: デフォルト
+button :: ボタン
+summary :: 概要
+continue :: 続ける
+mode_type :: モード :: アイテム
+
+#Folders
+gameplay_folder :: ゲームプレイ機能 :: 追加のゲームプレイ機能の構成。
+settings_folder :: ゲーム設定 :: CTGP-7固有の設定。
+other_folder :: その他のオプション :: その他の色々な情報。
+
+#Entries
+spdmeter :: スピードメーター :: 画面の右下にスピードメーターを表示します。
+ccsel :: CCセレクター :: CCを特定の値に設定します。(レースを始める前に有効にする必要があります。)
+itemled :: LED警告 :: トゲゾーこうらが使われた場合は青色に、サンダーが使われた場合は黄色にランプが点滅します。
+backcam :: バックカメラ :: \uE002を押すと他のマリオカート同様に、バックカメラを使用できます！(注:\uE002ボタンでアイテムの使用が出来なくなります。)
+charman :: カスタムキャラクターマネージャー :: 元のキャラクターとカスタムキャラクターを切り替えます。
+cuskart :: カスタムカート :: MyStuffフォルダからカスタムカートを読み込みます。
+trackorder :: オンライントラックオーダー :: オンライン上でカップを選択する方法を選択します。
+itmprb :: アイテムルーレットの改良 :: アイテムボックスを割ったときに、実際に入手できるアイテムのみ表示します。(例:1位の場合、バナナ、こうら、キノコのみが表示されます。)
+imtrick :: ジャンプアクションの改良 :: ジャンプアクションを行うときに、カートを回転させることができます。\uE077スライドパッドで回転する方向を変更できます。
+autoaccel :: オートアクセル :: \uE000や\uE003を押すことで自動的に加速することができます。\uE001で解除されます。
+imbrakedrift :: ブレーキドリフトの改良 :: ドリフトをしながら\uE001を押すとき、ミニターボを無くさずに減速することができます。
+autodelaydrift :: 自動ディレイドリフト :: ドリフト開始時のカートの速度低下を防ぎます。
+improvedhorn :: クラクションの改良 :: アイテムボタンでクラクションを鳴らすことができ、マルチプレイでは他のプレイヤーのクラクションも聞くことができます。
+achieventry :: 実績 :: CTGP-7の実績の進行状況を確認します。
+badgesentry :: バッジ :: 獲得したCTGP-7バッジを表示します(インターネット接続が必要です)。
+optionsentry :: オプション :: CTGP-7オプションを 設定します
+servsett :: サーバー設定 :: CTGP-7サーバー関連の設定。
+cloudsaveentry :: クラウドセーブバックアップ :: この本体で作成したオンライン上のセーブバックアップを管理します。
+
+#Speedometer text
+spd_set :: スピードメーターの設定をします。
+spd_unit :: 単位
+spd_type :: タイプ
+spd_sunit :: スピードメーターの単位を選んでください。
+spd_stype :: スピードメーターのタイプを選んでください。
+spd_types1 :: デジタル :: アナログ
+spd_types2 :: ダブルダッシュ
+
+#CC Selector text
+cc_set :: CCセレクターの設定をします。
+cc_val :: 値
+cc_entv :: 新しいCCの値を入力してください。
+cc_chgv :: 値の変更
+
+#Course Manager
+track_ct :: カスタムトラック
+track_ori :: オリジナルトラック
+ct_endis :: カスタムトラックを有効にしました。 :: カスタムトラックを無効にしました。
+ori_endis :: オリジナルトラックを有効にしました。 :: オリジナルトラックを無効にしました。
+
+#Community Code Generator
+def_spd :: デフォルトの速度
+rand_tr :: ランダムトラックを強制する
+code :: コード
+cusitem :: カスタムアイテム
+
+#Change Round Number
+chgrnd :: ラウンド数の変更 :: VSモードとバトルモードでのラウンド数を変更します。
+chgrnd_desc :: VSモードまたはバトルモードで\nプレイするラウンド数を選択します。\n(注:ダウンロードプレイでは機能しません。\nローカルマルチプレイヤーでは、\n全員が同じ設定をしている必要があります。)
+rounds :: ラウンド
+rnd_sel :: ラウンド数を選んでください。
+
+#Enhanced Local Map
+enhmap :: ローカルマップの拡張 :: \uE058タッチスクリーンを使用して、下画面のローカルマップにズーム機能を追加します。
+
+#Custom character manager text
+char_select :: 設定するキャラクターを選んでください。
+reboot_req :: 変更を適用するには再起動が必要です。
+face_raider_sel :: 顔を選んでください
+authors :: 作者
+change_face :: 顔を変える
+
+#Online track order
+order_mode :: デフォルト :: アルファベット順
+
+#Auto Acceleration
+autoaccel_button :: オートアクセルを有効化する\nボタンを選んでください。
+
+#Online update check
+update_check :: アップデートの確認をしています... :: オンラインでプレイするには\nCTGP-7の最新バージョンが必要です。
+fail_conn :: CTGP-7サーバーとの\nせつぞくにしっぱいしました。\n\nもういちどやりなおしてください。
+
+#CTWW
+cntdwn :: カウントダウン
+ctww :: CTWW
+vr :: VR
+CTWWtog :: CTWWを\n有効にしますか？ :: CTWWを\n無効にしますか？
+
+#VS Mode
+VSSet :: VS設定
+CourOrd :: コース
+RacAm :: レース数
+CpuAm :: COMの数
+RanCT :: ランダム(CT)
+RanOri :: ランダム(オリジナル)
+RanAll :: ランダム(全て)
+OrderH :: 横方向
+OrderV :: 縦方向
+NextRac :: 次のコースを選択してください。\n残りのレース:
+extra_diff :: とてもむずかしい :: EXTREME
+cusitem_notice :: 注意: デフォルトのアイテム（%s）が\n出る可能性もあります。
+item_mega :: 巨大キノコ
+item_fib :: にせアイテムボックス
+item_boxes :: ノーマル
+item_periodic :: 周期 :: アイテムを入手する頻度を\n秒単位で選択してください。
+item_color_rain :: カラーボックスレイン
+item_box_rain :: アイテムボックスレイン
+item_triple :: トリプルアイテム
+item_bs_show :: トゲゾーこうら対決
+item_sel_mode :: アイテムモードを選択してください。 :: アイテムの種類を選択してください。
+
+#Reset Ghosts
+resghost :: ゴーストのリセット :: タイムアタックのゴーストをリセットできます。
+ghostseltrack :: ゴーストをリセットする\nコースを選択してください。
+ghostcantrecov :: この操作は取り消すことができません。\n続行しますか？ :: ゴーストがリセットされました。
+
+#Server Settings
+serv_consID :: CTGP-7 ConsoleID
+serv_communic :: サーバー通信 :: この機能を使用するには\nサーバー通信を有効にする必要があります。
+serv_displname :: 表示名 :: 表示名のモードを選択します。
+serv_disphid :: 非表示
+serv_dispmii :: Miiの名前
+serv_dispcust :: カスタム名を入力します。 :: カスタム名は15字までです。
+serv_qrshow :: 表示するには\uE002を押してください。
+
+#Statistics
+statsentry :: ローカル統計 :: CTGP-7の個人使用の統計を確認できます。
+stats_tpl :: プレイ回数
+stats_tot :: オフラインレースの合計 :: オンラインレースの合計
+stats_sc :: スコアアタックレースの合計 :: ウィークリーチャレンジの合計
+stats_vnll :: 通常
+stats_most :: 最もプレイしたコース :: 最もプレイしたバトルステージ
+stats_rpoints :: レースポイント
+
+#Discord
+disc_info :: Discord情報
+disc_notlink :: この本体はDiscord\nアカウントに連携されていません。\n\nアカウントを連携しますか？
+disc_linksteps1 :: 次の手順に従ってDiscord\nアカウントを連携します:
+disc_linksteps2 :: 1. CTGP-7 Discordサーバーに入る。\n(リンク: invite.gg/ctgp7)
+disc_linksteps3 :: 2. \#botsチャンネルに移動する。
+disc_linksteps4 :: 3. 次のメッセージを送信する:
+disc_data :: アカウント :: ニックネーム
+disc_beta :: プライベートベータテストの対象です。 :: プライベートベータテストの対象外です。
+disc_unlink :: 連携の解除 :: Discordアカウントとの連携を\n解除しますか？
+
+#Render Optimizations
+render_optim :: レンダリングの最適化 :: 上画面の3Dモードを無効にし、New3DSのCPUの改善を有効にします。
+
+#Missions
+ms_miss :: ミッション
+ms_desc :: チャレンジをして ベストスコアをめざします
+ms_selmiss :: ミッションをかえる
+ms_rcrd :: きろく
+ms_gradelim :: ベスト :: ワースト
+ms_timescor :: タイム :: スコア
+ms_failed :: ミッションしっぱい！
+ms_nodata :: データなし
+ms_delsave :: (セーブ削除: \uE002) :: このミッションセーブデータを削除しますか？
+msstat_msnplay :: プレイしたミッション
+msstat_state :: 成功 :: 失敗
+msstat_perfgrad :: (パーフェクトグレード)
+msstat_usermsn :: ユーザーミッション
+
+#Course Checksum
+course_check :: トラックチェックサム
+
+#Custom Server
+server_name :: ニンテンドーネットワーク :: CTGP-7ネットワーク
+server_choice :: オンラインサーバーを選択してください。\n\n%s：\n    - CTGP-7プレイヤー専用\n    - CTWW及び既存トラック\n    - 強いアンチチート\n%s：\n    - 全てのマリカ７プレイヤー用\n    - 既存トラック及びコミュニティ\n    - 弱いアンチチート
+server_ctgp7_conn :: CTGP-7ネットワークに\n接続中…
+server_ctgp7_dconn :: CTGP-7ネットワークから\n切断しますか？
+server_ctgp7_nocomm :: CTGP-7ネットワークでは\nコミュニティは利用できません。
+
+#Blue Coins
+blue_coins :: あおコイン
+blue_coins_desc :: 全コースにあおコインが出現します。すべて集めると隠し要素がアンロックされます！
+blue_coin_obtain :: $あおコイン$をゲット！ :: のこり%dコース
+blue_coin_all :: 全てのコインを\nゲットしました！
+blue_coin_nocc :: CCセレクターが有効になっていると、\nあおコインを取得できません。
+
+#Lobby
+lobby_type :: パブリックロビー :: プライベートロビー
+choose_lobby :: オンラインロビーの選択:\n\n- パブリック: CTGP-7のプレイヤーとプレイします。\n- プライベート: コードを共有したプレイヤーとプライベートでプレイします。\n\n注: プライベートロビーではバニラ環境のVRが使用されます
+enter_lobby_code :: プライベートロビーコードを入力してください。\nこのコードを他のユーザーに共有して、一緒にプレイしてください！ :: ロビーコードが短すぎます。
+
+#Proximity Chat
+proximity_chat :: 近接チャット :: (\uE002で切り替え)
+proximity_chat_desc :: 近接チャットクライアントを接続してください。\nさらに詳しく: pastebin.com/ZPQs0FWR\n\nサーバーアドレス: %s\n\uE001でキャンセル :: エラーが発生しました。\n\uE001で戻る
+
+#Badges
+badges_obtained :: 獲得したバッジ:
+badges_use_online :: オンラインで使用 :: オンラインで使用しない
+badge_name_desc :: バッジ名 :: バッジの詳細
+badge_date :: 獲得した日
+badge_msg :: 新しい\nCTGP-7バッジを獲得しました。\n\nおめでとうございます！
+badge_date_fmt :: %Y年%m月%d日
+
+#Score Attack Actions
+pts_action_0 :: ダッシュキノコ
+pts_action_1 :: ダッシュプレート
+pts_action_2 :: ミニターボ
+pts_action_3 :: スーパーミニターボ
+pts_action_4 :: ロケットスタート!
+pts_action_5 :: ロケットスタート!!
+pts_action_6 :: ロケットスタート!!!
+pts_action_7 :: ジャンプアクション
+pts_action_8 :: スーパージャンプアクション
+pts_action_9 :: スリップストリーム
+pts_action_10 :: パワフルダッシュキノコ
+pts_action_11 :: コイン
+pts_action_12 :: スターリング
+pts_action_13 :: ドカン
+pts_action_14 :: クリボー
+pts_action_15 :: バサバサ
+pts_action_16 :: パイロン
+pts_action_17 :: いわ
+pts_action_18 :: プクプク
+pts_action_19 :: アコヤガイ
+pts_action_20 :: カニ
+pts_action_21 :: ヤギ
+pts_action_22 :: ツボ
+pts_action_23 :: そらとぶヘイホー
+pts_action_24 :: タル
+pts_action_25 :: ティキトントン
+pts_action_26 :: フログーン
+pts_action_27 :: クルマ
+pts_action_28 :: きばこ
+pts_action_29 :: ペンギン
+pts_action_30 :: ツララ
+pts_action_31 :: ドッスン
+pts_action_32 :: ハリボテ
+pts_action_33 :: ハリボテ(クリボー)
+pts_action_34 :: パックンフラワー
+pts_action_35 :: ワンワン
+pts_action_36 :: フィッシュボーン
+pts_action_37 :: イカリ
+pts_action_38 :: おんぷ
+pts_action_39 :: おちば
+pts_action_40 :: ハナチャン
+pts_action_41 :: キラー
+pts_action_42 :: プー
+pts_action_43 :: ゆきだるま
+pts_action_44 :: ゆきだま
+pts_action_45 :: てっきゅう
+pts_action_46 :: テーブル
+pts_action_47 :: サボテン
+pts_action_48 :: れっしゃ
+pts_action_49 :: ハッチン
+pts_action_50 :: グライドキープ
+pts_action_51 :: ミドリこうら ヒット!
+pts_action_52 :: アカこうら ヒット!
+pts_action_53 :: バナナ ヒット!
+pts_action_54 :: トゲゾーこうら ヒット!
+pts_action_55 :: サンダー ヒット!
+pts_action_56 :: にせアイテムボックス ヒット!
+pts_action_57 :: ボムへい ヒット!
+pts_action_58 :: ファイアフラワー ヒット!
+pts_action_59 :: スーパーこのは ヒット!
+pts_action_60 :: ゲッソー ヒット!
+pts_action_61 :: スター ヒット!
+pts_action_62 :: きょだいキノコ ヒット!
+pts_action_63 :: キラー ヒット!
+pts_action_64 :: おいこし!
+pts_action_65 :: しかえし!
+pts_action_66 :: スマッシュ!
+pts_action_67 :: アイテムブレイク
+pts_action_68 :: アイテムガード
+pts_action_69 :: トゲゾーこうら かいひ!
+pts_action_70 :: ネクストラップ!
+pts_action_71 :: ネクストセクション!
+pts_action_72 :: フィーバーフィニッシュ!
+pts_action_73 :: レースフィニッシュ!
+
+#Score Attack
+score_attack :: スコアアタック :: アクションをコンボさせ ベストスコアをめざします
+sc_at_spc_cup :: ランダムコース :: ウィークリーチャレンジ
+sc_at_race_start :: レーススタート
+sc_at_clear :: クリアしたコース :: 未クリアのコース
+sc_at_save :: (セーブ削除: \uE002) :: (なし)
+sc_at_score :: ベストスコア :: クリアスコア
+sc_at_delete :: このコースのセーブデータを削除しますか？
+sc_at_record :: New Record!
+sc_at_clear_small :: クリア！ :: 未クリア
+sc_at_cleared_tr :: クリアしたコース
+sc_at_nice :: NICE!
+sc_at_great :: GREAT!
+sc_at_excel :: EXCELLENT!
+sc_at_fanta :: FANTASTIC!
+sc_at_combo :: Combo x
+
+#Score Attack Weekly
+sc_wc_ended :: 現在のウィークリーチャレンジは終了しました :: 利用可能なデータはありません
+sc_wc_curr :: 現在のチャレンジ:
+sc_wc_time :: 残り時間:
+sc_wc_bonus :: ボーナスコンボ: :: あなたのボーナス:
+sc_wc_board :: リーダーボード: Top 10 :: リーダーボード: マイスコア
+sc_wc_getting :: ウィークリーチャレンジの情報を取得しています... :: ウィークリーチャレンジの情報の取得に失敗しました。\nエラー: 0x%08X
+sc_wc_results :: ウィークリーチャレンジの結果
+sc_wc_score :: 前回のスコア: :: 新しいスコア:
+sc_wc_upload :: あなたのスコアを公開しますか？ :: 公開
+sc_wc_uploading :: 結果をアップロードしています... :: エラーが発生しました。
+sc_wc_retry :: もう一度試しますか？
+
+#Local Multiplayer Error
+mult_error :: 参加者全員が\n最新バージョンのCTGP-7を\nインストールする必要があります。 :: この部屋でプレイするには\nCTGP-7を更新する\n必要があります。
+
+#Save Backup
+sbak_avail :: このオプションは「ひとりで」の\nメニュー内でのみ使用できます。
+sbak_fetch :: セーブバックアップ情報を取得しています... :: セーブバックアップ情報の取得に失敗しました:\n0x%08X
+sbak_info :: セーブバックアップ情報
+sbak_found :: セーブバックアップが見つかりました。 :: セーブバックアップがありません。
+sbak_created :: 前回のバックアップ
+sbak_cretime :: 今日 :: %d日前
+sbak_create :: バックアップを作成する
+sbak_restore :: バックアップを復元する
+sbak_delete :: バックアップを削除する
+sbak_new :: オンライン上に新しいバックアップを\n作成します(ゴーストデータを除く)。 :: 以前のバックアップは上書きされます。
+sbak_newprog :: バックアップを作成中: %s
+sbak_newres :: バックアップが正常に作成されました。 :: バックアップの作成に失敗しました:\n0x%08X
+sbak_rest :: オンライン上のバックアップセーブデータを\n復元します。 :: 現在のセーブデータは\n次のフォルダにバックアップされます:
+sbak_restex :: バックアップフォルダは\nすでに存在するため、削除されます。
+sbak_restprog :: バックアップを復元中: %s
+sbak_restres :: バックアップが正常に復元されました。 :: バックアップの復元に失敗しました:\n0x%08X
+sbak_restres2 :: 古いセーブデータを回復するには\n次のフォルダを手動で\n復元してください: :: ゲームは終了します。
+sbak_dele :: オンライン上のバックアップセーブデータを\n削除します。 :: この操作は元に戻せません。
+sbak_deleprog :: バックアップを削除しています...
+sbak_deleres :: バックアップが正常に削除されました。 :: バックアップの削除に失敗しました:\n0x%08X
+
+#Photo Mode
+photo_inst :: フォトモードのそうさ\n\nA: とる\nB: もどる\nスライドパッド: いどう\nタッチ: みまわす\nL/R: ズーム\nX/Y: そくどへんこう
+photo_saved :: ほぞんしました！

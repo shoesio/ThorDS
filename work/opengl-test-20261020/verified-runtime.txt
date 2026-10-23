@@ -1,0 +1,16 @@
+[   0.276325] Config <Info> common/settings.cpp:operator():85: Renderer_GraphicsAPI: OpenGL
+[   0.276341] Config <Info> common/settings.cpp:operator():85: Renderer_UseResolutionFactor: 4
+[   0.276364] Config <Info> common/settings.cpp:operator():85: Renderer_DisableRightEyeRender: true
+[   0.549827] Render.OpenGL <Info> video_core/renderer_opengl/gl_driver.cpp:ReportDriverInfo:133: GL_VERSION: 4.6 (Core Profile) Mesa 26.1.6-thorch1
+[   0.549843] Render.OpenGL <Info> video_core/renderer_opengl/gl_driver.cpp:ReportDriverInfo:134: GL_VENDOR: freedreno
+[   0.549844] Render.OpenGL <Info> video_core/renderer_opengl/gl_driver.cpp:ReportDriverInfo:135: GL_RENDERER: FD740
+[
+  {
+    "success": true
+  }
+]
+Requested clean close of Azahar 1211
+Azahar closed cleanly; session will relaunch HOME.
+OpenGL test launched 77906
+47186fdc18c6b4b1e9003ad75538cadd7a6689daaaac7ab51ae88917432870d3  /usr/bin/azahar
+dd1b0ccfdddbe86c775939461c0fe33085729ff42ba7fbbbdaf71e0955c473b3  /home/thords/opengl-test-20261020/build/bin/Release/azahar

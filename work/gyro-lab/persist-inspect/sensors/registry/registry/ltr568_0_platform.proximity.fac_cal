@@ -1,0 +1,1 @@
+{"ltr568_0_platform.proximity.fac_cal":{"owner":"sns_ltr568","near_threshold":{"type":"flt","ver":"0","data":"400"},"far_threshold":{"type":"flt","ver":"0","data":"350"},"cross_talk":{"type":"flt","ver":"0","data":"300"}}}

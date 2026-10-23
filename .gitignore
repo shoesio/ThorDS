@@ -1,0 +1,296 @@
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+/build/
+/upstream/
+/backups/
+/testdata/
+/output/
+.env
+*.pem
+*.key
+*.cia
+*.3ds
+*.bin
+*.img
+*.iso
+*.tar
+*.tar.*
+*.tgz
+*.zip
+*.gz
+*.xz
+*.zst
+*.whl
+*.o
+*.a
+*.so
+*.so.*
+*.deb
+*.pkg.*
+/work/compatibility-reference-20261018/
+/work/gyro-lab/pd-mapper/
+/work/gyro-lab/qrtr/
+/work/gyro-lab/firmware-ayn-odin/
+/work/gyro-lab/hexagonrpc/
+/work/mako-source/
+/work/3dsconv/
+/work/hexagonrpc/
+/work/gyro-kettle-reference/
+/work/rocknix-distribution/
+/work/armada/
+/work/ctgp-now.png
+/work/ctgp-stall.png
+/work/ctgp-after20.png
+/work/opengl-test-20261020/screens.png
+/work/gyro-lab/icm426xx-probe
+/work/gyro-20261018/meson.tar.gz
+/work/gyro-20261018/libssc-0.4.4.tar.gz
+/work/gyro-20261018/hexagonrpc-0.5.0.tar.gz
+/work/gyro-20261018/top-verified.png
+/work/restart-shortcut-20261018/display-check.png
+/work/restart-shortcut-20261018/kms-check.png
+/work/restart-shortcut-20261018/top-now.png
+/work/homebrew/Universal-Updater-v3.4.1.cia
+/work/fps-overlay-20261020/source.tar.xz
+/work/fps-overlay-20261020/meson-1.12.1-py3-none-any.whl
+/work/sdmc-import/bottom-grim.png
+/work/sdmc-import/selected2-saves.tgz
+/work/sdmc-import/live-captain-GameData.bin
+/work/sdmc-import/bottom-check.png
+/work/sdmc-import/bottom-edge.png
+/work/sdmc-import/bottom-fixed.png
+/work/sdmc-import/final-bottom-check.png
+/work/sdmc-import/bottom-edge-20x.png
+/work/sdmc-import/window-fix-scripts.tgz
+/work/game-fixes-20261018/before.png
+/work/game-fixes-20261018/clock-before.png
+/work/app-restore/Universal-Updater.cia
+/work/edge-aa/screens.png
+/work/edge-aa/top.png
+/work/pretendo-ctgp/nimbus-combined-2.1.1.zip
+/work/pretendo-ctgp/ctgp7-online-installer.zip
+/work/armada-sleep-20261012/linux-thorch-7.1.2-19-aarch64.pkg.tar.xz
+/work/armada-sleep-20261012/linux-thorch-7.1.2-18-aarch64.pkg.tar.xz
+/work/armada-sleep-20261012/early-splash-renderer
+/work/armada-sleep-20261012/boot-splash.asp
+/work/armada-sleep-20261012/splash-preview.png
+/work/ctgp7-update-1.6.25/common/resources/creditsImages.sarc
+/work/ctgp7-update-1.6.25/common/resources/CTGP-7Streamed.sarc
+/work/ctgp7-update-1.6.25/common/resources/secure.sarc
+/work/ctgp7-update-1.6.25/common/resources/CTGP-7.3gx
+/work/ctgp7-update-1.6.25/common/resources/ghosts.bin
+/work/ctgp7-update-1.6.25/common/resources/CTGP-7.sarc
+/work/ctgp7-update-1.6.25/common/cia/tooInstall.cia
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Face_Raider.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Pauline.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/King_Boo.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Rainbow_Chomp.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Dry_Bones.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Gold_Mario.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Red_Ninja.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Sonic.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Characters/Miku.chpack
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_CZE/trophy-ee.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_CZE/race-ee.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_LUX/trophy-ee.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_CAT/race-es.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_POL/race-es.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_UKR/trophy-er.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_UKR/race-er.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_UKR/thankyou-er.szs
+/work/ctgp7-update-1.6.25/common/MyStuff/Languages/Lang_HUN/trophy-ee.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_WiiDKSummit.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_FlowerBFort.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_BanshBoardT.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_VolcanoBeachRuins.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_N64ShbLnd.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_DarkSanctuary.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Course/Ctgp_WiiWarioGoldMine.szs
+/work/ctgp7-update-1.6.25/common/gamefs/Sound/stream/STRM_CC_FRAPPE_SNOWLAND_F.bcstm
+/work/ctgp7-update-1.6.25/common/gamefs/Sound/stream/STRM_CC_FRAPPE_SNOWLAND_N.bcstm
+/work/ctgp7-update-1.6.25/common/resources/pat/kor_rev2_code.bin
+/work/ctgp7-update-1.6.25/common/resources/pat/jap_rev2_code.bin
+/work/ctgp7-update-1.6.25/common/resources/pat/usa_rev2_code.bin
+/work/ctgp7-update-1.6.25/common/resources/pat/eur_rev2_code.bin
+/work/ctgp7-update-1.6.25/citra/resources/CTGP-7.3gx
+/work/ctgp7-update-1.6.25/citra/resources/ghosts.bin
+/work/ctgp7-update-1.6.25/citra/cia/tooInstall.cia
+/work/armada-sleep-20261012/bundle/linux-thorch-7.1.2-19-aarch64.pkg.tar.xz
+/work/armada-sleep-20261012/bundle/linux-thorch-7.1.2-18-aarch64.pkg.tar.xz
+/work/armada-sleep-20261012/bundle/early-splash-renderer
+/work/armada-sleep-20261012/bundle/boot-splash.asp
+/work/pretendo-ctgp/stage2/ctgp/CTGP-7_Online_Installer.cia
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus.3dsx
+/work/pretendo-ctgp/stage2/nimbus/cias/nimbus.cia
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/000400300000BC02.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/000400300000BE02.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/000400300000BD02.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/0004013000003802.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/juxt-prod.pem
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/0004013000003202.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/0004013000002902.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/0004013000002F02.ips
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/nimbus.3gx
+/work/pretendo-ctgp/stage2/nimbus/3ds/nimbus/update/0004013000002E02.ips
+/work/charging-fix-20261021/bundle/linux-thorch-7.1.2-19-aarch64.pkg.tar.xz
+/work/charging-fix-20261021/bundle/linux-thorch-7.1.2-20-aarch64.pkg.tar.xz
+/work/clock-fix-20261018/__pycache__/install-clock-fix.cpython-314.pyc
+/work/clock-fix-20261018/__pycache__/build-clock-fix.cpython-314.pyc
+/work/sdmc-import/selected2/00040000/00033600/data/00000001/system.dat
+/work/sdmc-import/selected2/00040000/00086300/data/00000001/exhibition.dat
+/work/sdmc-import/selected2/00040000/00086300/data/00000001/garden.dat
+/work/sdmc-import/selected2/00040000/00086300/data/00000001/friend1.dat
+/work/sdmc-import/selected2/00040000/000edf00/data/00000001/save_data/account_data.bin
+/work/sdmc-import/selected2/00040000/000edf00/data/00000001/save_data/system_data.bin
+/work/sdmc-import/selected2/00040000/000dcd00/data/00000001/0
+/work/sdmc-import/selected2/00040000/00054000/data/00000001/GameData.bin
+/work/sdmc-import/selected2/00040000/0007ae00/data/00000001/BigRedSave.dat
+/work/sdmc-import/selected2/00040000/00031d00/data/00000001/slot0.dat
+/work/sdmc-import/selected2/00040000/00031d00/data/00000001/slot4.dat
+/work/sdmc-import/selected2/00040000/000cce00/data/00000001/slot0.dat
+/work/sdmc-import/selected2/00040000/00030100/data/00000001/00.SAV
+/work/sdmc-import/selected2/00040000/00030100/data/00000001/01.SAV
+/work/sdmc-import/selected2/00040000/001bb200/data/00000001/profile0/samus.bmssv
+/work/sdmc-import/selected2/00040000/001bb200/data/00000001/profile0/pkprfl.bmssv
+/work/sdmc-import/selected2/00040000/001bb200/data/00000001/profile0/common.bmssv
+/work/sdmc-import/selected2/00040000/001cb200/data/00000001/GameData.bin
+/work/sdmc-import/selected2/00040000/00111b00/data/00000001/bigegg2.sav
+/work/sdmc-import/selected2/00040000/00111b00/data/00000001/bigegg1.sav
+/work/sdmc-import/selected2/00040000/00111b00/data/00000001/bigegg0.sav
+/work/sdmc-import/selected2/00040000/00035800/data/00000001/savedata
+/work/sdmc-import/selected2/00040000/0008c300/data/00000001/savedataArc.txt
+/work/sdmc-import/selected2/00040000/00030800/data/00000001/system9.dat
+/work/sdmc-import/selected2/00040000/00030800/data/00000001/system0.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033600/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033600/data/00000001/system.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111c00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111c00/data/00000001/bigegg2.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111c00/data/00000001/bigegg1.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111c00/data/00000001/bigegg0.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00038a00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00086300/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00086300/data/00000001/exhibition.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00086300/data/00000001/garden.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00086300/data/00000001/friend1.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030700/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030700/data/00000001/system3.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030700/data/00000001/system4.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec300/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec300/data/00000001/Save_2.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec300/data/00000001/Save_1.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec300/data/00000001/Save_0.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec300/data/00000001/SaveCommon.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000edf00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000edf00/data/00000001/save_data/account_data.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000edf00/data/00000001/save_data/system_data.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/0010c000/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/0010c000/data/00000001/savedata.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000dcd00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000dcd00/data/00000001/0
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00054000/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00054000/data/00000001/GameData.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/0007ae00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/0007ae00/data/00000001/BigRedSave.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00031d00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00031d00/data/00000001/slot0.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00031d00/data/00000001/slot4.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec400/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec400/data/00000001/Save_2.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec400/data/00000001/Save_1.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec400/data/00000001/Save_0.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000ec400/data/00000001/SaveCommon.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000dce00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/000dce00/data/00000001/0
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb100/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb100/data/00000001/GameData.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030100/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001bb200/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001bb200/data/00000001/profile0/samus.bmssv
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001bb200/data/00000001/profile0/pkprfl.bmssv
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001bb200/data/00000001/profile0/common.bmssv
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200/data/00000001/GameData.bin
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111b00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111b00/data/00000001/bigegg2.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111b00/data/00000001/bigegg1.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00111b00/data/00000001/bigegg0.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00035800/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00035800/data/00000001/savedata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00055f00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033c00/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033c00/data/00000001/system.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033c00/data/00000001/injustic.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033c00/data/00000001/progress.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00033c00/data/00000001/figure.sav
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030800/data/00000001.metadata
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030800/data/00000001/system9.dat
+/work/sdmc-import/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/00030800/data/00000001/system0.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00CCE DK Country Returns 3D/20251114-182717/slot0.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00301 Kid Icarus  Uprising/20251114-182922/00.SAV
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00301 Kid Icarus  Uprising/20251114-182922/01.SAV
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x018A5 Rhythm Paradise Megamix/20251114-182950/savedataArc.txt
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x008C3 Tomodachi Life/20251114-182837/savedataArc.txt
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00540 SUPER MARIO 3D LAND/Citra/GameData.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00540 SUPER MARIO 3D LAND/SM3DLand/GameData.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00540 SUPER MARIO 3D LAND/sm3djh/GameData.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00540 SUPER MARIO 3D LAND/20251114-183005/GameData.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00B7F Scribblenauts Unlimited/20251114-183059/Savecard.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/20251114-182741/system8.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/20251114-182741/system7.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/00000001/system2.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/00000001/system1.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/20250424-214451/system3.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00308 MARIO KART 7/20250424-214451/system4.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x01CB2 Captain Toad  Treasure Tracker/20251114-182505/GameData.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00336 Ocarina of Time 3D/20251114-182900/system.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x007AE New Super Mario Bros  2/20251114-182801/BigRedSave.dat
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00EC4 The Legend of Zelda/20251114-182825/Save_2.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00EC4 The Legend of Zelda/20251114-182825/Save_1.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00EC4 The Legend of Zelda/20251114-182825/Save_0.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x00EC4 The Legend of Zelda/20251114-182825/SaveCommon.bin
+/work/sdmc-import/sdmc/3ds/Checkpoint/saves/0x0033B RIDGE RACER 3D/20251114-182655/savedata
+/work/sdmc-import/sdmc/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200/data/00000001.metadata
+/work/sdmc-import/sdmc/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000/001cb200/data/00000001/GameData.bin
+/work/ctgp7-compatible-1.6.23/common/resources/creditsImages.sarc
+/work/ctgp7-compatible-1.6.23/common/resources/CTGP-7Streamed.sarc
+/work/ctgp7-compatible-1.6.23/common/resources/secure.sarc
+/work/ctgp7-compatible-1.6.23/common/resources/CTGP-7.3gx
+/work/ctgp7-compatible-1.6.23/common/resources/ghosts.bin
+/work/ctgp7-compatible-1.6.23/common/resources/CTGP-7.sarc
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/Face_Raider.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/Pauline.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/King_Boo.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/Rainbow_Chomp.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/Dry_Bones.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Characters/Red_Ninja.chpack
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_CZE/trophy-ee.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_CZE/race-ee.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_LUX/trophy-ee.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_CAT/race-es.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_POL/race-es.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_UKR/trophy-er.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_UKR/race-er.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_UKR/thankyou-er.szs
+/work/ctgp7-compatible-1.6.23/common/MyStuff/Languages/Lang_HUN/trophy-ee.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_WiiDKSummit.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_FlowerBFort.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_BanshBoardT.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_VolcanoBeachRuins.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_N64ShbLnd.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_DarkSanctuary.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Course/Ctgp_WiiWarioGoldMine.szs
+/work/ctgp7-compatible-1.6.23/common/gamefs/Sound/stream/STRM_CC_FRAPPE_SNOWLAND_F.bcstm
+/work/ctgp7-compatible-1.6.23/common/gamefs/Sound/stream/STRM_CC_FRAPPE_SNOWLAND_N.bcstm
+/work/ctgp7-compatible-1.6.23/common/resources/pat/kor_rev2_code.bin
+/work/ctgp7-compatible-1.6.23/common/resources/pat/jap_rev2_code.bin
+/work/ctgp7-compatible-1.6.23/common/resources/pat/usa_rev2_code.bin
+/work/ctgp7-compatible-1.6.23/common/resources/pat/eur_rev2_code.bin
+/work/ctgp7-compatible-1.6.23/citra/resources/CTGP-7.3gx
+/work/ctgp7-compatible-1.6.23/citra/resources/ghosts.bin
+/work/gyro-20261018/__pycache__/thords-motion.cpython-314.pyc
+/work/gyro-20261018/libssc/docs/ssc-architecture.png
+/work/gyro-lab/persist-inspect/sensors/registry/sns_reg_version
+/work/opengl-test-20261020/__pycache__/run-test.cpython-314.pyc
