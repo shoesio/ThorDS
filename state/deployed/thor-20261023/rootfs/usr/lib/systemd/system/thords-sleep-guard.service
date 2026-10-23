@@ -1,0 +1,15 @@
+[Unit]
+Description=ThorDS scheduler and battery sleep guard
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/thords-sleep-guard pre
+ExecStopPost=/usr/bin/thords-sleep-guard post
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+[Install]
+RequiredBy=sleep.target

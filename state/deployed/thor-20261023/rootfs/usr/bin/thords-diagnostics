@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set +e
+OUT=/var/log/thords/hardware.txt
+mkdir -p "$(dirname "$OUT")"
+
+{
+  echo "===== ThorDS hardware report ====="
+  date
+  echo
+  echo "===== uname ====="
+  uname -a
+  echo
+  echo "===== cmdline ====="
+  cat /proc/cmdline
+  echo
+  echo "===== DRM ====="
+  find /sys/class/drm -maxdepth 2 -type f \( -name status -o -name modes -o -name enabled \) \
+    -print -exec sh -c 'cat "$1" 2>/dev/null' _ {} \;
+  echo
+  echo "===== input ====="
+  cat /proc/bus/input/devices
+  echo
+  echo "===== libinput ====="
+  libinput list-devices 2>&1
+  echo
+  echo "===== Vulkan ====="
+  command -v vulkaninfo >/dev/null && vulkaninfo --summary 2>&1
+  echo
+  echo "===== battery/power ====="
+  for f in /sys/class/power_supply/*/{type,status,capacity,manufacturer,model_name}; do
+    [[ -e "$f" ]] && printf '%s: %s\n' "$f" "$(cat "$f" 2>/dev/null)"
+  done
+  echo
+  echo "===== network ====="
+  ip link
+  echo
+  echo "===== sway outputs ====="
+  swaymsg -t get_outputs 2>&1
+  echo
+  echo "===== sway inputs ====="
+  swaymsg -t get_inputs 2>&1
+} >"$OUT" 2>&1
+
+cp "$OUT" /boot/thords-hardware.txt 2>/dev/null || true

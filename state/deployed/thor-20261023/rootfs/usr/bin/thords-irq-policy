@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Armada SM8550 policy: keep interrupts off the silver cores before allowing
+# CPU0 rail collapse. Keep the conservative workaround if verification fails.
+set -euo pipefail
+sysfs=${THORDS_SYSFS_ROOT:-/sys}
+procfs=${THORDS_PROC_ROOT:-/proc}
+idle=$sysfs/devices/system/cpu/cpu0/cpuidle/state1/disable
+[[ -w "$idle" ]] || exit 1
+printf '1' > "$idle"
+if systemctl is-active --quiet irqbalance.service; then
+  echo 'irqbalance is active; retaining CPU0 idle workaround' >&2
+  exit 1
+fi
+printf 'f8' > "$procfs/irq/default_smp_affinity"
+shopt -s nullglob
+for affinity in "$procfs"/irq/[0-9]*/smp_affinity_list; do
+  # Per-CPU and managed IRQs may reject writes; verify the GPU separately.
+  { printf '3-7' > "$affinity"; } 2>/dev/null || true
+done
+mapfile -t gpu_irqs < <(awk '/gpu-irq|gmu/ {gsub(":", "", $1); print $1}' "$procfs/interrupts")
+(( ${#gpu_irqs[@]} >= 2 )) || { echo 'GPU/GMU IRQs unavailable; retaining CPU0 idle workaround' >&2; exit 1; }
+for irq in "${gpu_irqs[@]}"; do
+  mask=$(cat "$procfs/irq/$irq/effective_affinity")
+  [[ "$mask" =~ ^[0-9a-fA-F]+$ ]] && (( (16#$mask & 7) == 0 && (16#$mask & 248) != 0 )) || {
+    echo "GPU IRQ $irq still targets silver CPUs; retaining CPU0 idle workaround" >&2
+    exit 1
+  }
+done
+printf '0' > "$idle"
+echo 'ThorDS IRQs routed to CPU3-7; CPU0 deep idle enabled'

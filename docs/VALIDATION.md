@@ -51,3 +51,11 @@ These describe the existing development installation, not a new GitHub build.
 Before distributing an installable image, complete the checks in
 [the SD testing guide](INSTALLATION.md) using a separate card and record the
 image checksum and source revisions.
+
+## Subsequent live-device alignment audit
+
+A read-only audit confirmed that the historical build recipe differs from the
+running development Thor. The captured deployment and effective source changes
+are preserved separately; see [device alignment](DEVICE_ALIGNMENT.md). The
+old frame-generation checks above validate the old recipe, not the current
+native-launch deployment. No hardware state was changed during the audit.

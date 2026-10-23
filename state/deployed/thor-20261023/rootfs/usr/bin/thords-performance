@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Adaptive clocks by default; retain full frequency limits for demanding games.
+set -euo pipefail
+sysfs=${THORDS_SYSFS_ROOT:-/sys}
+config=${THORDS_POWER_CONFIG:-/etc/thords/power.conf}
+THORDS_POWER_PROFILE=balanced
+[[ ! -r "$config" ]] || source "$config"
+profile=${1:-$THORDS_POWER_PROFILE}
+case "$profile" in
+  balanced) cpu=schedutil; gpu=simple_ondemand ;;
+  performance) cpu=performance; gpu=performance ;;
+  *) echo 'Usage: thords-performance [balanced|performance]' >&2; exit 2 ;;
+esac
+shopt -s nullglob
+policies=("$sysfs"/devices/system/cpu/cpufreq/policy*)
+(( ${#policies[@]} > 0 )) || { echo 'No CPU frequency policies found' >&2; exit 1; }
+# Validate every governor before changing any device.
+for policy in "${policies[@]}"; do
+  grep -qw "$cpu" "$policy/scaling_available_governors" || exit 1
+done
+gpu_path=$sysfs/class/devfreq/3d00000.gpu
+grep -qw "$gpu" "$gpu_path/available_governors" || exit 1
+for policy in "${policies[@]}"; do
+  printf '%s' "$cpu" > "$policy/scaling_governor"
+done
+# This devfreq driver requires a write without a trailing newline.
+printf '%s' "$gpu" > "$gpu_path/governor"
+printf 'ThorDS %s profile: CPU=%s GPU=%s (frequency limits unchanged)\n' "$profile" "$cpu" "$gpu"

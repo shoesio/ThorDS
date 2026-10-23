@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+config="${HOME}/.config/azaharplus-emu/qt-config.ini"
+[[ -f "$config" ]] || exit 0
+
+config_edits=()
+set_setting() {
+  local key=$1 value=$2
+  config_edits+=(-e "s|^${key}=.*|${key}=${value}|")
+  config_edits+=(-e "s|^${key}\\\\default=.*|${key}\\\\default=false|")
+}
+
+set_setting resolution_factor 4
+set_setting async_shader_compilation true
+set_setting async_presentation true
+set_setting use_hw_shader true
+set_setting use_disk_shader_cache true
+set_setting shaders_accurate_mul false
+set_setting disable_right_eye_render true
+set_setting filter_mode false
+set_setting texture_filter 4
+set_setting spirv_shader_gen true
+set_setting use_vsync true
+set_setting frame_limit 100
+set_setting cpu_clock_percentage 100
+
+sed -i "${config_edits[@]}" "$config"

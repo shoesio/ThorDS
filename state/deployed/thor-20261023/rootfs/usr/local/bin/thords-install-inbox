@@ -1,0 +1,85 @@
+#!/usr/bin/python3
+"""Install complete, top-level CIA uploads once per boot, before ThorDS HOME."""
+import fcntl
+import os
+from pathlib import Path
+import struct
+import subprocess
+import time
+
+
+def complete_cia(path):
+    with path.open('rb') as source:
+        header = source.read(32)
+    if len(header) != 32:
+        return False
+    header_size, _, _, cert, ticket, tmd, meta, content = struct.unpack('<IHHIIIIQ', header)
+    if header_size != 0x2020 or not ticket or not tmd:
+        return False
+    align = lambda n: (n + 63) & ~63
+    end = align(align(align(header_size) + cert) + ticket)
+    end = align(end + tmd) + content
+    if meta:
+        end = align(end) + meta
+    return path.stat().st_size >= end
+
+
+def destination(folder, name):
+    target = folder / name
+    if target.exists():
+        target = folder / (Path(name).stem + '.' + str(time.time_ns()) + Path(name).suffix)
+    return target
+
+
+def main(home=None, boot_id=None):
+    home = Path(home or Path.home())
+    inbox = home / 'Install'
+    state = home / '.local/state/thords-cia-inbox'
+    # Never run alongside HOME, a game, or a manual Azahar installation.
+    if subprocess.run(['/usr/bin/pgrep', '-x', 'azahar'], stdout=subprocess.DEVNULL).returncode == 0:
+        print('CIA inbox deferred: Azahar is already running.')
+        return 0
+    state.mkdir(parents=True, exist_ok=True)
+    with (state / 'lock').open('w') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return 0
+        boot_id = boot_id or Path('/proc/sys/kernel/random/boot_id').read_text().strip()
+        marker = state / 'last-boot'
+        if marker.exists() and marker.read_text().strip() == boot_id:
+            return 0
+        inbox.mkdir(exist_ok=True)
+        for name in ('Installed', 'Failed', 'Processing', 'Logs'):
+            (inbox / name).mkdir(exist_ok=True)
+        # A power loss during installation leaves the original CIA for retry.
+        for path in (inbox / 'Processing').iterdir():
+            if path.is_file() and not path.is_symlink():
+                path.rename(destination(inbox, path.name))
+        for path in sorted(inbox.iterdir()):
+            if path.suffix.lower() != '.cia' or path.is_symlink() or not path.is_file():
+                continue
+            try:
+                if time.time() - path.stat().st_mtime < 15 or not complete_cia(path):
+                    print('CIA inbox waiting for complete upload:', path.name)
+                    continue
+                pending = path.rename(inbox / 'Processing' / path.name)
+                log_path = destination(inbox / 'Logs', path.name + '.log')
+                env = os.environ.copy()
+                env['QT_QPA_PLATFORM'] = 'offscreen'
+                env.pop('THORDS_BOOT_HOME_MENU_EUROPE', None)
+                with log_path.open('w') as log:
+                    result = subprocess.run(['/usr/bin/azahar', '-i', str(pending)],
+                                            env=env, stdout=log, stderr=subprocess.STDOUT)
+                succeeded = result.returncode == 0 and 'Installed CIA successfully.' in log_path.read_text(errors='replace')
+                target = inbox / ('Installed' if succeeded else 'Failed')
+                pending.rename(destination(target, path.name))
+                print('CIA inbox:', 'installed' if succeeded else 'failed', path.name, flush=True)
+            except (OSError, ValueError, subprocess.SubprocessError) as error:
+                print('CIA inbox error:', path.name, error, flush=True)
+        marker.write_text(boot_id + '\n')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

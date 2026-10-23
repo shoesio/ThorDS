@@ -1,0 +1,21 @@
+[Unit]
+Description=ThorDS sensor processor file service
+After=systemd-udev-settle.service
+ConditionPathExists=/dev/fastrpc-adsp
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+ExecStart=/usr/bin/stdbuf -oL -eL /usr/local/bin/hexagonrpcd -f /dev/fastrpc-adsp -d adsp -s -R /var/lib/thords/gyro/qcom
+User=fastrpc
+Group=fastrpc
+Restart=on-failure
+RestartSec=5
+ProtectSystem=strict
+ReadWritePaths=/var/lib/thords/gyro/qcom/sensors/persist
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

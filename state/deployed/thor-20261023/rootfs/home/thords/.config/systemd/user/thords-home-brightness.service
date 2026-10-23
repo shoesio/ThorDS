@@ -1,0 +1,8 @@
+[Unit]
+Description=Follow HOME Menu brightness on Thor screens
+[Service]
+ExecStart=%h/.local/bin/thords-home-brightness
+Restart=on-failure
+RestartSec=3
+[Install]
+WantedBy=default.target

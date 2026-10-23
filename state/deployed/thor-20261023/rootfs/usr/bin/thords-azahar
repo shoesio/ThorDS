@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Use the verified dual-window XWayland path without frame-generation layers.
+export DISPLAY="${DISPLAY:-:0}"
+export QT_QPA_PLATFORM=xcb
+unset THORDS_FRAMEGEN_ENABLED THORDS_FRAMEGEN_TARGET_FPS THORDS_FRAMEGEN_SESSION_NATIVE
+unset MAKO_CONFIG MAKO_PROFILE MAKO_FRAME_GENERATION_TOP_ONLY
+exec /usr/bin/azahar "$@"

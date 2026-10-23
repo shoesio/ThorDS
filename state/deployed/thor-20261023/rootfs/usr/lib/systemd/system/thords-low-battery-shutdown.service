@@ -1,0 +1,14 @@
+[Unit]
+Description=ThorDS clean shutdown on critically low battery
+After=local-fs.target systemd-udev-settle.service
+Wants=systemd-udev-settle.service
+ConditionPathExists=/sys/class/power_supply/battery/capacity
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thords-low-battery-shutdown
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

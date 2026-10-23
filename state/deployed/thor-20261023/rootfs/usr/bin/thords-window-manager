@@ -1,0 +1,186 @@
+#!/usr/bin/env bash
+set -u
+
+# Arrange Azahar's two render windows independently. DSI-2 is the 120 Hz top
+# panel; DSI-1 is the 60 Hz lower panel. Separate Wayland surfaces prevent the
+# lower panel from pacing the top panel.
+runtime_dir="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+discover_socket() {
+  if [[ -z "${SWAYSOCK:-}" || ! -S "${SWAYSOCK:-}" ]]; then
+    SWAYSOCK=$(find "$runtime_dir" -maxdepth 1 -type s -name 'sway-ipc.*.sock' -print -quit 2>/dev/null || true)
+    export SWAYSOCK
+  fi
+}
+discover_socket
+run_sway() {
+  discover_socket
+  [[ -n "${SWAYSOCK:-}" ]] || return 0
+  swaymsg "$@" >/dev/null 2>&1 || true
+}
+# Keep workspace bindings consistent with the deployed, visually verified layout.
+# Workspace numbers are not physical screen identities.
+run_sway 'workspace 1; move workspace to output DSI-1; workspace 2; move workspace to output DSI-2'
+last_pid=""
+reported_pid=""
+ready_pid=""
+stable_signature=""
+stable_since=0
+last_primary=""
+last_secondary=""
+last_main=""
+while true; do
+  discover_socket
+  tree=$(swaymsg -r -t get_tree 2>/dev/null || true)
+  if [[ -z "$tree" ]]; then
+    sleep 1
+    continue
+  fi
+  # Only resize after both real render surfaces have settled. A fixed delay
+  # from the controller window made fast boots wait unnecessarily and could
+  # still race initialization on slow boots.
+  current_pid=$(jq -r '[.. | objects | select(.window_properties?.class? == "Azahar" or .app_id? == "org.azahar_emu.Azahar") | .pid // empty] | first // empty' <<<"$tree")
+  if [[ -n "$current_pid" && "$current_pid" != "$last_pid" ]]; then
+    last_pid="$current_pid"
+    ready_pid=""
+    stable_signature=""
+    last_primary=""
+    last_secondary=""
+    last_main=""
+  fi
+  if [[ -z "$current_pid" ]]; then
+    sleep 1
+    continue
+  fi
+  if [[ "$ready_pid" != "$current_pid" ]]; then
+    signature=$(jq -c --argjson pid "$current_pid" '[.. | objects |
+      select(.pid? == $pid) |
+      select(.name? == "Azahar" or ((.name? // "") | test(" [|] (Primary|Secondary) Window$"))) |
+      select((.geometry.width // 0) >= 320 and (.geometry.height // 0) >= 240) |
+      [.id, .geometry.width, .geometry.height]] | sort_by(.[0]) | select(length == 2)' <<<"$tree")
+    if [[ -z "$signature" || "$signature" != "$stable_signature" ]]; then
+      stable_signature="$signature"
+      stable_since=$SECONDS
+      sleep 0.5
+      continue
+    fi
+    if (( SECONDS - stable_since < 1 )); then
+      sleep 0.5
+      continue
+    fi
+    ready_pid="$current_pid"
+  fi
+  while IFS=$'\t' read -r id title geometry_width geometry_height; do
+    [[ -n "$id" ]] || continue
+    # The jq source is already restricted to Azahar containers.
+    is_azahar=1
+    case "$title" in
+      *" | Primary Window")
+        if [[ "$last_primary" != "$id" ]]; then
+          run_sway "[con_id=$id]" move container to workspace 1
+          run_sway "[con_id=$id]" fullscreen disable
+          run_sway "[con_id=$id]" floating enable
+          run_sway "[con_id=$id]" resize set width 1240 px height 1080 px
+          run_sway "[con_id=$id]" move position 0 px 0 px
+          run_sway "[con_id=$id]" border none
+          run_sway "[con_id=$id]" opacity 1
+          last_primary="$id"
+        else
+          run_sway "[con_id=$id]" resize set width 1240 px height 1080 px
+          run_sway "[con_id=$id]" move position 0 px 0 px
+        fi
+        ;;
+      *" | Secondary Window")
+        if [[ "$last_secondary" != "$id" ]]; then
+          run_sway "[con_id=$id]" move container to workspace 2
+          run_sway "[con_id=$id]" fullscreen disable
+          run_sway "[con_id=$id]" floating enable
+          run_sway "[con_id=$id]" resize set width 1920 px height 1080 px
+          # Workspace 2 already starts at the lower panel's origin.  A
+          # desktop-global X offset would place an XWayland window at 3840.
+          run_sway "[con_id=$id]" move position 0 px 0 px
+          run_sway "[con_id=$id]" border none
+          run_sway "[con_id=$id]" opacity 1
+          last_secondary="$id"
+        fi
+        # Azahar restores its saved geometry after mapping. Reconcile the
+        # client rectangle on subsequent passes until the saved geometry no
+        # longer wins the race.
+        run_sway "[con_id=$id]" resize set width 1920 px height 1080 px
+        run_sway "[con_id=$id]" move position 0 px 0 px
+        ;;
+      *" | "*)
+        [[ "$is_azahar" -eq 1 ]] || continue
+        # Azahar's XWayland game surface uses the game title but does not
+        # include the older "Primary Window" suffix. The secondary case is
+        # handled above; any other titled render surface is the top screen.
+        run_sway "[con_id=$id]" move container to workspace 1
+        run_sway "[con_id=$id]" fullscreen disable
+        run_sway "[con_id=$id]" floating enable
+        run_sway "[con_id=$id]" resize set width 1240 px height 1080 px
+        run_sway "[con_id=$id]" move position 0 px 0 px
+        run_sway "[con_id=$id]" border none
+        run_sway "[con_id=$id]" opacity 1
+        last_primary="$id"
+        ;;
+      Azahar\ [0-9A-Fa-f]*)
+        [[ "$is_azahar" -eq 1 ]] || continue
+        # The controller window is not a render surface. Keep it out of the
+        # panel workspaces so the two plain "Azahar" windows map cleanly to
+        # the primary and secondary displays below.
+        if [[ "$last_main" != "$id" ]]; then
+          run_sway "[con_id=$id]" move scratchpad
+          run_sway "[con_id=$id]" opacity 0
+          last_main="$id"
+        fi
+        ;;
+      Azahar|Azahar\ *)
+        [[ "$is_azahar" -eq 1 ]] || continue
+        # This installed Qt build gives both surfaces the title "Azahar".
+        # Visually verified HOME Menu mapping: saved 900x1080 geometry carries
+        # the TOP image; 900x1022 carries the TOUCH image. These are client
+        # geometry hints, not physical panel sizes or primary/secondary roles.
+        if [[ "$geometry_height" -lt 1050 ]]; then
+          if [[ "$last_primary" != "$id" ]]; then
+            run_sway "[con_id=$id]" move container to workspace 1
+            run_sway "[con_id=$id]" fullscreen disable
+            run_sway "[con_id=$id]" floating enable
+            run_sway "[con_id=$id]" resize set width 1240 px height 1080 px
+            run_sway "[con_id=$id]" move position 0 px 0 px
+            run_sway "[con_id=$id]" border none
+            run_sway "[con_id=$id]" opacity 1
+            last_primary="$id"
+          else
+            run_sway "[con_id=$id]" resize set width 1240 px height 1080 px
+            run_sway "[con_id=$id]" move position 0 px 0 px
+          fi
+        else
+          if [[ "$last_secondary" != "$id" ]]; then
+            run_sway "[con_id=$id]" move container to workspace 2
+            run_sway "[con_id=$id]" fullscreen disable
+            run_sway "[con_id=$id]" floating enable
+            run_sway "[con_id=$id]" resize set width 1920 px height 1080 px
+            run_sway "[con_id=$id]" move position 0 px 0 px
+            run_sway "[con_id=$id]" border none
+            run_sway "[con_id=$id]" opacity 1
+            last_secondary="$id"
+          fi
+          run_sway "[con_id=$id]" resize set width 1920 px height 1080 px
+          run_sway "[con_id=$id]" move position 0 px 0 px
+        fi
+        ;;
+      *)
+        [[ "$is_azahar" -eq 1 ]] || continue
+        if [[ "$last_main" != "$id" ]]; then
+          run_sway "[con_id=$id]" move scratchpad
+          run_sway "[con_id=$id]" opacity 0
+          last_main="$id"
+        fi
+        ;;
+    esac
+  done < <(jq -r '[.. | objects | select(.app_id? == "org.azahar_emu.Azahar" or .window_properties?.class? == "Azahar" or .window_properties?.instance? == "azahar")] | .[] | [.id, (.name // ""), (.geometry.width // 0), (.geometry.height // 0)] | @tsv' <<<"$tree" 2>/dev/null)
+  if [[ -n "$last_primary" && -n "$last_secondary" && "$reported_pid" != "$current_pid" ]]; then
+    printf '%s render-windows-visible pid=%s\n' "$(cut -d' ' -f1 /proc/uptime)" "$current_pid" >>/var/log/thords/boot-timing.log
+    reported_pid="$current_pid"
+  fi
+  sleep 1
+done

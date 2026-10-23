@@ -1,0 +1,102 @@
+#!/usr/bin/python3
+"""Close kiosk Azahar normally; escalate only if it fails to exit.
+
+The existing ThorDS session loop starts its replacement after the old PID exits.
+Never start a second emulator against the same save files.
+"""
+import fcntl
+import glob
+import json
+import os
+from pathlib import Path
+import select
+import signal
+import subprocess
+import time
+
+
+def kiosk_child(pid):
+    for _ in range(12):
+        try:
+            proc = Path('/proc') / str(pid)
+            args = (proc / 'cmdline').read_bytes().split(b'\0')
+            if any(arg == b'/usr/bin/thords-session' for arg in args):
+                return True
+            pid = int((proc / 'stat').read_text().rsplit(')', 1)[1].split()[1])
+            if pid <= 1:
+                return False
+        except (OSError, ValueError, IndexError):
+            return False
+    return False
+
+
+def exited(fd, seconds):
+    return bool(select.select([fd], [], [], seconds)[0])
+
+
+def nodes(tree):
+    yield tree
+    for child in tree.get('nodes', []) + tree.get('floating_nodes', []):
+        yield from nodes(child)
+
+
+def main():
+    runtime = f'/run/user/{os.getuid()}'
+    with open(runtime + '/thords-restart.lock', 'w') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return
+        targets = []
+        for proc in Path('/proc').iterdir():
+            if not proc.name.isdigit():
+                continue
+            try:
+                pid = int(proc.name)
+                fd = os.pidfd_open(pid)
+                if (proc.stat().st_uid == os.getuid() and
+                        (proc / 'exe').resolve() == Path('/usr/bin/azahar') and kiosk_child(pid)):
+                    targets.append((pid, fd))
+                else:
+                    os.close(fd)
+            except (OSError, ValueError):
+                continue
+        if not targets:
+            print('No kiosk Azahar process; session supervisor already owns recovery.', flush=True)
+            return
+        try:
+            for pid, fd in targets:
+                for sock in glob.glob(runtime + '/sway-ipc.*.sock'):
+                    try:
+                        command = ['/usr/bin/swaymsg', '-s', sock, '-r']
+                        tree = json.loads(subprocess.check_output(command + ['-t', 'get_tree'], timeout=2))
+                        candidates = [n for n in nodes(tree) if n.get('pid') == pid and
+                                      (n.get('name') or '').startswith('Azahar ') and
+                                      not (n.get('window_properties') or {}).get('transient_for')]
+                        if candidates:
+                            subprocess.run(command + [f'[con_id={candidates[0]["id"]}] kill'],
+                                           timeout=2, check=False)
+                            print(f'Requested clean close of Azahar {pid}', flush=True)
+                            break
+                    except (OSError, ValueError, subprocess.SubprocessError):
+                        continue
+                if exited(fd, 8):
+                    print('Azahar closed cleanly; session will relaunch HOME.', flush=True)
+                    continue
+                print('Azahar did not close; sending TERM.', flush=True)
+                try:
+                    signal.pidfd_send_signal(fd, signal.SIGTERM)
+                    if not exited(fd, 3):
+                        print('Azahar is stuck; sending KILL.', flush=True)
+                        signal.pidfd_send_signal(fd, signal.SIGKILL)
+                        if not exited(fd, 5):
+                            raise RuntimeError('Azahar has not exited; no replacement was launched')
+                except ProcessLookupError:
+                    pass
+        finally:
+            for _, fd in targets:
+                os.close(fd)
+
+
+if __name__ == '__main__':
+    main()

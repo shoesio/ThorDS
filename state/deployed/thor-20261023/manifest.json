@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-23",
+  "capture": "read-only SSH; no device writes or service changes",
+  "kernel": "7.1.2-thorch20",
+  "packages": {
+    "azahar": "2126.1.B-12",
+    "linux-thorch": "7.1.2-20",
+    "thorch-bsp": "1-41",
+    "thorch-firmware-rocknix": "1-14",
+    "thorch-inputplumber": "0.78.0-1",
+    "thorch-mesa": "26.1.6-1",
+    "thords-kiosk": "0.2.0-4"
+  },
+  "files": {
+    "/usr/bin/thords-performance": {
+      "sha256": "76a5288b9ef8d562b8f5e9dd2b401df9229974435edc648b852f93d5283319af",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-hardware-buttons": {
+      "sha256": "e04afdd23cb887453362bd5d35a60ff8e27680e72f87591545dac9522a0154c3",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-configure-performance": {
+      "sha256": "fa49412e9e47742ddef69d9e28a2318d31e43e23bb318f6e412f49d97a388bb0",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-session": {
+      "sha256": "80a619a5abf4870d3b4eec4fe0d29d6856db7aa39a1d8605f68d8571268a705c",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-diagnostics": {
+      "sha256": "41a836712a9af7f7fd8eb8f91ba47f8458020e74f056c8eb1709c3c15ff4c105",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-wake-policy": {
+      "sha256": "07c5eba3dc76bcb14564233476f118662c0db6ebfccdc3b7c01e6249bd176575",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-prepare-testdata": {
+      "sha256": "97f2d535543c2930bf505435e0e49059f516d349563e958a662c7f322d589260",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-irq-policy": {
+      "sha256": "de89f440ab1dd9af7f519b62d8b738e608a28c9d5739613d3444aa4ec56d8bd0",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-rgb-sleep": {
+      "sha256": "255665f3458f9c757345a6f6e63799fc7ded011eea2c4042b8460e14d873ee07",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-sleep-guard": {
+      "sha256": "403064e0de8a3c5209ab766a4214e2852e0c5c4cdef22ecceec46edbe544dac1",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-power-sample": {
+      "sha256": "98f2b7f7679944f7cb3202d78625fa8b26591921a2488e4127753532fa7193fa",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-azahar": {
+      "sha256": "41eecf7286845a6f52b70a9376ef7a117f876cfbea41144c1da268a0c068c33e",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-configure-controls": {
+      "sha256": "897c98af95d5c247b55b2f758881c536ebe204cee60a371b723ff42cc7519ee4",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-brightness-hotkeys": {
+      "sha256": "6191332552064bb7b85acab2bdb1ae17f7508b73e95f707d1ce9a48aff479c7a",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-brightness": {
+      "sha256": "fa55b85b2a92e74b62b9e3b819449e849376cef3f9e74360f954601085b20e5a",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-window-manager": {
+      "sha256": "0a5a542ecdb60b6a8f4b790dab2fc93998b9d4257a532ed958c02e493368d5fb",
+      "mode": "0o755"
+    },
+    "/usr/bin/thords-low-battery-shutdown": {
+      "sha256": "490c461ed5bc1bd11206692a291a89e266918b84302edcb5126c599a63ebe570",
+      "mode": "0o755"
+    },
+    "/usr/local/bin/thords-install-inbox": {
+      "sha256": "5137b8a9cc4e34e8481c13801c123b0bb753deea4c3cbe0b72cb104b01ab7848",
+      "mode": "0o755"
+    },
+    "/usr/local/libexec/thords/thords-restart-azahar": {
+      "sha256": "fa2dfedfdce9ceb06563c64266342c16910294107659b889812e4f2b19c66ad2",
+      "mode": "0o755"
+    },
+    "/usr/local/libexec/thords/thords-motion.py": {
+      "sha256": "80ec5519bf3e96be5ed56274b21358834e551ec6c83ede303755f3c27738b0c1",
+      "mode": "0o755"
+    },
+    "/etc/thords/power.conf": {
+      "sha256": "50fef5f617c422f02f93131ceea34ea41899aeec1c068cd0539a83d60d0b88da",
+      "mode": "0o644"
+    },
+    "/etc/thords/sway.conf": {
+      "sha256": "c824f254692302f4d66e78217f1e4a08faed13f25260c9564bc58fed470136ba",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-hardware-buttons.service": {
+      "sha256": "7a6bdbc21c87a5f736657b9b1d0583cade740a14133000129f89d539b3281c0a",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-sensors.service": {
+      "sha256": "1692030d11faf77a7bf887b0d819132febb4000bcc687e52283bbad16b01ae3f",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-restart-azahar.service": {
+      "sha256": "7cb042a1bcdf20878e9d41c19aafa0bde346694c4be9f9c60f7dafc06dfe468a",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-early-splash.service": {
+      "sha256": "8aef76d8f9c2e338b776dd23fc910aab44e9705b4da34e21172110f5e560ace8",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-low-battery-shutdown.service": {
+      "sha256": "db2dfc4614e708fa6d3e0c6f4a338ddce8f8bc6e8cd3f52bd67c01fdcfa7d4aa",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-motion.service": {
+      "sha256": "da38e3ed0fc52c66007588f31e4037fdbccac1f648a476e4a16448edb78b0c68",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-session.service.d/40-early-splash.conf": {
+      "sha256": "58815fdd68d956014a36cd21b82d89c8574eb43e67ff75f208082eeda8657065",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-session.service.d/30-cia-inbox.conf": {
+      "sha256": "c154579ccf4ed381e8e95951e3837a9a8c8608e5520f0b9e629617877633472e",
+      "mode": "0o644"
+    },
+    "/etc/systemd/system/thords-session.service.d/20-user-services.conf": {
+      "sha256": "074f8705b9fb968539994d52534db473a279db5a21223122750797cb56d802ea",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system/thords-sleep-guard.service": {
+      "sha256": "482e30babce5e722d23c7ae1bd2520e5995857915d6404b05c0297c28c31b4ac",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system/thords-low-battery-shutdown.service": {
+      "sha256": "8f7802422b45fc460ba3067fe3b6c58635eb440026bc1d835bc65733bd6f4677",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system/thords-irq-policy.service": {
+      "sha256": "f0bdaed224e2ab7fe1ca23bb72ea8632eb5277b8671cb76e88d2d4e44bdf0e44",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system/thords-session.service": {
+      "sha256": "e5b08e980b6bb1f4e868c9c3dfa59672ce92c4cc39df06db2c7e276cc25bb2c0",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system/thords-performance.service": {
+      "sha256": "1fd2e9fd61bc0dd5edbbf708c431c70a7e3120c167266d09bee4bdc6d08bbad2",
+      "mode": "0o644"
+    },
+    "/usr/lib/systemd/system-preset/90-thords.preset": {
+      "sha256": "037a57944c6f34c7aa59fc4b99d7fffa3fc44bd99214e853750ccc279581280b",
+      "mode": "0o644"
+    },
+    "/usr/lib/sysusers.d/thords.conf": {
+      "sha256": "233d7ced9a50389f6dcb971e362e962903fe9a5316e910a749d890b62b6d4ef7",
+      "mode": "0o644"
+    },
+    "/usr/lib/tmpfiles.d/thords.conf": {
+      "sha256": "b2864e1481e664a576b4f4a1bc5b7e7083809a03e295b6d9dd7ac63fb38bf025",
+      "mode": "0o644"
+    },
+    "/etc/udev/rules.d/70-thords-sensors.rules": {
+      "sha256": "2fb278b0bb85958fc9693c0cd211941ff7eeac393b3b046a547c4ad7b4003798",
+      "mode": "0o644"
+    },
+    "/usr/libexec/thords/early-splash": {
+      "sha256": "300c96d44c529bb0f51b82db029c716f01bf65a6142085e69a22337c511cd81a",
+      "mode": "0o755"
+    },
+    "/home/thords/.local/bin/thords-home-brightness": {
+      "sha256": "be0239a813ef9be905b997c50dd9ee37e10c223a77476631c6f7c46e3ac9cae8",
+      "mode": "0o755"
+    },
+    "/home/thords/.config/systemd/user/thords-home-brightness.service": {
+      "sha256": "521ef407db51c6fd99d7f7c211f3c84cca2c512dffc6712ffe8a6fdcb06207b8",
+      "mode": "0o644"
+    },
+    "/etc/ld.so.conf.d/thords-motion.conf": {
+      "sha256": "f283a326962a77447bcb562fe2c4a81ca556ae2ffaacc35375207fd378574ccd",
+      "mode": "0o644"
+    }
+  },
+  "emulator": {
+    "origin": "https://github.com/AzaharPlus/AzaharPlus.git",
+    "base_commit": "415d04c8866cb10ebcbf9ff381e82dbe924564af",
+    "installed_binary_sha256": "47186fdc18c6b4b1e9003ad75538cadd7a6689daaaac7ab51ae88917432870d3",
+    "patch_sha256": "568022b7e48b0d34a519d9e5bcbde5f11ea55da603cc95888ba89a8948fb4f2d",
+    "clock_source_sha256": "d780f0efa3ec44f678b4865a9e2e794436b58e0554f549b5abae9f92e8a27a58",
+    "clock_source": "work/clock-fix-20261018/shared_page.cpp",
+    "provenance": "Live retained source tree plus separately compiled clock replacement source. Installed executable hash matches the recorded clock-fix candidate. No full rebuild performed."
+  },
+  "binary_fingerprints": {
+    "/usr/local/libexec/thords/ssc-sampler": {
+      "sha256": "a50edaf1c6607b30e868ae8b15b98f2dbcc42c8e5c744a4d18e4a58e7c617cb6",
+      "bytes": 72016,
+      "executable": true,
+      "symlink": null
+    },
+    "/usr/local/bin/hexagonrpcd": {
+      "sha256": "7cc6acfbefa0d32fe357b9ee61c233bed84bad2423e1adf24e281d3d6ca803ee",
+      "bytes": 149064,
+      "executable": true,
+      "symlink": null
+    },
+    "/usr/libexec/thords/early-splash-renderer": {
+      "sha256": "70a5682953fef822d39746ed23c472ef2cf0fce39d53cf8dd500b589e50352f1",
+      "bytes": 134800,
+      "executable": true,
+      "symlink": null
+    },
+    "/usr/bin/azahar": {
+      "sha256": "47186fdc18c6b4b1e9003ad75538cadd7a6689daaaac7ab51ae88917432870d3",
+      "bytes": 59369672,
+      "executable": true,
+      "symlink": null
+    },
+    "/usr/lib/firmware/qcom/sm8550/ayn/thor/adsp.mbn": {
+      "sha256": "e771ab967310bc210147d5d0f9e455802c35564584d1ed26e64a2eb4e9c2470c"
+    },
+    "/usr/lib/firmware/qcom/sm8550/ayn/thor/adsp_dtb.mbn": {
+      "sha256": "660fd8f2051bd2dd8694d1b36b70bc339faf6d86b0f80462395e8d229f376477"
+    },
+    "/usr/local/lib/libssc.so.2": {
+      "sha256": "30c2eb60b1e44ef14e70700026e24a434ab1f36d7abfc7daa637a0885eced6d2"
+    },
+    "/home/thords/.local/bin/opensave": {
+      "sha256": "e1186e626d1a9aea234fc76f26417cac65365887228d95750ff8d12aa32fc05d"
+    }
+  },
+  "running_emulator_environment": {
+    "QT_QPA_PLATFORM": "xcb"
+  },
+  "selected_emulator_settings": {
+    "output_type": "4",
+    "profiles\\1\\motion_device": "engine:cemuhookudp",
+    "graphics_api": "2",
+    "resolution_factor": "4",
+    "init_clock": "0"
+  },
+  "sensor_source": {
+    "base": "work/gyro-20261018",
+    "overlay_files": {
+      "libssc/meson.build": {
+        "path": "sensor-source/libssc/meson.build",
+        "sha256": "63931540cb00adc79fa18fbac8e2ca9ff7e7086eaf13118321913433b1e38898"
+      },
+      "libssc/src/libssc-sensor.c": {
+        "path": "sensor-source/libssc/src/libssc-sensor.c",
+        "sha256": "d3375d6cf91581832497dd36e3d762bc4abe99be20dd20ba9eaa7447fcc2cfb1"
+      },
+      "libssc/src/libssc-cli.c": {
+        "path": "sensor-source/libssc/src/libssc-cli.c",
+        "sha256": "290cac771eef935017d162becb023f18f0c21019952001b5d5235f9170694fa0"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/apps_std.c": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/apps_std.c",
+        "sha256": "e0848d91a188069f8639a82739c7cf81e37138e35f115a079a3adefa28ac7702"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/hexagonfs.h": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/hexagonfs.h",
+        "sha256": "2b99e1ea09c2ee54e4c5bcb584cec7f6ee8fdac2a1e31aabcac14ebc8527faf2"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/hexagonrpcd.1": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/hexagonrpcd.1",
+        "sha256": "3dde5fc763fa630bde947e15ef69e98591696d9e2739a0d8f5894790471da7bd"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/hexagonfs_mapped.c": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/hexagonfs_mapped.c",
+        "sha256": "c6626c7d49bfc10ae7c19b48e9d73d3d06e5559803155c0e45b7af406c5f13aa"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/rpcd_builder.c": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/rpcd_builder.c",
+        "sha256": "3e71616cec2bf094c86a9b41259d83ce847c5c48fbe71a6884939f078115b1bf"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/listener.c": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/listener.c",
+        "sha256": "b14bf5b7caf3a07fe014dc5f11025db5a95b886ebdf74c30a7a26c7baa3ac1dd"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/hexagonfs.c": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/hexagonfs.c",
+        "sha256": "19a0290a9a89b87fdb109290555e04dd7c535434a5a5c18bd9b8d84eee2bd9ab"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/interfaces/adsp_listener.def": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/interfaces/adsp_listener.def",
+        "sha256": "208c8e9785b8e25bd2ae034620b106b2b3b8153d408b86e8467fecc6c09cc435"
+      },
+      "hexagonrpc-0.5.0/hexagonrpcd/interfaces/apps_std.def": {
+        "path": "sensor-source/hexagonrpc-0.5.0/hexagonrpcd/interfaces/apps_std.def",
+        "sha256": "1b7382ef861a8e2d20fe022aa145b3fcdb5b749f8b85d6c2ea1af8d0ca69174f"
+      },
+      "ssc-sampler.c": {
+        "path": "sensor-source/ssc-sampler.c",
+        "sha256": "742bc569cdeab236f873ecbf2990c391c0b942e8fa8e05840623dea6e24a7bbe"
+      },
+      "thords-motion.conf": {
+        "path": "rootfs/etc/ld.so.conf.d/thords-motion.conf",
+        "sha256": "f283a326962a77447bcb562fe2c4a81ca556ae2ffaacc35375207fd378574ccd"
+      }
+    },
+    "description": "Copy libssc and hexagonrpc-0.5.0 from the base, then overlay same-named files in sensor-source. These are the live retained sources; binaries were fingerprinted, not rebuilt."
+  }
+}

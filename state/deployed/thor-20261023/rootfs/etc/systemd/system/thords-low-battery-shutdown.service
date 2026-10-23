@@ -1,0 +1,12 @@
+[Unit]
+Description=ThorDS clean shutdown on critically low battery
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thords-low-battery-shutdown
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

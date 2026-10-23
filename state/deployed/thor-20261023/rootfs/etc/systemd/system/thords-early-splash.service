@@ -1,0 +1,17 @@
+[Unit]
+Description=ThorDS loading image before the console session
+DefaultDependencies=no
+After=systemd-udevd.service
+Before=sysinit.target
+Conflicts=shutdown.target
+ConditionPathExists=/usr/share/thords/boot-splash.asp
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+KillMode=none
+ExecStart=/usr/libexec/thords/early-splash start
+ExecStop=/usr/libexec/thords/early-splash stop
+
+[Install]
+WantedBy=sysinit.target

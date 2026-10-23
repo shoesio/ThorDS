@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+"""Read HOME's saved brightness; never modify emulated NAND."""
+import os
+from pathlib import Path
+import struct
+import time
+
+BACKLIGHT = Path(os.environ.get('THORDS_BACKLIGHT_ROOT', '/sys/class/backlight'))
+# Five HOME levels (1–5). Retain the existing top-panel compensation.
+LEVELS = (10, 25, 45, 70, 90)
+
+def read_level(data):
+    if len(data) != 32768:
+        raise ValueError('Incomplete CFG save')
+    count, offset = struct.unpack_from('<HH', data)
+    if not 0 < count <= 1479 or offset != 0x455C:
+        raise ValueError('Invalid CFG header')
+    for index in range(count):
+        block, value, size, flags = struct.unpack_from('<IIHH', data, 4+12*index)
+        if block == 0x50001:
+            level = (value >> 8) & 255
+            if size != 2 or not 1 <= level <= 5:
+                raise ValueError('Invalid brightness block')
+            return level
+    raise ValueError('No brightness block')
+
+def apply_level(level):
+    for name, percent in [('ae94000.dsi.0',LEVELS[level-1]),
+                          ('ae96000.dsi.0',min(100,LEVELS[level-1]+10))]:
+        panel = BACKLIGHT/name
+        maximum = int((panel/'max_brightness').read_text())
+        (panel/'brightness').write_text(str(max(1, maximum*percent//100)))
+
+def main():
+    root = Path.home()/'.local/share/azaharplus-emu/nand/data'
+    last = None
+    pending = None
+    initialized = False
+    warned = None
+    while True:
+        try:
+            files = list(root.glob('*/sysdata/00010017/00000000/config'))
+            if len(files) != 1:
+                raise ValueError('Expected one active NAND CFG save')
+            level = read_level(files[0].read_bytes())
+            # Two matching reads avoid acting on an in-progress file write.
+            if level == pending:
+                if not initialized:
+                    last = level
+                    initialized = True
+                    print(f'Watching HOME brightness {level}; existing panel brightness retained',flush=True)
+                elif level != last:
+                    apply_level(level)
+                    last = level
+                    print(f'HOME brightness {level}: panels updated',flush=True)
+            pending = level
+            warned = None
+        except (OSError,ValueError,struct.error) as exc:
+            pending = None
+            if str(exc) != warned:
+                print(f'Waiting: {exc}',flush=True)
+                warned = str(exc)
+        time.sleep(.5)
+
+if __name__ == '__main__':main()

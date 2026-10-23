@@ -1,0 +1,13 @@
+[Unit]
+Description=ThorDS performance profile
+After=systemd-user-sessions.service thorch-hw-defaults.service thords-irq-policy.service
+Wants=thords-irq-policy.service
+Before=thords-session.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/thords-performance
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

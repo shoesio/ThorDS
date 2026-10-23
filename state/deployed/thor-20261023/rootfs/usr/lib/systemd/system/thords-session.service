@@ -1,0 +1,30 @@
+[Unit]
+Description=ThorDS console session
+After=systemd-user-sessions.service systemd-sysusers.service seatd.service
+Wants=seatd.service thords-performance.service
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+User=thords
+Group=thords
+SupplementaryGroups=video input audio seat
+PAMName=login
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+StandardInput=tty-force
+StandardOutput=journal
+StandardError=journal
+Environment=XDG_RUNTIME_DIR=/run/thords
+Environment=WLR_BACKENDS=drm,libinput
+Environment=LIBSEAT_BACKEND=seatd
+RuntimeDirectory=thords
+RuntimeDirectoryMode=0700
+ExecStart=/usr/bin/sway --unsupported-gpu -c /etc/thords/sway.conf
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target

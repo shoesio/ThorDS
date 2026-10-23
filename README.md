@@ -15,6 +15,7 @@ Thor remain separate experiments rather than integrated image components.
 - [Getting started](docs/GETTING_STARTED.md) — restore and inspect the sources.
 - [Build guide](docs/BUILD.md) — environment, commands, private-data handling, and remaining build gaps.
 - [SD testing and recovery](docs/INSTALLATION.md) — spare-card testing and acceptance criteria.
+- [Live-device alignment audit](docs/DEVICE_ALIGNMENT.md) — current Thor differs from the historical build recipe.
 - [Validation status](docs/VALIDATION.md) — exactly what has and has not passed.
 - [Contributing](CONTRIBUTING.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 

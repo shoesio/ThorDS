@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+import fcntl
+import glob
+import os
+import struct
+import subprocess
+import time
+
+EV_KEY = 0x01
+EV_ABS = 0x03
+BTN_SELECT = 0x13A
+ABS_HAT0Y = 0x11
+EVENT = struct.Struct("llHHi")
+
+
+def gamepad_path():
+    # InputPlumber exclusively owns the raw AYN device. Listen to its virtual
+    # Xbox output so these hotkeys see the same buttons as Azahar.
+    preferred_names = (
+        "Microsoft Xbox Series S|X Controller",
+        "AYN Odin2 Gamepad",
+    )
+    candidates = []
+    for path in glob.glob("/sys/class/input/event*"):
+        try:
+            with open(os.path.join(path, "device/name"), encoding="utf-8") as handle:
+                name = handle.read().strip()
+                if name in preferred_names:
+                    candidates.append((preferred_names.index(name), path))
+        except OSError:
+            pass
+    if not candidates:
+        return None
+    _, path = min(candidates)
+    return "/dev/input/" + os.path.basename(path)
+
+
+lock = open("/run/user/%d/thords-brightness-hotkeys.lock" % os.getuid(), "w")
+try:
+    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except BlockingIOError:
+    raise SystemExit(0)
+
+while True:
+    device = gamepad_path()
+    if not device:
+        time.sleep(2)
+        continue
+    try:
+        select_held = False
+        with open(device, "rb", buffering=0) as events:
+            while True:
+                sec, usec, event_type, code, value = EVENT.unpack(events.read(EVENT.size))
+                if event_type == EV_KEY and code == BTN_SELECT:
+                    select_held = value != 0
+                elif event_type == EV_ABS and code == ABS_HAT0Y and select_held:
+                    if value == -1:
+                        subprocess.run(["/usr/bin/thords-brightness", "up"], check=False)
+                    elif value == 1:
+                        subprocess.run(["/usr/bin/thords-brightness", "down"], check=False)
+    except (OSError, struct.error):
+        time.sleep(1)

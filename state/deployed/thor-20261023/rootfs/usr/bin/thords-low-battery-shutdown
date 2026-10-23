@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Cleanly power off before a discharging battery reaches the hardware cutoff.
+set -u
+
+battery=/sys/class/power_supply/battery
+threshold=${THORDS_LOW_BATTERY_SHUTDOWN_PERCENT:-5}
+confirmations=0
+
+while :; do
+    status=$(cat "$battery/status" 2>/dev/null || printf 'Unknown')
+    capacity=$(cat "$battery/capacity" 2>/dev/null || printf '100')
+    if [[ "$status" == Discharging ]] && [[ "$capacity" =~ ^[0-9]+$ ]] && (( capacity <= threshold )); then
+        confirmations=$((confirmations + 1))
+        logger -t thords-battery "critical battery: ${capacity}% (${confirmations}/3)"
+        if (( confirmations >= 3 )); then
+            logger -t thords-battery "powering off cleanly at ${capacity}%"
+            systemctl poweroff
+            exit 0
+        fi
+    else
+        confirmations=0
+    fi
+    sleep 10
+done
